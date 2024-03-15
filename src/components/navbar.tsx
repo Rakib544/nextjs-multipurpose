@@ -1,6 +1,7 @@
 "use client";
 import { navLinks } from "@/lib/data/navigation-data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import MobileNavigation from "./mobile-navigation";
 import { buttonVariants } from "./ui/button";
 import {
@@ -12,8 +13,15 @@ import {
 } from "./ui/navigation-menu";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isAuthRoute = pathname.startsWith("/auth/");
+
   return (
-    <NavigationMenu className="max-w-none py-8 flex !w-full justify-between items-center">
+    <NavigationMenu
+      className={`max-w-none py-8 flex !w-full justify-between items-center ${
+        isAuthRoute ? "hidden" : ""
+      }`}
+    >
       <Link aria-label="Home" href="/" className="text-2xl font-extrabold ">
         <svg viewBox="0 0 130 32" aria-hidden="true" className="h-8">
           <svg

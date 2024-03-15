@@ -3,13 +3,12 @@ import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import Features from "@/components/features";
 import { GridPattern } from "@/components/grid-pattern";
-import { Pricing } from "@/components/pricing";
+import { Pricing1 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { Testimonials } from "@/components/testimonials";
 import { buttonVariants } from "@/components/ui/button";
 import Workflow from "@/components/work-flow";
-// import dashboardImage from "@/images/dashboard.png";
 import heroImage from "@/images/hero.jpg";
 import Image from "next/image";
 import Link from "next/link";
@@ -99,7 +98,20 @@ export default function Home() {
           </FadeIn>
         </Container>
       </div>
-      <Pricing />
+      <Container className="py-20 sm:py-32">
+        <div className="flex justify-center text-center">
+          <SectionIntro
+            title="We offer great prices for your
+            business."
+          >
+            <p className="mt-4 text-slate-700">
+              It doesn’t matter what size your business is, our software won’t
+              work well for you.
+            </p>
+          </SectionIntro>
+        </div>
+        <Pricing1 />
+      </Container>
       <Testimonials />
       {/* <Services services={caseStudies} /> */}
     </main>

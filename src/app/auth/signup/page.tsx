@@ -1,21 +1,14 @@
-"use client";
-import { footerNavigation } from "@/lib/data/footer-navigation";
+import SignUpForm from "@/components/signup-form";
+import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Container } from "./container";
-import { FadeIn } from "./fade-in";
-import { NewsletterForm } from "./newsletter-form";
-import { SocialMediaProfiles } from "./social-media-profiles";
 
-function Navigation() {
-  const company = footerNavigation[1];
-  const work = footerNavigation[0];
+export default function SignUp() {
   return (
-    <nav className="col-span-12 md:col-span-12 lg:col-span-8">
-      <ul className="grid grid-cols-12 gap-x-8 gap-y-16">
-        <li className="col-span-12 sm:col-span-6">
-          <div>
-            <Link href="/" aria-label="Home">
+    <div className="min-h-screen h-full">
+      <div className="grid grid-cols-12 gap-6 items-center">
+        <div className="col-span-12 lg:col-span-6 mt-20 md:mt-0">
+          <div className="max-w-lg mx-auto px-6">
+            <Link href="/" aria-label="Home" className="mb-6 inline-block">
               <svg viewBox="0 0 130 32" aria-hidden="true" className="h-8">
                 <svg
                   viewBox="0 0 32 32"
@@ -48,77 +41,36 @@ function Navigation() {
                 ></path>
               </svg>
             </Link>
-            <p className="text-neutral-700 mt-4 leading-7">
-              We are developer studio working at the intersection of design and
-              technology. It’s a really busy intersection though — a lot of our
-              staff have been involved in hit and runs.
+            <h1 className="font-bold text-2xl text-neutral-950">
+              Create your Account
+            </h1>
+            <p className="text-neutral-700 leading-7 text-sm mt-1 mb-8">
+              Welcome back! Please enter your details
             </p>
-            <SocialMediaProfiles />
+            <SignUpForm />
           </div>
-        </li>
-        <li className="col-span-6 sm:col-span-3">
-          <div className="font-display text-lg font-bold text-neutral-950">
-            {company.title}
-          </div>
-          <ul role="list" className="mt-4 text-neutral-700">
-            {company.links.map((link: any) => (
-              <li key={link.title} className="mt-4">
-                <Link
-                  href={link.href}
-                  className="transition hover:text-neutral-950"
-                >
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </li>
-        <li className="col-span-6 sm:col-span-3">
-          <div className="font-display text-lg font-bold text-neutral-950">
-            {work.title}
-          </div>
-          <ul role="list" className="mt-4 text-neutral-700">
-            {work.links.map((link: any) => (
-              <li key={link.title} className="mt-4">
-                <Link
-                  href={link.href}
-                  className="transition hover:text-neutral-950"
-                >
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  );
-}
-
-export function Footer2() {
-  const pathname = usePathname();
-  const isAuthRoute = pathname.startsWith("/auth");
-  return (
-    <footer>
-      <Container
-        className={`mt-24 w-full sm:mt-32 lg:mt-40 ${
-          isAuthRoute ? "hidden" : ""
-        }`}
-      >
-        <FadeIn className="lg:px-4">
-          <div className="grid grid-cols-12 gap-x-8 gap-y-16">
-            <Navigation />
-            <div className="col-span-12 md:col-span-12 lg:col-span-4">
-              <NewsletterForm />
+        </div>
+        <div className="col-span-12 lg:col-span-6 relative h-full min-h-screen hidden md:block">
+          <div className="absolute inset-0 bg-slate-900/30 z-50 flex justify-center items-end">
+            <div className="mb-20 max-w-md mx-auto text-center">
+              <h2 className="text-xl font-bold text-white">
+                Connect with every Application.
+              </h2>
+              <p className="text-slate-200 text-sm leading-6 mt-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit, nulla quo fugit perspiciatis accusantium ex nemo
+                laboriosam explicabo omnis illum!
+              </p>
             </div>
           </div>
-          <div className="mb-20 mt-24 text-center border-t border-neutral-950/10 pt-12">
-            <p className="text-neutral-700">
-              © Rakib {new Date().getFullYear()}
-            </p>
-          </div>
-        </FadeIn>
-      </Container>
-    </footer>
+          <Image
+            src="/login.jpg"
+            alt=""
+            fill
+            className="object-cover object-center"
+          />
+        </div>
+      </div>
+    </div>
   );
 }

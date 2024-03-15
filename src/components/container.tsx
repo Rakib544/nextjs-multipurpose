@@ -9,7 +9,7 @@ const containerVariants = cva("mx-auto px-4 sm:px-6 md:px-4 md:max-w-2xl ", {
       xs: "lg:px-2",
       sm: "lg:max-w-4xl lg:px-12",
       md: "lg:max-w-5xl lg:px-8",
-      lg: "lg:max-w-7xl lg:px-8",
+      lg: "lg:max-w-7xl lg:px-14",
     },
   },
 });

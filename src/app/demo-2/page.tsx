@@ -1,6 +1,7 @@
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import { Pricing } from "@/components/pricing";
+import Pricing2 from "@/components/pricing/pricing2";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import {
@@ -269,6 +270,7 @@ export default function Demo2() {
           </div>
         </div>
       </Container>
+      <Pricing2 />
       <div className="my-32">
         <SectionIntro
           title="The service we offer is specially designed to meet your needs."
