@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { Container } from "./container";
 import { FadeIn } from "./fade-in";
-import { GridPattern } from "./grid-pattern";
 
 export function PageIntro({
   eyebrow,
@@ -9,18 +8,13 @@ export function PageIntro({
   children,
   centered = false,
 }: {
-  eyebrow: any;
+  eyebrow?: any;
   title: string;
-  children: any;
+  children?: any;
   centered?: boolean;
 }) {
   return (
-    <Container
-      className={clsx("mt-24 sm:mt-32 lg:mt-40", centered && "text-center")}
-    >
-      <div className="absolute inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-        <GridPattern />
-      </div>
+    <Container className={clsx("mt-24", centered && "text-center")}>
       <FadeIn>
         <h1>
           <span className="block font-display text-base font-semibold text-neutral-950">
@@ -29,7 +23,7 @@ export function PageIntro({
           <span className="sr-only"> - </span>
           <span
             className={clsx(
-              "mt-6 block text-3xl font-bold tracking-tighter md:text-5xl/tight",
+              "mt-3 block text-3xl font-bold tracking-tight md:text-4xl/tight",
               centered && "mx-auto"
             )}
           >
@@ -38,7 +32,7 @@ export function PageIntro({
         </h1>
         <div
           className={clsx(
-            "mt-2 max-w-3xl text-lg leading-8 text-neutral-600",
+            "mt-2 max-w-3xl text-base leading-8 text-neutral-600",
 
             centered && "mx-auto"
           )}

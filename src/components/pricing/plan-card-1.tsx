@@ -27,7 +27,7 @@ function CheckIcon({ className }: { className: string }) {
     </svg>
   );
 }
-export function Plan({
+export function PlanCard1({
   name,
   price,
   description,
@@ -49,7 +49,7 @@ export function Plan({
       className={clsx(
         "flex flex-col rounded-3xl px-6 sm:px-8",
         featured
-          ? "order-first bg-[#0A2540] py-8 lg:order-none"
+          ? "order-first bg-primary py-8 lg:order-none"
           : "lg:py-8 bg-slate-50 border"
       )}
     >

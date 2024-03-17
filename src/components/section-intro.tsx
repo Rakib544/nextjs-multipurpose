@@ -27,7 +27,7 @@ export function SectionIntro({
           <>
             <span
               className={clsx(
-                "mb-6 block font-display text-base font-semibold",
+                "mb-2 block font-display text-sm font-medium",
                 invert ? "text-white" : "text-neutral-950"
               )}
             >
@@ -38,8 +38,8 @@ export function SectionIntro({
         )}
         <span
           className={clsx(
-            "block tracking-tight [text-wrap:balance]",
-            smaller ? "text-2xl font-bold" : "text-4xl font-bold",
+            "block [text-wrap:balance]",
+            smaller ? "text-2xl font-bold" : "text-3xl font-bold",
             invert ? "text-white" : "text-neutral-950"
           )}
         >
@@ -49,8 +49,8 @@ export function SectionIntro({
       {children && (
         <div
           className={clsx(
-            "mt-6 text-lg leading-7",
-            invert ? "text-neutral-300" : "text-neutral-600"
+            "mt-2 text-base leading-8",
+            invert ? "text-neutral-300" : "text-neutral-700"
           )}
         >
           {children}

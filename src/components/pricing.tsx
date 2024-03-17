@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import Link from "next/link";
-import { Container } from "./container";
 import { SectionIntro } from "./section-intro";
 import { buttonVariants } from "./ui/button";
 
@@ -50,7 +49,7 @@ function Plan({
       className={clsx(
         "flex flex-col rounded-3xl px-6 sm:px-8",
         featured
-          ? "order-first bg-[#0A2540] py-8 lg:order-none"
+          ? "order-first bg-primary py-8 lg:order-none"
           : "lg:py-8 bg-slate-50 border"
       )}
     >
@@ -108,63 +107,61 @@ function Plan({
 export function Pricing() {
   return (
     <section id="pricing" className="py-20 sm:py-32">
-      <Container>
-        <div className="text-center max-w-xl mx-auto">
-          <SectionIntro
-            title="We offer great prices, premium products and quality service for your
+      <div className="text-center max-w-xl mx-auto">
+        <SectionIntro
+          title="We offer great prices, premium products and quality service for your
             business."
-          >
-            <p className="mt-4 text-slate-700">
-              It doesn’t matter what size your business is, our software won’t
-              work well for you.
-            </p>
-          </SectionIntro>
-        </div>
-        <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
-          <Plan
-            name="Starter"
-            price="$9"
-            description="Good for anyone who is self-employed and just getting started."
-            href="/register"
-            features={[
-              "Send 10 quotes and invoices",
-              "Connect up to 2 bank accounts",
-              "Track up to 15 expenses per month",
-              "Manual payroll support",
-              "Export up to 3 reports",
-            ]}
-          />
-          <Plan
-            featured
-            name="Small business"
-            price="$15"
-            description="Perfect for small / medium sized businesses."
-            href="/register"
-            features={[
-              "Send 25 quotes and invoices",
-              "Connect up to 5 bank accounts",
-              "Track up to 50 expenses per month",
-              "Automated payroll support",
-              "Export up to 12 reports",
-              "Bulk reconcile transactions",
-              "Track in multiple currencies",
-            ]}
-          />
-          <Plan
-            name="Enterprise"
-            price="$39"
-            description="For even the biggest enterprise companies."
-            href="/register"
-            features={[
-              "Send unlimited quotes and invoices",
-              "Connect up to 15 bank accounts",
-              "Track up to 200 expenses per month",
-              "Automated payroll support",
-              "Export up to 25 reports, including TPS",
-            ]}
-          />
-        </div>
-      </Container>
+        >
+          <p className="mt-4 text-slate-700">
+            It doesn’t matter what size your business is, our software won’t
+            work well for you.
+          </p>
+        </SectionIntro>
+      </div>
+      <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
+        <Plan
+          name="Starter"
+          price="$9"
+          description="Good for anyone who is self-employed and just getting started."
+          href="/register"
+          features={[
+            "Send 10 quotes and invoices",
+            "Connect up to 2 bank accounts",
+            "Track up to 15 expenses per month",
+            "Manual payroll support",
+            "Export up to 3 reports",
+          ]}
+        />
+        <Plan
+          featured
+          name="Small business"
+          price="$15"
+          description="Perfect for small / medium sized businesses."
+          href="/register"
+          features={[
+            "Send 25 quotes and invoices",
+            "Connect up to 5 bank accounts",
+            "Track up to 50 expenses per month",
+            "Automated payroll support",
+            "Export up to 12 reports",
+            "Bulk reconcile transactions",
+            "Track in multiple currencies",
+          ]}
+        />
+        <Plan
+          name="Enterprise"
+          price="$39"
+          description="For even the biggest enterprise companies."
+          href="/register"
+          features={[
+            "Send unlimited quotes and invoices",
+            "Connect up to 15 bank accounts",
+            "Track up to 200 expenses per month",
+            "Automated payroll support",
+            "Export up to 25 reports, including TPS",
+          ]}
+        />
+      </div>
     </section>
   );
 }

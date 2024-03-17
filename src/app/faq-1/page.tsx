@@ -1,6 +1,7 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { GridPattern } from "@/components/grid-pattern";
+import { PageIntro } from "@/components/page-intro";
 import {
   Accordion,
   AccordionContent,
@@ -104,24 +105,20 @@ const faqData = [
 export default function Faq1() {
   return (
     <div>
+      <PageIntro title="Frequently asked questions" centered>
+        <p>
+          {" "}
+          These are the most commonly asked questions about us and billing.
+          Can&apos;t find what you are looking for?{" "}
+          <a className="underline" href="mailto:md.rakib10122003@gmail.com">
+            Chat to our Support Team!
+          </a>
+        </p>
+      </PageIntro>
+      <div className="absolute inset-0 z-[-1] top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
+        <GridPattern />
+      </div>
       <Container className="mt-16 lg:mt-32">
-        <div className="absolute inset-0 z-[-1] top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-          <GridPattern />
-        </div>
-        <FadeIn className="max-w-4xl mx-auto col-span-12 text-center order-2 lg:order-1 z-10">
-          <h1 className="text-3xl font-bold tracking-tighter md:text-5xl/tight">
-            Frequently asked questions
-          </h1>
-          <p className="mt-3 text-lg text-neutral-600 leading-8 px-3">
-            These are the most commonly asked questions about us and billing.
-            Can&apos;t find what you are looking for?{" "}
-            <a className="underline" href="mailto:md.rakib10122003@gmail.com">
-              Chat to our Support Team!
-            </a>
-          </p>
-        </FadeIn>
-      </Container>
-      <Container>
         <div className="max-w-xl mx-auto mt-16">
           <FadeInStagger faster>
             <Accordion

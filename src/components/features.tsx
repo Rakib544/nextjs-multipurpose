@@ -2,10 +2,10 @@ import partnershipIcon from "@/images/key-features/partnership.svg";
 import performanceIcon from "@/images/key-features/performance.svg";
 import subscriptionIcon from "@/images/key-features/subscription.svg";
 import supportIcon from "@/images/key-features/support.svg";
-import Image from "next/image";
 import { Container } from "./container";
-import { FadeIn, FadeInStagger } from "./fade-in";
+import { FadeInStagger } from "./fade-in";
 import { SectionIntro } from "./section-intro";
+import ServiceCard from "./service-card";
 
 const data = [
   {
@@ -49,16 +49,12 @@ export default function Features() {
       </div>
       <FadeInStagger faster className="grid grid-cols-12 gap-4 mt-20">
         {data.map((d) => (
-          <FadeIn
+          <ServiceCard
             key={d.id}
-            className="col-span-12 md:col-span-6 lg:col-span-3"
-          >
-            <Image src={d.icon} alt={d.title} className="h-20 -ml-4" />
-            <h3 className="text-lg font-bold text-neutral-950">{d.title}</h3>
-            <p className="text-base text-neutral-700 leading-7 mt-2">
-              {d.description}
-            </p>
-          </FadeIn>
+            title={d.title}
+            description={d.description}
+            icon={d.icon}
+          />
         ))}
       </FadeInStagger>
     </Container>
