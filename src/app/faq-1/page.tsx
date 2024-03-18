@@ -1,13 +1,9 @@
 import { Container } from "@/components/container";
-import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { FadeInStagger } from "@/components/fade-in";
+import { FaqCard1 } from "@/components/faq-card";
 import { GridPattern } from "@/components/grid-pattern";
 import { PageIntro } from "@/components/page-intro";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion } from "@/components/ui/accordion";
 
 const faqData = [
   {
@@ -128,24 +124,12 @@ export default function Faq1() {
               className="mt-6"
             >
               {faqData.map((faq) => (
-                <FadeIn key={faq.id}>
-                  <AccordionItem
-                    className="border-none"
-                    value={`item=${faq.id}`}
-                  >
-                    <AccordionTrigger className="font-semibold text-base text-neutral-950">
-                      <div>
-                        <span className="h-10 w-10 border-[1.5px] rounded-lg inline-flex items-center justify-center mr-3">
-                          {faq.id.toString().padStart(2, "0")}
-                        </span>
-                        {faq.question}
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="text-base leading-7 text-neutral-700 ml-12">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                </FadeIn>
+                <FaqCard1
+                  key={faq.id}
+                  id={faq.id.toString()}
+                  question={faq.question}
+                  answer={faq.answer}
+                />
               ))}
             </Accordion>
           </FadeInStagger>

@@ -3,7 +3,10 @@ import { ArrowRight } from "./arrow-right-icon";
 import { ChatIcon } from "./chat-icon";
 import { CheckIcon } from "./check-icon";
 import { CheckRoundIcon } from "./check-round-icon";
+import { ChevronLeft } from "./chervon-left-icon";
+import { ChevronRight } from "./chervon-right-icon";
 import { ChevronDown } from "./chevron-down-icon";
+import { Ellips } from "./ellips-icon";
 import { FacebookIcon } from "./facebook-icon";
 import { FlyPlaceIcon } from "./fly-place-icon";
 import { LaptopIcon } from "./laptop-icon";
@@ -25,6 +28,9 @@ export {
   CheckIcon,
   CheckRoundIcon,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Ellips,
   FacebookIcon,
   FlyPlaceIcon,
   LaptopIcon,

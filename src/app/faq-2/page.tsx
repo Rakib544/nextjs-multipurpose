@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
-import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { FadeInStagger } from "@/components/fade-in";
+import { FaqCard2 } from "@/components/faq-card";
 import { GridPattern } from "@/components/grid-pattern";
 import { PageIntro } from "@/components/page-intro";
 
@@ -119,21 +120,13 @@ export default function Faq2() {
           <FadeInStagger faster>
             <div className="mt-6 grid grid-cols-12 gap-6">
               {faqData.map((faq) => (
-                <FadeIn key={faq.id} className="col-span-12 lg:col-span-6">
-                  <div className="flex gap-x-4">
-                    <div className="h-10 w-10 border-[1.5px] rounded-lg shrink-0 flex justify-center items-center">
-                      {faq.id}
-                    </div>
-                    <div>
-                      <h2 className="font-semibold text-base text-neutral-950">
-                        {faq.question}
-                      </h2>
-                      <p className="text-base leading-7 text-neutral-700 mt-2">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                </FadeIn>
+                <FaqCard2
+                  key={faq.id}
+                  id={faq.id.toString()}
+                  answer={faq.answer}
+                  question={faq.question}
+                  className="col-span-12 lg:col-span-6"
+                />
               ))}
             </div>
           </FadeInStagger>

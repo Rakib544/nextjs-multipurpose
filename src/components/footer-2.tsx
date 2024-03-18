@@ -12,7 +12,7 @@ function Navigation() {
   const work = footerNavigation[0];
   return (
     <nav className="col-span-12 md:col-span-12 lg:col-span-8">
-      <ul className="grid grid-cols-12 gap-x-8 gap-y-16">
+      <ul className="grid grid-cols-12 md:gap-x-8 gap-y-16">
         <li className="col-span-12 sm:col-span-6">
           <div>
             <Link href="/" aria-label="Home">
@@ -106,7 +106,7 @@ export function Footer2() {
         }`}
       >
         <FadeIn className="lg:px-4">
-          <div className="grid grid-cols-12 gap-x-8 gap-y-16">
+          <div className="grid grid-cols-12 md:gap-x-8 gap-y-16">
             <Navigation />
             <div className="col-span-12 md:col-span-12 lg:col-span-4">
               <NewsletterForm />
