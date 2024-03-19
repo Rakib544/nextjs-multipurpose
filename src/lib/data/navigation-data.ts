@@ -103,8 +103,8 @@ export const navLinks = [
           },
           {
             id: 1111,
-            label: "Career Details",
-            href: "career-details",
+            label: "Job Details",
+            href: "jobs/1",
           },
         ],
       },
