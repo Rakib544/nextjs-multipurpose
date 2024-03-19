@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main>
       <Container className="mt-16 lg:mt-32 grid grid-cols-12 gap-x-4 items-center">
-        <div className="absolute inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
+        <div className="absolute z-[-1] inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
           <GridPattern />
         </div>
         <FadeIn className="max-w-4xl mx-auto col-span-12 text-center order-2 lg:order-1 z-10">

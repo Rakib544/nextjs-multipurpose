@@ -12,6 +12,7 @@ import { FlyPlaceIcon } from "./fly-place-icon";
 import { LaptopIcon } from "./laptop-icon";
 import { LineChartIcon } from "./line-chart-icon";
 import { LinkedInIcon } from "./linkedin-icon";
+import { MessageCircle } from "./message-circle-icon";
 import { MobileNavIcon } from "./mobile-nav-icon";
 import { NotificationIcon } from "./notification-icon";
 import { PhoneIcon } from "./phone-icon";
@@ -36,6 +37,7 @@ export {
   LaptopIcon,
   LineChartIcon,
   LinkedInIcon,
+  MessageCircle,
   MobileNavIcon,
   NotificationIcon,
   PhoneIcon,

@@ -6,9 +6,11 @@ import MobileNavigation from "./mobile-navigation";
 import { buttonVariants } from "./ui/button";
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 
@@ -18,7 +20,7 @@ export default function Navbar() {
 
   return (
     <NavigationMenu
-      className={`max-w-none py-8 flex !w-full justify-between items-center ${
+      className={`pt-8 max-w-none z-50 flex !w-full justify-between items-center ${
         isAuthRoute ? "hidden" : ""
       }`}
     >
@@ -55,18 +57,79 @@ export default function Navbar() {
           ></path>
         </svg>
       </Link>
-      <NavigationMenuList className="hidden lg:flex">
-        {navLinks.map((link) => (
-          <NavigationMenuItem key={link.id}>
-            <Link href={link.href} legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {link.label}
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        ))}
-      </NavigationMenuList>
 
+      <NavigationMenu>
+        <NavigationMenuList className="hidden lg:flex !relative">
+          {navLinks.map((link) => (
+            <NavigationMenuItem key={link.id} className="relative">
+              {link?.submenus.length > 0 ? (
+                <>
+                  <NavigationMenuTrigger>{link.label}</NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-white border shadow-xl rounded p-2">
+                    <ul
+                      className={
+                        link.submenus.some(
+                          (subLink) => subLink.submenus.length > 0
+                        )
+                          ? "grid grid-cols-3 gap-x-4 w-[500px]"
+                          : ""
+                      }
+                    >
+                      {link.submenus.map((subLink) => (
+                        <li key={subLink.id}>
+                          {subLink.submenus.length > 0 ? (
+                            <div className="py-4">
+                              <p className="px-4 text-sm mb-1 text-neutral-800 font-semibold uppercase">
+                                {subLink.label}
+                              </p>
+                              <ul className="">
+                                {/* {JSON.stringify(subLink.submenus)} */}
+                                {subLink.submenus.map((menu) => (
+                                  <li key={menu.id}>
+                                    <Link
+                                      href={menu?.href || ""}
+                                      legacyBehavior
+                                      passHref
+                                    >
+                                      <NavigationMenuLink
+                                        className={navigationMenuTriggerStyle()}
+                                      >
+                                        {menu.label}
+                                      </NavigationMenuLink>
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ) : (
+                            <Link
+                              href={subLink?.href || ""}
+                              legacyBehavior
+                              passHref
+                            >
+                              <NavigationMenuLink
+                                className={navigationMenuTriggerStyle()}
+                              >
+                                {subLink.label}
+                              </NavigationMenuLink>
+                            </Link>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </>
+              ) : (
+                <Link href={link?.href || ""} legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    {link.label}
+                  </NavigationMenuLink>
+                </Link>
+              )}
+            </NavigationMenuItem>
+          ))}
+        </NavigationMenuList>
+      </NavigationMenu>
       <Link
         href="/contact"
         className={buttonVariants({
