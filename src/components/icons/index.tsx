@@ -9,6 +9,7 @@ import { ChevronLeft } from "./chervon-left-icon";
 import { ChevronRight } from "./chervon-right-icon";
 import { ChevronDown } from "./chevron-down-icon";
 import { ClockIcon } from "./clock-icon";
+import { DollarCircleIcon } from "./dollar-circle-icon";
 import { Ellips } from "./ellips-icon";
 import { FacebookIcon } from "./facebook-icon";
 import { FileTextIcon } from "./file-text-icon";
@@ -39,6 +40,7 @@ export {
   ChevronLeft,
   ChevronRight,
   ClockIcon,
+  DollarCircleIcon,
   Ellips,
   FacebookIcon,
   FileTextIcon,

@@ -7,25 +7,25 @@ export const navLinks = [
       {
         id: 111,
         label: "Homepage-1",
-        href: "demo-1",
+        href: "/demo-1",
         submenus: [],
       },
       {
         id: 112,
         label: "Homepage-2",
-        href: "demo-2",
+        href: "/demo-2",
         submenus: [],
       },
       {
         id: 113,
         label: "Homepage-3",
-        href: "demo-3",
+        href: "/demo-3",
         submenus: [],
       },
       {
         id: 114,
         label: "Homepage-4",
-        href: "demo-4",
+        href: "/demo-4",
         submenus: [],
       },
     ],
@@ -43,12 +43,12 @@ export const navLinks = [
           {
             id: 1111,
             label: "services-1",
-            href: "services-1",
+            href: "/services-1",
           },
           {
             id: 1111,
             label: "services-2",
-            href: "services-2",
+            href: "/services-2",
           },
         ],
       },
@@ -60,12 +60,12 @@ export const navLinks = [
           {
             id: 1111,
             label: "about-1",
-            href: "about-1",
+            href: "/about-1",
           },
           {
             id: 1111,
             label: "about-2",
-            href: "about-2",
+            href: "/about-2",
           },
         ],
       },
@@ -77,12 +77,12 @@ export const navLinks = [
           {
             id: 1111,
             label: "Contact-1",
-            href: "contact-1",
+            href: "/contact-1",
           },
           {
             id: 1111,
             label: "Contact-2",
-            href: "contact-2",
+            href: "/contact-2",
           },
         ],
       },
@@ -94,17 +94,17 @@ export const navLinks = [
           {
             id: 1111,
             label: "Career-1",
-            href: "career-1",
+            href: "/career-1",
           },
           {
             id: 1111,
             label: "Career-2",
-            href: "career-2",
+            href: "/career-2",
           },
           {
             id: 1111,
             label: "Job Details",
-            href: "jobs/1",
+            href: "/jobs/1",
           },
         ],
       },
@@ -116,7 +116,7 @@ export const navLinks = [
           {
             id: 1111,
             label: "404 Not Found",
-            href: "not-found",
+            href: "/not-found",
           },
           {
             id: 1111,
@@ -153,17 +153,17 @@ export const navLinks = [
           {
             id: 1111,
             label: "Pricing-1",
-            href: "pricing-1",
+            href: "/pricing-1",
           },
           {
             id: 1111,
             label: "Pricing-2",
-            href: "pricing-2",
+            href: "/pricing-2",
           },
           {
             id: 1111,
             label: "Pricing-3",
-            href: "pricing-3",
+            href: "/pricing-3",
           },
         ],
       },
@@ -177,31 +177,31 @@ export const navLinks = [
       {
         id: 222,
         label: "Blog-1",
-        href: "blogs-1",
+        href: "/blogs-1",
         submenus: [],
       },
       {
         id: 223,
         label: "Blog-2",
-        href: "blogs-2",
+        href: "/blogs-2",
         submenus: [],
       },
       {
         id: 224,
         label: "Blog-3",
-        href: "blogs-3",
+        href: "/blogs-3",
         submenus: [],
       },
       {
         id: 224,
         label: "Blog-4",
-        href: "blogs-4",
+        href: "/blogs-4",
         submenus: [],
       },
       {
         id: 225,
         label: "Blog Details",
-        href: "blog-details",
+        href: "/blog-details",
         submenus: [],
       },
     ],
@@ -209,7 +209,7 @@ export const navLinks = [
   {
     id: 7,
     label: "Documentation",
-    href: "documentation",
+    href: "/documentation",
     submenus: [],
   },
 ];

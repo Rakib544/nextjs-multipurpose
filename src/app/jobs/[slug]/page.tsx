@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import { FadeIn } from "@/components/fade-in";
 import { GridPattern } from "@/components/grid-pattern";
 import {
   BriefcaseIcon,
@@ -26,8 +27,8 @@ export default function JobDetails() {
           WordPress Plugin Development.
         </p>
       </PageIntro>
-      <Container className="my-20">
-        <div className="grid grid-cols-12 gap-6">
+      <Container className="my-12">
+        <FadeIn className="grid grid-cols-12 gap-6">
           <div className="col-span-12 lg:col-span-8">
             <div
               className="prose prose-slate prose-base"
@@ -39,13 +40,13 @@ export default function JobDetails() {
               <div className="flex gap-x-2 text-base text-neutral-950 font-semibold">
                 <PinIcon className="h-5 w-5" /> Dhaka, Bangladesh
               </div>
-              <p className="text-base text-neutral-600 leading-7 mt-2">
+              <p className="text-base text-neutral-600 leading-6 mt-2">
                 Please send us your details CV to apply for this post.
               </p>
               <p className="font-bold text-2xl text-neutral-950 mt-4">
                 $185,000
               </p>
-              <span className="text-base text-neutral-800 font-medium">
+              <span className="text-sm text-neutral-800 font-medium">
                 Average Salary
               </span>
               <div className="flex gap-x-2 mt-4">
@@ -109,7 +110,7 @@ export default function JobDetails() {
               </Link>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </Container>
     </div>
   );
