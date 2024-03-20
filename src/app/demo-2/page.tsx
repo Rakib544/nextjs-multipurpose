@@ -1,15 +1,10 @@
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
+import { FadeIn } from "@/components/fade-in";
+import { GridPattern } from "@/components/grid-pattern";
 import { Pricing } from "@/components/pricing";
-import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { buttonVariants } from "@/components/ui/button";
 import { seoServices } from "@/lib/data/seo-services";
 import Image from "next/image";
@@ -164,55 +159,55 @@ function WhyChooseUs() {
   return (
     <section className="my-32">
       <Container>
-        <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 lg:col-span-6">
-            <Image src="/banner-2.svg" alt="" height={450} width={450} />
-          </div>
-          <div className="col-span-12 lg:col-span-6">
-            <SectionIntro
-              title="We bring solutions to make life easier for clients"
-              eyebrow="Why choose us?"
+        <div className="grid grid-cols-12 gap-y-6 lg:gap-x-20 my-24 items-center">
+          <FadeIn className="col-span-12 lg:col-span-6 relative">
+            <Image
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1784&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              height={400}
+              width={300}
+              className="aspect-[16/14] object-cover rounded-xl w-full"
             />
-            <Accordion
-              type="single"
-              collapsible
-              defaultValue="item-1"
-              className="mt-6"
+          </FadeIn>
+          <div className="col-span-12 lg:col-span-6 max-w-lg">
+            <SectionIntro
+              eyebrow="Why Choose Us"
+              title="Unlock opportunities Maximizing Potentials"
             >
-              <AccordionItem className="border-none" value="item-1">
-                <AccordionTrigger className="font-semibold text-base text-neutral-950">
-                  Professional Design
-                </AccordionTrigger>
-                <AccordionContent className="text-base leading-7 text-neutral-700">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
-                  quibusdam quae accusantium ea repudiandae, rerum, deleniti
-                  pariatur iste omnis quod, ipsa placeat neque ullam. Nisi eius
-                  ullam optio hic cum.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem className="border-none" value="item-2">
-                <AccordionTrigger className="font-semibold text-base text-neutral-950">
-                  Professional Design
-                </AccordionTrigger>
-                <AccordionContent className="text-base leading-7 text-neutral-700">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
-                  quibusdam quae accusantium ea repudiandae, rerum, deleniti
-                  pariatur iste omnis quod, ipsa placeat neque ullam. Nisi eius
-                  ullam optio hic cum.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem className="border-none" value="item-3">
-                <AccordionTrigger className="font-semibold text-base text-neutral-950">
-                  Professional Design
-                </AccordionTrigger>
-                <AccordionContent className="text-base leading-7 text-neutral-700">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
-                  quibusdam quae accusantium ea repudiandae, rerum, deleniti
-                  pariatur iste omnis quod, ipsa placeat neque ullam. Nisi eius
-                  ullam optio hic cum.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+              <p>
+                We are a digital and branding company that believes in the power
+                of creative strategy and along with great design.
+              </p>
+              <ul className="mt-4 space-y-2">
+                <li className="flex gap-x-2">
+                  <div className="font-semibold text-neutral-950">{">"}</div>
+                  <div>
+                    <h3 className="font-bold text-neutral-950">
+                      Proven Track Record
+                    </h3>
+                    <p className="leading-7">
+                      With 7 years of industry experience, it has a proven track
+                      record of delivering innovative software solutions.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex gap-x-2">
+                  <div className="font-semibold text-neutral-950">{">"}</div>
+                  <div>
+                    <h3 className="font-bold text-neutral-950">
+                      Proven Track Record
+                    </h3>
+                    <p className="leading-7">
+                      With 7 years of industry experience, it has a proven track
+                      record of delivering innovative software solutions.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <Link href="" className={buttonVariants({ className: "mt-4" })}>
+                Learn More &rarr;
+              </Link>
+            </SectionIntro>
           </div>
         </div>
       </Container>
@@ -251,41 +246,243 @@ function LetsTalk() {
 export default function Demo2() {
   return (
     <main>
-      <Container>
+      <Container className="mt-16 lg:mt-20">
+        <div className="absolute z-[-1] inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
+          <GridPattern />
+        </div>
+
         <div className="grid grid-cols-12 gap-6 items-center">
-          <div className="col-span-12 lg:col-span-6">
-            <Image src="/banner-2.svg" height={450} width={450} alt="" />
+          <div className="col-span-12 lg:col-span-7">
+            <FadeIn className="order-2 lg:order-1 z-10">
+              <h1 className="text-4xl pr-10 font-bold md:text-5xl/tight">
+                Unlock Your Online Potential with Expert SEO Services.
+              </h1>
+              <p className="mt-3 text-lg text-neutral-600 leading-8">
+                Elevating Your Online Presence: Our Strategies Drive Traffic,
+                Boost Rankings, and Enhance Visibility in Search Engine Results.
+              </p>
+              <div className="flex gap-4 mt-7">
+                <Link
+                  href="/about-us"
+                  className={buttonVariants({
+                    size: "lg",
+                  })}
+                >
+                  Get Started
+                </Link>
+              </div>
+            </FadeIn>
           </div>
-          <div className="col-span-12 lg:col-span-6">
-            <h1 className="text-3xl font-bold tracking-tighter md:text-5xl/tight">
-              Grow Your Business With Our Solutions
-            </h1>
-            <p className="mt-3 text-lg text-neutral-600 leading-8 mb-4">
-              We Help you clients to increase their website traffic, ranking and
-              visibility in search result.
-            </p>
-            <Link href="" className={buttonVariants({ size: "lg" })}>
-              Try It For Free
-            </Link>
+          <div className="col-span-12 lg:col-span-5 relative">
+            <Image
+              src="/header1.png"
+              alt=""
+              height={300}
+              width={300}
+              className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl"
+            />
+
+            <Image
+              src="/header2.png"
+              alt=""
+              height={200}
+              width={300}
+              className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl mt-4 ml-4"
+            />
           </div>
         </div>
       </Container>
-      <Pricing2 />
-      <div className="my-32">
-        <SectionIntro
-          title="The service we offer is specially designed to meet your needs."
-          eyebrow="What we do?"
-        />
-        <Container>
-          <Services />
-        </Container>
-      </div>
-      <div className="my-32">
-        <Analyze />
-      </div>
-      <div className="my-32">
-        <Strategy />
-      </div>
+      <Container className="my-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="relative after:absolute after:h-2 after:w-full after:border-b-2 after:border-dashed after:top-10 after:-right-10 after:z-[-1]">
+            <span className="absolute h-16 w-16 bg-white border rounded-full flex justify-center items-center text-2xl font-bold right-1/2 top-4 text-stroke text-transparent">
+              01
+            </span>
+            <span className="h-20 w-20 rounded-full  block mb-4 bg-white">
+              <Image
+                src="/marketing.svg"
+                alt=""
+                height={100}
+                width={100}
+                className="border-2 border-dashed z-10 rounded-full p-1"
+              />
+            </span>
+            <div className="pr-10">
+              <h3 className="font-bold text-xl text-neutral-950 mb-2 mt-3">
+                Better Audiance
+              </h3>
+              <p className="text-neutral-600 text-base leading-7">
+                Bndulgence diminution so discovered mr perfect off under folly
+                death wrote cause her way spite. Plan upon yet way.
+              </p>
+            </div>
+          </div>
+          <div className="mt-20 after:-right-10 relative after:absolute after:h-2 after:w-full after:border-b-2 after:border-dashed after:top-10 after:z-[-1] ">
+            <span className="absolute h-16 w-16 bg-white border rounded-full flex justify-center items-center text-2xl font-bold right-1/2 top-4 text-stroke text-transparent">
+              02
+            </span>
+            <div className="h-20 w-20 rounded-xl mb-4 relative bg-white">
+              <span className="h-20 w-20 rounded-full block bg-white  before:absolute before:h-full before:w-1 before:border-r-2 before:border-dashed before:-top-1/2 mt-2 before:left-1/2 before:z-[-1]">
+                <Image
+                  src="/analytics.svg"
+                  alt=""
+                  height={100}
+                  width={100}
+                  className="z-10 border-2 border-dashed rounded-full p-1"
+                />
+              </span>
+            </div>
+            <div className="pr-10">
+              <h3 className="font-bold text-xl text-neutral-950 mb-2 mt-3">
+                Better Audiance
+              </h3>
+              <p className="text-neutral-600 text-base leading-7">
+                Bndulgence diminution so discovered mr perfect off under folly
+                death wrote cause her way spite. Plan upon yet way.
+              </p>
+            </div>
+          </div>
+          <div className="mt-40 relative">
+            <span className="absolute h-16 w-16 bg-white border rounded-full flex justify-center items-center text-2xl font-bold right-1/2 top-4 text-stroke text-transparent">
+              03
+            </span>
+            <div className="h-20 w-20 mb-4 rounded-full relative bg-white">
+              <span className="h-20 w-20 mb-4 rounded-full block bg-white before:z-[-1] before:absolute before:h-full before:w-1 before:border-r-2 before:border-dashed before:-top-1/2 mt-2 before:left-1/2 after:z-[-1]">
+                <Image
+                  src="/earn-money.svg"
+                  alt=""
+                  height={200}
+                  width={200}
+                  className="border-2 border-dashed z-10 rounded-full p-1"
+                />
+              </span>
+            </div>
+            <div className="pr-10">
+              <h3 className="font-bold text-xl text-neutral-950 mb-2 mt-3">
+                Better Audiance
+              </h3>
+              <p className="text-neutral-600 text-base leading-7">
+                Bndulgence diminution so discovered mr perfect off under folly
+                death wrote cause her way spite. Plan upon yet way.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+      <Container className="my-32">
+        <div className="grid grid-cols-12 gap-20 items-center">
+          <div className="col-span-12 lg:col-span-7">
+            <div className="grid grid-cols-2 gap-8">
+              <div className="space-y-8">
+                <div className="p-6 bg-slate-50 border rounded-xl">
+                  <Image
+                    src="https://uithemez.com/i/funnelio/home2_seo/assets/img/icons/f1.svg"
+                    alt=""
+                    width={80}
+                    height={80}
+                  />
+                  <h3 className="mt-5 font-bold text-lg">SEO Services</h3>
+                  <p className="text-base leading-7 mt-3">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vero incidunt cupiditate iusto!
+                  </p>
+                  <Link
+                    href=""
+                    className={buttonVariants({
+                      variant: "link",
+                      className: "px-0 mt-4",
+                    })}
+                  >
+                    Read More &rarr;
+                  </Link>
+                </div>
+                <div className="p-6 bg-slate-50 border rounded-xl">
+                  <Image
+                    src="https://uithemez.com/i/funnelio/home2_seo/assets/img/icons/f1.svg"
+                    alt=""
+                    width={80}
+                    height={80}
+                  />
+                  <h3 className="mt-5 font-bold text-lg">SEO Services</h3>
+                  <p className="text-base leading-7 mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error fugit est.
+                  </p>
+                  <Link
+                    href=""
+                    className={buttonVariants({
+                      variant: "link",
+                      className: "px-0 mt-2",
+                    })}
+                  >
+                    Read More &rarr;
+                  </Link>
+                </div>
+              </div>
+              <div className="mt-16 space-y-6">
+                <div className="p-6 bg-slate-50 border rounded-xl">
+                  <Image
+                    src="https://uithemez.com/i/funnelio/home2_seo/assets/img/icons/f1.svg"
+                    alt=""
+                    width={80}
+                    height={80}
+                  />
+                  <h3 className="mt-5 font-bold text-lg">SEO Services</h3>
+                  <p className="text-base leading-7 mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error fugit est.
+                  </p>
+                  <Link
+                    href=""
+                    className={buttonVariants({
+                      variant: "link",
+                      className: "px-0 mt-2",
+                    })}
+                  >
+                    Read More &rarr;
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-span-12 lg:col-span-5">
+            <SectionIntro
+              eyebrow="Core Features"
+              title="So what do company do exactly?"
+            >
+              <p>
+                We’re a full-stack firm that can help you from strategy to
+                launch, and anywhere in between.
+              </p>
+              <p className="mt-4">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
+                unde laboriosam ipsa numquam mollitia fugiat repellat distinctio
+                modi voluptatem officiis!
+              </p>
+            </SectionIntro>
+            <h4 className="mt-8 font-bold text-base mb-2">
+              Easily Check Your SEO Score Now
+            </h4>
+            <div className="relative">
+              <input
+                type="link"
+                placeholder="Enter Website URL"
+                aria-label="Enter Website URL"
+                className="block w-full rounded-full border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
+              />
+              <div className="absolute inset-y-1 right-1 flex justify-end">
+                <button
+                  type="submit"
+                  aria-label="Submit"
+                  className="flex w-full px-6 h-full items-center justify-center rounded-full bg-neutral-950 text-white transition hover:bg-neutral-800"
+                >
+                  Check
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
       <WhyChooseUs />
       <Container className="mt-16 mb-32">
         <SectionIntro
@@ -304,7 +501,9 @@ export default function Demo2() {
           <StatListItem value="$25M" label="Invoices billed" />
         </StatList>
       </Container>
-      <Pricing />
+      <Container>
+        <Pricing />
+      </Container>
       <LetsTalk />
       <Clients />
     </main>

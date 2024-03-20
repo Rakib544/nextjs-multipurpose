@@ -20,15 +20,15 @@ export default function FaqCard1({
   return (
     <FadeIn {...(props as any)}>
       <AccordionItem className="border-none" value={`item=${id}`}>
-        <AccordionTrigger className="font-semibold text-base text-neutral-950">
+        <AccordionTrigger className="font-semibold text-base text-neutral-950 text-start">
           <div>
-            <span className="h-10 w-10 border-[1.5px] rounded-lg inline-flex items-center justify-center mr-3">
+            <span className="hidden h-10 w-10 border-[1.5px] rounded-lg md:inline-flex items-center justify-center mr-3">
               {id.padStart(2, "0")}
             </span>
             {question}
           </div>
         </AccordionTrigger>
-        <AccordionContent className="text-base leading-7 text-neutral-700 ml-12">
+        <AccordionContent className="text-base leading-7 text-neutral-700 ml-0 md:ml-12">
           {answer}
         </AccordionContent>
       </AccordionItem>

@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { FaqCard2 } from "@/components/faq-card/index";
 import { GridPattern } from "@/components/grid-pattern";
 import { PageIntro } from "@/components/page-intro";
 import { Pricing1 } from "@/components/pricing/index";
@@ -12,6 +13,7 @@ import partnershipIcon from "@/images/key-features/partnership.svg";
 import performanceIcon from "@/images/key-features/performance.svg";
 import subscriptionIcon from "@/images/key-features/subscription.svg";
 import supportIcon from "@/images/key-features/support.svg";
+import { faqData } from "@/lib/data/faq-data";
 import Link from "next/link";
 
 const data = [
@@ -58,7 +60,7 @@ export default function Services1() {
           recusandae facilis distinctio id, animi facere!
         </p>
       </PageIntro>
-      <Container className="my-32">
+      <Container className="mt-12">
         <StatList>
           <StatListItem
             label="of sharing architectural landscapes"
@@ -124,7 +126,25 @@ export default function Services1() {
       <Container className="my-32">
         <Pricing1 />
       </Container>
-      <p>Faq will be here</p>
+      <Container>
+        <SectionIntro eyebrow="FAQ" title="Frequently asked questions">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at
+            quam, doloremque maiores fuga numquam!
+          </p>
+        </SectionIntro>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12">
+          {faqData.splice(0, 6).map((faq) => (
+            <FaqCard2
+              key={faq.id}
+              id={faq.id.toString()}
+              question={faq.question}
+              answer={faq.answer}
+            />
+          ))}
+        </div>
+      </Container>
     </div>
   );
 }

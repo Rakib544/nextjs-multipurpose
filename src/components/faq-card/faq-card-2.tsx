@@ -14,15 +14,15 @@ export default function FaqCard2({
 }: FaqCardProps) {
   return (
     <FadeIn {...(props as any)}>
-      <div className="flex gap-x-4">
-        <div className="h-10 w-10 border-[1.5px] font-semibold rounded-lg shrink-0 flex justify-center items-center">
+      <div className="flex flex-col md:flex-row gap-x-4">
+        <div className="h-10 w-10 mb-2 md:mb-0 border-[1.5px] font-semibold rounded-lg shrink-0 flex justify-center items-center">
           {id.padStart(2, "0")}
         </div>
         <div>
           <h2 className="font-semibold text-base text-neutral-950">
             {question}
           </h2>
-          <p className="text-base leading-7 text-neutral-700 mt-2">{answer}</p>
+          <p className="text-base leading-7 text-neutral-600 mt-2">{answer}</p>
         </div>
       </div>
     </FadeIn>

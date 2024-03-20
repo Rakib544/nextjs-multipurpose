@@ -10,7 +10,7 @@ export function Pricing1() {
   );
   return (
     <section>
-      <div className="flex justify-center item-center gap-x-1">
+      <div className="flex justify-end item-center gap-x-1">
         <span
           className={
             pricingType === "monthly"
@@ -36,7 +36,7 @@ export function Pricing1() {
         </span>
       </div>
       <section id="pricing">
-        <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
+        <div className="-mx-4 mt-8 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           {pricingData.map((price) => (
             <PlanCard2
               pricingType={pricingType}
