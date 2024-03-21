@@ -1,159 +1,27 @@
-import { Clients } from "@/components/clients";
+import { BlogCard2 } from "@/components/blog-card";
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import { GridPattern } from "@/components/grid-pattern";
-import { Pricing } from "@/components/pricing";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { buttonVariants } from "@/components/ui/button";
-import { seoServices } from "@/lib/data/seo-services";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { testimonials } from "@/lib/data/testimonials-data";
 import Image from "next/image";
 import Link from "next/link";
-
-function Services() {
-  return (
-    <section className="grid grid-cols-12 gap-4 mt-14">
-      {seoServices.map((service) => (
-        <div
-          className="col-span-12 md:col-span-6 lg:col-span-3"
-          key={service.id}
-        >
-          <p>Icon</p>
-          <h3 className="text-lg font-bold leading-7 text-neutral-950 mb-2">
-            {service.title}
-          </h3>
-          <p className="text-base leading-7 text-neutral-700">
-            {service.description}
-          </p>
-        </div>
-      ))}
-    </section>
-  );
-}
-
-function Analyze() {
-  return (
-    <section className="grid grid-cols-12 gap-6">
-      <div className="col-span-12 lg:col-span-6">
-        <SectionIntro
-          eyebrow="Analyze Now"
-          title="Wonder how much faster you site can go? Easily check you SEO score now"
-        >
-          <p className="text-base leading-7 text-neutral-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-            explicabo temporibus? Voluptatem dignissimos odit totam earum animi
-            sequi, libero laudantium! Autem, sunt eveniet? Necessitatibus id
-            consequatur itaque soluta et cum dolore eaque eius excepturi nostrum
-            doloribus ea quia, ipsum commodi.
-          </p>
-        </SectionIntro>
-        <Container>
-          <div className="relative mt-6">
-            <input
-              type="link"
-              placeholder="Enter Website URL"
-              aria-label="Enter Website URL"
-              className="block w-full rounded-full border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
-            />
-            <div className="absolute inset-y-1 right-1 flex justify-end">
-              <button
-                type="submit"
-                aria-label="Submit"
-                className="flex w-full px-6 h-full items-center justify-center rounded-full bg-neutral-950 text-white transition hover:bg-neutral-800"
-              >
-                Check
-              </button>
-            </div>
-          </div>
-        </Container>
-      </div>
-      <div className="col-span-12 lg:col-span-6">
-        <Image src="/banner-2.svg" height={450} width={450} alt="" />
-      </div>
-    </section>
-  );
-}
-
-function Strategy() {
-  return (
-    <Container className="grid grid-cols-12 gap-6">
-      <div className="col-span-12 lg:col-span-6">
-        <SectionIntro
-          eyebrow="Our Strategy"
-          title="Here are 3 working steps to organize our business projects."
-        >
-          <p className="text-base leading-7 text-neutral-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-            minima, inventore tempore odio aut repellendus ipsa ipsam enim
-            facilis ipsum dolorem, suscipit aspernatur dolores eius iste. Quo
-            molestias sed sint.
-          </p>
-          <p className="text-base leading-7 text-neutral-700 mt-2 mb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            dolorum alias libero mollitia ipsa sit?
-          </p>
-        </SectionIntro>
-        <Container>
-          <Link href="" className={buttonVariants({ size: "lg" })}>
-            Learn More
-          </Link>
-        </Container>
-      </div>
-      <Container className="col-span-12 lg:col-span-6 space-y-6">
-        <div className="border p-6 rounded-xl flex gap-x-6 relative">
-          <span className="text-3xl font-bold">01</span>
-          <div>
-            <h3 className="font-bold text-lg mb-1 text-neutral-950">
-              Lorem ipsum dolor sit.
-            </h3>
-            <p className="text-base leading-7 text-neutral-700">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Quibusdam.
-            </p>
-            <Image
-              src="/arrowOdd.svg"
-              alt=""
-              height={10}
-              width={170}
-              className="absolute top-20 -right-28 rotate-90"
-            />
-          </div>
-        </div>
-        <div className="border p-6 rounded-xl flex gap-x-6 relative">
-          <span className="text-3xl font-bold">01</span>
-          <div>
-            <h3 className="font-bold text-lg mb-1 text-neutral-950">
-              Lorem ipsum dolor sit.
-            </h3>
-            <p className="text-base leading-7 text-neutral-700">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Quibusdam.
-            </p>
-            <Image
-              src="/arrowOdd.svg"
-              alt=""
-              height={10}
-              width={170}
-              className="absolute top-36 -right-28 rotate-90"
-            />
-          </div>
-        </div>
-        <div className="border p-6 rounded-xl flex gap-x-6">
-          <span className="text-3xl font-bold">01</span>
-          <div>
-            <h3 className="font-bold text-lg mb-1 text-neutral-950">
-              Lorem ipsum dolor sit.
-            </h3>
-            <p className="text-base leading-7 text-neutral-700">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Quibusdam.
-            </p>
-          </div>
-        </div>
-      </Container>
-    </Container>
-  );
-}
 
 function WhyChooseUs() {
   return (
@@ -215,34 +83,237 @@ function WhyChooseUs() {
   );
 }
 
-function LetsTalk() {
+function WhatWeOffer() {
   return (
     <Container className="my-32">
-      <div className="grid grid-cols-12 gap-6">
-        <div className="col-span-12 lg:col-span-6">
-          <Image src="/banner-2.svg" alt="" height={450} width={450} />
-        </div>
-        <div className="col-span-12 lg:col-span-6">
+      <SectionIntro
+        title="We Offer Full range of digital marketing services!"
+        eyebrow="What we offer"
+      />
+      <Tabs
+        defaultValue="item-1"
+        className="w-full grid grid-cols-12 gap-x-6 mt-8"
+      >
+        <TabsList className="col-span-3 flex flex-col h-full text-left items-start !justify-start bg-white border-r p-0">
+          <TabsTrigger value="item-1" className="w-full py-3">
+            Goal Tracking
+          </TabsTrigger>
+          <TabsTrigger value="item-2" className="w-full py-3">
+            Keywords Rankings
+          </TabsTrigger>
+          <TabsTrigger value="item-3" className="w-full py-3">
+            Site optimization
+          </TabsTrigger>
+          <TabsTrigger value="item-4" className="w-full py-3">
+            Content Planning
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="item-1" className="col-span-9 ml-10">
+          <h3 className="text-xl font-bold text-neutral-950 mb-2">
+            How we tracking success
+          </h3>
+          <p className="text-base leading-7 text-neutral-700">
+            SEO goals are important for measuring the success of your SEO
+            strategy. To set good SEO goals, they should be specific,
+            measurable, actionable, relevant, and time-bound (SMART).
+          </p>
+          <ul className="mt-4 space-y-1 text-neutral-700 list-disc list-inside">
+            <li>Improve Your Website Loading Speed</li>
+            <li>Get Your Site Inside of Featured Snippets</li>
+            <li>improve Dwell Time</li>
+            <li>Use Site-links</li>
+          </ul>
+        </TabsContent>
+        <TabsContent value="item-2" className="col-span-9 ml-10">
+          <h3 className="text-xl font-bold text-neutral-950 mb-2">
+            How we ranking keywords
+          </h3>
+          <p className="text-base leading-7 text-neutral-700">
+            SEO goals are important for measuring the success of your SEO
+            strategy. To set good SEO goals, they should be specific,
+            measurable, actionable, relevant, and time-bound (SMART).
+          </p>
+          <ul className="mt-4 space-y-1 text-neutral-700 list-disc list-inside">
+            <li>Improve Your Website Loading Speed</li>
+            <li>Get Your Site Inside of Featured Snippets</li>
+            <li>improve Dwell Time</li>
+            <li>Use Site-links</li>
+          </ul>
+        </TabsContent>
+        <TabsContent value="item-3" className="col-span-9 ml-10 rounded-xl">
+          <h3 className="text-xl font-bold text-neutral-950 mb-2">
+            How we site optimization
+          </h3>
+          <p className="text-base leading-7 text-neutral-700">
+            SEO goals are important for measuring the success of your SEO
+            strategy. To set good SEO goals, they should be specific,
+            measurable, actionable, relevant, and time-bound (SMART).
+          </p>
+          <ul className="mt-4 space-y-1 text-neutral-700 list-disc list-inside">
+            <li>Improve Your Website Loading Speed</li>
+            <li>Get Your Site Inside of Featured Snippets</li>
+            <li>improve Dwell Time</li>
+            <li>Use Site-links</li>
+          </ul>
+        </TabsContent>
+        <TabsContent value="item-4" className="col-span-9 ml-10">
+          <h3 className="text-xl font-bold text-neutral-950 mb-2">
+            How we plan for writing content
+          </h3>
+          <p className="text-base leading-7 text-neutral-700">
+            SEO goals are important for measuring the success of your SEO
+            strategy. To set good SEO goals, they should be specific,
+            measurable, actionable, relevant, and time-bound (SMART).
+          </p>
+          <ul className="mt-4 space-y-1 text-neutral-700 list-disc list-inside">
+            <li>Improve Your Website Loading Speed</li>
+            <li>Get Your Site Inside of Featured Snippets</li>
+            <li>improve Dwell Time</li>
+            <li>Use Site-links</li>
+          </ul>
+        </TabsContent>
+      </Tabs>
+    </Container>
+  );
+}
+
+function MainAbility() {
+  return (
+    <Container className="my-32">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div>
           <SectionIntro
-            eyebrow="Lets Talk"
-            title="Lets make sometihng great together. We are trusted by over 3000+ clients"
+            eyebrow="Main Ability"
+            title="We are able to play with SEO integrations"
           >
-            <p className="text-base leading-7 text-neutral-700 mb-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates, minima, inventore tempore odio aut repellendus ipsa
-              ipsam enim facilis ipsum dolorem, suscipit aspernatur dolores eius
-              iste. Quo molestias sed sint.
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
+              ratione! Quas officia voluptate maiores, deserunt odit amet rerum
+              sapiente cumque!
             </p>
           </SectionIntro>
-          <Link href="" className={buttonVariants({ size: "lg" })}>
-            Join Us
-          </Link>
+          <FadeIn>
+            <Accordion type="single" className="mt-5" defaultValue="item-1">
+              <AccordionItem value="item-1" className="border-0">
+                <AccordionTrigger className="font-bold text-neutral-950">
+                  How can i make this happen?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-neutral-700 leading-7">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem, esse assumenda temporibus at perferendis hic
+                  incidunt repudiandae aut necessitatibus quam?
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2" className="border-0">
+                <AccordionTrigger className="font-bold text-neutral-950">
+                  How can i make this happen?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-neutral-700 leading-7">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem, esse assumenda temporibus at perferendis hic
+                  incidunt repudiandae aut necessitatibus quam?
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3" className="border-0">
+                <AccordionTrigger className="font-bold text-neutral-950">
+                  How can i customize this?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-neutral-700 leading-7">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem, esse assumenda temporibus at perferendis hic
+                  incidunt repudiandae aut necessitatibus quam?
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4" className="border-0">
+                <AccordionTrigger className="font-bold text-neutral-950">
+                  How can i achieve this?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-neutral-700 leading-7">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem, esse assumenda temporibus at perferendis hic
+                  incidunt repudiandae aut necessitatibus quam?
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </FadeIn>
         </div>
+
+        <FadeIn className="relative">
+          <Image
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1784&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            height={400}
+            width={300}
+            className="aspect-[16/14] object-cover rounded-xl w-full"
+          />
+        </FadeIn>
       </div>
     </Container>
   );
 }
 
+function Testimonials() {
+  return (
+    <Container className="py-20 relative">
+      <SectionIntro
+        eyebrow="Testimonials"
+        title="Loved by businesses worldwide."
+      >
+        <p className="text-neutral-700 leading-7 text-base">
+          Our software is so simple that people can’t help but fall in love with
+          it. Simplicity is easy when you just skip tons of mission-critical
+          features.
+        </p>
+      </SectionIntro>
+
+      <Carousel
+        className="w-full md:max-w-full rounded-xl relative mt-12"
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+      >
+        <CarouselContent className="">
+          {testimonials.map((testimonial, index) => (
+            <CarouselItem
+              className="basis-full md:basis-[50%] bg-slate-50 mx-2 py-10 rounded-xl border px-10"
+              key={index}
+            >
+              <figure>
+                <blockquote className="mt-10 font-display text-lg leading-8  font-medium tracking-tight text-slate-900 sm:text-center">
+                  {testimonial.content}
+                </blockquote>
+                <figcaption className="mt-10 flex items-center sm:justify-center">
+                  <div className="overflow-hidden rounded-full bg-slate-50">
+                    <Image
+                      className="h-12 w-12 object-cover"
+                      src={testimonial.image}
+                      alt=""
+                      width={48}
+                      height={48}
+                    />
+                  </div>
+                  <div className="ml-4">
+                    <div className="text-base font-medium leading-6 tracking-tight text-slate-900">
+                      {testimonial.name}
+                    </div>
+                    <div className="mt-1 text-sm text-slate-600">
+                      {testimonial.role}
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <div className="flex justify-end gap-x-4 items-center">
+          <CarouselPrevious className="!-left-4" />
+          <CarouselNext className="!-right-4" />
+        </div>
+      </Carousel>
+    </Container>
+  );
+}
 export default function Demo2() {
   return (
     <main>
@@ -254,10 +325,10 @@ export default function Demo2() {
         <div className="grid grid-cols-12 gap-6 items-center">
           <div className="col-span-12 lg:col-span-7">
             <FadeIn className="order-2 lg:order-1 z-10">
-              <h1 className="text-4xl pr-10 font-bold md:text-5xl/tight">
+              <h1 className="text-4xl pr-10 font-bold md:text-4xl/tight max-w-lg">
                 Unlock Your Online Potential with Expert SEO Services.
               </h1>
-              <p className="mt-3 text-lg text-neutral-600 leading-8">
+              <p className="mt-3 text-lg text-neutral-600 leading-8 max-w-xl">
                 Elevating Your Online Presence: Our Strategies Drive Traffic,
                 Boost Rankings, and Enhance Visibility in Search Engine Results.
               </p>
@@ -342,7 +413,7 @@ export default function Demo2() {
               </p>
             </div>
           </div>
-          <div className="mt-40 relative">
+          <div className="mt-40 relative flex">
             <span className="absolute h-16 w-16 bg-white border rounded-full flex justify-center items-center text-2xl font-bold right-1/2 top-4 text-stroke text-transparent">
               03
             </span>
@@ -501,11 +572,23 @@ export default function Demo2() {
           <StatListItem value="$25M" label="Invoices billed" />
         </StatList>
       </Container>
+      <WhatWeOffer />
+      <MainAbility />
+      <Testimonials />
       <Container>
-        <Pricing />
+        <SectionIntro eyebrow="NEWS & EVENTS" title="Check out our blog posts">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            quo quibusdam omnis deleniti itaque praesentium enim repellendus,
+            nisi porro odit?
+          </p>
+        </SectionIntro>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-6">
+          <BlogCard2 />
+          <BlogCard2 />
+          <BlogCard2 />
+        </div>
       </Container>
-      <LetsTalk />
-      <Clients />
     </main>
   );
 }
