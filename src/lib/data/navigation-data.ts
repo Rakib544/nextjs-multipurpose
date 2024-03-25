@@ -6,26 +6,38 @@ export const navLinks = [
     submenus: [
       {
         id: 111,
-        label: "Homepage-1",
+        label: "Sass Agency",
         href: "/demo-1",
         submenus: [],
       },
       {
         id: 112,
-        label: "Homepage-2",
+        label: "SEO Agency",
         href: "/demo-2",
         submenus: [],
       },
       {
         id: 113,
-        label: "Homepage-3",
+        label: "Digital Agency",
         href: "/demo-3",
         submenus: [],
       },
       {
         id: 114,
-        label: "Homepage-4",
+        label: "Marketing Agency",
         href: "/demo-4",
+        submenus: [],
+      },
+      {
+        id: 114,
+        label: "App Landing Page",
+        href: "/demo-6",
+        submenus: [],
+      },
+      {
+        id: 114,
+        label: "Digital Studio",
+        href: "/demo-8",
         submenus: [],
       },
     ],

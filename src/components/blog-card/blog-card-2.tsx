@@ -1,38 +1,27 @@
-import blogCardImage from "@/images/office.jpg";
 import Image from "next/image";
 import Link from "next/link";
-import { buttonVariants } from "../ui/button";
 export default function BlogCard2() {
   return (
     <article>
-      <div className="aspect-[16/9] relative">
+      <div className="aspect-square relative">
         <Image
-          src={blogCardImage}
+          src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
           fill
-          className="rounded-lg object-cover"
+          className="object-cover"
         />
       </div>
 
       <Link href="">
-        <h2 className="text-xl tracking-tight font-bold mt-3 text-neutral-950">
-          Secure you business finalcial future today
+        <h2 className="text-lg mt-4 font-bold tracking-tight text-neutral-950 line-clamp-2">
+          The Future of Web Development: Our Predictions for 2023
         </h2>
       </Link>
-      <p className="text-base mt-2  leading-8 line-clamp-2 text-neutral-600">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas quo
-        inventore omnis error soluta iusto, nobis adipisci quis exercitationem
-        vitae.
+      <p className="mt-2 text-base text-neutral-600 line-clamp-2 leading-7 font-medium">
+        Let’s explore the latest trends in web development, and regurgitate some
+        predictions we read on X for how they will shape the industry in the
+        coming year.
       </p>
-      <Link
-        href=""
-        className={buttonVariants({
-          variant: "outline",
-          className: "mt-4",
-        })}
-      >
-        Read More &rarr;
-      </Link>
     </article>
   );
 }

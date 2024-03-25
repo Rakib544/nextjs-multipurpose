@@ -13,7 +13,7 @@ export default function Blogs2() {
         </p>
       </PageIntro>
       <Container className="my-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-6 gap-y-8">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
             <BlogCard2 key={i} />
           ))}

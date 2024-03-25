@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <NavigationMenu
-      className={`pt-8 max-w-none z-50 flex !w-full justify-between items-center ${
+      className={`pt-8 pb-8 max-w-none z-50 flex !w-full justify-between items-center ${
         isAuthRoute ? "hidden" : ""
       }`}
     >

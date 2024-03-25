@@ -101,9 +101,7 @@ export function Footer2() {
   return (
     <footer>
       <Container
-        className={`mt-24 w-full sm:mt-32 lg:mt-40 ${
-          isAuthRoute ? "hidden" : ""
-        }`}
+        className={`mt-24 w-full sm:mt-32 ${isAuthRoute ? "hidden" : ""}`}
       >
         <FadeIn className="lg:px-4">
           <div className="grid grid-cols-12 md:gap-x-8 gap-y-16">
