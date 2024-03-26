@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { FadeIn, FadeInStagger } from "./fade-in";
-import { SectionIntro } from "./section-intro";
 
 const data = [
   {
@@ -26,14 +25,7 @@ const data = [
 ];
 export default function Workflow() {
   return (
-    <section className="my-32 py-20">
-      <div className="max-w-xl mx-auto text-center mb-20">
-        <SectionIntro
-          title="Let’s see how it works"
-          eyebrow="Whats the function"
-        />
-      </div>
-
+    <section>
       <FadeInStagger faster className="grid grid-cols-12 gap-6 relative pb-10">
         {data.map((d) => (
           <FadeIn className="col-span-12 lg:col-span-3 relative" key={d.id}>
