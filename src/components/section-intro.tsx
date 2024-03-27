@@ -27,8 +27,8 @@ export function SectionIntro({
           <>
             <span
               className={clsx(
-                "mb-2 block font-display text-sm font-medium",
-                invert ? "text-white" : "text-neutral-950"
+                "mb-4 block font-display text-sm font-bold",
+                invert ? "text-white" : "text-neutral-800"
               )}
             >
               {eyebrow}
@@ -39,7 +39,7 @@ export function SectionIntro({
         <span
           className={clsx(
             "block [text-wrap:balance]",
-            smaller ? "text-2xl font-bold" : "text-3xl font-bold",
+            smaller ? "text-2xl font-extrabold" : "text-3xl font-extrabold",
             invert ? "text-white" : "text-neutral-950"
           )}
         >

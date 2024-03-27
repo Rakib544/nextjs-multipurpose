@@ -28,6 +28,8 @@ type CarouselContextProps = {
   scrollNext: () => void;
   canScrollPrev: boolean;
   canScrollNext: boolean;
+  currentItem: number;
+  onSlideJump: (index: number) => void;
 } & CarouselProps;
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null);
@@ -67,6 +69,11 @@ const Carousel = React.forwardRef<
     );
     const [canScrollPrev, setCanScrollPrev] = React.useState(false);
     const [canScrollNext, setCanScrollNext] = React.useState(false);
+    const [currentItem, setSelectedItem] = React.useState(0);
+
+    const onSlideJump = React.useCallback((index: number) => {
+      setSelectedItem(index);
+    }, []);
 
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
@@ -75,14 +82,17 @@ const Carousel = React.forwardRef<
 
       setCanScrollPrev(api.canScrollPrev());
       setCanScrollNext(api.canScrollNext());
+      setSelectedItem(api.selectedScrollSnap());
     }, []);
 
     const scrollPrev = React.useCallback(() => {
       api?.scrollPrev();
+      setSelectedItem((prev) => prev - 1);
     }, [api]);
 
     const scrollNext = React.useCallback(() => {
       api?.scrollNext();
+      setSelectedItem((prev) => prev + 1);
     }, [api]);
 
     const handleKeyDown = React.useCallback(
@@ -90,9 +100,11 @@ const Carousel = React.forwardRef<
         if (event.key === "ArrowLeft") {
           event.preventDefault();
           scrollPrev();
+          setSelectedItem((prev) => prev - 1);
         } else if (event.key === "ArrowRight") {
           event.preventDefault();
           scrollNext();
+          setSelectedItem((prev) => prev + 1);
         }
       },
       [scrollPrev, scrollNext]
@@ -132,6 +144,8 @@ const Carousel = React.forwardRef<
           scrollNext,
           canScrollPrev,
           canScrollNext,
+          onSlideJump,
+          currentItem,
         }}
       >
         <div
@@ -194,6 +208,41 @@ const CarouselItem = React.forwardRef<
 });
 CarouselItem.displayName = "CarouselItem";
 
+const CarouselDotButton = React.forwardRef<
+  HTMLButtonElement,
+  React.ComponentProps<typeof Button>
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+  const { api, currentItem, onSlideJump } = useCarousel();
+
+  const handleJumpSlide = (index: number) => {
+    api?.scrollTo(index + 1);
+    onSlideJump(index);
+  };
+  return (
+    <div className="flex gap-x-2">
+      {[...Array((api?.scrollSnapList().length || 1) - 1)].map((_, index) => (
+        <Button
+          key={index + 1}
+          ref={ref}
+          variant={variant}
+          size={size}
+          className={cn(
+            "h-2 w-2 bg-transparent ring-2  rounded-full",
+            className,
+            index === currentItem ? "ring-slate-700" : "ring-slate-300"
+          )}
+          onClick={() => handleJumpSlide(index)}
+          {...props}
+        >
+          <span></span>
+        </Button>
+      ))}
+    </div>
+  );
+});
+
+CarouselDotButton.displayName = "CarouselDotButton";
+
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
@@ -255,6 +304,7 @@ CarouselNext.displayName = "CarouselNext";
 export {
   Carousel,
   CarouselContent,
+  CarouselDotButton,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,

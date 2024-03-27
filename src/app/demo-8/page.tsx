@@ -3,8 +3,6 @@ import { BlogCard2 } from "@/components/blog-card";
 import CallToAction from "@/components/call-to-action";
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
-import { FadeIn } from "@/components/fade-in";
-import { GridPattern } from "@/components/grid-pattern";
 import Portfolios from "@/components/portfolio";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
@@ -20,6 +18,7 @@ import {
 import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
 import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
 import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
+import Image from "next/image";
 import Link from "next/link";
 import TestingSection from "./testing";
 
@@ -79,48 +78,81 @@ function OurTeam() {
 export default function CreativeDigitalStudio() {
   return (
     <div>
-      <div className="absolute z-[-1] inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-        <GridPattern />
-      </div>
-      <Container className="mt-20">
-        <FadeIn>
-          <h1 className="font-extrabold text-8xl max-w-2xl tracking-tight">
-            Creative Design Studio
-          </h1>
-        </FadeIn>
-        <FadeIn>
-          <p className="max-w-xl text-base leading-8 mt-6">
-            Welcome to our digital agency! We specialize in helping businesses
-            like yours succeed online. From website design and development to
-            digital marketing and advertising, we have the tools.
+      <div
+        className="absolute min-h-screen w-full top-0 z-[-2] bg-cover"
+        style={{
+          backgroundImage:
+            "url(https://tailwindui.com/img/beams-basic-transparent.png)",
+        }}
+      ></div>
+      <span className="absolute h-80 w-80 top-40 bg-gradient-to-r from-indigo-50 to-white  z-[-1] rotate-45 -left-52"></span>
+      <Container className="relative overflow-x-hidden">
+        <span className="text-9xl -rotate-12 font-black absolute z-[-1] text-indigo-50 lg:bottom-48 -ml-10 lg:left-1/2">
+          Design Studio
+        </span>
+
+        <div className="absolute right-0 lg:right-10 bg-white shadow-xl p-5 rounded-xl bottom-96 lg:bottom-20">
+          <p className="font-bold">5000+</p>
+          <p className="text-sm text-neutral-600 font-medium">
+            Satisfied Clients
           </p>
-          <Link
-            href=""
-            className={buttonVariants({ size: "lg", className: "mt-8" })}
+        </div>
+
+        <div className="grid grid-cols-12 items-center gap-y-6 lg:gap-x-10 z-10">
+          <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
+            <div className="max-w-xl">
+              <h1 className="text-3xl font-black  md:text-4xl/tight">
+                Transform{" "}
+                <span className="-ml-1.5 inline-block bg-indigo-600 px-2 text-white rotate-2">
+                  Your Brand&apos;s
+                </span>{" "}
+                Narrative with Remarkable Design
+              </h1>
+              <p className="text-base mt-6 text-neutral-800 leading-8">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatibus libero placeat reprehenderit magni, maiores aliquam
+                atque nisi fugiat veniam dicta autem odio obcaecati,
+              </p>
+              <Link
+                href=""
+                className={buttonVariants({
+                  size: "lg",
+                  className: "mt-8 bg-indigo-600 text-white",
+                })}
+              >
+                Explore our works <span className="ml-2">&rarr;</span>
+              </Link>
+            </div>
+          </div>
+          <div className="col-span-12 lg:col-span-6 order-1 lg:order-2">
+            <Image src="/design-studio.png" alt="" height={577} width={517} />
+          </div>
+        </div>
+      </Container>
+      {/* <div className="bg-gradient-to-b from-gray-50 to-white py-2"></div> */}
+
+      <div className="bg-[#0A2540]">
+        <Container className="py-32">
+          <SectionIntro
+            invert
+            className="mb-12"
+            title="We Providing Digital Services in USA."
           >
-            Explore our works <span className="ml-2">&rarr;</span>
-          </Link>
-        </FadeIn>
-      </Container>
-      <Container className="my-32">
-        <SectionIntro
-          className="mb-12"
-          title="We Providing Digital Services in USA."
-        >
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
-            assumenda voluptatibus quos voluptate asperiores impedit veniam sed
-            illum soluta explicabo?
-          </p>
-        </SectionIntro>
-        <StatList>
-          <StatListItem value="10K" label="Project Completed" />
-          <StatListItem value="180" label="Skilled professionals" />
-          <StatListItem value="500" label="Visited Conference" />
-          <StatListItem value="50K" label="Happy Clients" />
-        </StatList>
-      </Container>
-      <Container className="my-32">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              assumenda voluptatibus quos voluptate asperiores impedit veniam
+              sed illum soluta explicabo?
+            </p>
+          </SectionIntro>
+          <StatList>
+            <StatListItem value="10K" label="Project Completed" />
+            <StatListItem value="180" label="Skilled professionals" />
+            <StatListItem value="500" label="Visited Conference" />
+            <StatListItem value="50K" label="Happy Clients" />
+          </StatList>
+        </Container>
+      </div>
+      <Container className="my-32 relative">
         <TestingSection />
       </Container>
       <OurAwards />

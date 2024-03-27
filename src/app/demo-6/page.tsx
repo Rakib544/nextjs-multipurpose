@@ -7,6 +7,7 @@ import Link from "next/link";
 import { BlogCard2 } from "@/components/blog-card";
 import CallToAction from "@/components/call-to-action";
 import { SectionIntro } from "@/components/section-intro";
+import Testimonials2 from "@/components/testimonials-2";
 import { InfiniteMovingImageCards } from "@/components/ui/infinite-moveing-image-cards";
 import Workflow from "@/components/work-flow";
 import userImage2 from "@/images/testimonial_2.jpg";
@@ -215,6 +216,18 @@ export default function AppLanding() {
           <BlogCard2 />
         </div>
       </Container>
+
+      <Container className="my-32">
+        <SectionIntro title="What Our Clients Says" className="mb-8">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            laboriosam earum possimus deserunt sapiente quod nihil voluptates
+            voluptas dignissimos explicabo?
+          </p>
+        </SectionIntro>{" "}
+        <Testimonials2 />
+      </Container>
+
       <CallToAction
         title="This app is now available in play store."
         subtitle=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum ab dolores tempore repudiandae libero dolorem autem distinctio aliquid. Repudiandae, labore."
