@@ -4,6 +4,7 @@ import { GridPattern } from "@/components/grid-pattern";
 import { PageIntro } from "@/components/page-intro";
 import { Pricing1 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
+import { TestimonialCard } from "@/components/testimonial-card";
 import { Accordion } from "@/components/ui/accordion";
 import {
   Breadcrumb,
@@ -13,8 +14,12 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import {
+  InfiniteMoving,
+  InfiniteMovingItem,
+} from "@/components/ui/infinite-moving";
 import { faqData } from "@/lib/data/faq-data";
+import { testimonials } from "@/lib/data/testimonials-data";
 
 export default function Services2() {
   return (
@@ -46,29 +51,22 @@ export default function Services2() {
             fugiat laboriosam placeat.
           </p>
         </SectionIntro>
-        <InfiniteMovingCards
-          className="mt-12"
-          items={[
-            {
-              role: "Developer",
-              name: "Rakib",
-              quote:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellat ducimus laboriosam dicta laudantium blanditiis aspernatur distinctio dolore nihil quos.",
-            },
-            {
-              role: "Developer",
-              name: "Rakib",
-              quote:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellat ducimus laboriosam dicta laudantium blanditiis aspernatur distinctio dolore nihil quos.",
-            },
-            {
-              role: "Developer",
-              name: "Rakib",
-              quote:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellat ducimus laboriosam dicta laudantium blanditiis aspernatur distinctio dolore nihil quos.",
-            },
-          ]}
-        />
+        <InfiniteMoving>
+          {testimonials.map((testimonial) => (
+            <InfiniteMovingItem
+              key={testimonial.id}
+              className="md:w-[350px] bg-slate-50 text-left"
+            >
+              <TestimonialCard
+                name={testimonial.name}
+                image={testimonial.image}
+                quote={testimonial.quote}
+                rating={testimonial.rating}
+                role={testimonial.role}
+              />
+            </InfiniteMovingItem>
+          ))}
+        </InfiniteMoving>
       </Container>
       <Container className="mt-20">
         <SectionIntro

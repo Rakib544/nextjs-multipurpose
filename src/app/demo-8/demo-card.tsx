@@ -30,7 +30,7 @@ export default function DemoCard({
       className={`${
         isView
           ? "p-5 opacity-100  transition-all"
-          : "opacity-20  transition-all p-5"
+          : "opacity-100  transition-all p-5"
       }`}
     >
       <span className="text-6xl block mb-3 font-extrabold">

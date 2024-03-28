@@ -7,20 +7,18 @@ import Portfolios from "@/components/portfolio";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import TeamCard1 from "@/components/team-card/team-card-1";
+import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+  InfiniteMoving,
+  InfiniteMovingItem,
+} from "@/components/ui/infinite-moving";
 import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
 import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
 import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
+import { testimonials } from "@/lib/data/testimonials-data";
 import Image from "next/image";
 import Link from "next/link";
-import TestingSection from "./testing";
 
 const peoples = [
   {
@@ -42,6 +40,30 @@ const peoples = [
     name: "Michael Foster",
     role: "Co-Founder / CTO",
     image: { src: imageMichaelFoster },
+  },
+];
+
+const services = [
+  {
+    id: 1,
+    title: "UI/UX Design",
+    description:
+      "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience",
+    image: "/ui-ux.webp",
+  },
+  {
+    id: 2,
+    title: "Web Development",
+    description:
+      "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience",
+    image: "/web-development.webp",
+  },
+  {
+    id: 4,
+    title: "App Development",
+    description:
+      "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience",
+    image: "/app-development.webp",
   },
 ];
 
@@ -99,7 +121,7 @@ export default function CreativeDigitalStudio() {
         </div>
 
         <div className="grid grid-cols-12 items-center gap-y-6 lg:gap-x-10 z-10">
-          <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
+          <div className="col-span-12 lg:col-span-6 order-2 lg:order-1 pb-10">
             <div className="max-w-xl">
               <h1 className="text-3xl font-black  md:text-4xl/tight">
                 Transform{" "}
@@ -129,8 +151,6 @@ export default function CreativeDigitalStudio() {
           </div>
         </div>
       </Container>
-      {/* <div className="bg-gradient-to-b from-gray-50 to-white py-2"></div> */}
-
       <div className="bg-[#0A2540]">
         <Container className="py-32">
           <SectionIntro
@@ -145,65 +165,88 @@ export default function CreativeDigitalStudio() {
             </p>
           </SectionIntro>
           <StatList>
-            <StatListItem value="10K" label="Project Completed" />
-            <StatListItem value="180" label="Skilled professionals" />
-            <StatListItem value="500" label="Visited Conference" />
-            <StatListItem value="50K" label="Happy Clients" />
+            <StatListItem invert value="10K" label="Project Completed" />
+            <StatListItem invert value="180" label="Skilled professionals" />
+            <StatListItem invert value="500" label="Visited Conference" />
+            <StatListItem invert value="50K" label="Happy Clients" />
           </StatList>
         </Container>
       </div>
       <Container className="my-32 relative">
-        <TestingSection />
+        <SectionIntro
+          className="mb-8"
+          eyebrow="Our Services"
+          title="Comprehensive Digital Strategy Transformation"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            officiis ipsa veniam perspiciatis harum facere.
+          </p>
+        </SectionIntro>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((service) => (
+            <Link
+              href="/services/1"
+              key={service.id}
+              className="border rounded-xl p-6 hover:bg-gradient-to-b from-indigo-50 hover:border-indigo-200 to-white"
+            >
+              <span>
+                <Image
+                  src={service.image}
+                  alt=""
+                  height={60}
+                  width={60}
+                  className="border px-5 py-1.5 border-indigo-200 rounded-full"
+                />
+              </span>
+              <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
+              <p className="text-base leading-7 mt-3 text-neutral-600">
+                {service.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+        {/* <TestingSection /> */}
       </Container>
       <OurAwards />
       <Portfolios />
-      <div className="my-32 py-20 bg-neutral-950 text-white">
-        <Container>
-          <div className="grid grid-cols-12 gap-20">
-            <div className="col-span-12 lg:col-span-5 relative">
-              <SectionIntro
-                invert
-                title="Some Of Our Respected Happy Clients Says"
-              ></SectionIntro>
-            </div>
-            <div className="col-span-12 lg:col-span-12">
-              <div>
-                <Carousel opts={{ loop: true }}>
-                  <CarouselContent>
-                    {[1, 2, 3, 4].map((i) => (
-                      <CarouselItem key={i}>
-                        <p className="leading-7 text-center">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing
-                          elit. Dolorum, modi quaerat. Eligendi ab, itaque
-                          tenetur earum necessitatibus ipsum assumenda veniam
-                          consequatur sequi sed animi rem porro neque voluptas,
-                          nisi maxime corporis fuga laudantium eum nesciunt
-                          temporibus ducimus et. In, explicabo.
-                        </p>
 
-                        <h4 className="text-center text-lg mt-6 font-semibold">
-                          Rakib
-                        </h4>
-                        <p className="text-center text-sm text-neutral-300">
-                          Fullstack Developer.
-                        </p>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <div>
-                    <CarouselNext variant="default" />
-                    <CarouselPrevious variant="default" />
-                  </div>
-                </Carousel>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div>
+      <Container className="mt-32">
+        <SectionIntro
+          className="mb-6"
+          eyebrow="Reviews"
+          title="Some Of Our Respected Happy Clients Says"
+        >
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Dignissimos quibusdam aspernatur cumque doloremque odio. At est
+            mollitia iure itaque beatae.
+          </p>
+        </SectionIntro>
+        <InfiniteMoving>
+          {testimonials.map((testimonial) => (
+            <InfiniteMovingItem
+              key={testimonial.id}
+              className="md:w-[350px] bg-slate-50"
+            >
+              <TestimonialCard
+                image={testimonial.image}
+                quote={testimonial.quote}
+                name={testimonial.name}
+                rating={testimonial.rating}
+                role={testimonial.role}
+              />
+            </InfiniteMovingItem>
+          ))}
+        </InfiniteMoving>
+      </Container>
+
       <Container className="mt-32">
         <OurTeam />
       </Container>
-      <Clients />
+      <Container className="mt-32">
+        <Clients />
+      </Container>
       <Container className="mt-32">
         <SectionIntro eyebrow="Our Blogs" title="Latest News & Updates.">
           <p>

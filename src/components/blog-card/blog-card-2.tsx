@@ -12,9 +12,12 @@ export default function BlogCard2() {
           className="object-cover rounded-sm"
         />
       </div>
+      <p className=" mt-4 mb-2 text-sm text-neutral-600 font-medium">
+        {new Date().toDateString()}
+      </p>
 
       <Link href="">
-        <h2 className="text-lg mt-4 font-bold tracking-tight text-neutral-950 line-clamp-2">
+        <h2 className="text-lg font-bold tracking-tight text-neutral-950 line-clamp-2">
           The Future of Web Development: Our Predictions for 2023
         </h2>
       </Link>

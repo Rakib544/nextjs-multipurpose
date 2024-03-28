@@ -15,28 +15,21 @@ const services = [
     id: 1,
     title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea eveniet repellat quasi! Fugit, ullam. Fuga modi, ipsam necessitatibus unde asperiores iure eius possimus. Vero commodi nesciunt quos nemo, pariatur optio rerum quasi. Minima voluptatum sint, asperiores perferendis ea eveniet!",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea eveniet repellat quasi! Fugit, ullam. Fuga modi, ipsam necessitatibus unde asperiores iure eius possimus. Vero commodi nesciunt quos nemo.",
     image: "/ui-ux.gif",
   },
   {
     id: 2,
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea eveniet repellat quasi! Fugit, ullam. Fuga modi, ipsam necessitatibus unde asperiores iure eius possimus. Vero commodi nesciunt quos nemo, pariatur optio rerum quasi. Minima voluptatum sint, asperiores perferendis ea eveniet!",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea eveniet repellat quasi! Fugit, ullam. Fuga modi, ipsam necessitatibus unde asperiores iure eius possimus. Vero commodi nesciunt quos nemo.",
     image: "/development.svg",
-  },
-  {
-    id: 3,
-    title: "Digital Services",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea eveniet repellat quasi! Fugit, ullam. Fuga modi, ipsam necessitatibus unde asperiores iure eius possimus. Vero commodi nesciunt quos nemo, pariatur optio rerum quasi. Minima voluptatum sint, asperiores perferendis ea eveniet!",
-    image: "/digital-service.png",
   },
   {
     id: 4,
     title: "Digital Product Design",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea eveniet repellat quasi! Fugit, ullam. Fuga modi, ipsam necessitatibus unde asperiores iure eius possimus. Vero commodi nesciunt quos nemo, pariatur optio rerum quasi. Minima voluptatum sint, asperiores perferendis ea eveniet!",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ea eveniet repellat quasi! Fugit, ullam. Fuga modi, ipsam necessitatibus unde asperiores iure eius possimus. Vero commodi nesciunt quos nemo.",
     image: "/digital-marketing.gif",
   },
 ];
@@ -48,7 +41,7 @@ export default function TestingSection() {
   }
   return (
     <div className="grid grid-cols-12 gap-x-20 relative h-full pb-20">
-      <div className="col-span-6 space-y-10">
+      <div className="col-span-6 space-y-32">
         {services.map((service) => (
           <DemoCard
             title={service.title}

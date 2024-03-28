@@ -1,21 +1,20 @@
 "use client";
 import { cn } from "@/lib/utils";
-import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useState } from "react";
 
-export const InfiniteMovingImageCards = ({
-  items,
-  direction = "left",
-  speed = "fast",
-  pauseOnHover = true,
-  className,
-}: {
-  items: StaticImageData[] | string[];
+interface InfiniteMovingProps extends React.HTMLAttributes<HTMLUListElement> {
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
-  className?: string;
-}) => {
+}
+
+const InfiniteMoving = ({
+  className,
+  direction = "left",
+  speed = "fast",
+  pauseOnHover = true,
+  ...props
+}: InfiniteMovingProps) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
@@ -67,36 +66,37 @@ export const InfiniteMovingImageCards = ({
     }
   };
   return (
-    <div
-      ref={containerRef}
-      className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden",
-        className
-      )}
-    >
+    <div ref={containerRef} className="scroller relative z-20 overflow-hidden">
       <ul
         ref={scrollerRef}
         className={cn(
           " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
-          pauseOnHover && "hover:[animation-play-state:paused]"
+          pauseOnHover && "hover:[animation-play-state:paused]",
+          className
         )}
-      >
-        {items.map((item, idx) => (
-          <li
-            className="w-[350px] text-center max-w-full relative rounded-2xl flex-shrink-0 md:w-[200px]"
-            key={idx}
-          >
-            <Image
-              src={item}
-              alt=""
-              width={100}
-              height={100}
-              className="w-full h-auto object-cover rounded-xl border"
-            />
-          </li>
-        ))}
-      </ul>
+        {...props}
+      />
     </div>
   );
 };
+
+const InfiniteMovingItem = React.forwardRef<
+  HTMLLIElement,
+  React.HTMLAttributes<HTMLLIElement>
+>(({ className, ...props }, ref) => {
+  return (
+    <li
+      ref={ref}
+      className={cn(
+        "w-[350px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[200px]",
+        className
+      )}
+      {...props}
+    />
+  );
+});
+
+InfiniteMovingItem.displayName = "InfiniteMovingItem";
+
+export { InfiniteMoving, InfiniteMovingItem };

@@ -8,7 +8,10 @@ import { BlogCard2 } from "@/components/blog-card";
 import CallToAction from "@/components/call-to-action";
 import { SectionIntro } from "@/components/section-intro";
 import Testimonials2 from "@/components/testimonials-2";
-import { InfiniteMovingImageCards } from "@/components/ui/infinite-moveing-image-cards";
+import {
+  InfiniteMoving,
+  InfiniteMovingItem,
+} from "@/components/ui/infinite-moving";
 import Workflow from "@/components/work-flow";
 import userImage2 from "@/images/testimonial_2.jpg";
 import userImage1 from "@/images/testimonial_3.jpg";
@@ -196,14 +199,24 @@ export default function AppLanding() {
           className="mb-8"
           title="SLEEK & ELEGANT DESIGN"
         />
-        <InfiniteMovingImageCards
-          items={[
+        <InfiniteMoving>
+          {[
             "/cool-amazing-3.png",
             "/cool-amazing-4.png",
             "/cool-amazing-5.png",
             "/cool-amazing-3.png",
-          ]}
-        />
+          ].map((image, index) => (
+            <InfiniteMovingItem key={index} className="md:w-[200px]">
+              <Image
+                src={image}
+                alt=""
+                width={200}
+                height={200}
+                className="w-full h-auto object-cover rounded-xl border"
+              />
+            </InfiniteMovingItem>
+          ))}
+        </InfiniteMoving>
       </Container>
       <Container className="my-32">
         <SectionIntro

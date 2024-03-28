@@ -99,10 +99,8 @@ export function Footer2() {
   const pathname = usePathname();
   const isAuthRoute = pathname.startsWith("/auth");
   return (
-    <footer>
-      <Container
-        className={`mt-24 w-full sm:mt-32 ${isAuthRoute ? "hidden" : ""}`}
-      >
+    <footer className="">
+      <Container className={`pt-24 w-full ${isAuthRoute ? "hidden" : ""}`}>
         <FadeIn className="lg:px-4">
           <div className="grid grid-cols-12 md:gap-x-8 gap-y-16">
             <Navigation />
@@ -110,7 +108,7 @@ export function Footer2() {
               <NewsletterForm />
             </div>
           </div>
-          <div className="mb-20 mt-24 text-center border-t border-neutral-950/10 pt-12">
+          <div className="pb-20 mt-24 text-center border-t border-neutral-950/10 pt-12">
             <p className="text-neutral-700">
               © Rakib {new Date().getFullYear()}
             </p>

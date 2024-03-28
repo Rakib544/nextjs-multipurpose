@@ -6,9 +6,9 @@ export const testimonials = [
     id: 1,
     name: "Sarah Johnson",
     image: testimonialUser1,
-    rating: 5,
+    rating: 4.8,
     role: "Marketing Manager",
-    content:
+    quote:
       "Unlock Your Potential has been a game-changer for me! Emma's insights and strategies have empowered me to overcome self-doubt and take bold steps towards my goals. Highly recommended!",
   },
   {
@@ -17,7 +17,7 @@ export const testimonials = [
     role: "Entrepreneur",
     image: testimonialUser2,
     rating: 5,
-    content:
+    quote:
       "As an entrepreneur, personal growth is essential for success. Emma's book provided me with practical tools and actionable advice to overcome challenges and unlock my full potential. Thank you, Emma!",
   },
   {
@@ -25,8 +25,8 @@ export const testimonials = [
     name: "Emily Clark",
     role: "Student",
     image: testimonialUser3,
-    rating: 5,
-    content:
+    rating: 4.9,
+    quote:
       "I stumbled upon Unlock Your Potential during a challenging time in my life, and it was exactly what I needed. The book's practical exercises and inspiring stories helped me gain clarity and confidence in pursuing my dreams.",
   },
 ];

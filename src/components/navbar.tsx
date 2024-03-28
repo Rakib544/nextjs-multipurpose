@@ -72,27 +72,29 @@ export default function Navbar() {
                           (subLink) => subLink.submenus.length > 0
                         )
                           ? "grid grid-cols-3 gap-x-4 w-[500px]"
-                          : ""
+                          : "!text-left"
                       }
                     >
                       {link.submenus.map((subLink) => (
-                        <li key={subLink.id}>
+                        <li key={subLink.id} className="text-left">
                           {subLink.submenus.length > 0 ? (
                             <div className="py-4">
                               <p className="px-4 text-sm mb-1 text-neutral-800 font-semibold uppercase">
                                 {subLink.label}
                               </p>
-                              <ul className="">
-                                {/* {JSON.stringify(subLink.submenus)} */}
+                              <ul className="w-full">
                                 {subLink.submenus.map((menu) => (
-                                  <li key={menu.id}>
+                                  <li key={menu.id} className="w-full">
                                     <Link
                                       href={menu?.href || ""}
                                       legacyBehavior
                                       passHref
                                     >
                                       <NavigationMenuLink
-                                        className={navigationMenuTriggerStyle()}
+                                        className={navigationMenuTriggerStyle({
+                                          className:
+                                            "!w-full !justify-start text-nowrap shrink-0",
+                                        })}
                                       >
                                         {menu.label}
                                       </NavigationMenuLink>
@@ -108,7 +110,10 @@ export default function Navbar() {
                               passHref
                             >
                               <NavigationMenuLink
-                                className={navigationMenuTriggerStyle()}
+                                className={navigationMenuTriggerStyle({
+                                  className:
+                                    "!w-full !justify-start text-nowrap shrink-0",
+                                })}
                               >
                                 {subLink.label}
                               </NavigationMenuLink>

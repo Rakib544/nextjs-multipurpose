@@ -1,11 +1,14 @@
 import { Container } from "@/components/container";
-import { FadeIn } from "@/components/fade-in";
-import { ClockIcon, DollarCircleIcon, PinIcon } from "@/components/icons";
+import { JobCard } from "@/components/job-card";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
-import { InfiniteMovingImageCards } from "@/components/ui/infinite-moveing-image-cards";
+import {
+  InfiniteMoving,
+  InfiniteMovingItem,
+} from "@/components/ui/infinite-moving";
 import heroImage from "@/images/hero.jpg";
-import Link from "next/link";
+import { jobs } from "@/lib/data/job-data";
+import Image from "next/image";
 
 const images = [heroImage, heroImage, heroImage, heroImage, heroImage];
 
@@ -20,9 +23,19 @@ export default function Career2() {
         </p>
       </PageIntro>
       <Container className="mt-12">
-        <FadeIn>
-          <InfiniteMovingImageCards items={images} />
-        </FadeIn>
+        <InfiniteMoving>
+          {images.map((image, index) => (
+            <InfiniteMovingItem key={index} className="md:w-[350px]">
+              <Image
+                src={image}
+                alt=""
+                width={200}
+                height={200}
+                className="w-full h-auto object-cover rounded-xl border"
+              />
+            </InfiniteMovingItem>
+          ))}
+        </InfiniteMoving>
       </Container>
       <Container className="my-20">
         <SectionIntro title="Job Openings">
@@ -32,52 +45,20 @@ export default function Career2() {
           </p>
         </SectionIntro>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12">
-          <JobCard />
-          <JobCard />
-          <JobCard />
-          <JobCard />
-          <JobCard />
-          <JobCard />
-          <JobCard />
-          <JobCard />
-          <JobCard />
-          <JobCard />
+          {jobs.map((job, index) => (
+            <JobCard
+              key={index}
+              address={job.address}
+              category={job.category}
+              salary={job.category}
+              jobType={job.jobType}
+              slug={job.slug}
+              subtitle={job.subtitle}
+              title={job.title}
+            />
+          ))}
         </div>
       </Container>
     </div>
-  );
-}
-
-function JobCard() {
-  return (
-    <Link
-      href="/jobs/1"
-      className="border bg-white p-4 rounded-xl hover:bg-neutral-50 block"
-    >
-      <div className="flex justify-between">
-        <h3 className="text-lg font-bold">
-          Product Designer{" "}
-          <span className="inline-block px-4 py-1 bg-gray-100 text-xs font-semibold rounded-full">
-            Design
-          </span>
-        </h3>
-        <div>
-          <span className="flex items-center gap-x-1 px-4 py-1 bg-gray-100 text-xs font-semibold rounded-full">
-            <PinIcon className="h-3 w-3" /> Dhaka, Bangladesh
-          </span>
-        </div>
-      </div>
-      <p className="text-base text-neutral-600 leading-7 mt-2 mb-4">
-        We are looking for a mid-level product designer to join our team
-      </p>
-      <div className="flex gap-x-4">
-        <span className="flex gap-x-1 text-sm items-center font-medium text-neutral-600">
-          <ClockIcon className="h-4 w-4" /> Full Time
-        </span>
-        <span className="flex gap-x-1 text-sm items-center font-medium text-neutral-600">
-          <DollarCircleIcon className="h-4 w-4" /> $90k - $100k
-        </span>
-      </div>
-    </Link>
   );
 }

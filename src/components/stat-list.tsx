@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Border } from "./border";
 import { FadeIn, FadeInStagger } from "./fade-in";
 
@@ -20,16 +21,33 @@ export function StatList({
 export function StatListItem({
   label,
   value,
+  invert = false,
 }: {
   label: string;
   value: string;
+  invert?: boolean;
 }) {
   return (
-    <Border as={FadeIn} position="left" className="flex flex-col-reverse pl-8 ">
-      <dt className="mt-2 text-base leading-7 text-neutral-700 font-medium">
+    <Border
+      invert
+      as={FadeIn}
+      position="left"
+      className="flex flex-col-reverse pl-8 "
+    >
+      <dt
+        className={cn(
+          "mt-2 text-base leading-7  font-medium",
+          invert ? "text-slate-400" : "text-neutral-700"
+        )}
+      >
         {label}
       </dt>
-      <dd className="font-display text-3xl font-extrabold text-neutral-950 sm:text-3xl">
+      <dd
+        className={cn(
+          "font-display text-3xl font-extrabold  sm:text-3xl",
+          invert ? "text-white" : "text-neutral-950"
+        )}
+      >
         {value}
       </dd>
     </Border>
