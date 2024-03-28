@@ -49,7 +49,7 @@ export function PlanCard1({
       className={clsx(
         "flex flex-col rounded-3xl px-6 sm:px-8",
         featured
-          ? "order-first bg-primary py-8 lg:order-none"
+          ? "order-first bg-indigo-600 py-8 lg:order-none"
           : "lg:py-8 bg-slate-50 border"
       )}
     >

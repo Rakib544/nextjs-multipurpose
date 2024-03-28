@@ -4,23 +4,23 @@ import { FadeIn, FadeInStagger } from "./fade-in";
 const data = [
   {
     id: 1,
-    title: "Set disbursement Instructions",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    title: "Sign Up",
+    text: "Create your account and choose your subscription plan.",
   },
   {
     id: 2,
-    title: "Assembly retrieves funds from your account",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    title: "Set Up",
+    text: "Customize your settings and preferences.",
   },
   {
     id: 3,
-    title: "Assembly initiates disbursement",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    title: "Start Using",
+    text: "Explore features, import data, and start using the software.",
   },
   {
     id: 4,
-    title: "Customer receives funds payment",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    title: "Get Results",
+    text: "Experience increased efficiency and productivity in your workflow.",
   },
 ];
 export default function Workflow() {
@@ -36,16 +36,16 @@ export default function Workflow() {
                 width={220}
                 className={
                   d.id % 2 === 0
-                    ? "absolute right-0 top-4 hidden lg:block"
-                    : "absolute right-0 -top-1 hidden lg:block"
+                    ? "absolute -right-2 top-4 hidden lg:block"
+                    : "absolute -right-2 -top-1 hidden lg:block"
                 }
                 height={10}
               />
             )}
-            <span className="h-14 w-14 rounded-2xl mb-3 bg-[#0A2540] text-white inline-flex justify-center items-center text-xl font-bold">
+            <span className="h-14 w-14 rounded-2xl mb-3  border text-indigo-600 border-indigo-200 inline-flex justify-center items-center text-xl font-bold">
               0{d.id}
             </span>
-            <h3 className="font-semibold text-lg mt-3 text-neutral-950">
+            <h3 className="font-extrabold text-lg mt-3 text-neutral-950">
               {d.title}
             </h3>
             <p className="text-base mt-3 text-neutral-700 leading-7">

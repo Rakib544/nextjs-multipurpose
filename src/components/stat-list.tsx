@@ -29,7 +29,7 @@ export function StatListItem({
 }) {
   return (
     <Border
-      invert
+      invert={invert}
       as={FadeIn}
       position="left"
       className="flex flex-col-reverse pl-8 "
