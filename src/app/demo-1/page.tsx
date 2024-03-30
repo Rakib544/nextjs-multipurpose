@@ -175,7 +175,7 @@ export default function Home() {
           {testimonials.map((testimonial) => (
             <InfiniteMovingItem
               key={testimonial.id}
-              className="md:w-[350px] bg-slate-50"
+              className="md:w-[400px] bg-gradient-to-br from-indigo-50 to-white"
             >
               <TestimonialCard
                 image={testimonial.image}

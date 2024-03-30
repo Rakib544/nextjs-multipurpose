@@ -37,7 +37,7 @@ export function StatListItem({
       <dt
         className={cn(
           "mt-2 text-base leading-7  font-medium",
-          invert ? "text-slate-400" : "text-neutral-700"
+          invert ? "text-slate-400" : "text-neutral-800"
         )}
       >
         {label}
@@ -45,7 +45,7 @@ export function StatListItem({
       <dd
         className={cn(
           "font-display text-3xl font-extrabold  sm:text-3xl",
-          invert ? "text-white" : "text-neutral-950"
+          invert ? "text-white" : "text-indigo-600"
         )}
       >
         {value}

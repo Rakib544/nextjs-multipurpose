@@ -10,6 +10,7 @@ import { ChevronLeft } from "./chervon-left-icon";
 import { ChevronRight } from "./chervon-right-icon";
 import { ChevronDown } from "./chevron-down-icon";
 import { ClockIcon } from "./clock-icon";
+import { DollarBagIcon } from "./dollar-bag-icon";
 import { DollarCircleIcon } from "./dollar-circle-icon";
 import { Ellips } from "./ellips-icon";
 import { FacebookIcon } from "./facebook-icon";
@@ -22,6 +23,7 @@ import { LineChartIcon } from "./line-chart-icon";
 import { LinkedInIcon } from "./linkedin-icon";
 import { MagicIcon } from "./magic-icon";
 import { MailIcon } from "./mail-icon";
+import { MegaphoneIcon } from "./megaphone-icon";
 import { MessageCircle } from "./message-circle-icon";
 import { MobileNavIcon } from "./mobile-nav-icon";
 import { NotificationIcon } from "./notification-icon";
@@ -46,6 +48,7 @@ export {
   ChevronLeft,
   ChevronRight,
   ClockIcon,
+  DollarBagIcon,
   DollarCircleIcon,
   Ellips,
   FacebookIcon,
@@ -58,6 +61,7 @@ export {
   LinkedInIcon,
   MagicIcon,
   MailIcon,
+  MegaphoneIcon,
   MessageCircle,
   MobileNavIcon,
   NotificationIcon,

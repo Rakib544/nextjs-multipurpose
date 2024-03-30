@@ -1,9 +1,18 @@
 import { BlogCard2 } from "@/components/blog-card";
+import CallToAction from "@/components/call-to-action";
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import { GridPattern } from "@/components/grid-pattern";
+import {
+  AnalyticsIcon,
+  DollarBagIcon,
+  HomeIcon,
+  MegaphoneIcon,
+} from "@/components/icons";
+import { List, ListItem } from "@/components/list";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
+import { TestimonialCard } from "@/components/testimonial-card";
 import {
   Accordion,
   AccordionContent,
@@ -117,12 +126,13 @@ function WhatWeOffer() {
             strategy. To set good SEO goals, they should be specific,
             measurable, actionable, relevant, and time-bound (SMART).
           </p>
-          <ul className="mt-4 space-y-1 text-neutral-700 list-disc list-inside">
-            <li>Improve Your Website Loading Speed</li>
-            <li>Get Your Site Inside of Featured Snippets</li>
-            <li>improve Dwell Time</li>
-            <li>Use Site-links</li>
-          </ul>
+
+          <List className="mt-4">
+            <ListItem>Improve Your Website Loading Speed.</ListItem>
+            <ListItem>Get Your Site Inside of Featured Snippets</ListItem>
+            <ListItem>Improve Dwell Time</ListItem>
+            <ListItem>Use Site-links</ListItem>
+          </List>
         </TabsContent>
         <TabsContent value="item-2" className="col-span-9 ml-10">
           <h3 className="text-xl font-bold text-neutral-950 mb-2">
@@ -273,36 +283,19 @@ function Testimonials() {
           loop: true,
         }}
       >
-        <CarouselContent className="">
+        <CarouselContent className="mb-6">
           {testimonials.map((testimonial, index) => (
             <CarouselItem
-              className="basis-full md:basis-[50%] bg-slate-50 mx-2 py-10 rounded-xl border px-10"
+              className="basis-full md:basis-[50%] bg-gradient-to-br from-indigo-50 to-white mx-2 py-2 md:py-10 rounded-xl border px-6 md:px-10"
               key={index}
             >
-              <figure>
-                <blockquote className="mt-10 font-display text-lg leading-8  font-medium tracking-tight text-slate-900 sm:text-center">
-                  {testimonial.content}
-                </blockquote>
-                <figcaption className="mt-10 flex items-center sm:justify-center">
-                  <div className="overflow-hidden rounded-full bg-slate-50">
-                    <Image
-                      className="h-12 w-12 object-cover"
-                      src={testimonial.image}
-                      alt=""
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div className="ml-4">
-                    <div className="text-base font-medium leading-6 tracking-tight text-slate-900">
-                      {testimonial.name}
-                    </div>
-                    <div className="mt-1 text-sm text-slate-600">
-                      {testimonial.role}
-                    </div>
-                  </div>
-                </figcaption>
-              </figure>
+              <TestimonialCard
+                image={testimonial.image}
+                name={testimonial.name}
+                quote={testimonial.quote}
+                rating={testimonial.rating}
+                role={testimonial.role}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -325,8 +318,15 @@ export default function Demo2() {
         <div className="grid grid-cols-12 gap-6 items-center">
           <div className="col-span-12 lg:col-span-7">
             <FadeIn className="order-2 lg:order-1 z-10">
-              <h1 className="text-4xl pr-10 font-bold md:text-4xl/tight max-w-lg">
-                Unlock Your Online Potential with Expert SEO Services.
+              <span className="font-medium items-center gap-x-2 mb-4 px-6 inline-flex py-2 rounded-full bg-indigo-50 text-sm text-indigo-700">
+                <HomeIcon className="h-4 w-4" /> 55,000+ Business Trust
+              </span>
+              <h1 className="text-4xl pr-10 font-black tracking-tight md:text-5xl/tight">
+                Boost Your{" "}
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-transparent bg-clip-text">
+                  Online Presence
+                </span>{" "}
+                with Expert SEO Solutions
               </h1>
               <p className="mt-3 text-lg text-neutral-600 leading-8 max-w-xl">
                 Elevating Your Online Presence: Our Strategies Drive Traffic,
@@ -364,23 +364,18 @@ export default function Demo2() {
         </div>
       </Container>
       <Container className="my-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <div className="relative after:absolute after:h-2 after:w-full after:border-b-2 after:border-dashed after:top-10 after:-right-10 after:z-[-1]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 lg:gap-y-0 lg:grid-cols-3">
+          <div className="relative after:hidden lg:after:block after:absolute after:h-2 after:w-full after:border-b-2 after:border-dashed after:top-10 after:-right-10 after:z-[-1] after:border-indigo-600">
             <span className="absolute h-16 w-16 bg-white border rounded-full flex justify-center items-center text-2xl font-bold right-1/2 top-4 text-stroke text-transparent">
               01
             </span>
-            <span className="h-20 w-20 rounded-full  block mb-4 bg-white">
-              <Image
-                src="/marketing.svg"
-                alt=""
-                height={100}
-                width={100}
-                className="border-2 border-dashed z-10 rounded-full p-1"
-              />
+            <span className="h-20 w-20 bg-indigo-100 rounded-full relative mb-4 flex justify-center items-center">
+              <MegaphoneIcon className="fill-indigo-600 text-indigo-600  h-10 w-10" />
             </span>
+
             <div className="pr-10">
               <h3 className="font-bold text-xl text-neutral-950 mb-2 mt-3">
-                Better Audiance
+                Better audiences
               </h3>
               <p className="text-neutral-600 text-base leading-7">
                 Bndulgence diminution so discovered mr perfect off under folly
@@ -388,24 +383,18 @@ export default function Demo2() {
               </p>
             </div>
           </div>
-          <div className="mt-20 after:-right-10 relative after:absolute after:h-2 after:w-full after:border-b-2 after:border-dashed after:top-10 after:z-[-1] ">
+          <div className="lg:mt-20 after:hidden lg:after:block after:-right-10 relative after:absolute after:h-2 after:w-full after:border-b-2 after:border-dashed after:top-10 after:z-[-1] after:border-indigo-600">
             <span className="absolute h-16 w-16 bg-white border rounded-full flex justify-center items-center text-2xl font-bold right-1/2 top-4 text-stroke text-transparent">
               02
             </span>
             <div className="h-20 w-20 rounded-xl mb-4 relative bg-white">
-              <span className="h-20 w-20 rounded-full block bg-white  before:absolute before:h-full before:w-1 before:border-r-2 before:border-dashed before:-top-1/2 mt-2 before:left-1/2 before:z-[-1]">
-                <Image
-                  src="/analytics.svg"
-                  alt=""
-                  height={100}
-                  width={100}
-                  className="z-10 border-2 border-dashed rounded-full p-1"
-                />
+              <span className="h-20 w-20 before:hidden lg:before:block rounded-full flex justify-center items-center bg-indigo-100  before:absolute before:h-full before:w-1 before:border-indigo-600 before:border-r-2 before:border-dashed before:-top-1/2 mt-2 before:left-1/2 before:z-[-1]">
+                <AnalyticsIcon className="text-indigo-600 h-10 w-10" />
               </span>
             </div>
             <div className="pr-10">
               <h3 className="font-bold text-xl text-neutral-950 mb-2 mt-3">
-                Better Audiance
+                Better Analytics
               </h3>
               <p className="text-neutral-600 text-base leading-7">
                 Bndulgence diminution so discovered mr perfect off under folly
@@ -413,24 +402,18 @@ export default function Demo2() {
               </p>
             </div>
           </div>
-          <div className="mt-40 relative flex">
+          <div className="lg:mt-40 relative">
             <span className="absolute h-16 w-16 bg-white border rounded-full flex justify-center items-center text-2xl font-bold right-1/2 top-4 text-stroke text-transparent">
               03
             </span>
-            <div className="h-20 w-20 mb-4 rounded-full relative bg-white">
-              <span className="h-20 w-20 mb-4 rounded-full block bg-white before:z-[-1] before:absolute before:h-full before:w-1 before:border-r-2 before:border-dashed before:-top-1/2 mt-2 before:left-1/2 after:z-[-1]">
-                <Image
-                  src="/earn-money.svg"
-                  alt=""
-                  height={200}
-                  width={200}
-                  className="border-2 border-dashed z-10 rounded-full p-1"
-                />
+            <div className="h-20 w-20 mb-4 rounded-full relative">
+              <span className="h-20 w-20 mb-4 before:hidden lg:before:block after:hidden lg:after:block rounded-full flex justify-center items-center bg-indigo-100 before:z-[-1] before:absolute before:h-full before:w-1 before:border-indigo-600 before:border-r-2 before:border-dashed before:-top-1/2 mt-2 before:left-1/2 after:z-[-1]">
+                <DollarBagIcon className="h-10 w-10 text-indigo-600" />
               </span>
             </div>
             <div className="pr-10">
               <h3 className="font-bold text-xl text-neutral-950 mb-2 mt-3">
-                Better Audiance
+                Better outcomes
               </h3>
               <p className="text-neutral-600 text-base leading-7">
                 Bndulgence diminution so discovered mr perfect off under folly
@@ -440,120 +423,122 @@ export default function Demo2() {
           </div>
         </div>
       </Container>
-      <Container className="my-32">
-        <div className="grid grid-cols-12 gap-20 items-center">
-          <div className="col-span-12 lg:col-span-7">
-            <div className="grid grid-cols-2 gap-8">
-              <div className="space-y-8">
-                <div className="p-6 bg-slate-50 border rounded-xl">
-                  <Image
-                    src="https://uithemez.com/i/funnelio/home2_seo/assets/img/icons/f1.svg"
-                    alt=""
-                    width={80}
-                    height={80}
-                  />
-                  <h3 className="mt-5 font-bold text-lg">SEO Services</h3>
-                  <p className="text-base leading-7 mt-3">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vero incidunt cupiditate iusto!
-                  </p>
-                  <Link
-                    href=""
-                    className={buttonVariants({
-                      variant: "link",
-                      className: "px-0 mt-4",
-                    })}
-                  >
-                    Read More &rarr;
-                  </Link>
+      <div className="my-32 py-20 bg-indigo-50">
+        <Container>
+          <div className="grid grid-cols-12 gap-y-6 lg:gap-x-20 items-center">
+            <div className="col-span-12 lg:col-span-7 order-2 lg:order-1">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="space-y-8">
+                  <div className="p-6 bg-white rounded-xl">
+                    <Image
+                      src="https://uithemez.com/i/funnelio/home2_seo/assets/img/icons/f1.svg"
+                      alt=""
+                      width={80}
+                      height={80}
+                    />
+                    <h3 className="mt-5 font-bold text-lg">SEO Services</h3>
+                    <p className="text-base leading-7 mt-3">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Vero incidunt cupiditate iusto!
+                    </p>
+                    <Link
+                      href=""
+                      className={buttonVariants({
+                        variant: "link",
+                        className: "!px-0 mt-4",
+                      })}
+                    >
+                      Read More &rarr;
+                    </Link>
+                  </div>
+                  <div className="p-6 bg-white rounded-xl">
+                    <Image
+                      src="https://uithemez.com/i/funnelio/home2_seo/assets/img/icons/f1.svg"
+                      alt=""
+                      width={80}
+                      height={80}
+                    />
+                    <h3 className="mt-5 font-bold text-lg">SEO Services</h3>
+                    <p className="text-base leading-7 mt-3">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Error fugit est.
+                    </p>
+                    <Link
+                      href=""
+                      className={buttonVariants({
+                        variant: "link",
+                        className: "!px-0 mt-2",
+                      })}
+                    >
+                      Read More &rarr;
+                    </Link>
+                  </div>
                 </div>
-                <div className="p-6 bg-slate-50 border rounded-xl">
-                  <Image
-                    src="https://uithemez.com/i/funnelio/home2_seo/assets/img/icons/f1.svg"
-                    alt=""
-                    width={80}
-                    height={80}
-                  />
-                  <h3 className="mt-5 font-bold text-lg">SEO Services</h3>
-                  <p className="text-base leading-7 mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Error fugit est.
-                  </p>
-                  <Link
-                    href=""
-                    className={buttonVariants({
-                      variant: "link",
-                      className: "px-0 mt-2",
-                    })}
-                  >
-                    Read More &rarr;
-                  </Link>
+                <div className="lg:mt-16 space-y-6">
+                  <div className="p-6 bg-white rounded-xl">
+                    <Image
+                      src="https://uithemez.com/i/funnelio/home2_seo/assets/img/icons/f1.svg"
+                      alt=""
+                      width={80}
+                      height={80}
+                    />
+                    <h3 className="mt-5 font-bold text-lg">SEO Services</h3>
+                    <p className="text-base leading-7 mt-3">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Error fugit est.
+                    </p>
+                    <Link
+                      href=""
+                      className={buttonVariants({
+                        variant: "link",
+                        className: "!px-0 mt-2",
+                      })}
+                    >
+                      Read More &rarr;
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div className="mt-16 space-y-6">
-                <div className="p-6 bg-slate-50 border rounded-xl">
-                  <Image
-                    src="https://uithemez.com/i/funnelio/home2_seo/assets/img/icons/f1.svg"
-                    alt=""
-                    width={80}
-                    height={80}
-                  />
-                  <h3 className="mt-5 font-bold text-lg">SEO Services</h3>
-                  <p className="text-base leading-7 mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Error fugit est.
-                  </p>
-                  <Link
-                    href=""
-                    className={buttonVariants({
-                      variant: "link",
-                      className: "px-0 mt-2",
-                    })}
+            </div>
+            <div className="col-span-12 lg:col-span-5 order-1 lg:order-2">
+              <SectionIntro
+                eyebrow="Core Features"
+                title="So what do company do exactly?"
+              >
+                <p>
+                  We’re a full-stack firm that can help you from strategy to
+                  launch, and anywhere in between.
+                </p>
+                <p className="mt-4">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
+                  unde laboriosam ipsa numquam mollitia fugiat repellat
+                  distinctio modi voluptatem officiis!
+                </p>
+              </SectionIntro>
+              <h4 className="mt-8 font-bold text-base mb-2">
+                Easily Check Your SEO Score Now
+              </h4>
+              <div className="relative">
+                <input
+                  type="link"
+                  placeholder="Enter Website URL"
+                  aria-label="Enter Website URL"
+                  className="block w-full rounded-full border border-indigo-300 bg-white bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
+                />
+                <div className="absolute inset-y-1 right-1 flex justify-end">
+                  <button
+                    type="submit"
+                    aria-label="Submit"
+                    className="flex w-full px-6 h-full items-center justify-center rounded-full bg-neutral-950 text-white transition hover:bg-neutral-800"
                   >
-                    Read More &rarr;
-                  </Link>
+                    Check
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-5">
-            <SectionIntro
-              eyebrow="Core Features"
-              title="So what do company do exactly?"
-            >
-              <p>
-                We’re a full-stack firm that can help you from strategy to
-                launch, and anywhere in between.
-              </p>
-              <p className="mt-4">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                unde laboriosam ipsa numquam mollitia fugiat repellat distinctio
-                modi voluptatem officiis!
-              </p>
-            </SectionIntro>
-            <h4 className="mt-8 font-bold text-base mb-2">
-              Easily Check Your SEO Score Now
-            </h4>
-            <div className="relative">
-              <input
-                type="link"
-                placeholder="Enter Website URL"
-                aria-label="Enter Website URL"
-                className="block w-full rounded-full border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
-              />
-              <div className="absolute inset-y-1 right-1 flex justify-end">
-                <button
-                  type="submit"
-                  aria-label="Submit"
-                  className="flex w-full px-6 h-full items-center justify-center rounded-full bg-neutral-950 text-white transition hover:bg-neutral-800"
-                >
-                  Check
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
       <WhyChooseUs />
       <Container className="mt-16 mb-32">
         <SectionIntro
@@ -575,7 +560,7 @@ export default function Demo2() {
       <WhatWeOffer />
       <MainAbility />
       <Testimonials />
-      <Container>
+      <Container className="mb-32">
         <SectionIntro eyebrow="NEWS & EVENTS" title="Check out our blog posts">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -589,6 +574,12 @@ export default function Demo2() {
           <BlogCard2 />
         </div>
       </Container>
+      <CallToAction
+        title="Ready to Boost Your Rankings?"
+        subtitle="Contact Us Today to Get Started on Your SEO Journey"
+        btnText="Contact us"
+        link="/contact"
+      />
     </main>
   );
 }

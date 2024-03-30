@@ -16,7 +16,7 @@ export default function CallToAction({
 }) {
   return (
     <Container>
-      <div className="bg-gradient-to-r from-indigo-200 to to-blue-50 rounded-3xl mb-10 py-16 sm:py-28 md:py-32">
+      <div className="bg-gradient-to-r from-indigo-50 to to-blue-50 rounded-3xl mb-10 py-16 sm:py-28 md:py-32">
         <FadeIn className="max-w-xl mx-auto text-center z-20">
           <h2 className="block tracking-tight [text-wrap:balance] leading-10 text-2xl lg:text-3xl font-extrabold text-neutral-950 mb-2">
             {title}

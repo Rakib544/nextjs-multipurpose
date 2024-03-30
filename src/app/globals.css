@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 0 0% 3.92%;
+    --primary: 243.4 75.36% 58.63%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -76,5 +76,5 @@
 }
 
 .text-stroke {
-  -webkit-text-stroke: 1px #0a0a0a;
+  -webkit-text-stroke: 1px #4f46e5;
 }
