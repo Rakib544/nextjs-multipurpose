@@ -19,7 +19,9 @@ import {
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
 import { faqData } from "@/lib/data/faq-data";
+import { sassFeatures } from "@/lib/data/sass-features";
 import { testimonials } from "@/lib/data/testimonials-data";
+import Link from "next/link";
 
 export default function Services2() {
   return (
@@ -40,6 +42,35 @@ export default function Services2() {
           </BreadcrumbList>
         </Breadcrumb>
       </PageIntro>
+      <Container className="mt-20">
+        <SectionIntro
+          title="Empower your saas solutions"
+          eyebrow="Solution"
+          className="mb-8"
+        >
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem est
+            deleniti, molestias maxime laudantium eos?
+          </p>
+        </SectionIntro>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {sassFeatures.map((service) => (
+            <Link
+              href="/services/1"
+              key={service.id}
+              className="border rounded-xl p-6 hover:bg-gradient-to-b from-indigo-50 hover:border-indigo-200 to-white"
+            >
+              <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full">
+                {service.icon}
+              </span>
+              <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
+              <p className="text-base leading-7 mt-3 text-neutral-600">
+                {service.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </Container>
       <Container className="my-20">
         <SectionIntro
           eyebrow="Testimonials"

@@ -37,7 +37,7 @@ export default function privacyAndPolicy() {
       <div className="absolute z-[-1] inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
         <GridPattern />
       </div>
-      <PageIntro title="Terms and Conditions" centered>
+      <PageIntro title="Privacy and Policy" centered>
         <Breadcrumb className="flex justify-center">
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -52,12 +52,15 @@ export default function privacyAndPolicy() {
       </PageIntro>
       <Container className="mt-20 ">
         <div className="grid grid-cols-12 gap-x-6">
-          <div className="col-span-12 md:col-span-3 sticky top-0 h-screen">
-            <h2 className="font-bold mb-4">Table Of Contents</h2>
-            <ul className="space-y-2 text-neutral-950">
+          <div className="col-span-12 md:col-span-3 sticky top-0 h-screen hidden md:block">
+            <h2 className="font-bold text-lg mb-4">Table Of Contents</h2>
+            <ul className="space-y-3 text-neutral-950">
               {sideMenus.map((menu) => (
                 <li key={menu.href} className="">
-                  <Link href={`#${menu.href}`} className="hover:underline">
+                  <Link
+                    href={`#${menu.href}`}
+                    className="hover:text-indigo-600 font-medium text-neutral-600"
+                  >
                     {menu.label}
                   </Link>
                 </li>

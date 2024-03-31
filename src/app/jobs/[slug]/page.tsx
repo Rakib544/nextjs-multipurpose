@@ -36,7 +36,7 @@ export default function JobDetails() {
             />
           </div>
           <div className="col-span-12 lg:col-span-4">
-            <div className="border rounded-xl p-6">
+            <div className="border border-indigo-200 bg-white rounded-xl p-6">
               <div className="flex gap-x-2 text-base text-neutral-950 font-semibold">
                 <PinIcon className="h-5 w-5" /> Dhaka, Bangladesh
               </div>

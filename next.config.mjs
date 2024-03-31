@@ -10,6 +10,10 @@ const nextConfig = {
         hostname: "fxotary.netlify.app",
         protocol: "https",
       },
+      {
+        hostname: "vue.hibotheme.com",
+        protocol: "https",
+      },
     ],
   },
 };

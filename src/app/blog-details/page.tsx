@@ -19,7 +19,7 @@ export default function BlogDetails1() {
           <p className="text-sm text-neutral-700 font-medium mb-4">
             19 October, 2023
           </p>
-          <h1 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+          <h1 className="text-2xl max-w-full md:text-3xl font-extrabold tracking-tight lg:text-4xl/tight">
             The Future of Web Development: Our Predictions for 2023
           </h1>
           <p className="font-medium mt-3 text-sm text-neutral-900">
@@ -92,18 +92,32 @@ function CommentCard() {
 
 function CommentReplyCard() {
   return (
-    <div className="relative ml-[25px] before:absolute before:left-[-18px] before:h-full before:w-[3px] before:bg-gray-300 lg:ml-[60px] lg:before:left-[-30px]">
+    <div className="relative ml-[25px] before:absolute before:left-[-18px] before:h-full before:w-[3px] before:bg-indigo-100 lg:ml-[60px] lg:before:left-[-30px]">
       {[1, 2].map((i) => (
         <div
           key={i}
-          className="relative mt-5 rounded-xl border border-slate-100 bg-slate-50 before:absolute before:left-[-18px] before:top-1/3 before:h-[3px] before:w-[13px] before:bg-gray-300 hover:bg-slate-100 lg:before:left-[-30px] lg:before:w-[20px]"
+          className="relative mt-5 rounded-xl border bg-gray-50 before:absolute before:left-[-18px] before:top-1/3 before:h-[3px] before:w-[13px] before:bg-indigo-100 hover:from-indigo-100 lg:before:left-[-30px] lg:before:w-[20px]"
         >
           <div className="p-5">
-            <h3>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
-              dolore.
-            </h3>
-            <p>
+            <div className="flex justify-between items-center">
+              <div className="flex gap-x-3 items-center">
+                <Image
+                  src={userImage}
+                  className="h-10 w-10 rounded-full object-cover shrink-0"
+                  alt=""
+                />
+                <div>
+                  <h4 className="font-bold text-neutral-950 text-sm">
+                    Md Rakib
+                  </h4>
+                  <p className="text-xs text-neutral-600 font-medium">
+                    19 October, 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-base text-neutral-600 leading-7 mt-4">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Excepturi nihil ipsam recusandae velit sed dolorem ex voluptatum
               rem distinctio asperiores.

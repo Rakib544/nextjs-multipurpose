@@ -1,7 +1,6 @@
 import ContactForm from "@/components/contact-form";
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
-import { GridPattern } from "@/components/grid-pattern";
 import {
   ChatIcon,
   NotificationIcon,
@@ -18,7 +17,7 @@ const contactData = [
     title: "Chat to sales",
     subtitle: "Speak to our friendly teams",
     link: "",
-    icon: <ChatIcon className="h-4 w-4" />,
+    icon: <ChatIcon className="h-5 w-5 text-[#6666FF]" />,
     btnText: "Chat to sales",
   },
   {
@@ -26,7 +25,7 @@ const contactData = [
     title: "Chat to support",
     subtitle: "Write here to help",
     link: "",
-    icon: <NotificationIcon className="h-4 w-4" />,
+    icon: <NotificationIcon className="h-5 w-5 text-[#6666FF]" />,
     btnText: "Chat to support",
   },
   {
@@ -34,7 +33,7 @@ const contactData = [
     title: "Visit us",
     subtitle: "Visit our office HQ",
     link: "",
-    icon: <PinIcon className="h-4 w-4" />,
+    icon: <PinIcon className="h-5 w-5 text-[#6666FF]" />,
     btnText: "Get Direction",
   },
   {
@@ -42,7 +41,7 @@ const contactData = [
     title: "Call us",
     subtitle: "Monday-Fri from 8am to 5pm",
     link: "",
-    icon: <PhoneIcon className="h-4 w-4" />,
+    icon: <PhoneIcon className="h-5 w-5 text-[#6666FF]" />,
     btnText: "Call our team",
   },
 ];
@@ -51,11 +50,11 @@ export default function Contact1() {
   return (
     <div>
       <Container className="mt-16 lg:mt-24">
-        <div className="absolute inset-0 z-[-1] top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
+        {/* <div className="absolute inset-0 z-[-1] top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
           <GridPattern />
-        </div>
+        </div> */}
         <FadeIn className="max-w-xl mx-auto col-span-12 text-center order-2 lg:order-1 z-10">
-          <h1 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+          <h1 className="text-3xl font-extrabold tracking-tighter text-neutral-950 md:text-4xl/tight">
             Get In Touch With our Team
           </h1>
           <p className="mt-3 text-lg text-neutral-600 leading-8 px-3">
@@ -68,9 +67,9 @@ export default function Contact1() {
         {contactData.map((contactInfo) => (
           <div
             key={contactInfo.id}
-            className="col-span-12 lg:col-span-3 rounded-lg p-4 bg-white ring-1 ring-neutral-950/10 transition hover:bg-neutral-50"
+            className="col-span-12 sm:col-span-6 lg:col-span-3 border rounded-xl p-6 hover:bg-gradient-to-b from-indigo-50 hover:border-indigo-200 to-white transition hover:bg-neutral-50"
           >
-            <span className="h-10 w-10 rounded-full ring-1 ring-neutral-950/10  flex justify-center items-center mb-4">
+            <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full mb-4">
               {contactInfo.icon}
             </span>
             <h2 className="text-lg font-bold text-neutral-950 mb-1">
@@ -80,14 +79,14 @@ export default function Contact1() {
               {contactInfo.subtitle}
             </p>
             <Link href={contactInfo.link} className={buttonVariants({})}>
-              Chat to sales
+              {contactInfo.btnText} <span className="ml-2">&rarr;</span>
             </Link>
           </div>
         ))}
       </Container>
       <Container className="mt-32">
         <SectionIntro title="Message Us">
-          <p className="text-base text-neutral-700 -mt-4">
+          <p className="text-base text-neutral-700 -mt-1">
             We Will be back to you within 24 hours.
           </p>
         </SectionIntro>

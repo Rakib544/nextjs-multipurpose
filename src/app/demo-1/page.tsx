@@ -8,6 +8,12 @@ import { SectionIntro } from "@/components/section-intro";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
 import {
+  CallToAction,
+  CallToActionHeading,
+  CallToActionMenus,
+  CallToActionSubHeading,
+} from "@/components/ui/call-to-action";
+import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
@@ -205,7 +211,7 @@ export default function Home() {
         <Pricing2 />
       </Container>
 
-      <Container>
+      {/* <Container>
         <div className="relative isolate bg-gradient-to-b rounded-3xl from-indigo-100 to-indigo-50/60 py-16 sm:py-28 md:py-32">
           <FadeIn className="max-w-xl mx-auto text-center z-20">
             <h2 className="block tracking-tight [text-wrap:balance] text-4xl font-bold text-neutral-950 mb-2">
@@ -223,7 +229,36 @@ export default function Home() {
             </Link>
           </FadeIn>
         </div>
-      </Container>
+      </Container> */}
+
+      {/* <Container className="max-w-"> */}
+      <CallToAction>
+        <CallToActionHeading>
+          Let&apos;s maximize your online impact!
+        </CallToActionHeading>
+        <CallToActionSubHeading>
+          More than just buzzwords for marketing concepts of SEO.
+        </CallToActionSubHeading>
+        <CallToActionMenus>
+          <Link
+            href=""
+            className={buttonVariants({ size: "lg", variant: "outline" })}
+          >
+            Get In Touch
+          </Link>
+          <Link
+            href=""
+            className={buttonVariants({
+              variant: "link",
+              size: "lg",
+              className: "!text-white",
+            })}
+          >
+            Book a Demo &rarr;
+          </Link>
+        </CallToActionMenus>
+      </CallToAction>
+      {/* </Container> */}
     </div>
   );
 }

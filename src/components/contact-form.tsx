@@ -49,7 +49,7 @@ export default function ContactForm() {
                   <FormControl>
                     <Input
                       placeholder="John Doe"
-                      className="bg-gray-50"
+                      className="bg-indigo-50/40"
                       {...field}
                     />
                   </FormControl>
@@ -65,7 +65,7 @@ export default function ContactForm() {
                   <FormLabel>Your Email</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-gray-50"
+                      className="bg-indigo-50/40"
                       type="email"
                       placeholder="example@gmail.com"
                       {...field}
@@ -86,7 +86,7 @@ export default function ContactForm() {
                   <FormControl>
                     <Input
                       placeholder="Design and Graphics"
-                      className="bg-gray-50"
+                      className="bg-indigo-50/40"
                       {...field}
                     />
                   </FormControl>
@@ -103,7 +103,7 @@ export default function ContactForm() {
                   <FormControl>
                     <Input
                       placeholder="$500-$1000"
-                      className="bg-gray-50"
+                      className="bg-indigo-50/40"
                       {...field}
                     />
                   </FormControl>
@@ -122,7 +122,7 @@ export default function ContactForm() {
                 <FormControl>
                   <Textarea
                     rows={5}
-                    className="bg-gray-50"
+                    className="bg-indigo-50/40"
                     placeholder="Let tell us know your project about"
                     {...field}
                   />

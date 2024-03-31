@@ -6,7 +6,7 @@ export default function SignIn() {
   return (
     <div className="min-h-screen h-full">
       <div className="grid grid-cols-12 gap-6 items-center">
-        <div className="col-span-12 lg:col-span-6 mt-20 md:mt-0">
+        <div className="col-span-12 lg:col-span-6 mt-20 lg:mt-0">
           <div className="max-w-lg mx-auto px-6">
             <Link href="/" aria-label="Home" className="mb-6 inline-block">
               <svg viewBox="0 0 130 32" aria-hidden="true" className="h-8">
@@ -50,7 +50,7 @@ export default function SignIn() {
             <LoginForm />
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-6 relative h-full min-h-screen hidden md:block">
+        <div className="col-span-12 lg:col-span-6 relative h-full min-h-screen hidden lg:block">
           <div className="absolute inset-0 bg-slate-900/30 z-50 flex justify-center items-end">
             <div className="mb-20 max-w-md mx-auto text-center">
               <h2 className="text-xl font-bold text-white">

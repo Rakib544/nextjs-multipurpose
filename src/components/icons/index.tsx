@@ -31,8 +31,10 @@ import { PencilIcon } from "./pencil-icon";
 import { PhoneIcon } from "./phone-icon";
 import { PinIcon } from "./pin-icon";
 import { ShieldCheckIcon } from "./shield-check-icon";
+import { StandingPeopleIcon } from "./standing-people-icon";
 import { StarIcon } from "./start-icon";
 import { TwitterIcon } from "./twitter-icon";
+import { UsersIcon } from "./users-icon";
 import { X } from "./x-icon";
 
 export {
@@ -69,7 +71,9 @@ export {
   PhoneIcon,
   PinIcon,
   ShieldCheckIcon,
+  StandingPeopleIcon,
   StarIcon,
   TwitterIcon,
+  UsersIcon,
   X,
 };

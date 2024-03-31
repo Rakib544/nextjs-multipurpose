@@ -39,7 +39,7 @@ export default function LoginForm() {
 
   return (
     <div>
-      <div className="flex gap-x-4 mt-3">
+      <div className="flex flex-col sm:flex-row gap-x-4 mt-3">
         <Button
           variant="outline"
           className="mt-4 w-full items-center gap-x-1 !rounded-lg"

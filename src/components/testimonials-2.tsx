@@ -17,7 +17,7 @@ export default function Testimonials2() {
           {testimonials.map((testimonial) => (
             <CarouselItem
               key={testimonial.id}
-              className="bg-slate-50  md:basis-1/2 lg:basis-1/3 rounded-xl"
+              className="bg-gradient-to-br from-indigo-50 to-white md:basis-1/2 lg:basis-1/3 rounded-xl"
             >
               <TestimonialCard
                 quote={testimonial.quote}

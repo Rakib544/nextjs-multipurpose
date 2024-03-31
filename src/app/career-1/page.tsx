@@ -15,14 +15,14 @@ export default function Career1() {
       </PageIntro>
       <Container className="my-12">
         <Border />
-        <div className="grid grid-cols-12 py-10">
-          <div className="col-span-5">
+        <div className="grid grid-cols-12 py-10 gap-y-6">
+          <div className="col-span-12 lg:col-span-5">
             <h2 className="text-lg font-bold text-neutral-950 mb-2">Design</h2>
             <p className="text-base text-neutral-600">
               Open Positions for our design team
             </p>
           </div>
-          <div className="col-span-7 space-y-4">
+          <div className="col-span-12 lg:col-span-7 space-y-4">
             {jobs
               .filter((item) => item.category.toLowerCase() === "design")
               .map((job, index) => (
@@ -42,8 +42,8 @@ export default function Career1() {
       </Container>
       <Container className="my-12">
         <Border />
-        <div className="grid grid-cols-12 py-10">
-          <div className="col-span-5">
+        <div className="grid grid-cols-12 py-10 gap-y-6">
+          <div className="col-span-12 lg:col-span-5">
             <h2 className="text-lg font-bold text-neutral-950 mb-2">
               Marketing
             </h2>
@@ -51,7 +51,7 @@ export default function Career1() {
               Open Positions for our design team
             </p>
           </div>
-          <div className="col-span-7 space-y-4">
+          <div className="col-span-12 lg:col-span-7 space-y-4">
             {jobs
               .filter((item) => item.category.toLowerCase() === "marketing")
               .map((job, index) => (

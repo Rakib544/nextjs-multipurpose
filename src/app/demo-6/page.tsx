@@ -1,25 +1,44 @@
 import { Container } from "@/components/container";
-import { StarIcon } from "@/components/icons";
+import {
+  AnalyticsIcon,
+  CheckIcon,
+  ClockIcon,
+  MagicIcon,
+  StandingPeopleIcon,
+  StarIcon,
+  UsersIcon,
+} from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
 import { BlogCard2 } from "@/components/blog-card";
-import CallToAction from "@/components/call-to-action";
 import { SectionIntro } from "@/components/section-intro";
 import Testimonials2 from "@/components/testimonials-2";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  CallToAction,
+  CallToActionHeading,
+  CallToActionMenus,
+  CallToActionSubHeading,
+} from "@/components/ui/call-to-action";
 import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
-import Workflow from "@/components/work-flow";
+import Workflow2 from "@/components/work-flow-2";
 import userImage2 from "@/images/testimonial_2.jpg";
 import userImage1 from "@/images/testimonial_3.jpg";
 
 const features = [
   {
     id: 1,
-    icon: "/treadmill.png",
+    icon: <StandingPeopleIcon className="h-5 w-5 text-indigo-600" />,
     title: "Track Your Workouts",
     description:
       "Log your exercises, set goals, and track your progress over time",
@@ -27,23 +46,51 @@ const features = [
   {
     id: 2,
     title: "Personalized Plans",
-    icon: "/planning.png",
+    icon: <MagicIcon className="h-5 w-5" />,
     description:
       "Receive customized workout and nutrition plans based on your goals and preferences",
   },
   {
     id: 3,
     title: "Activity Tracking",
-    icon: "/time.png",
+    icon: <ClockIcon className="text-indigo-600 h-5 w-5" />,
     description:
       "Monitor your daily activity levels, steps, and calories burned effortlessly",
   },
   {
     id: 4,
     title: "Insights & Analytics",
-    icon: "/analysis.png",
+    icon: <AnalyticsIcon className="h-5 w-5 text-indigo-600" />,
     description:
       "Gain valuable insights into your fitness journey with detailed analytics and reports",
+  },
+  {
+    id: 5,
+    title: "Community Support",
+    description:
+      "Connect with like-minded individuals, share achievements, and stay motivated together.",
+    icon: <UsersIcon className="h-5 w-5 text-indigo-600" />,
+  },
+];
+
+const whyChooseData = [
+  {
+    id: 1,
+    title: "Digital Comprehensive Analytics",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita maiores et velit quae sequi iure alias beatae magnam aliquam?",
+  },
+  {
+    id: 2,
+    title: "Personalized Plans",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita maiores et velit quae sequi iure alias beatae magnam aliquam?",
+  },
+  {
+    id: 3,
+    title: "Community Feedbacks",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita maiores et velit quae sequi iure alias beatae magnam aliquam?",
   },
 ];
 
@@ -53,8 +100,8 @@ export default function AppLanding() {
       <div>
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-            <div>
-              <h1 className="text-4xl pr-10 font-black md:text-4xl/tight max-w-lg">
+            <div className="order-2 lg:order-1">
+              <h1 className="text-3xl pr-10 font-black md:text-4xl/tight max-w-lg">
                 Transform{" "}
                 <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
                   {" "}
@@ -75,7 +122,7 @@ export default function AppLanding() {
                 ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                 omnis.
               </p>
-              <div className="flex gap-x-3 mt-4">
+              <div className="flex flex-col sm:flex-row gap-y-3 gap-x-3 mt-4">
                 <Link href="" className={buttonVariants({ size: "lg" })}>
                   Download IOS
                 </Link>
@@ -86,7 +133,7 @@ export default function AppLanding() {
                   Download Android
                 </Link>
               </div>
-              <div className="flex gap-x-6 mt-8 items-center">
+              <div className=" hidden md:flex gap-x-6 mt-8 items-center">
                 <div className="border-r-2 flex gap-x-3 pr-6">
                   <div className="flex">
                     <Image
@@ -125,13 +172,81 @@ export default function AppLanding() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center order-1 lg:order-2">
               <Image src="/device.png" height={700} width={400} alt="" />
             </div>
           </div>
         </Container>
       </div>
-      <div className="my-32 py-20 bg-slate-100">
+      <Container className="mt-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="relative">
+            <Image
+              src="https://vue.hibotheme.com/prag/img/about-img.df163752.webp"
+              alt=""
+              height={500}
+              width={400}
+              className="block mx-auto rounded-xl"
+            />
+            <div className="absolute bottom-10 bg-white p-4 rounded-xl shadow-xl">
+              <span className="text-lg font-semibold flex">
+                <CheckIcon className="h-7 w-7 fill-indigo-600 shrink-0" /> 24/7
+                Community Support
+              </span>
+              <span className="text-base font-medium leading-7">
+                We’re servicing 24/7 support for all
+              </span>
+            </div>
+            <div className="absolute top-10 bg-white p-4 rounded-xl shadow-xl">
+              <span className="text-lg font-semibold flex">
+                <CheckIcon className="h-7 w-7 fill-indigo-600 shrink-0" />{" "}
+                Personalized Plan
+              </span>
+            </div>
+            <div className="absolute right-0 bottom-32 bg-white p-4 rounded-xl shadow-xl">
+              <span className="text-lg font-semibold flex">
+                <CheckIcon className="h-7 w-7 fill-indigo-600 shrink-0" />{" "}
+                Analytics
+              </span>
+              <span className="text-base font-medium leading-7">
+                Lorem ipsum dolor sit amet.
+              </span>
+            </div>
+          </div>
+          <div>
+            <SectionIntro
+              eyebrow="Why choose us"
+              title="Why FitLife Is THe Right Choice For You"
+            >
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+                expedita, culpa enim praesentium amet necessitatibus.
+              </p>
+            </SectionIntro>
+            <Accordion
+              type="single"
+              defaultValue="item-1"
+              className="mt-12 space-y-3"
+            >
+              {whyChooseData.map((data) => (
+                <AccordionItem
+                  key={data.id}
+                  value={`item-${data.id}`}
+                  className="border rounded-xl text-base py-1 px-4 data-[state=open]:bg-indigo-600 data-[state=open]:text-white"
+                >
+                  <AccordionTrigger className="font-semibold">
+                    {data.id.toString().padStart(2, "0")}. {data.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-slate-200 leading-8 text-base">
+                    {data.description}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </Container>
+      <div className="my-32">
         <Container>
           <SectionIntro
             eyebrow="Our Features"
@@ -143,34 +258,41 @@ export default function AppLanding() {
               natus nobis. Voluptates?
             </p>
           </SectionIntro>
-          <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {features.map((feature) => (
-              <div key={feature.id} className="p-5 bg-white rounded-xl">
-                <Image src={feature.icon} alt="" height={60} width={60} />
-                <h3 className="font-bold text-lg text-neutral-950 mt-4">
-                  {feature.title}
-                </h3>
-                <p className="text-neutral-600 leading-7 mt-2 text-base">
-                  {feature.description}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+            {features.map((service) => (
+              <Link
+                href="/services/1"
+                key={service.id}
+                className="border rounded-xl bg-indigo-50 transition-all duration-500  p-6 hover:bg-gradient-to-b from-indigo-50 hover:border-indigo-200 to-white"
+              >
+                <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full">
+                  {service.icon}
+                </span>
+                <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
+                <p className="text-base leading-7 mt-3 text-neutral-600">
+                  {service.description}
                 </p>
-                <Link
-                  href=""
-                  className={buttonVariants({
-                    variant: "link",
-                    className: "!px-0 mt-3",
-                  })}
-                >
-                  Learn More &rarr;
-                </Link>
-              </div>
+              </Link>
             ))}
           </div>
         </Container>
       </div>
       <Container className="my-32">
-        <Workflow />
+        <SectionIntro
+          eyebrow="Working Steps"
+          title="How it works?"
+          className="mb-12"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis iusto impedit fugiat laboriosam odio dolore fuga quo
+            natus nobis. Voluptates?
+          </p>
+        </SectionIntro>
+        <Workflow2 />
+        {/* <TestingSection /> */}
       </Container>
-      <div className="my-32 py-20 bg-slate-100">
+      {/* <div className="my-32 py-20 bg-slate-100">
         <Container>
           <SectionIntro
             eyebrow="Benefits"
@@ -205,7 +327,7 @@ export default function AppLanding() {
             ))}
           </div>
         </Container>
-      </div>
+      </div> */}
       <Container className="my-32">
         <SectionIntro
           eyebrow="COOL & AMAZING DESIGN"
@@ -253,13 +375,31 @@ export default function AppLanding() {
         </SectionIntro>{" "}
         <Testimonials2 />
       </Container>
-
-      <CallToAction
-        title="This app is now available in play store."
-        subtitle=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum ab dolores tempore repudiandae libero dolorem autem distinctio aliquid. Repudiandae, labore."
-        btnText="Download Now"
-        link=""
-      />
+      <CallToAction>
+        <CallToActionHeading>Download this app now</CallToActionHeading>
+        <CallToActionSubHeading>
+          This app is now available on both Apple store and app store. You can
+          download it and enjoy it now.
+        </CallToActionSubHeading>
+        <CallToActionMenus>
+          <Link
+            href=""
+            className={buttonVariants({ variant: "outline", size: "lg" })}
+          >
+            Download IOS
+          </Link>
+          <Link
+            href=""
+            className={buttonVariants({
+              variant: "link",
+              className: "text-white",
+              size: "lg",
+            })}
+          >
+            Download Android
+          </Link>
+        </CallToActionMenus>
+      </CallToAction>
     </div>
   );
 }

@@ -18,17 +18,17 @@ const JobCard = React.forwardRef<HTMLAnchorElement, JobCardProps>(
       <Link
         ref={ref}
         href={`/jobs/${slug}`}
-        className="border bg-white relative p-4 rounded-xl hover:bg-gradient-to-br hover:from-indigo-50 hover:to-white group  block"
+        className="border  border-indigo-200 bg-gradient-to-br from-violet-50 to-white relative p-4 rounded-xl hover:bg-gradient-to-br hover:from-indigo-100 hover:to-indigo-50 group  block"
       >
         <div className="flex justify-between">
           <h3 className="text-lg font-bold">
             {title}{" "}
-            <span className="inline-block px-4 py-1 group-hover:transparent bg-gray-100 text-xs font-semibold rounded-full">
+            <span className="inline-block px-4 py-1 group-hover:transparent bg-indigo-600 text-white text-xs font-semibold rounded-full">
               {category}
             </span>
           </h3>
           <div>
-            <span className="absolute -top-3 right-0  inline-flex items-center gap-x-1 px-4 py-1 bg-gray-100 text-xs font-semibold rounded-full">
+            <span className="absolute -top-3 right-0  inline-flex items-center gap-x-1 px-4 py-1 bg-indigo-600 text-white text-xs font-semibold rounded-full">
               <PinIcon className="h-3 w-3" /> {address}
             </span>
           </div>

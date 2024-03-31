@@ -1,51 +1,15 @@
 import { Container } from "@/components/container";
-import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { FadeIn } from "@/components/fade-in";
 import { FaqCard2 } from "@/components/faq-card/index";
 import { GridPattern } from "@/components/grid-pattern";
 import { PageIntro } from "@/components/page-intro";
 import { Pricing1 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
-import ServiceCard from "@/components/service-card";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
-import Workflow from "@/components/work-flow";
-import partnershipIcon from "@/images/key-features/partnership.svg";
-import performanceIcon from "@/images/key-features/performance.svg";
-import subscriptionIcon from "@/images/key-features/subscription.svg";
-import supportIcon from "@/images/key-features/support.svg";
 import { faqData } from "@/lib/data/faq-data";
+import { sassFeatures } from "@/lib/data/sass-features";
 import Link from "next/link";
-
-const data = [
-  {
-    id: 1,
-    title: "Fast Performance",
-    description:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
-    icon: performanceIcon,
-  },
-  {
-    id: 2,
-    title: "Partnership deal",
-    description:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
-    icon: partnershipIcon,
-  },
-  {
-    id: 3,
-    title: "Pro Subscription",
-    description:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
-    icon: subscriptionIcon,
-  },
-  {
-    id: 4,
-    title: "Customer Support",
-    description:
-      "Get your blood tests delivered at home collect a sample from the your blood tests.",
-    icon: supportIcon,
-  },
-];
 
 export default function Services1() {
   return (
@@ -80,26 +44,34 @@ export default function Services1() {
           />
         </StatList>
       </Container>
-      <Container className="my-32">
-        <SectionIntro eyebrow="Services" title="Our Services">
+      <Container className="mt-20">
+        <SectionIntro
+          title="Empower your saas solutions"
+          eyebrow="Solution"
+          className="mb-8"
+        >
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-            obcaecati ipsam rem excepturi perferendis iusto provident sapiente
-            autem officiis laboriosam.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem est
+            deleniti, molestias maxime laudantium eos?
           </p>
         </SectionIntro>
-        <FadeInStagger faster className="grid grid-cols-12 gap-4 mt-12">
-          {data.map((d) => (
-            <ServiceCard
-              key={d.id}
-              title={d.title}
-              description={d.description}
-              icon={d.icon}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {sassFeatures.map((service) => (
+            <Link
+              href="/services/1"
+              key={service.id}
+              className="border rounded-xl p-6 hover:bg-gradient-to-b from-indigo-50 hover:border-indigo-200 to-white"
+            >
+              <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full">
+                {service.icon}
+              </span>
+              <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
+              <p className="text-base leading-7 mt-3 text-neutral-600">
+                {service.description}
+              </p>
+            </Link>
           ))}
-        </FadeInStagger>
-
-        <Workflow />
+        </div>
       </Container>
       <div className="relative isolate bg-[#F6F9FC] py-16 sm:py-28 md:py-32">
         <div className="absolute inset-0 top-0 z-[-1] text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">

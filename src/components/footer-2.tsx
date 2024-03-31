@@ -24,11 +24,11 @@ function Navigation() {
                 >
                   <rect
                     clipPath="url(#:R6ata:-clip)"
-                    className="h-8 transition-all duration-300 fill-neutral-950 w-0 group-hover/logo:w-8"
+                    className="h-8 transition-all duration-300 fill-white w-0 group-hover/logo:w-8"
                   ></rect>
                   <use
                     href="#:R6ata:-path"
-                    className="stroke-neutral-950"
+                    className="stroke-white"
                     fill="none"
                     strokeWidth="1.5"
                   ></use>
@@ -43,12 +43,12 @@ function Navigation() {
                   </defs>
                 </svg>
                 <path
-                  className="fill-neutral-950"
+                  className="fill-white"
                   d="M52.928 23.716c5.184 0 7.992-1.992 7.992-5.28 0-3.888-2.688-4.8-7.512-5.376-3.36-.408-4.728-.672-4.728-2.448 0-1.464 1.44-2.376 3.912-2.376 2.4 0 3.936.864 4.104 2.784h3.576c-.24-3.288-3-5.232-7.536-5.232-4.728 0-7.68 1.896-7.68 5.208 0 3.48 2.712 4.464 7.416 5.04 3.216.408 4.8.648 4.8 2.664 0 1.584-1.392 2.544-4.224 2.544-3.048 0-4.68-1.176-4.752-3.288H44.6c.072 3.408 2.616 5.76 8.328 5.76Zm14.175-.216h3.312v-2.928h-1.968c-.84 0-1.272-.24-1.272-1.104v-6.144h3.24v-2.592h-3.24V6.676l-3.36.648v3.408h-2.496v2.592h2.496v7.2c0 2.04 1.248 2.976 3.288 2.976Zm10.078.216c2.16 0 4.104-1.008 4.944-2.64h.168l.144 2.424h3.288V10.732h-3.432v6.336c0 2.4-1.584 4.032-3.984 4.032-2.328 0-3.264-1.368-3.264-3.936v-6.432h-3.432v7.032c0 4.416 2.256 5.952 5.568 5.952Zm16.24.048c2.52 0 4.2-1.008 4.944-2.496h.168l.072 2.232h3.264V6.004h-3.408v7.008h-.168c-.792-1.56-2.592-2.52-4.848-2.52-3.816 0-6.384 2.592-6.384 6.624 0 4.056 2.568 6.648 6.36 6.648Zm1.032-2.616c-2.472 0-3.96-1.536-3.96-4.032s1.488-4.008 3.96-4.008 3.984 1.512 3.984 3.648v.744c0 2.136-1.536 3.648-3.984 3.648Zm9.485-12.216h3.408V6.004h-3.408v2.928Zm0 14.568h3.408V10.732h-3.408V23.5Zm12.481.24c4.584 0 7.56-2.52 7.56-6.624 0-4.152-3-6.624-7.56-6.624s-7.56 2.52-7.56 6.624c0 4.128 3.024 6.624 7.56 6.624Zm0-2.64c-2.592 0-4.128-1.56-4.128-3.984s1.536-3.984 4.128-3.984c2.616 0 4.152 1.536 4.152 3.984 0 2.424-1.56 3.984-4.152 3.984Zm8.794 2.4h3.384v-2.88h-3.384v2.88Z"
                 ></path>
               </svg>
             </Link>
-            <p className="text-neutral-700 mt-4 leading-7">
+            <p className="text-[#ADBDCC] mt-4 leading-7">
               We are developer studio working at the intersection of design and
               technology. It’s a really busy intersection though — a lot of our
               staff have been involved in hit and runs.
@@ -57,15 +57,15 @@ function Navigation() {
           </div>
         </li>
         <li className="col-span-6 sm:col-span-3">
-          <div className="font-display text-lg font-bold text-neutral-950">
+          <div className="font-display text-lg font-bold text-white">
             {company.title}
           </div>
-          <ul role="list" className="mt-4 text-neutral-700">
+          <ul role="list" className="mt-4 text-[#ADBDCC]">
             {company.links.map((link: any) => (
               <li key={link.title} className="mt-4">
                 <Link
                   href={link.href}
-                  className="transition hover:text-neutral-950"
+                  className="transition hover:text-indigo-600"
                 >
                   {link.title}
                 </Link>
@@ -74,15 +74,15 @@ function Navigation() {
           </ul>
         </li>
         <li className="col-span-6 sm:col-span-3">
-          <div className="font-display text-lg font-bold text-neutral-950">
+          <div className="font-display text-lg font-bold text-white">
             {work.title}
           </div>
-          <ul role="list" className="mt-4 text-neutral-700">
+          <ul role="list" className="mt-4 text-[#ADBDCC]">
             {work.links.map((link: any) => (
               <li key={link.title} className="mt-4">
                 <Link
                   href={link.href}
-                  className="transition hover:text-neutral-950"
+                  className="transition hover:text-indigo-600"
                 >
                   {link.title}
                 </Link>
@@ -99,7 +99,7 @@ export function Footer2() {
   const pathname = usePathname();
   const isAuthRoute = pathname.startsWith("/auth");
   return (
-    <footer className="">
+    <footer className="bg-[#0A2540]">
       <Container className={`pt-24 w-full ${isAuthRoute ? "hidden" : ""}`}>
         <FadeIn className="lg:px-4">
           <div className="grid grid-cols-12 md:gap-x-8 gap-y-16">
@@ -108,10 +108,18 @@ export function Footer2() {
               <NewsletterForm />
             </div>
           </div>
-          <div className="pb-20 mt-24 text-center border-t border-neutral-950/10 pt-12">
-            <p className="text-neutral-700">
-              © Rakib {new Date().getFullYear()}
+          <div className="pb-10 mt-24 flex justify-between items-center border-t border-slate-50/10 pt-12">
+            <p className="text-[#ADBDCC] text-sm">
+              © {new Date().getFullYear()}. All Right Reserved
             </p>
+            <div className="gap-x-4 text-[#ADBDCC] flex text-sm">
+              <Link href="/privacy-policy" className="hover:text-indigo-600">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-condition" className="hover:text-indigo-600">
+                Terms of Condition
+              </Link>
+            </div>
           </div>
         </FadeIn>
       </Container>

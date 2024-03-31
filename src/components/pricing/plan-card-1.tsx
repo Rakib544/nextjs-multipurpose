@@ -47,10 +47,10 @@ export function PlanCard1({
   return (
     <section
       className={clsx(
-        "flex flex-col rounded-3xl px-6 sm:px-8",
+        "flex flex-col rounded-3xl px-6 sm:px-8 py-8",
         featured
-          ? "order-first bg-indigo-600 py-8 lg:order-none"
-          : "lg:py-8 bg-gradient-to-br from-indigo-50 to-white border"
+          ? "order-first bg-indigo-600 lg:order-none"
+          : "bg-gradient-to-br from-indigo-50 to-white border"
       )}
     >
       <h3
@@ -90,7 +90,7 @@ export function PlanCard1({
         )}
       >
         {features.map((feature) => (
-          <li key={feature} className="flex">
+          <li key={feature} className="flex font-medium">
             <CheckIcon
               className={featured ? "text-white" : "text-neutral-700"}
             />
