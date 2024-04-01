@@ -47,11 +47,7 @@ export default function ContactForm() {
                 <FormItem className="col-span-12 md:col-span-6">
                   <FormLabel>Your Name</FormLabel>
                   <FormControl>
-                    <Input
-                      placeholder="John Doe"
-                      className="bg-indigo-50/40"
-                      {...field}
-                    />
+                    <Input placeholder="John Doe" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -65,7 +61,6 @@ export default function ContactForm() {
                   <FormLabel>Your Email</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-indigo-50/40"
                       type="email"
                       placeholder="example@gmail.com"
                       {...field}
@@ -84,11 +79,7 @@ export default function ContactForm() {
                 <FormItem className="col-span-12 md:col-span-6">
                   <FormLabel>What you are interested?</FormLabel>
                   <FormControl>
-                    <Input
-                      placeholder="Design and Graphics"
-                      className="bg-indigo-50/40"
-                      {...field}
-                    />
+                    <Input placeholder="Design and Graphics" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -101,11 +92,7 @@ export default function ContactForm() {
                 <FormItem className="col-span-12 md:col-span-6">
                   <FormLabel>Project Budget</FormLabel>
                   <FormControl>
-                    <Input
-                      placeholder="$500-$1000"
-                      className="bg-indigo-50/40"
-                      {...field}
-                    />
+                    <Input placeholder="$500-$1000" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -122,7 +109,6 @@ export default function ContactForm() {
                 <FormControl>
                   <Textarea
                     rows={5}
-                    className="bg-indigo-50/40"
                     placeholder="Let tell us know your project about"
                     {...field}
                   />

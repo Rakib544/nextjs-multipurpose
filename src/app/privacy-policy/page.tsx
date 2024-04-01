@@ -50,7 +50,7 @@ export default function privacyAndPolicy() {
           </BreadcrumbList>
         </Breadcrumb>
       </PageIntro>
-      <Container className="mt-20 ">
+      <Container className="my-20 ">
         <div className="grid grid-cols-12 gap-x-6">
           <div className="col-span-12 md:col-span-3 sticky top-0 h-screen hidden md:block">
             <h2 className="font-bold text-lg mb-4">Table Of Contents</h2>
@@ -70,7 +70,7 @@ export default function privacyAndPolicy() {
           <div className="col-span-12 md:col-span-9">
             <div
               dangerouslySetInnerHTML={{ __html: privacyPolicyData }}
-              className="prose prose-slate max-w-none prose-base"
+              className="prose prose-slate max-w-none prose-base  prose-h3:font-bold prose-h3:text-lg"
             />
           </div>
         </div>

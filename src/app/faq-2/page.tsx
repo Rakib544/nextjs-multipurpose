@@ -1,7 +1,6 @@
 import { Container } from "@/components/container";
 import { FadeInStagger } from "@/components/fade-in";
 import { FaqCard2 } from "@/components/faq-card";
-import { GridPattern } from "@/components/grid-pattern";
 import { PageIntro } from "@/components/page-intro";
 import { faqData } from "@/lib/data/faq-data";
 
@@ -19,11 +18,7 @@ export default function Faq2() {
         </p>
       </PageIntro>
 
-      <div className="absolute inset-0 z-[-1] top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-        <GridPattern />
-      </div>
-
-      <Container className="mt-16 lg:mt-24">
+      <Container className="my-16 lg:my-24">
         <div className=" mt-16">
           <FadeInStagger faster>
             <div className="mt-6 grid grid-cols-12 gap-6">

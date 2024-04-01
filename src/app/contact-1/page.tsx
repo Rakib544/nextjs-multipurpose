@@ -1,14 +1,31 @@
-import ContactForm from "@/components/contact-form";
 import { Container } from "@/components/container";
-import { FadeIn } from "@/components/fade-in";
+import { FadeInStagger } from "@/components/fade-in";
+import { FaqCard1 } from "@/components/faq-card";
 import {
   ChatIcon,
   NotificationIcon,
   PhoneIcon,
   PinIcon,
 } from "@/components/icons";
+import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
+import { TestimonialCard } from "@/components/testimonial-card";
+import { Accordion } from "@/components/ui/accordion";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import { buttonVariants } from "@/components/ui/button";
+import {
+  InfiniteMoving,
+  InfiniteMovingItem,
+} from "@/components/ui/infinite-moving";
+import { faqData } from "@/lib/data/faq-data";
+import { testimonials } from "@/lib/data/testimonials-data";
 import Link from "next/link";
 
 const contactData = [
@@ -49,21 +66,25 @@ const contactData = [
 export default function Contact1() {
   return (
     <div>
-      <Container className="mt-16 lg:mt-24">
-        {/* <div className="absolute inset-0 z-[-1] top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-          <GridPattern />
-        </div> */}
-        <FadeIn className="max-w-xl mx-auto col-span-12 text-center order-2 lg:order-1 z-10">
-          <h1 className="text-3xl font-extrabold tracking-tighter text-neutral-950 md:text-4xl/tight">
-            Get In Touch With our Team
-          </h1>
-          <p className="mt-3 text-lg text-neutral-600 leading-8 px-3">
-            Ready to help your company grow faster? Let&apos;s chat about how we
-            can help.
-          </p>
-        </FadeIn>
-      </Container>
-      <Container className="grid grid-cols-12 gap-6 mt-16">
+      <PageIntro title="Don’t hesitate to reach out" centered>
+        <p>
+          Ready to help your company grow faster? Let&apos;s chat about how we
+          can help.
+        </p>
+        <Breadcrumb className="flex justify-center mt-4">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Contact</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+      </PageIntro>
+
+      <Container className="grid grid-cols-12 gap-6 mt-20">
         {contactData.map((contactInfo) => (
           <div
             key={contactInfo.id}
@@ -78,21 +99,119 @@ export default function Contact1() {
             <p className="text-sm text-neutral-700 mb-4">
               {contactInfo.subtitle}
             </p>
-            <Link href={contactInfo.link} className={buttonVariants({})}>
+            <Link
+              href={contactInfo.link}
+              className={buttonVariants({
+                variant: "link",
+                className: "!px-0",
+              })}
+            >
               {contactInfo.btnText} <span className="ml-2">&rarr;</span>
             </Link>
           </div>
         ))}
       </Container>
-      <Container className="mt-32">
-        <SectionIntro title="Message Us">
-          <p className="text-base text-neutral-700 -mt-1">
-            We Will be back to you within 24 hours.
+
+      <div className="bg-indigo-600 py-20 mt-32">
+        <Container>
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-12 md:col-span-5">
+              <SectionIntro
+                eyebrow="Our Locations"
+                title="Visit our offices"
+                invert
+              >
+                <p>Find us on these locations</p>
+              </SectionIntro>
+            </div>
+            <div className="col-span-12 md:col-span-7 grid grid-cols-1  sm:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-white font-bold text-base">Copenhagen</h4>
+                <p className="text-sm mt-1 text-slate-200">1 Carlsberg Gate</p>
+                <p className="text-sm text-slate-200">
+                  1260, København, Denmark
+                </p>
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-base">London</h4>
+                <p className="text-sm mt-1 text-slate-200">1 Carlsberg Gate</p>
+                <p className="text-sm text-slate-200">
+                  1260, København, Denmark
+                </p>
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-base">Sydney</h4>
+                <p className="text-sm mt-1 text-slate-200">1 Carlsberg Gate</p>
+                <p className="text-sm text-slate-200">
+                  1260, København, Denmark
+                </p>
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-base">New York</h4>
+                <p className="text-sm mt-1 text-slate-200">1 Carlsberg Gate</p>
+                <p className="text-sm text-slate-200">
+                  1260, København, Denmark
+                </p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      <Container className="mt-16 lg:mt-32">
+        <SectionIntro
+          title="Got questions? We’ve got answers"
+          eyebrow="Our FAQ"
+          className="max-w-2xl mx-auto text-center"
+        >
+          <p>
+            In order to make sure your website is user friendly and optimized
+            for Google’s algorithm, our on-site optimization experts clean up
+            the code and copy.
           </p>
         </SectionIntro>
-        <div className="max-w-3xl mt-12">
-          <ContactForm />
+        <div className="max-w-2xl mx-auto mt-16">
+          <FadeInStagger faster>
+            <Accordion
+              type="single"
+              collapsible
+              defaultValue="item-1"
+              className="mt-6"
+            >
+              {faqData.splice(0, 8).map((faq) => (
+                <FaqCard1
+                  key={faq.id}
+                  id={faq.id.toString()}
+                  question={faq.question}
+                  answer={faq.answer}
+                />
+              ))}
+            </Accordion>
+          </FadeInStagger>
         </div>
+      </Container>
+      <Container className="my-32">
+        <SectionIntro
+          eyebrow="Reviews"
+          title="Clients feedback"
+          className="max-w-2xl mx-auto mb-6 text-center"
+        ></SectionIntro>
+        <InfiniteMoving>
+          {testimonials.map((testimonial) => (
+            <InfiniteMovingItem
+              key={testimonial.id}
+              className="md:w-[350px] bg-gradient-to-br from-indigo-50 to-white"
+            >
+              <TestimonialCard
+                image={testimonial.image}
+                quote={testimonial.quote}
+                name={testimonial.name}
+                rating={testimonial.rating}
+                role={testimonial.role}
+              />
+            </InfiniteMovingItem>
+          ))}
+        </InfiniteMoving>
       </Container>
     </div>
   );

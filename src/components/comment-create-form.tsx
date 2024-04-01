@@ -50,11 +50,7 @@ export default function CommentCreateForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input
-                      //   className="rounded-full px-5"
-                      {...field}
-                      placeholder="Name"
-                    />
+                    <Input {...field} placeholder="Name" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -66,12 +62,7 @@ export default function CommentCreateForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input
-                      //   className="rounded-full px-5"
-                      type="email"
-                      placeholder="Email"
-                      {...field}
-                    />
+                    <Input type="email" placeholder="Email" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

@@ -3,7 +3,6 @@ import { Clients } from "@/components/clients";
 import { ContactSection } from "@/components/contact-us-section";
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
-import { GridPattern } from "@/components/grid-pattern";
 import { Services } from "@/components/services";
 import { buttonVariants } from "@/components/ui/button";
 import heroImage from "@/images/hero.jpg";
@@ -15,9 +14,6 @@ export default function Home() {
   return (
     <main>
       <Container className="mt-16 lg:mt-32 grid grid-cols-12 gap-x-4 items-center">
-        <div className="absolute inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-          <GridPattern />
-        </div>
         <FadeIn className="max-w-4xl mx-auto col-span-12 text-center order-2 lg:order-1 z-10">
           <h1 className="text-3xl font-bold tracking-tighter md:text-5xl/tight">
             Experience the workflow the best frontend teams love.

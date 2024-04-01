@@ -27,11 +27,11 @@ export default function JobDetails() {
           WordPress Plugin Development.
         </p>
       </PageIntro>
-      <Container className="my-12">
+      <Container className="mt-12 mb-32">
         <FadeIn className="grid grid-cols-12 gap-6">
           <div className="col-span-12 lg:col-span-8">
             <div
-              className="prose prose-slate prose-base"
+              className="prose prose-slate prose-base prose-h3:font-bold prose-h3:text-lg"
               dangerouslySetInnerHTML={{ __html: jobDescription }}
             />
           </div>
