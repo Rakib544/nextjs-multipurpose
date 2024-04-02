@@ -1,18 +1,18 @@
 import { Container } from "@/components/container";
 import { JobCard } from "@/components/job-card";
+import JobFilter from "@/components/job-filter";
+import MobileFilterDrawer from "@/components/mobile-filter-drawer";
 import { PageIntro } from "@/components/page-intro";
-import { SectionIntro } from "@/components/section-intro";
-import {
-  InfiniteMoving,
-  InfiniteMovingItem,
-} from "@/components/ui/infinite-moving";
-import heroImage from "@/images/hero.jpg";
+import { Input } from "@/components/ui/input";
+import Pagination from "@/components/ui/pagination";
 import { jobs } from "@/lib/data/job-data";
-import Image from "next/image";
-
-const images = [heroImage, heroImage, heroImage, heroImage, heroImage];
 
 export default function Career2() {
+  const jobType = jobs.map((job) => job.jobType);
+  const uniqueJobType = [...new Set(jobType)];
+
+  const jobCategories = jobs.map((job) => job.category);
+
   return (
     <div>
       <PageIntro title="Become a part of our team">
@@ -22,41 +22,36 @@ export default function Career2() {
           laudantium?
         </p>
       </PageIntro>
-      <Container className="mt-12">
-        <InfiniteMoving>
-          {images.map((image, index) => (
-            <InfiniteMovingItem key={index} className="md:w-[350px]">
-              <Image
-                src={image}
-                alt=""
-                width={200}
-                height={200}
-                className="w-full h-auto object-cover rounded-xl border"
-              />
-            </InfiniteMovingItem>
-          ))}
-        </InfiniteMoving>
-      </Container>
       <Container className="my-20">
-        <SectionIntro title="Job Openings">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Praesentium, at?
-          </p>
-        </SectionIntro>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12">
-          {jobs.map((job, index) => (
-            <JobCard
-              key={index}
-              address={job.address}
-              category={job.category}
-              salary={job.category}
-              jobType={job.jobType}
-              slug={job.slug}
-              subtitle={job.subtitle}
-              title={job.title}
+        <div className="grid grid-cols-12 gap-6">
+          <div className="col-span-12 md:col-span-8 space-y-4">
+            <Input
+              className="w-full"
+              placeholder="Search Job Title"
+              autoFocus
             />
-          ))}
+            <div className="flex justify-end md:hidden">
+              <MobileFilterDrawer />
+            </div>
+            {jobs.map((job, index) => (
+              <JobCard
+                key={index}
+                address={job.address}
+                category={job.category}
+                salary={job.category}
+                jobType={job.jobType}
+                slug={job.slug}
+                subtitle={job.subtitle}
+                title={job.title}
+              />
+            ))}
+            <div className="pt-12">
+              <Pagination perPageItems={10} totalItems={45} />
+            </div>
+          </div>
+          <div className="col-span-12 md:col-span-4 hidden md:block">
+            <JobFilter categories={jobCategories} jobTypes={uniqueJobType} />
+          </div>
         </div>
       </Container>
     </div>

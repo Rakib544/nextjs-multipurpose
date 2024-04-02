@@ -4,18 +4,12 @@ export function PinIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      enable-background="new 0 0 24 24"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      role="img"
       {...props}
     >
-      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-      <circle cx="12" cy="10" r="3" />
+      <path d="m12.001 0c-6.001 0-9.001 4.5-9.001 9s9.001 15 9.001 15 8.999-10.5 8.999-15-3-9-8.999-9zm-.001 12c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"></path>
     </svg>
   );
 }

@@ -10,6 +10,7 @@ import { ChevronLeft } from "./chervon-left-icon";
 import { ChevronRight } from "./chervon-right-icon";
 import { ChevronDown } from "./chevron-down-icon";
 import { ClockIcon } from "./clock-icon";
+import { CloudUploadIcon } from "./cloud-upload-icon";
 import { DollarBagIcon } from "./dollar-bag-icon";
 import { DollarCircleIcon } from "./dollar-circle-icon";
 import { Ellips } from "./ellips-icon";
@@ -21,6 +22,7 @@ import { HomeIcon } from "./home-icon";
 import { LaptopIcon } from "./laptop-icon";
 import { LineChartIcon } from "./line-chart-icon";
 import { LinkedInIcon } from "./linkedin-icon";
+import { ListFilterIcon } from "./list-filter-icon";
 import { MagicIcon } from "./magic-icon";
 import { MailIcon } from "./mail-icon";
 import { MegaphoneIcon } from "./megaphone-icon";
@@ -33,6 +35,7 @@ import { PinIcon } from "./pin-icon";
 import { ShieldCheckIcon } from "./shield-check-icon";
 import { StandingPeopleIcon } from "./standing-people-icon";
 import { StarIcon } from "./start-icon";
+import { TrashIcon } from "./trash-icon";
 import { TwitterIcon } from "./twitter-icon";
 import { UsersIcon } from "./users-icon";
 import { X } from "./x-icon";
@@ -50,6 +53,7 @@ export {
   ChevronLeft,
   ChevronRight,
   ClockIcon,
+  CloudUploadIcon,
   DollarBagIcon,
   DollarCircleIcon,
   Ellips,
@@ -61,6 +65,7 @@ export {
   LaptopIcon,
   LineChartIcon,
   LinkedInIcon,
+  ListFilterIcon,
   MagicIcon,
   MailIcon,
   MegaphoneIcon,
@@ -73,6 +78,7 @@ export {
   ShieldCheckIcon,
   StandingPeopleIcon,
   StarIcon,
+  TrashIcon,
   TwitterIcon,
   UsersIcon,
   X,

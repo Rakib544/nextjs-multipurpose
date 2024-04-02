@@ -103,7 +103,7 @@ export default function JobDetails() {
                 </div>
               </div>
               <Link
-                href=""
+                href="/jobs/1/apply"
                 className={buttonVariants({ className: "w-full mt-8" })}
               >
                 Apply for this job

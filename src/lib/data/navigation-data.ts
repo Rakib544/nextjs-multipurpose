@@ -118,6 +118,11 @@ export const navLinks = [
             label: "Job Details",
             href: "/jobs/1",
           },
+          {
+            id: 1111,
+            label: "Job Apply",
+            href: "/jobs/1/apply",
+          },
         ],
       },
       {

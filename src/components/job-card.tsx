@@ -16,26 +16,21 @@ const JobCard = React.forwardRef<HTMLAnchorElement, JobCardProps>(
   ({ title, category, address, subtitle, jobType, salary, slug }, ref) => {
     return (
       <Link
-        ref={ref}
         href={`/jobs/${slug}`}
-        className="border  border-indigo-200 bg-gradient-to-br from-violet-50 to-white relative p-4 rounded-xl hover:bg-gradient-to-br hover:from-indigo-100 hover:to-indigo-50 group  block"
+        className="border relative p-4 rounded-xl group block hover:bg-slate-50"
       >
-        <div className="flex justify-between">
-          <h3 className="text-lg font-bold">
-            {title}{" "}
-            <span className="inline-block px-4 py-1 group-hover:transparent bg-indigo-600 text-white text-xs font-semibold rounded-full">
-              {category}
-            </span>
-          </h3>
-          <div>
-            <span className="absolute -top-3 right-0  inline-flex items-center gap-x-1 px-4 py-1 bg-indigo-600 text-white text-xs font-semibold rounded-full">
-              <PinIcon className="h-3 w-3" /> {address}
-            </span>
-          </div>
+        <div className="flex justify-between items-center mb-3">
+          <span className="hidden sm:inline-block px-4 py-1 group-hover:transparent border bg-slate-100 text-neutral-950 text-xs font-semibold rounded-full">
+            {category}
+          </span>
+          <span className="inline-flex border items-center gap-x-1 px-4 py-1 bg-gray-100 text-neutral-950 text-xs font-semibold rounded-full">
+            <PinIcon className="h-3 w-3" /> {address}
+          </span>
         </div>
-        <p className="text-base text-neutral-600 leading-7 mt-2 mb-4">
-          {subtitle}
-        </p>
+
+        <h3 className="text-lg font-bold">{title}</h3>
+
+        <p className="text-base text-neutral-600 leading-7 mb-4">{subtitle}</p>
         <div className="flex gap-x-4">
           <span className="flex gap-x-1 text-sm items-center font-medium text-neutral-600">
             <ClockIcon className="h-4 w-4" /> {jobType}

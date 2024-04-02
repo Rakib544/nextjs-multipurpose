@@ -14,10 +14,10 @@ export default function Pricing() {
         }}
       ></div>
       <Container className="z-10">
-        <FadeIn className="max-w-3xl mx-auto text-center z-10 mt-20 mb-10">
+        <FadeIn className="max-w-xl mx-auto text-center z-10 mt-20 mb-10">
           <h1 className="text-3xl font-black md:text-4xl/tight text-neutral-950">
             Our plans scale with{" "}
-            <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
               Your Business
             </span>{" "}
           </h1>
