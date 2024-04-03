@@ -231,7 +231,6 @@ export default function Home() {
         </div>
       </Container> */}
 
-      {/* <Container className="max-w-"> */}
       <CallToAction>
         <CallToActionHeading>
           Let&apos;s maximize your online impact!
@@ -258,7 +257,6 @@ export default function Home() {
           </Link>
         </CallToActionMenus>
       </CallToAction>
-      {/* </Container> */}
     </div>
   );
 }

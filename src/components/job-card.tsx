@@ -23,8 +23,8 @@ const JobCard = React.forwardRef<HTMLAnchorElement, JobCardProps>(
           <span className="hidden sm:inline-block px-4 py-1 group-hover:transparent border bg-slate-100 text-neutral-950 text-xs font-semibold rounded-full">
             {category}
           </span>
-          <span className="inline-flex border items-center gap-x-1 px-4 py-1 bg-gray-100 text-neutral-950 text-xs font-semibold rounded-full">
-            <PinIcon className="h-3 w-3" /> {address}
+          <span className="inline-flex border items-center gap-x-1 px-4 py-1 bg-indigo-50 text-indigo-600 text-xs font-semibold rounded-full">
+            <PinIcon className="h-3 w-3 fill-indigo-600" /> {address}
           </span>
         </div>
 

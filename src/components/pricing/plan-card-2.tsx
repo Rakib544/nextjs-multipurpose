@@ -1,32 +1,8 @@
 import clsx from "clsx";
 import Link from "next/link";
+import { CheckIcon } from "../icons";
 import { buttonVariants } from "../ui/button";
 
-function CheckIcon({ className }: { className: string }) {
-  return (
-    <svg
-      aria-hidden="true"
-      className={clsx(
-        "h-6 w-6 flex-none fill-current stroke-current",
-        className
-      )}
-    >
-      <path
-        d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-        strokeWidth={0}
-      />
-      <circle
-        cx={12}
-        cy={12}
-        r={8.25}
-        fill="none"
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 export function PlanCard2({
   name,
   price,
@@ -47,27 +23,37 @@ export function PlanCard2({
   return (
     <section
       className={clsx(
-        "flex flex-col rounded px-6 sm:px-8  py-8 border-t-4 bg-white shadow-slate-200 shadow-lg",
+        "flex flex-col rounded-lg border-slate-200 px-6 sm:px-8  py-8 bg-white shadow-sm border relative",
         featured
-          ? "order-first lg:order-none border-primary"
-          : "border-blue-600"
+          ? "order-first lg:order-none w-full h-full border-[1.5px] border-indigo-600"
+          : ""
       )}
     >
-      <h3 className="mt-5 font-display text-lg font-semibold text-neutral-700">
+      {featured && (
+        <span className="absolute top-2 right-2 px-4 py-2 bg-indigo-50 text-indigo-600 font-semibold text-xs tracking-wide rounded-md">
+          Popular
+        </span>
+      )}
+      <h3 className="mb-3 font-display text-base font-medium text-neutral-950">
         {name}
       </h3>
-      <p className="mt-2 text-base text-neutral-700">{description}</p>
-      <div className="flex items-end gap-x-1 order-first text-neutral-950">
-        <p className="font-display text-5xl font-bold tracking-tight text-neutral-950">
+
+      <div className="flex items-end gap-x-1 text-neutral-950">
+        <p className="font-display text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-indigo-500 text-transparent bg-clip-text">
           {price}
         </p>
-        <span>/</span>
-        <span>{pricingType === "monthly" ? "month" : "year"}</span>
+        <span className="text-sm text-neutral-600">/</span>
+        <span className="text-sm text-neutral-600 font-medium">
+          {pricingType === "monthly" ? "month" : "year"}
+        </span>
       </div>
-      <ul className="mt-6 flex flex-col gap-y-3 text-sm text-neutral-700">
+      <p className="mt-4 text-base leading-6 text-neutral-700">{description}</p>
+      <ul className="mt-6 flex flex-col gap-y-4 text-sm text-neutral-700">
         {features.map((feature) => (
-          <li key={feature} className="flex">
-            <CheckIcon className="text-neutral-700" />
+          <li key={feature} className="flex font-medium text-neutral-600">
+            <span className="h-6 w-6 rounded-full bg-indigo-50">
+              <CheckIcon className="fill-indigo-600 h-6 w-6" />
+            </span>
             <span className="ml-4">{feature}</span>
           </li>
         ))}

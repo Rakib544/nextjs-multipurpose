@@ -12,7 +12,7 @@ export default function GlobalError({
 }) {
   return (
     <main className="flex justify-center items-center text-center">
-      <FadeIn className="mt-32 max-w-xl">
+      <FadeIn className="my-32 max-w-xl">
         <span className="text-6xl font-bold">500</span>
         <h1 className="text-2xl mt-3 mb-2 font-bold text-neutral-950">
           Internal Server Error
