@@ -57,10 +57,10 @@ export default function PriceComparisonTable() {
           <TableHead className="pb-8 min-w-[230px]">
             <div className="text-center w-full py-8 ">
               <p>Free Plan</p>
-              <p className="font-display mt-4 text-4xl font-bold tracking-tight text-neutral-950">
+              <p className="font-display mt-4 text-4xl font-bold tracking-tight text-indigo-950">
                 {pricingComparison.free.pricing[pricingType]}
               </p>
-              <p className="mt-2 text-neutral-600 mb-6">
+              <p className="mt-2 text-gray-600 mb-6">
                 {pricingType === "monthly" ? "Per Month" : "Per Year"}
               </p>
               <div>
@@ -101,10 +101,10 @@ export default function PriceComparisonTable() {
           <TableHead className="min-w-[230px]">
             <div className="text-center w-full py-8 ">
               <p>Enterprise Plan</p>
-              <p className="font-display mt-4 text-4xl font-bold tracking-tight text-neutral-950">
+              <p className="font-display mt-4 text-4xl font-bold tracking-tight text-indigo-950">
                 {pricingComparison.premium.pricing[pricingType]}
               </p>
-              <p className="mt-2 text-neutral-600 mb-6">
+              <p className="mt-2 text-gray-600 mb-6">
                 {pricingType === "monthly" ? "Per Month" : "Per Year"}
               </p>
               <div>

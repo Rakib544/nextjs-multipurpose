@@ -65,7 +65,7 @@ export default function Workflow2() {
                     </span>
                   </div>
                   <h3 className="text-xl font-extrabold mt-4">{d.title}</h3>
-                  <p className="text-base leading-7 text-neutral-600 font-medium mt-2 pb-2">
+                  <p className="text-base leading-7 text-gray-600 font-medium mt-2 pb-2">
                     {d.text} Lorem ipsum dolor sit amet consectetur adipisicing
                     elit. Voluptate optio nulla voluptas itaque?
                   </p>

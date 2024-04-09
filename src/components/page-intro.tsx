@@ -32,7 +32,7 @@ export function PageIntro({
         </h1>
         <div
           className={clsx(
-            "mt-2 max-w-3xl text-base leading-8 text-neutral-600",
+            "mt-2 max-w-3xl text-base leading-8 text-gray-600",
 
             centered && "mx-auto"
           )}

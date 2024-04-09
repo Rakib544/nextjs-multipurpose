@@ -11,10 +11,10 @@ export default function Pricing() {
     <div>
       <Container>
         <FadeIn className="max-w-3xl mx-auto text-center z-10 mt-20 mb-10">
-          <span className="font-medium items-center gap-x-2 mb-4 px-6 inline-flex py-2 rounded-full bg-indigo-50 text-sm text-indigo-700">
+          <span className="uppercase text-xs tracking-wider text-center font-bold text-indigo-600 mb-3 inline-block">
             Pricing Plan
           </span>
-          <h1 className="text-3xl font-black md:text-4xl/tight text-neutral-950">
+          <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
             Take a tour of our
             <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
               {" "}
@@ -29,16 +29,16 @@ export default function Pricing() {
               </svg>
             </span>{" "}
           </h1>
-          <p className="mt-3 text-base text-neutral-600 leading-8">
+          <p className="mt-3 text-lg text-gray-600 leading-8">
             Enjoy lifetime access, community support, and no subscription fees.
           </p>
         </FadeIn>
         <Pricing2 />
-        <div className="my-32">
+        <div className="my-20 md:my-32">
           <SectionIntro
             title="Got questions? We’ve got answers"
             eyebrow="Our FAQ"
-            className="max-w-2xl mx-auto text-center"
+            className="max-w-2xl mx-auto text-center mb-12"
           >
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam

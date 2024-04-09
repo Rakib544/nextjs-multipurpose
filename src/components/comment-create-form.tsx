@@ -38,7 +38,7 @@ export default function CommentCreateForm() {
   return (
     <div className="text-left mt-16">
       <h3 className="text-2xl font-bold text-left">Add a comment</h3>
-      <p className="leading-7 text-base text-neutral-600 mb-4">
+      <p className="leading-7 text-base text-gray-600 mb-4">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </p>
       <Form {...form}>

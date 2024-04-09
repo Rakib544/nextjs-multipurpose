@@ -16,10 +16,10 @@ export default function Faq1() {
   return (
     <div>
       <FadeIn className="max-w-2xl mx-auto text-center z-10 mt-20 mb-10">
-        <span className="font-medium items-center gap-x-2 mb-4 px-6 inline-flex py-2 rounded-full bg-indigo-50 text-sm text-indigo-700">
-          FAQ
-        </span>
-        <h1 className="text-3xl font-black md:text-4xl/tight text-neutral-950">
+        <p className="uppercase text-xs tracking-wider text-center font-bold text-indigo-600 mb-3">
+          Faq
+        </p>
+        <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
           Frequently Asked
           <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
             {" "}
@@ -34,12 +34,12 @@ export default function Faq1() {
             </svg>
           </span>{" "}
         </h1>
-        <p className="mt-3 text-base text-neutral-600 leading-8">
+        <p className="mt-3 text-base text-gray-600 leading-8">
           These are the most commonly asked questions about us and billing.
           Can&apos;t find what you are looking for? Chat to our Support Team!
         </p>
       </FadeIn>
-      <Container className="my-16 lg:my-20">
+      <Container className="mt-12">
         <div className="max-w-xl mx-auto mt-16">
           <FadeInStagger faster>
             <Accordion
@@ -60,7 +60,7 @@ export default function Faq1() {
           </FadeInStagger>
         </div>
       </Container>
-      <CallToAction>
+      <CallToAction className="mt-20 mb-0 md:my-32">
         <CallToActionHeading>
           Let&apos;s maximize your online impact!
         </CallToActionHeading>

@@ -117,7 +117,7 @@ export default function AppLanding() {
                 </span>{" "}
                 Journey with FitLife Tracker
               </h1>
-              <p className="text-base leading-7 text-neutral-600 font-medium mt-3">
+              <p className="text-base leading-7 text-gray-600 font-medium mt-3">
                 Take Control of Your Health and Reach Your Goals Faster. Lorem,
                 ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                 omnis.
@@ -154,7 +154,7 @@ export default function AppLanding() {
                   </div>
                   <div>
                     <span className="text-xl font-bold">4,353</span>
-                    <span className="block text-base text-neutral-600">
+                    <span className="block text-base text-gray-600">
                       Happy Clients
                     </span>
                   </div>
@@ -167,7 +167,7 @@ export default function AppLanding() {
                     <StarIcon className="h-4 w-4 fill-yellow-400" />
                     <StarIcon className="h-4 w-4 fill-yellow-400" />
                     <StarIcon className="h-4 w-4 fill-gray-300" />
-                    <span className="text-neutral-600 text-sm">Rating</span>
+                    <span className="text-gray-600 text-sm">Rating</span>
                   </span>
                 </div>
               </div>
@@ -269,7 +269,7 @@ export default function AppLanding() {
                   {service.icon}
                 </span>
                 <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
-                <p className="text-base leading-7 mt-3 text-neutral-600">
+                <p className="text-base leading-7 mt-3 text-gray-600">
                   {service.description}
                 </p>
               </Link>
@@ -308,10 +308,10 @@ export default function AppLanding() {
             {features.map((feature) => (
               <div key={feature.id} className="p-5 bg-white rounded-xl">
                 <Image src={feature.icon} alt="" height={60} width={60} />
-                <h3 className="font-bold text-lg text-neutral-950 mt-4">
+                <h3 className="font-bold text-lg text-indigo-950 mt-4">
                   {feature.title}
                 </h3>
-                <p className="text-neutral-600 leading-7 mt-2 text-base">
+                <p className="text-gray-600 leading-7 mt-2 text-base">
                   {feature.description}
                 </p>
                 <Link

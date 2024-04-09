@@ -14,6 +14,10 @@ const nextConfig = {
         hostname: "vue.hibotheme.com",
         protocol: "https",
       },
+      {
+        hostname: "sandbox.ui-lib.com",
+        protocol: "https",
+      },
     ],
   },
 };

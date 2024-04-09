@@ -23,7 +23,7 @@ export default function FaqCard1({
         className="border-none data-[state=open]:bg-indigo-600 px-3 md:px-4 rounded-xl data-[state=open]:text-slate-300  text-neutral-700"
         value={`item-${id}`}
       >
-        <AccordionTrigger className="font-semibold text-base data-[state=open]:text-white text-neutral-950 text-start">
+        <AccordionTrigger className="font-semibold text-base data-[state=open]:text-white text-indigo-950 text-start">
           <div>
             <span className="hidden h-10 w-10 border-[1.5px] rounded-lg md:inline-flex items-center justify-center mr-3">
               {id.padStart(2, "0")}

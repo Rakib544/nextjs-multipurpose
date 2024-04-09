@@ -37,7 +37,7 @@ export default function DemoCard({
         {id.toString().padStart(2, "0")}
       </span>
       <h1 className="text-2xl font-bold">{title}</h1>
-      <p className="leading-8 mt-4 text-base text-neutral-600">{description}</p>
+      <p className="leading-8 mt-4 text-base text-gray-600">{description}</p>
       <Link
         href=""
         className={buttonVariants({ size: "sm", className: "mt-6 px-4" })}

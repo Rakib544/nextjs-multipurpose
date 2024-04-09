@@ -30,7 +30,7 @@ export default function Blogs3() {
           </div>
           <div className="col-span-4 space-y-8">
             <div className="bg-white pr-5 rounded-lg">
-              <h2 className="font-bold text-neutral-950 mb-2">Search Here</h2>
+              <h2 className="font-bold text-indigo-950 mb-2">Search Here</h2>
 
               <input
                 type="search"
@@ -41,7 +41,7 @@ export default function Blogs3() {
             </div>
 
             <div className="bg-white pr-5 rounded-lg">
-              <h2 className="font-bold text-neutral-950 mb-2">Popular Posts</h2>
+              <h2 className="font-bold text-indigo-950 mb-2">Popular Posts</h2>
               <div className="space-y-3">
                 {[1, 2, 3].map((i) => (
                   <div className="grid grid-cols-12 gap-x-2" key={i}>
@@ -51,10 +51,10 @@ export default function Blogs3() {
                       className="col-span-4 aspect-video object-cover rounded"
                     />
                     <div className="col-span-8">
-                      <time className="text-xs font-medium text-neutral-600">
+                      <time className="text-xs font-medium text-gray-600">
                         19 October, 2023
                       </time>
-                      <h3 className="font-semibold text-sm text-neutral-950 line-clamp-2">
+                      <h3 className="font-semibold text-sm text-indigo-950 line-clamp-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Id, ad.
                       </h3>
@@ -64,8 +64,8 @@ export default function Blogs3() {
               </div>
             </div>
             <div className="bg-white pr-5 rounded-lg">
-              <h2 className="font-bold text-neutral-950 mb-2">Categories</h2>
-              <ul className="list-disc list-inside text-base space-y-2 font-medium text-neutral-600">
+              <h2 className="font-bold text-indigo-950 mb-2">Categories</h2>
+              <ul className="list-disc list-inside text-base space-y-2 font-medium text-gray-600">
                 <li>
                   <Link href="">Team Work (21)</Link>
                 </li>
@@ -78,7 +78,7 @@ export default function Blogs3() {
               </ul>
             </div>
             <div className="bg-white pr-5 rounded-lg">
-              <h2 className="font-bold text-neutral-950 mb-2">Tags</h2>
+              <h2 className="font-bold text-indigo-950 mb-2">Tags</h2>
               <ul className="flex flex-wrap gap-2">
                 <li>
                   <Link

@@ -62,12 +62,12 @@ export default function TermsAndCondition() {
         <div className="grid grid-cols-12 gap-x-6">
           <div className="col-span-12 md:col-span-3 sticky top-0 h-screen hidden lg:block">
             <h2 className="font-extrabold text-lg mb-4">Table Of Contents</h2>
-            <ul className="space-y-3 text-neutral-950">
+            <ul className="space-y-3 text-indigo-950">
               {sideMenus.map((menu) => (
                 <li key={menu.href} className="">
                   <Link
                     href={`#${menu.href}`}
-                    className=" font-medium  text-base text-neutral-600 hover:text-indigo-600"
+                    className=" font-medium  text-base text-gray-600 hover:text-indigo-600"
                   >
                     {menu.label}
                   </Link>

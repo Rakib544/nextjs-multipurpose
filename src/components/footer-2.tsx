@@ -48,7 +48,7 @@ function Navigation() {
                 ></path>
               </svg>
             </Link>
-            <p className="text-[#ADBDCC] mt-4 leading-7">
+            <p className="text-[#ADBDCC] mt-6 leading-7 mb-6">
               We are developer studio working at the intersection of design and
               technology. It’s a really busy intersection though — a lot of our
               staff have been involved in hit and runs.
@@ -60,7 +60,7 @@ function Navigation() {
           <div className="font-display text-lg font-bold text-white">
             {company.title}
           </div>
-          <ul role="list" className="mt-4 text-[#ADBDCC]">
+          <ul role="list" className="mt-6 text-[#ADBDCC]">
             {company.links.map((link: any) => (
               <li key={link.title} className="mt-4">
                 <Link
@@ -77,7 +77,7 @@ function Navigation() {
           <div className="font-display text-lg font-bold text-white">
             {work.title}
           </div>
-          <ul role="list" className="mt-4 text-[#ADBDCC]">
+          <ul role="list" className="mt-6 text-[#ADBDCC]">
             {work.links.map((link: any) => (
               <li key={link.title} className="mt-4">
                 <Link
@@ -97,10 +97,13 @@ function Navigation() {
 
 export function Footer2() {
   const pathname = usePathname();
-  const isAuthRoute = pathname.startsWith("/auth");
+  const isAuthRoute = pathname.startsWith("/auth/");
+  const isDashboardRoute = pathname.startsWith("/dashboard");
+
+  const isFooterHidden = isAuthRoute || isDashboardRoute;
   return (
     <footer className="bg-[#0A2540]">
-      <Container className={`pt-24 w-full ${isAuthRoute ? "hidden" : ""}`}>
+      <Container className={`pt-24 w-full ${isFooterHidden ? "hidden" : ""}`}>
         <FadeIn className="lg:px-4">
           <div className="grid grid-cols-12 md:gap-x-8 gap-y-16">
             <Navigation />

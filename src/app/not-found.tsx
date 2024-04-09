@@ -6,7 +6,7 @@ export default function NotFound() {
     <main className="flex justify-center items-center text-center">
       <div className="my-32">
         <span className="text-6xl font-black text-indigo-600">404</span>
-        <h1 className="text-2xl mt-3 mb-2 font-bold text-neutral-950">
+        <h1 className="text-2xl mt-3 mb-2 font-bold text-indigo-950">
           Page Not Found
         </h1>
         <p className="text-neutral-700">

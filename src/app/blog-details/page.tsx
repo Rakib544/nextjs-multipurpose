@@ -67,8 +67,8 @@ function CommentCard() {
             alt=""
           />
           <div>
-            <h4 className="font-bold text-neutral-950">Md Rakib</h4>
-            <p className="text-sm text-neutral-600 font-medium">
+            <h4 className="font-bold text-indigo-950">Md Rakib</h4>
+            <p className="text-sm text-gray-600 font-medium">
               19 October, 2023
             </p>
           </div>
@@ -77,7 +77,7 @@ function CommentCard() {
           <MessageCircle className="h-4 w-4 mr-1" /> Reply
         </Button>
       </div>
-      <p className="text-base text-neutral-600 leading-7 mt-4">
+      <p className="text-base text-gray-600 leading-7 mt-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, soluta
         aut nihil quo mollitia cupiditate labore, ea cumque doloribus vel
         tenetur odit doloremque consequatur? Earum tempora magnam ipsa minus
@@ -107,17 +107,17 @@ function CommentReplyCard() {
                   alt=""
                 />
                 <div>
-                  <h4 className="font-bold text-neutral-950 text-sm">
+                  <h4 className="font-bold text-indigo-950 text-sm">
                     Md Rakib
                   </h4>
-                  <p className="text-xs text-neutral-600 font-medium">
+                  <p className="text-xs text-gray-600 font-medium">
                     19 October, 2023
                   </p>
                 </div>
               </div>
             </div>
 
-            <p className="text-base text-neutral-600 leading-7 mt-4">
+            <p className="text-base text-gray-600 leading-7 mt-4">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Excepturi nihil ipsam recusandae velit sed dolorem ex voluptatum
               rem distinctio asperiores.

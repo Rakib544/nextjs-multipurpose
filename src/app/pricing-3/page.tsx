@@ -17,9 +17,12 @@ export default function Component() {
     <div>
       <div className="h-screen absolute top-0 left-0 bg-gradient-to-t from-violet-100 to-white w-full z-[-1]" />
       <Container>
-        <FadeIn className="max-w-xl mx-auto text-center z-10 mt-20 mb-10">
-          <h1 className="text-3xl font-black md:text-4xl/tight text-neutral-950">
-            Our Plans scale with
+        <FadeIn className="max-w-3xl mx-auto text-center z-10 mt-20 mb-10">
+          <span className="uppercase text-xs tracking-wider text-center font-bold text-indigo-600 mb-3 inline-block">
+            Pricing Plan
+          </span>
+          <h1 className="text-3xl font-black md:text-4xl/tight text-indigo-950">
+            Our plans scale with
             <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
               {" "}
               <span className="relative">your business</span>{" "}
@@ -33,14 +36,14 @@ export default function Component() {
               </svg>
             </span>{" "}
           </h1>
-          <p className="mt-3 text-base text-neutral-600 leading-8">
+          <p className="mt-3 text-lg text-gray-600 leading-8">
             Enjoy lifetime access, community support, and no subscription fees.
           </p>
         </FadeIn>
-        <div className="bg-white border rounded mt-20">
+        <div className="bg-white border rounded mt-12 md:mt-20">
           <PriceComparisonTable />
         </div>
-        <div className="mt-32">
+        <div className="mt-20 md:mt-32">
           <SectionIntro
             eyebrow="Reviews"
             title="Clients feedback"
@@ -63,7 +66,7 @@ export default function Component() {
             ))}
           </InfiniteMoving>
         </div>
-        <div className="my-32">
+        <div className="my-20 md:my-32">
           <SectionIntro
             title="Got questions? We’ve got answers"
             eyebrow="Our FAQ"

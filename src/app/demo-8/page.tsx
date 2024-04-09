@@ -115,9 +115,7 @@ export default function CreativeDigitalStudio() {
 
         <div className="absolute right-0 lg:right-10 bg-white shadow-xl p-5 rounded-xl bottom-96 lg:bottom-20">
           <p className="font-bold">5000+</p>
-          <p className="text-sm text-neutral-600 font-medium">
-            Satisfied Clients
-          </p>
+          <p className="text-sm text-gray-600 font-medium">Satisfied Clients</p>
         </div>
 
         <div className="grid grid-cols-12 items-center gap-y-6 lg:gap-x-10 z-10">
@@ -200,7 +198,7 @@ export default function CreativeDigitalStudio() {
                 />
               </span>
               <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
-              <p className="text-base leading-7 mt-3 text-neutral-600">
+              <p className="text-base leading-7 mt-3 text-gray-600">
                 {service.description}
               </p>
             </Link>

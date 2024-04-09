@@ -1,26 +1,26 @@
 export const seoServices = [
   {
     id: 1,
-    title: "SEO services",
+    title: "Keyword Research",
     description:
-      "      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit distinctio autem fugit unde similique rem sapiente aliquam iure ipsam delectus.",
+      "Identify relevant keywords to optimize website content and improve search engine rankings.",
   },
   {
-    id: 2,
-    title: "Web Development",
-    description:
-      "      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit distinctio autem fugit unde similique rem sapiente aliquam iure ipsam delectus.",
-  },
-  {
-    id: 3,
-    title: "Social Engagement",
-    description:
-      "      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit distinctio autem fugit unde similique rem sapiente aliquam iure ipsam delectus.",
-  },
-  {
-    id: 4,
+    id: 6,
     title: "Content Marketing",
     description:
-      "      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit distinctio autem fugit unde similique rem sapiente aliquam iure ipsam delectus.",
+      "Create high-quality, informative content that resonates with your target audience.",
+  },
+  {
+    id: 7,
+    title: "SEO Audits",
+    description:
+      "Identify website strengths, weaknesses, opportunities for SEO improvement and deliver good service.",
+  },
+  {
+    id: 8,
+    title: "Email Marketing",
+    description:
+      "Develop customized SEO strategies tailored to your business goals, target audience",
   },
 ];

@@ -24,10 +24,10 @@ export default function TeamCard2({
           className="h-72 rounded-2xl  w-full object-cover"
         />
         <div className="flex flex-col mt-3">
-          <p className="font-display text-lg font-semibold tracking-wide text-neutral-950">
+          <p className="font-display text-lg font-semibold tracking-wide text-indigo-950">
             {name}
           </p>
-          <p className="mt-1 text-sm text-neutral-600">{role}</p>
+          <p className="mt-1 text-sm text-gray-600">{role}</p>
         </div>
         {children}
       </div>

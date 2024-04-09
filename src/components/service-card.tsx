@@ -23,7 +23,7 @@ export default function ServiceCard({
       {...(props as any)}
     >
       <Image src={icon} alt={title} className="h-20 -ml-4" />
-      <h3 className="text-lg font-bold text-neutral-950">{title}</h3>
+      <h3 className="text-lg font-bold text-indigo-950">{title}</h3>
       <p className="text-base text-neutral-700 leading-7 mt-2">{description}</p>
       {children}
     </FadeIn>

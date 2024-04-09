@@ -58,7 +58,7 @@ function JobCategoryFilter({ categories }: { categories: string[] }) {
         <div className="flex items-center space-x-2" key={category}>
           <Label
             htmlFor={category}
-            className="flex cursor-pointer items-center gap-x-2  py-1 capitalize"
+            className="flex font-medium cursor-pointer items-center gap-x-2  py-1 capitalize"
           >
             <RadioGroupItem value={category} id={category} />
             {category}
@@ -99,7 +99,7 @@ function JobTypeFilter({ jobTypes }: { jobTypes: string[] }) {
         <div className="flex items-center space-x-2" key={jobType}>
           <Label
             htmlFor={jobType}
-            className="flex cursor-pointer items-center gap-x-2 py-1 capitalize"
+            className="flex font-medium cursor-pointer items-center gap-x-2 py-1 capitalize"
           >
             <RadioGroupItem value={jobType} id={jobType} />
             {jobType}

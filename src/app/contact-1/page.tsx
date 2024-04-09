@@ -58,14 +58,14 @@ export default function Contact1() {
   return (
     <div>
       <FadeIn className="max-w-3xl mx-auto text-center z-10 mt-20 mb-10 px-4">
-        <span className="font-medium items-center gap-x-2 mb-4 px-6 inline-flex py-2 rounded-full bg-indigo-50 text-sm text-indigo-700">
+        <span className="uppercase text-xs tracking-wider text-center font-bold text-indigo-600 mb-3 inline-block">
           Contact Us
         </span>
-        <h1 className="text-3xl font-black md:text-4xl/tight text-neutral-950">
+        <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
           Don’t hesitate to
           <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
             {" "}
-            <span className="relative">Contact Us</span>{" "}
+            <span className="relative">contact us</span>{" "}
             <svg
               aria-hidden="true"
               viewBox="0 0 418 42"
@@ -76,41 +76,43 @@ export default function Contact1() {
             </svg>
           </span>{" "}
         </h1>
-        <p className="mt-3 text-base text-neutral-600 leading-8">
+        <p className="mt-3 text-lg text-gray-600 leading-8">
           Ready to help your company grow faster? Let&apos;s chat about how we
           can help.
         </p>
       </FadeIn>
 
-      <Container className="grid grid-cols-12 gap-6 mt-20">
-        {contactData.map((contactInfo) => (
-          <div
-            key={contactInfo.id}
-            className="col-span-12 sm:col-span-6 lg:col-span-3 border rounded-xl p-6 hover:bg-gradient-to-b from-indigo-50 hover:border-indigo-200 to-white transition hover:bg-neutral-50"
-          >
-            <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full mb-4">
-              {contactInfo.icon}
-            </span>
-            <h2 className="text-lg font-bold text-neutral-950 mb-1">
-              {contactInfo.title}
-            </h2>
-            <p className="text-sm text-neutral-700 mb-4">
-              {contactInfo.subtitle}
-            </p>
-            <Link
-              href={contactInfo.link}
-              className={buttonVariants({
-                variant: "link",
-                className: "!px-0",
-              })}
+      <Container className=" mt-20">
+        <FadeInStagger faster className="grid grid-cols-12 gap-4">
+          {contactData.map((contactInfo) => (
+            <FadeIn
+              key={contactInfo.id}
+              className="col-span-12 sm:col-span-6 lg:col-span-3 border rounded-xl p-6 hover:bg-slate-50"
             >
-              {contactInfo.btnText} <span className="ml-2">&rarr;</span>
-            </Link>
-          </div>
-        ))}
+              <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full mb-4">
+                {contactInfo.icon}
+              </span>
+              <h2 className="text-xl font-bold text-indigo-950 mb-1">
+                {contactInfo.title}
+              </h2>
+              <p className="text-base text-gray-600 mb-4">
+                {contactInfo.subtitle}
+              </p>
+              <Link
+                href={contactInfo.link}
+                className={buttonVariants({
+                  variant: "link",
+                  className: "!px-0",
+                })}
+              >
+                {contactInfo.btnText} <span className="ml-2">&rarr;</span>
+              </Link>
+            </FadeIn>
+          ))}
+        </FadeInStagger>
       </Container>
 
-      <div className="bg-indigo-600 py-20 mt-32">
+      <div className="bg-indigo-600 py-20 md:py-32 mt-20 md:mt-32">
         <Container>
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-5">
@@ -122,45 +124,64 @@ export default function Contact1() {
                 <p>Find us on these locations</p>
               </SectionIntro>
             </div>
-            <div className="col-span-12 md:col-span-7 grid grid-cols-1  sm:grid-cols-2 gap-6">
-              <div>
-                <h4 className="text-white font-bold text-base">Copenhagen</h4>
-                <p className="text-sm mt-1 text-slate-200">1 Carlsberg Gate</p>
-                <p className="text-sm text-slate-200">
+            <FadeInStagger
+              faster
+              className="col-span-12 md:col-span-7 grid grid-cols-1  sm:grid-cols-2 gap-6"
+            >
+              <FadeIn>
+                <h4 className="text-white font-bold text-base md:text-lg ">
+                  Copenhagen
+                </h4>
+                <p className="text-base mt-1 text-slate-200">
+                  1 Carlsberg Gate
+                </p>
+                <p className="text-base text-slate-200">
                   1260, København, Denmark
                 </p>
-              </div>
-              <div>
-                <h4 className="text-white font-bold text-base">London</h4>
-                <p className="text-sm mt-1 text-slate-200">1 Carlsberg Gate</p>
-                <p className="text-sm text-slate-200">
+              </FadeIn>
+              <FadeIn>
+                <h4 className="text-white font-bold text-base md:text-lg ">
+                  London
+                </h4>
+                <p className="text-base mt-1 text-slate-200">
+                  1 Carlsberg Gate
+                </p>
+                <p className="text-base text-slate-200">
                   1260, København, Denmark
                 </p>
-              </div>
-              <div>
-                <h4 className="text-white font-bold text-base">Sydney</h4>
-                <p className="text-sm mt-1 text-slate-200">1 Carlsberg Gate</p>
-                <p className="text-sm text-slate-200">
+              </FadeIn>
+              <FadeIn>
+                <h4 className="text-white font-bold text-base md:text-lg ">
+                  Sydney
+                </h4>
+                <p className="text-base mt-1 text-slate-200">
+                  1 Carlsberg Gate
+                </p>
+                <p className="text-base text-slate-200">
                   1260, København, Denmark
                 </p>
-              </div>
-              <div>
-                <h4 className="text-white font-bold text-base">New York</h4>
-                <p className="text-sm mt-1 text-slate-200">1 Carlsberg Gate</p>
-                <p className="text-sm text-slate-200">
+              </FadeIn>
+              <FadeIn>
+                <h4 className="text-white font-bold text-base md:text-lg ">
+                  New York
+                </h4>
+                <p className="text-base mt-1 text-slate-200">
+                  1 Carlsberg Gate
+                </p>
+                <p className="text-base text-slate-200">
                   1260, København, Denmark
                 </p>
-              </div>
-            </div>
+              </FadeIn>
+            </FadeInStagger>
           </div>
         </Container>
       </div>
 
-      <Container className="mt-16 lg:mt-32">
+      <Container className="mt-20 lg:mt-32">
         <SectionIntro
           title="Got questions? We’ve got answers"
           eyebrow="Our FAQ"
-          className="max-w-2xl mx-auto text-center"
+          className="max-w-2xl mx-auto text-center mb-12"
         >
           <p>
             In order to make sure your website is user friendly and optimized
@@ -168,7 +189,7 @@ export default function Contact1() {
             the code and copy.
           </p>
         </SectionIntro>
-        <div className="max-w-2xl mx-auto mt-16">
+        <div className="max-w-2xl mx-auto">
           <FadeInStagger faster>
             <Accordion
               type="single"
@@ -176,7 +197,7 @@ export default function Contact1() {
               defaultValue="item-1"
               className="mt-6"
             >
-              {faqData.splice(0, 8).map((faq) => (
+              {faqData.slice(0, 8).map((faq) => (
                 <FaqCard1
                   key={faq.id}
                   id={faq.id.toString()}
@@ -188,11 +209,11 @@ export default function Contact1() {
           </FadeInStagger>
         </div>
       </Container>
-      <Container className="mb-32">
+      <Container className="my-20 md:my-32 ">
         <SectionIntro
           eyebrow="Reviews"
           title="Clients feedback"
-          className="max-w-2xl mx-auto mb-6 text-center"
+          className="max-w-2xl mx-auto mb-12 text-center"
         ></SectionIntro>
         <InfiniteMoving>
           {testimonials.map((testimonial) => (

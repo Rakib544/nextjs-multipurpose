@@ -70,7 +70,7 @@ export default function OurAwards() {
                 <h3 className="font-semibold text-xl md:text-lg">
                   {award.title}
                 </h3>
-                <p className="text-base md:text-sm mt-2 leading-6 text-neutral-600 font-medium">
+                <p className="text-base md:text-sm mt-2 leading-6 text-gray-600 font-medium">
                   Welcome to our digital agency We specialize in helping
                   business most like yours succeed online. From website design.
                 </p>

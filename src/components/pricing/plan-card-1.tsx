@@ -70,12 +70,12 @@ export function PlanCard1({
       </p>
       <div
         className={`flex items-end gap-x-1 order-first ${
-          featured ? "text-white" : "text-neutral-950"
+          featured ? "text-white" : "text-indigo-950"
         }`}
       >
         <p
           className={`font-display text-5xl font-bold tracking-tight ${
-            featured ? "text-white" : "text-neutral-950"
+            featured ? "text-white" : "text-indigo-950"
           }`}
         >
           {price}

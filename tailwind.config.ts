@@ -22,6 +22,14 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      fontSize: {
+        "4.5xl": [
+          "42px",
+          {
+            lineHeight: "50px",
+          },
+        ],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

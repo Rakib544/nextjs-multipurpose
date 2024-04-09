@@ -1,63 +1,102 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Container } from "./container";
-import { FadeIn } from "./fade-in";
+import { CheckIcon } from "./icons";
 import { SectionIntro } from "./section-intro";
-import { buttonVariants } from "./ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
+
+const whyChooseData = [
+  {
+    id: 1,
+    title: "Digital Comprehensive Analytics",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita maiores et velit quae sequi iure alias beatae magnam aliquam?",
+  },
+  {
+    id: 2,
+    title: "Personalized Plans",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita maiores et velit quae sequi iure alias beatae magnam aliquam?",
+  },
+  {
+    id: 3,
+    title: "Community Feedbacks",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita maiores et velit quae sequi iure alias beatae magnam aliquam?",
+  },
+];
 
 export default function WhyChooseUs() {
   return (
-    <section className="my-32">
+    <section className="mt-20 md:mt-32">
       <Container>
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-x-20 my-24 items-center">
-          <FadeIn className="col-span-12 lg:col-span-6 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="relative">
             <Image
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1784&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://vue.hibotheme.com/prag/img/about-img.df163752.webp"
               alt=""
-              height={400}
-              width={300}
-              className="aspect-[16/14] object-cover rounded-xl w-full"
+              height={500}
+              width={400}
+              className="block mx-auto rounded-xl"
             />
-          </FadeIn>
-          <div className="col-span-12 lg:col-span-6 max-w-lg">
+            <div className="absolute bottom-10 bg-indigo-600 text-white p-4 rounded-xl shadow-xl">
+              <span className="text-base font-semibold flex">
+                <CheckIcon className="h-7 w-7  text-white fill-white shrink-0" />{" "}
+                24/7 Community Support
+              </span>
+              <span className="text-sm font-medium leading-7 text-slate-200">
+                We’re servicing 24/7 support for all
+              </span>
+            </div>
+            <div className="absolute top-10 bg-indigo-600 text-white p-4 rounded-xl shadow-xl">
+              <span className="text-base font-semibold flex">
+                <CheckIcon className="h-7 w-7 fill-white shrink-0" />{" "}
+                Personalized Plan
+              </span>
+            </div>
+            <div className="absolute right-0 bottom-32 bg-indigo-600 text-white p-4 rounded-xl shadow-xl">
+              <span className="text-base font-semibold flex">
+                <CheckIcon className="h-7 w-7 fill-white shrink-0" /> Analytics
+              </span>
+              <span className="text-sm font-medium leading-7 text-slate-200">
+                Lorem ipsum dolor sit amet.
+              </span>
+            </div>
+          </div>
+          <div>
             <SectionIntro
-              eyebrow="Why Choose Us"
-              title="Unlock opportunities Maximizing Potentials"
+              eyebrow="Why choose us"
+              title="Why FitLife Is THe Right Choice For You"
             >
               <p>
-                We are a digital and branding company that believes in the power
-                of creative strategy and along with great design.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+                expedita, culpa enim praesentium amet necessitatibus.
               </p>
-              <ul className="mt-4 space-y-2">
-                <li className="flex gap-x-2">
-                  <div className="font-semibold text-neutral-950">{">"}</div>
-                  <div>
-                    <h3 className="font-bold text-neutral-950">
-                      Proven Track Record
-                    </h3>
-                    <p className="leading-7">
-                      With 7 years of industry experience, it has a proven track
-                      record of delivering innovative software solutions.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex gap-x-2">
-                  <div className="font-semibold text-neutral-950">{">"}</div>
-                  <div>
-                    <h3 className="font-bold text-neutral-950">
-                      Proven Track Record
-                    </h3>
-                    <p className="leading-7">
-                      With 7 years of industry experience, it has a proven track
-                      record of delivering innovative software solutions.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-              <Link href="" className={buttonVariants({ className: "mt-4" })}>
-                Learn More &rarr;
-              </Link>
             </SectionIntro>
+            <Accordion
+              type="single"
+              defaultValue="item-1"
+              className="mt-12 space-y-3"
+            >
+              {whyChooseData.map((data) => (
+                <AccordionItem
+                  key={data.id}
+                  value={`item-${data.id}`}
+                  className="border rounded-xl text-base py-1 px-4 data-[state=open]:bg-indigo-600 data-[state=open]:text-white"
+                >
+                  <AccordionTrigger className="font-semibold">
+                    {data.id.toString().padStart(2, "0")}. {data.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-slate-200 leading-8 text-base">
+                    {data.description}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </Container>

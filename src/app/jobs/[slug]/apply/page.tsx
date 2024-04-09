@@ -19,10 +19,10 @@ export default function JobApply() {
         </div>
         <Border position="top" className="mt-3 pb-4" />
         <div className="mt-6">
-          <h1 className="text-2xl md:text-3xl text-neutral-950 font-extrabold">
+          <h1 className="text-2xl md:text-3xl text-indigo-950 font-extrabold">
             Senior WordPress Plugin Developer
           </h1>
-          <p className="text-base font-medium text-neutral-600 mt-1">
+          <p className="text-base font-medium text-gray-600 mt-1">
             Dhaka, Bangladesh
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
@@ -31,8 +31,8 @@ export default function JobApply() {
                 <DollarBagIcon className="h-5 w-5 text-indigo-500" />
               </span>
               <div>
-                <p className="font-bold text-neutral-950 text-base">$185K</p>
-                <p className="text-base text-neutral-600"> Average Salary</p>
+                <p className="font-bold text-indigo-950 text-base">$185K</p>
+                <p className="text-base text-gray-600"> Average Salary</p>
               </div>
             </div>
             {/*  */}
@@ -41,10 +41,8 @@ export default function JobApply() {
                 <BriefcaseIcon className="h-5 w-5 text-indigo-500" />
               </span>
               <div>
-                <p className="font-bold text-neutral-950 text-base">
-                  Full Time
-                </p>
-                <p className="text-base text-neutral-600">Job Type</p>
+                <p className="font-bold text-indigo-950 text-base">Full Time</p>
+                <p className="text-base text-gray-600">Job Type</p>
               </div>
             </div>
             {/*  */}
@@ -53,10 +51,10 @@ export default function JobApply() {
                 <ClockIcon className="h-5 w-5 text-indigo-500" />
               </span>
               <div>
-                <p className="font-bold text-neutral-950 text-base">
+                <p className="font-bold text-indigo-950 text-base">
                   8 AM – 5 PM
                 </p>
-                <p className="text-base text-neutral-600">Working Hours</p>
+                <p className="text-base text-gray-600">Working Hours</p>
               </div>
             </div>
             {/*  */}
@@ -65,8 +63,8 @@ export default function JobApply() {
                 <FileTextIcon className="h-5 w-5 text-indigo-500" />
               </span>
               <div>
-                <p className="font-bold text-neutral-950 text-base">5 Years</p>
-                <p className="text-base text-neutral-600">Experience</p>
+                <p className="font-bold text-indigo-950 text-base">5 Years</p>
+                <p className="text-base text-gray-600">Experience</p>
               </div>
             </div>
           </div>

@@ -45,7 +45,7 @@ export default function Workflow() {
             <span className="h-14 w-14 rounded-2xl mb-3  border text-indigo-600 border-indigo-200 inline-flex justify-center items-center text-xl font-bold">
               0{d.id}
             </span>
-            <h3 className="font-extrabold text-lg mt-3 text-neutral-950">
+            <h3 className="font-extrabold text-lg mt-3 text-indigo-950">
               {d.title}
             </h3>
             <p className="text-base mt-3 text-neutral-700 leading-7">

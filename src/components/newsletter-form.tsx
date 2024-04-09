@@ -6,7 +6,7 @@ export function NewsletterForm() {
       <h2 className="font-display text-lg font-bold text-white">
         Sign up for our newsletter
       </h2>
-      <p className="mt-4 text-slate-400">
+      <p className="mt-6 text-slate-400">
         Subscribe to get the latest design news, articles, resources and
         inspiration.
       </p>

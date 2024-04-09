@@ -14,8 +14,11 @@ export default function Faq2() {
   return (
     <div>
       <Container className="mt-20">
-        <FadeIn className="max-w-xl">
-          <h1 className="text-3xl font-black md:text-4xl/tight text-neutral-950">
+        <FadeIn className="max-w-2xl">
+          <p className="uppercase text-xs tracking-wider font-bold text-indigo-600 mb-3">
+            FAQ
+          </p>
+          <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
             Frequently Asked
             <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
               {" "}
@@ -30,14 +33,14 @@ export default function Faq2() {
               </svg>
             </span>{" "}
           </h1>
-          <p className="mt-3 text-base text-neutral-600 leading-8">
+          <p className="mt-3 text-base text-gray-600 leading-8">
             These are the most commonly asked questions about us and billing.
             Can&apos;t find what you are looking for? Chat to our Support Team!
           </p>
         </FadeIn>
       </Container>
-      <Container className="my-16 lg:my-24">
-        <div className=" mt-16">
+      <Container className="mt-12">
+        <div>
           <FadeInStagger faster>
             <div className="mt-6 grid grid-cols-12 gap-6">
               {faqData.map((faq) => (
@@ -57,7 +60,7 @@ export default function Faq2() {
         <SectionIntro
           eyebrow="Reviews"
           title="Clients feedback"
-          className="mb-6"
+          className="mb-12"
         ></SectionIntro>
         <InfiniteMoving>
           {testimonials.map((testimonial) => (

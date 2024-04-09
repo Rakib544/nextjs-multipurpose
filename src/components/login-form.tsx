@@ -64,7 +64,7 @@ export default function LoginForm() {
           <span className="w-full border-t"></span>
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-background px-2 text-neutral-950 font-medium">
+          <span className="bg-background px-2 text-indigo-950 font-medium">
             Or continue with
           </span>
         </div>

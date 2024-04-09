@@ -10,7 +10,7 @@ function Navigation() {
       <ul className="grid grid-cols-2 gap-8 sm:grid-cols-3">
         {footerNavigation.map((section) => (
           <li key={section.title}>
-            <div className="font-display text-lg font-bold text-neutral-950">
+            <div className="font-display text-lg font-bold text-indigo-950">
               {section.title}
             </div>
             <ul role="list" className="mt-4 text-neutral-700">
@@ -18,7 +18,7 @@ function Navigation() {
                 <li key={link.title} className="mt-4">
                   <Link
                     href={link.href}
-                    className="transition hover:text-neutral-950"
+                    className="transition hover:text-indigo-950"
                   >
                     {link.title}
                   </Link>

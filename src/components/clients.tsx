@@ -6,7 +6,7 @@ export function Clients() {
   return (
     <InfiniteMoving>
       {clients.map((client) => (
-        <InfiniteMovingItem key={client.id}>
+        <InfiniteMovingItem key={client.id} className="w-[150px]">
           <Image src={client.image} alt={client.href} className="" />
         </InfiniteMovingItem>
       ))}

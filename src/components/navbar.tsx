@@ -17,11 +17,14 @@ import {
 export default function Navbar() {
   const pathname = usePathname();
   const isAuthRoute = pathname.startsWith("/auth/");
+  const isDashboardRoute = pathname.startsWith("/dashboard");
+
+  const isNavHidden = isAuthRoute || isDashboardRoute;
 
   return (
     <NavigationMenu
-      className={`pt-8 pb-8 max-w-none z-50 flex !w-full justify-between items-center ${
-        isAuthRoute ? "hidden" : ""
+      className={`py-4 max-w-none z-50 flex !w-full justify-between items-center ${
+        isNavHidden ? "hidden" : ""
       }`}
     >
       <Link aria-label="Home" href="/" className="text-2xl font-extrabold ">
@@ -71,7 +74,7 @@ export default function Navbar() {
                         link.submenus.some(
                           (subLink) => subLink.submenus.length > 0
                         )
-                          ? "grid grid-cols-3 gap-x-4 w-[500px]"
+                          ? "grid grid-cols-5 gap-x-4 w-[720px]"
                           : "!text-left"
                       }
                     >
@@ -79,7 +82,7 @@ export default function Navbar() {
                         <li key={subLink.id} className="text-left">
                           {subLink.submenus.length > 0 ? (
                             <div className="py-4">
-                              <p className="px-4 text-sm mb-1 text-neutral-800 font-semibold uppercase">
+                              <p className="px-4 text-sm mb-1 text-gray-800 font-semibold uppercase">
                                 {subLink.label}
                               </p>
                               <ul className="w-full">

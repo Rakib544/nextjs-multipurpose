@@ -23,7 +23,7 @@ export default function Demo4() {
             <h1 className="text-4xl pr-10 font-bold md:text-4xl/tight max-w-lg">
               Your Digital Marketing Software Solution in One Place
             </h1>
-            <p className="text-base leading-7 text-neutral-600 mt-3">
+            <p className="text-base leading-7 text-gray-600 mt-3">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
               praesentium et fuga quidem deleniti harum eum perferendis nemo,
               similique, magnam molestias nihil excepturi sit aliquid?
@@ -39,7 +39,7 @@ export default function Demo4() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="h-5 w-5 text-neutral-950"
+                className="h-5 w-5 text-indigo-950"
               >
                 <circle cx="12" cy="12" r="10" />
                 <polygon points="10 8 16 12 10 16 10 8" />
@@ -77,7 +77,7 @@ export default function Demo4() {
                 </div>
                 <div>
                   <span className="font-bold text-sm">Lorem, ipsum dolor.</span>
-                  <p className="text-sm text-neutral-600">
+                  <p className="text-sm text-gray-600">
                     Lorem ipsum dolor sit amet.
                   </p>
                 </div>
@@ -143,10 +143,10 @@ export default function Demo4() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-6">
           {[1, 2, 3].map((i) => (
             <div className="p-8 bg-white rounded-xl" key={i}>
-              <h2 className="text-neutral-950 text-lg font-bold">
+              <h2 className="text-indigo-950 text-lg font-bold">
                 Digital Services
               </h2>
-              <p className="text-sm font-medium text-neutral-600 leading-7 mt-4">
+              <p className="text-sm font-medium text-gray-600 leading-7 mt-4">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Maiores ipsum modi deserunt itaque. Cum, vero?
               </p>

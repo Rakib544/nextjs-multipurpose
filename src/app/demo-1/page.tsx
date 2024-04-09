@@ -1,7 +1,6 @@
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
-import { GridPattern } from "@/components/grid-pattern";
 import { HomeIcon } from "@/components/icons";
 import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
@@ -26,15 +25,12 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <Container className="mt-16">
-        <div className="absolute z-[-1] inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-          <GridPattern />
-        </div>
-        <FadeIn className="max-w-3xl mx-auto text-center z-10">
+      <Container>
+        <FadeIn className="max-w-3xl mx-auto text-center z-10 my-20">
           <span className="font-medium items-center gap-x-2 mb-4 px-6 inline-flex py-2 rounded-full bg-indigo-50 text-sm text-indigo-700">
             <HomeIcon className="h-4 w-4" /> 55,000+ Business Trust
           </span>
-          <h1 className="text-3xl font-black md:text-5xl/tight text-neutral-950">
+          <h1 className="text-3xl font-extrabold md:text-5xl/tight text-indigo-950">
             Revolutionize
             <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
               {" "}
@@ -50,10 +46,10 @@ export default function Home() {
             </span>{" "}
             with StreamlinePro
           </h1>
-          <p className="mt-3 text-lg text-neutral-600 leading-8">
-            Streamline Processes, Boost Productivity, and Achieve Success
+          <p className="mt-3 mb-8 text-lg text-gray-600 leading-8">
+            Streamline Processes, Boost Productivity, and Achieve Success.
           </p>
-          <div className="flex gap-4 mt-7 justify-center flex-col sm:flex-row">
+          <div className="flex gap-4 justify-center flex-col sm:flex-row">
             <Link
               href="/about-us"
               className={buttonVariants({
@@ -88,68 +84,66 @@ export default function Home() {
         <div className="bg-gradient-to-t from-[#FAD0F9]/50 h-full to-transparent absolute inset-0"></div>
       </div>
 
-      <Container className="mt-12">
+      <Container className="mt-12 md:mt-20">
         <Clients />
       </Container>
-      <Container className="mt-20">
+      <Container className="mt-20 md:mt-32">
         <SectionIntro
           title="Empower your saas solutions"
           eyebrow="Solution"
-          className="mb-8"
+          className="mb-12"
         >
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem est
             deleniti, molestias maxime laudantium eos?
           </p>
         </SectionIntro>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {sassFeatures.map((service) => (
             <Link
               href="/services/1"
               key={service.id}
-              className="border rounded-xl p-6 hover:bg-gradient-to-b from-indigo-50 hover:border-indigo-200 to-white"
+              className="border focus:ring-0 focus:bg-primary focus:outline-none focus:border-primary group rounded-xl p-6 hover:border-primary hover:bg-primary transition duration-300"
             >
-              <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full">
+              <span className="border inline-block px-5 py-1.5 group-hover:border-indigo-500 border-indigo-200 rounded-full transition-all duration-300 group-focus:border-indigo-500">
                 {service.icon}
               </span>
-              <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
-              <p className="text-base leading-7 mt-3 text-neutral-600">
+              <h3 className="text-lg font-bold mt-8 group-focus:text-white group-hover:text-white transition duration-300">
+                {service.title}
+              </h3>
+              <p className="text-base leading-7 group-focus:text-slate-200 mt-3 group-hover:text-slate-200 text-gray-600 transition-all duration-300">
                 {service.description}
               </p>
             </Link>
           ))}
         </div>
       </Container>
-      <div className="bg-indigo-50 py-20 my-32">
-        <Container className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 lg:col-span-5">
-            <SectionIntro
-              eyebrow="Benefits"
-              title="Unlock the Power of StreamlinePro"
-            >
-              <p>
-                Discover How StreamlinePro Can Revolutionize Your Workflow and
-                Boost Productivity to New Heights.
-              </p>
-              <p className="mt-4">
-                Take Control of Your Business Processes and Streamline
-                Operations Effortlessly with Our Powerful Tools and Innovative
-                Solutions.
-              </p>
-            </SectionIntro>
-          </div>
-          <div className="col-span-12 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="bg-indigo-600 py-20 mt-20 md:py-32 md:mt-32">
+        <Container className="">
+          <SectionIntro
+            eyebrow="Benefits"
+            title="Unlock the Power of StreamlinePro"
+            invert
+            className="mb-12"
+          >
+            <p>
+              Discover How StreamlinePro Can Revolutionize Your Workflow and
+              Boost Productivity to New Heights.
+            </p>
+          </SectionIntro>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {sassBenefits.map((service) => (
               <Link
                 href="/services/1"
                 key={service.id}
-                className="border rounded-xl bg-white p-6 hover:bg-slate-50"
+                className="rounded-xl bg-white p-6 hover:bg-slate-50"
               >
                 <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full">
                   {service.icon}
                 </span>
-                <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
-                <p className="text-base leading-7 mt-3 text-neutral-600">
+                <h3 className="text-lg font-bold mt-8">{service.title}</h3>
+                <p className="text-base leading-7 mt-3 text-gray-600">
                   {service.description}
                 </p>
               </Link>
@@ -157,7 +151,7 @@ export default function Home() {
           </div>
         </Container>
       </div>
-      <Container>
+      <Container className="mt-20 md:mt-32">
         <SectionIntro eyebrow="How Work" title="How It Work?" className="mb-12">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
@@ -166,11 +160,11 @@ export default function Home() {
         </SectionIntro>
         <Workflow />
       </Container>
-      <Container className="mt-32">
+      <Container className="mt-20 md:mt-32">
         <SectionIntro
           eyebrow="Testimonials"
           title="Loved by businesses worldwide."
-          className="mb-8"
+          className="mb-12"
         >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
@@ -194,13 +188,13 @@ export default function Home() {
           ))}
         </InfiniteMoving>
       </Container>
-      <Container className="py-20 sm:py-32">
+      <Container className="mt-20 md:mt-32">
         <div className="flex">
           <SectionIntro
             eyebrow="Pricing"
             title="We offer great prices for your
             business."
-            className="mb-8 md:mb-0"
+            className="mb-12 md:mb-0"
           >
             <p className="mt-4 text-slate-700">
               It doesn’t matter what size your business is, our software won’t
@@ -210,28 +204,7 @@ export default function Home() {
         </div>
         <Pricing2 />
       </Container>
-
-      {/* <Container>
-        <div className="relative isolate bg-gradient-to-b rounded-3xl from-indigo-100 to-indigo-50/60 py-16 sm:py-28 md:py-32">
-          <FadeIn className="max-w-xl mx-auto text-center z-20">
-            <h2 className="block tracking-tight [text-wrap:balance] text-4xl font-bold text-neutral-950 mb-2">
-              Get started today
-            </h2>
-            <p className="text-neutral-700 leading-7">
-              It’s time to take control of your books. Buy our software so you
-              can feel like you’re doing something productive.
-            </p>
-            <Link
-              href=""
-              className={buttonVariants({ size: "lg", className: "mt-5 z-10" })}
-            >
-              Get 6 Month Free
-            </Link>
-          </FadeIn>
-        </div>
-      </Container> */}
-
-      <CallToAction>
+      <CallToAction className="mt-20 mb-0 md:my-32">
         <CallToActionHeading>
           Let&apos;s maximize your online impact!
         </CallToActionHeading>

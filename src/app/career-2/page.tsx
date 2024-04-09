@@ -17,11 +17,11 @@ export default function Career2() {
     <div>
       <Container className="mt-20">
         <FadeIn className="max-w-xl">
-          <h1 className="text-3xl font-black md:text-4xl/tight text-neutral-950">
-            Frequently Asked
+          <h1 className="text-3xl font-black md:text-4xl/tight text-indigo-950">
+            Join our team of
             <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
               {" "}
-              <span className="relative">Questions</span>{" "}
+              <span className="relative">revolutionaries</span>{" "}
               <svg
                 aria-hidden="true"
                 viewBox="0 0 418 42"
@@ -32,9 +32,10 @@ export default function Career2() {
               </svg>
             </span>{" "}
           </h1>
-          <p className="mt-3 text-base text-neutral-600 leading-8">
-            These are the most commonly asked questions about us and billing.
-            Can&apos;t find what you are looking for? Chat to our Support Team!
+          <p className="mt-3 text-base text-gray-600 leading-8">
+            Join us and become the trusted expert relied upon by the world’s
+            biggest brands, venues, and entertainers to solve their most complex
+            challenges.
           </p>
         </FadeIn>
       </Container>

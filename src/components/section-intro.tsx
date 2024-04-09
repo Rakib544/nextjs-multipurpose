@@ -20,14 +20,13 @@ export function SectionIntro({
   props?: any;
 }) {
   return (
-    // <Container {...props} className={className}>
     <FadeIn className={cn("max-w-xl", className)}>
-      <h2>
+      <h2 className="">
         {eyebrow && (
           <>
             <span
               className={clsx(
-                "mb-4 block font-display text-sm font-bold",
+                "block font-display uppercase text-xs tracking-wider font-bold",
                 invert ? "text-white" : "text-indigo-600"
               )}
             >
@@ -38,11 +37,11 @@ export function SectionIntro({
         )}
         <span
           className={clsx(
-            "block [text-wrap:balance]",
+            "block mb-3 mt-2 [text-wrap:balance]",
             smaller
               ? "text-2xl font-extrabold"
               : "text-2xl lg:text-3xl font-extrabold",
-            invert ? "text-white" : "text-neutral-950"
+            invert ? "text-white" : "text-indigo-950"
           )}
         >
           {title}
@@ -51,14 +50,13 @@ export function SectionIntro({
       {children && (
         <div
           className={clsx(
-            "mt-2 text-base leading-7",
-            invert ? "text-neutral-300" : "text-neutral-700"
+            "text-base leading-7",
+            invert ? "text-neutral-300" : "text-slate-600"
           )}
         >
           {children}
         </div>
       )}
     </FadeIn>
-    // </Container>
   );
 }

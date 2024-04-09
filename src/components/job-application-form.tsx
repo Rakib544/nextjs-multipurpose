@@ -142,11 +142,11 @@ export default function JobApplicationForm() {
                     <span className="inline-block mx-auto">
                       <CloudUploadIcon className="h-8 w-8 text-indigo-600" />
                     </span>
-                    <p className="text-neutral-950 font-semibold text-base text-center">
+                    <p className="text-indigo-950 font-semibold text-base text-center">
                       <span className="text-indigo-600">Click to upload</span>{" "}
                       or drag and drop
                     </p>
-                    <p className="text-center text-base text-neutral-600 mt-3 font-medium">
+                    <p className="text-center text-base text-gray-600 mt-3 font-medium">
                       Only .pdf file are allowed
                     </p>
                   </div>
@@ -163,7 +163,7 @@ export default function JobApplicationForm() {
                   <FileTextIcon className="h-4 w-4 md:h-5 md:w-5 text-indigo-500" />
                 </span>
                 <div>
-                  <p className="font-semibold text-neutral-950 text-sm text-wrap">
+                  <p className="font-semibold text-indigo-950 text-sm text-wrap">
                     {form.getValues("cv")?.name}
                   </p>
                 </div>

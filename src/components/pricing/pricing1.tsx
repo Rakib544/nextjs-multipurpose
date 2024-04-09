@@ -14,7 +14,7 @@ export function Pricing1() {
         <span
           className={
             pricingType === "monthly"
-              ? "text-neutral-950 font-bold text-sm"
+              ? "text-indigo-950 font-bold text-sm"
               : "text-neutral-700 font-bold text-sm"
           }
         >
@@ -28,7 +28,7 @@ export function Pricing1() {
         <span
           className={
             pricingType === "yearly"
-              ? "text-neutral-950 font-bold text-sm"
+              ? "text-indigo-950 font-bold text-sm"
               : "text-neutral-700 font-bold text-sm"
           }
         >
@@ -36,7 +36,7 @@ export function Pricing1() {
         </span>
       </div>
       <section id="pricing">
-        <div className="-mx-4 mt-8 grid gap-x-4 max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
+        <div className="-mx-4 mt-8 grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-8 md:gap-x-8 sm:mx-auto lg:-mx-8 lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           {pricingData.map((price) => (
             <PlanCard2
               pricingType={pricingType}

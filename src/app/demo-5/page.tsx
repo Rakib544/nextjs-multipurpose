@@ -52,7 +52,7 @@ export default function Demo5() {
           <h1 className="text-3xl font-bold tracking-tighter md:text-5xl/tight">
             Experience the workflow the best frontend teams love.
           </h1>
-          <p className="mt-3 text-lg text-neutral-600 leading-8">
+          <p className="mt-3 text-lg text-gray-600 leading-8">
             We are developer studio working at the intersection of design and
             technology. It’s a really busy intersection though — a lot of our
             staff have been involved in hit and runs.

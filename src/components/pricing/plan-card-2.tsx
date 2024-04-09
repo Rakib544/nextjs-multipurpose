@@ -23,10 +23,10 @@ export function PlanCard2({
   return (
     <section
       className={clsx(
-        "flex flex-col rounded-lg border-slate-200 px-6 sm:px-8  py-8 bg-white shadow-sm border relative",
+        "flex flex-col rounded-lg  px-6 sm:px-8  py-8 bg-white shadow-sm border relative",
         featured
           ? "order-first lg:order-none w-full h-full border-[1.5px] border-indigo-600"
-          : ""
+          : "border-slate-200"
       )}
     >
       {featured && (
@@ -34,23 +34,23 @@ export function PlanCard2({
           Popular
         </span>
       )}
-      <h3 className="mb-3 font-display text-base font-medium text-neutral-950">
+      <h3 className="mb-3 font-display text-base font-medium text-indigo-950">
         {name}
       </h3>
 
-      <div className="flex items-end gap-x-1 text-neutral-950">
+      <div className="flex items-end gap-x-1 text-indigo-950">
         <p className="font-display text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-indigo-500 text-transparent bg-clip-text">
           {price}
         </p>
-        <span className="text-sm text-neutral-600">/</span>
-        <span className="text-sm text-neutral-600 font-medium">
+        <span className="text-sm text-gray-600">/</span>
+        <span className="text-sm text-gray-600 font-medium">
           {pricingType === "monthly" ? "month" : "year"}
         </span>
       </div>
       <p className="mt-4 text-base leading-6 text-neutral-700">{description}</p>
       <ul className="mt-6 flex flex-col gap-y-4 text-sm text-neutral-700">
         {features.map((feature) => (
-          <li key={feature} className="flex font-medium text-neutral-600">
+          <li key={feature} className="flex font-medium text-gray-600">
             <span className="h-6 w-6 rounded-full bg-indigo-50">
               <CheckIcon className="fill-indigo-600 h-6 w-6" />
             </span>

@@ -41,7 +41,7 @@ export default function SignUp() {
                 ></path>
               </svg>
             </Link>
-            <h1 className="font-bold text-2xl text-neutral-950">
+            <h1 className="font-bold text-2xl text-indigo-950">
               Create your Account
             </h1>
             <p className="text-neutral-700 leading-7 text-sm mt-1 mb-8">

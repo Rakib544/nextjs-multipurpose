@@ -31,15 +31,15 @@ const TestimonialCard = React.forwardRef<HTMLDivElement, TestimonialCardProps>(
               className="h-12 w-12 rounded-full object-center object-cover"
             />
             <div>
-              <span className="block text-base font-semibold leading-[1.6] text-neutral-950">
+              <span className="block text-base font-semibold leading-[1.6] text-indigo-950">
                 {name}
               </span>
-              <span className="block text-sm  text-neutral-600 font-medium">
+              <span className="block text-sm  text-gray-600 font-medium">
                 {role}
               </span>
             </div>
           </div>
-          <span className="flex items-center font-medium text-neutral-950 text-sm gap-x-1">
+          <span className="flex items-center font-medium text-indigo-950 text-sm gap-x-1">
             {rating} <StarIcon className="h-4 w-4 fill-yellow-500" />
           </span>
         </figcaption>

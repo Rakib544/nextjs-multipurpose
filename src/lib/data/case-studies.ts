@@ -3,7 +3,7 @@ import clientLogo from "@/images/case-studies/client.svg";
 export const caseStudies = [
   {
     id: 1,
-    href: "/jfjknvdk",
+    href: "/case-studies-details",
     client: "Rakib",
     logo: clientLogo,
     year: "2023",
@@ -26,7 +26,7 @@ export const caseStudies = [
   },
   {
     id: 2,
-    href: "/jfjknvdk",
+    href: "/case-studies-details",
     client: "Rakib",
     logo: clientLogo,
     year: "2023",
@@ -49,7 +49,7 @@ export const caseStudies = [
   },
   {
     id: 3,
-    href: "/jfjknvdk",
+    href: "/case-studies-details",
     client: "Rakib",
     logo: clientLogo,
     year: "2023",
