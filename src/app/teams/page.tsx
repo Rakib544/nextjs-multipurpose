@@ -37,7 +37,7 @@ export default function Teams() {
       <Container className="mt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-0 gap-y-6 items-center">
           <div>
-            <FadeIn className="z-10 mt-20 mb-10">
+            <FadeIn className="z-10">
               <p className="uppercase text-xs tracking-wider font-bold text-indigo-600 mb-3">
                 Our Team
               </p>
@@ -57,7 +57,7 @@ export default function Teams() {
                 </span>{" "}
                 from the wide range of backgrounds
               </h1>
-              <p className="mt-3 text-base text-gray-600 leading-8 max-w-xl mx-auto">
+              <p className="mt-3 text-base text-gray-600 leading-8 lg:max-w-xl mx-auto">
                 Our philosophy is simple; hire great people and give them the
                 resources and support to do their best work.
               </p>
@@ -67,7 +67,7 @@ export default function Teams() {
             <Image
               height={450}
               width={450}
-              className="block ml-auto rounded-2xl"
+              className="block w-full lg:w-auto lg:ml-auto rounded-2xl"
               src="/about-intro-1.webp"
               alt=""
             />

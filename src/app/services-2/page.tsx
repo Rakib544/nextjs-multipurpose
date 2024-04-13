@@ -1,6 +1,6 @@
 import { Container } from "@/components/container";
-import { FadeIn } from "@/components/fade-in";
-import { FaqCard2 } from "@/components/faq-card";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { FaqCard1 } from "@/components/faq-card";
 import { SectionIntro } from "@/components/section-intro";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { Accordion } from "@/components/ui/accordion";
@@ -13,11 +13,37 @@ import { sassFeatures } from "@/lib/data/sass-features";
 import { testimonials } from "@/lib/data/testimonials-data";
 import Link from "next/link";
 
+const processSteps = [
+  {
+    title: "Uncovering Insights",
+    description:
+      "Delving deep to understand your audience, objectives, and market landscape.",
+  },
+  {
+    title: "Creative Exploration",
+    description:
+      "Collaborative brainstorming to generate innovative solutions aligned with your vision.",
+  },
+  {
+    title: "Bringing Ideas to Life",
+    description:
+      "Transforming concepts into interactive prototypes for detailed feedback and iterative refinement.",
+  },
+  {
+    title: "Refining for Perfection",
+    description:
+      "Conducting rigorous testing to ensure seamless user experiences and continuous improvement.",
+  },
+];
+
 export default function Services2() {
   return (
     <div>
-      <FadeIn className="max-w-2xl mx-auto text-center z-10 mt-20 mb-10">
-        <h1 className="text-3xl font-black md:text-4xl/tight text-indigo-950">
+      <FadeIn className="max-w-3xl mx-auto text-center z-10 mt-20 mb-10">
+        <p className="uppercase text-xs tracking-wider font-bold text-indigo-600 mb-3">
+          Our Services
+        </p>
+        <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
           Customized solutions to
           <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
             {" "}
@@ -32,10 +58,9 @@ export default function Services2() {
             </svg>
           </span>{" "}
         </h1>
-        <p className="mt-3 text-base text-gray-600 leading-8">
+        <p className="mt-3 text-lg text-gray-600 leading-8 max-w-xl mx-auto">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          dignissimos? Nihil suscipit alias inventore nisi a, asperiores ducimus
-          quasi necessitatibus!
+          dignissimos? Nihil suscipit alias inventore nisi!
         </p>
       </FadeIn>
       <Container className="mt-20">
@@ -44,20 +69,22 @@ export default function Services2() {
             <Link
               href="/services/1"
               key={service.id}
-              className="border rounded-xl p-6 hover:bg-gradient-to-b from-indigo-50 hover:border-indigo-200 to-white"
+              className="border focus:ring-0 focus:bg-primary focus:outline-none focus:border-primary group rounded-xl p-6 hover:border-primary hover:bg-primary transition duration-300"
             >
-              <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full">
+              <span className="border inline-block px-5 py-1.5 group-hover:border-indigo-500 border-indigo-200 rounded-full transition-all duration-300 group-focus:border-indigo-500">
                 {service.icon}
               </span>
-              <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
-              <p className="text-base leading-7 mt-3 text-gray-600">
+              <h3 className="text-lg font-bold mt-8 group-focus:text-white group-hover:text-white transition duration-300">
+                {service.title}
+              </h3>
+              <p className="text-base leading-7 group-focus:text-slate-200 mt-3 group-hover:text-slate-200 text-gray-600 transition-all duration-300">
                 {service.description}
               </p>
             </Link>
           ))}
         </div>
       </Container>
-      <Container className="my-20">
+      <Container className="mt-20 md:mt-32">
         <SectionIntro
           title="Smart And Effective Working Process"
           eyebrow="Our process"
@@ -68,30 +95,29 @@ export default function Services2() {
             at.
           </p>
         </SectionIntro>
-        <div className="grid grid-cols-1 md:grid-cold-2 lg:grid-cols-4 text-center">
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i}>
-              <span className="inline-block px-5 text-sm font-medium py-2 rounded-full bg-indigo-600 text-white">
-                Step - {i}
+        <div className="grid grid-cols-1 md:grid-cold-2 lg:grid-cols-4">
+          {processSteps.map((p, index) => (
+            <div key={index}>
+              <span className="inline-flex size-12 justify-center items-center font-bold rounded-xl bg-indigo-600 text-white">
+                {index + 1}
               </span>
-              <h3 className="mt-4 text-lg font-bold mb-3">Analysis</h3>
+              <h3 className="mt-4 text-lg font-bold mb-3">{p.title}</h3>
               <p className="text-base leading-7 text-gray-600">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est,
-                maiores?
+                {p.description}
               </p>
             </div>
           ))}
         </div>
       </Container>
-      <Container className="my-20">
+      <Container className="mt-20 md:mt-32">
         <SectionIntro
           eyebrow="Testimonials"
           title="What people say about our creative service"
+          className="mx-auto text-center mb-12"
         >
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. At qui
-            soluta voluptatem tempore, maxime voluptatibus architecto! Quas
-            fugiat laboriosam placeat.
+            soluta voluptatem tempore, maxime voluptatibus architecto!
           </p>
         </SectionIntro>
         <InfiniteMoving>
@@ -112,26 +138,36 @@ export default function Services2() {
         </InfiniteMoving>
       </Container>
 
-      <Container className="my-20">
-        <SectionIntro eyebrow="FAQ" title="Frequently asked questions">
+      <Container className="my-20 md:my-32">
+        <SectionIntro
+          title="Got questions? We’ve got answers"
+          eyebrow="Our FAQ"
+          className="max-w-2xl mx-auto text-center"
+        >
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at
-            quam, doloremque maiores fuga numquam!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            sed soluta voluptates?
           </p>
         </SectionIntro>
-
-        <Accordion type="multiple">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
-            {faqData.splice(0, 6).map((faq) => (
-              <FaqCard2
-                key={faq.id}
-                id={faq.id.toString()}
-                question={faq.question}
-                answer={faq.answer}
-              />
-            ))}
-          </div>
-        </Accordion>
+        <div className="max-w-2xl mx-auto mt-16">
+          <FadeInStagger faster>
+            <Accordion
+              type="single"
+              collapsible
+              defaultValue="item-1"
+              className="mt-6"
+            >
+              {faqData.slice(0, 10).map((faq) => (
+                <FaqCard1
+                  key={faq.id}
+                  id={faq.id.toString()}
+                  question={faq.question}
+                  answer={faq.answer}
+                />
+              ))}
+            </Accordion>
+          </FadeInStagger>
+        </div>
       </Container>
     </div>
   );

@@ -1,34 +1,40 @@
 import { Container } from "@/components/container";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { List, ListItem } from "@/components/list";
 import { StatList, StatListItem } from "@/components/stat-list";
 import coverImage from "@/images/hero.jpg";
+import { caseStudies } from "@/lib/data/case-studies";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CaseStudiesDetails() {
   return (
     <div>
       <Container className="my-20 !max-w-5xl">
-        <span className="block text-base font-bold text-indigo-600 mb-3">
-          Case Study
-        </span>
-        <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight lg:text-4xl/tight max-w-2xl">
+        <h1 className="text-indigo-950 text-3xl font-extrabold tracking-tight lg:text-4xl/tight max-w-2xl">
           Enhancing Online Presence for XYZ Corporation
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 mt-12 gap-6">
           <div>
-            <span className="text-sm font-medium text-gray-600 ">Client</span>
+            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+              Client
+            </span>
             <p className="text-base font-medium mt-1">
               Faulsk Company Inc Canada
             </p>
           </div>
           <div>
-            <span className="text-sm font-medium text-gray-600">Date</span>
+            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+              Date
+            </span>
             <p className="text-base font-medium mt-1">
               05 Dec 2022 - 01 Jan 2023
             </p>
           </div>
           <div>
-            <span className="text-sm font-medium text-gray-600">Services</span>
+            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+              Services
+            </span>
             <p className="text-base font-medium mt-1">
               UX Research, Wireframing, UI Design
             </p>
@@ -37,9 +43,9 @@ export default function CaseStudiesDetails() {
         <Image
           src={coverImage}
           alt=""
-          className="aspect-[16/9] block rounded-xl mt-8"
+          className="aspect-[16/9] block rounded-xl mt-12 object-cover"
         />
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Background</h2>
           <p className="text-base leading-8 font-medium text-gray-600">
             XYZ Corporation, a leading provider of innovative software
@@ -50,7 +56,7 @@ export default function CaseStudiesDetails() {
             search engine visibility and overall online performance.
           </p>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Objectives</h2>
           <List>
             <ListItem>
@@ -67,7 +73,7 @@ export default function CaseStudiesDetails() {
             </ListItem>
           </List>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Challenges</h2>
           <List>
             <ListItem>
@@ -97,7 +103,7 @@ export default function CaseStudiesDetails() {
             </ListItem>
           </List>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Solution & Result</h2>
           <List>
             <ListItem>
@@ -120,16 +126,16 @@ export default function CaseStudiesDetails() {
             </ListItem>
           </List>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <StatList>
             <StatListItem value="25%" label="More traffic" />
             <StatListItem value="10x" label="Page loads" />
             <StatListItem value="10%" label="Less infra costs" />
           </StatList>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Conclusion</h2>
-          <p className="text-base leading-8 font-medium text-gray-600">
+          <p className="text-base leading-8 text-gray-600">
             By partnering with our agency to redesign and optimize their
             website, XYZ Corporation was able to overcome various challenges and
             enhance their online presence, attract more visitors, and generate
@@ -139,7 +145,40 @@ export default function CaseStudiesDetails() {
           </p>
         </div>
         <div className="my-32">
-          <h3 className="text-2xl font-extrabold">More Case Studies</h3>
+          <h3 className="text-2xl font-extrabold mb-8">More Case Studies</h3>
+          <FadeInStagger className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
+            {caseStudies.slice(0, 2).map((caseStudy: any) => (
+              <FadeIn key={caseStudy.href} className="flex">
+                <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-indigo-950/5 transition hover:bg-slate-50 hover:ring-indigo-950/10 sm:p-8">
+                  <h3>
+                    <Link href={caseStudy.href}>
+                      <span className="absolute inset-0 rounded-3xl" />
+                      <Image
+                        src={caseStudy.logo}
+                        alt={caseStudy.client}
+                        unoptimized
+                      />
+                    </Link>
+                  </h3>
+                  <p className="mt-6 flex gap-x-2 text-sm text-indigo-950">
+                    <time dateTime={caseStudy.year} className="font-semibold">
+                      {caseStudy.date.split("-")[0]}
+                    </time>
+                    <span className="text-neutral-300" aria-hidden="true">
+                      /
+                    </span>
+                    <span className="font-medium">Case study</span>
+                  </p>
+                  <p className="mt-6 font-display text-xl font-extrabold text-indigo-950">
+                    {caseStudy.title}
+                  </p>
+                  <p className="mt-4 text-base leading-7 text-gray-600">
+                    {caseStudy.description}
+                  </p>
+                </article>
+              </FadeIn>
+            ))}
+          </FadeInStagger>
         </div>
       </Container>
     </div>

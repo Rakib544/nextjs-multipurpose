@@ -1,11 +1,13 @@
 import { Container } from "@/components/container";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { List, ListItem } from "@/components/list";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
-import coverImage from "@/images/hero.jpg";
 import userImage from "@/images/testimonial_1.jpg";
+import { portfoliosData } from "@/lib/data/portfolio-data";
 import Image from "next/image";
+import Link from "next/link";
 
 const serviceProcess = [
   {
@@ -38,7 +40,7 @@ export default function PortfolioDetails() {
   return (
     <div>
       <Container className="my-20 !max-w-5xl">
-        <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight lg:text-4xl/tight max-w-2xl">
+        <h1 className="text-indigo-950 text-3xl font-extrabold tracking-tight lg:text-4xl/tight max-w-2xl">
           E-commerce Website Redesign for ABC Clothing Co.
         </h1>
         <p className="text-lg leading-8 text-gray-600 mt-4">
@@ -46,39 +48,47 @@ export default function PortfolioDetails() {
           enhance user experience, improve conversion rates, and align with
           modern design trends.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 mt-12 md:mt-20 gap-6">
           <div>
-            <span className="text-sm font-medium text-gray-600 ">Client</span>
+            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+              Client
+            </span>
             <p className="text-base font-medium mt-1">
               Faulsk Company Inc Canada
             </p>
           </div>
           <div>
-            <span className="text-sm font-medium text-gray-600">Date</span>
+            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+              Date
+            </span>
             <p className="text-base font-medium mt-1">
               05 Dec 2022 - 01 Jan 2023
             </p>
           </div>
           <div>
-            <span className="text-sm font-medium text-gray-600">Services</span>
+            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+              Services
+            </span>
             <p className="text-base font-medium mt-1">
               UX Research, Wireframing, UI Design
             </p>
           </div>
         </div>
         <Image
-          src={coverImage}
+          src="https://images.unsplash.com/photo-1588590560438-5e27fe3f6b71?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
-          className="aspect-[16/9] block rounded-xl mt-8"
+          width={1200}
+          height={400}
+          className="aspect-[16/9] block rounded-xl mt-12 object-cover"
         />
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Background</h2>
           <p className="text-base leading-8 font-medium text-gray-600">
             ABC Clothing Co. is a leading fashion retailer specializing in
             high-quality apparel and accessories for men and women.
           </p>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Challenges</h2>
           <List>
             <ListItem>
@@ -98,7 +108,7 @@ export default function PortfolioDetails() {
             </ListItem>
           </List>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Solution & Result</h2>
           <List>
             <ListItem>
@@ -118,7 +128,7 @@ export default function PortfolioDetails() {
             </ListItem>
           </List>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Process</h2>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
             {serviceProcess.map((process) => (
@@ -127,14 +137,14 @@ export default function PortfolioDetails() {
                   {process.id.toString().padStart(2, "0")}
                 </span>
                 <h3 className="text-lg font-bold mt-6 mb-2">{process.title}</h3>
-                <p className="text-base leading-8 font-medium text-gray-600">
+                <p className="text-base leading-8 text-gray-600">
                   {process.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Technology Used</h2>
           <ul className="flex flex-wrap gap-4">
             <li>
@@ -183,7 +193,7 @@ export default function PortfolioDetails() {
             </li>
           </ul>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Key Features</h2>
           <List>
             <ListItem>
@@ -204,7 +214,7 @@ export default function PortfolioDetails() {
             </ListItem>
           </List>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Results</h2>
           <List>
             <ListItem>
@@ -224,7 +234,7 @@ export default function PortfolioDetails() {
             </ListItem>
           </List>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <StatList>
             <StatListItem value="25%" label="More traffic" />
             <StatListItem value="10x" label="Page loads" />
@@ -232,7 +242,7 @@ export default function PortfolioDetails() {
           </StatList>
         </div>
         <div className="mt-20">
-          <div className="max-w-3xl rounded-xl border border-indigo-50 bg-gradient-to-br from-indigo-50 to-white p-10">
+          <div className="max-w-3xl rounded-xl border border-indigo-50 bg-gradient-to-br from-indigo-50 to-white p-4 md:p-10">
             <TestimonialCard
               image={userImage}
               quote="Working with [Your Company Name] was a game-changer for our business. Their expertise in website design and development helped us transform our online presence and drive significant growth in sales."
@@ -242,7 +252,7 @@ export default function PortfolioDetails() {
             />
           </div>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Next Step</h2>
           <p className="text-base leading-8 font-medium text-gray-600">
             Offering ongoing maintenance and support to ensure the continued
@@ -250,7 +260,37 @@ export default function PortfolioDetails() {
           </p>
         </div>
         <div className="my-32">
-          <h3 className="text-2xl font-extrabold">More Portfolios</h3>
+          <h3 className="text-2xl font-extrabold mb-8">More Portfolios</h3>
+          <FadeInStagger
+            faster
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          >
+            {portfoliosData.slice(0, 3).map((portfolio, index) => (
+              <FadeIn key={index}>
+                <Link
+                  href="/portfolio-details"
+                  className="block relative aspect-square border group rounded-2xl overflow-hidden"
+                >
+                  <Image
+                    src={portfolio.image}
+                    fill
+                    alt=""
+                    className="object-cover object-center transition duration-500 motion-safe:group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 flex items-end p-4 md:p-8 bg-gradient-to-t from-black/70 from-5%">
+                    <div>
+                      <h2 className="font-semibold text-white text-lg md:text-xl ">
+                        {portfolio.client}
+                      </h2>
+                      <p className="text-slate-200 text-sm mt-1">
+                        {portfolio.category}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </FadeInStagger>
         </div>
       </Container>
     </div>

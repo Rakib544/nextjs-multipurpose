@@ -16,8 +16,11 @@ export default function Career2() {
   return (
     <div>
       <Container className="mt-20">
-        <FadeIn className="max-w-xl">
-          <h1 className="text-3xl font-black md:text-4xl/tight text-indigo-950">
+        <FadeIn className="max-w-2xl">
+          <p className="uppercase text-xs tracking-wider font-bold text-indigo-600 mb-3">
+            Careers
+          </p>
+          <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
             Join our team of
             <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
               {" "}
@@ -32,7 +35,7 @@ export default function Career2() {
               </svg>
             </span>{" "}
           </h1>
-          <p className="mt-3 text-base text-gray-600 leading-8">
+          <p className="mt-3 text-lg text-gray-600 leading-8">
             Join us and become the trusted expert relied upon by the world’s
             biggest brands, venues, and entertainers to solve their most complex
             challenges.

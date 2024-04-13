@@ -1,6 +1,5 @@
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
-import { GridPattern } from "@/components/grid-pattern";
 import {
   BriefcaseIcon,
   CalenderIcon,
@@ -17,9 +16,6 @@ import Link from "next/link";
 export default function JobDetails() {
   return (
     <div>
-      <div className="absolute z-[-1] inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-        <GridPattern />
-      </div>
       <PageIntro title="Senior WordPress Plugin Developer">
         <p>
           We are looking for Senior WordPress Plugin Developers with 5+ years of
@@ -36,7 +32,7 @@ export default function JobDetails() {
             />
           </div>
           <div className="col-span-12 lg:col-span-4">
-            <div className="border border-indigo-200 bg-white rounded-xl p-6">
+            <div className="border border-indigo-950/5 bg-white rounded-xl p-6">
               <div className="flex gap-x-2 text-base text-indigo-950 font-semibold">
                 <PinIcon className="h-5 w-5" /> Dhaka, Bangladesh
               </div>

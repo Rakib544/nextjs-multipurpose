@@ -11,7 +11,7 @@ export default function Contact2() {
   return (
     <div>
       <div className="absolute top-0 left-0 min-h-screen w-full bg-gradient-to-b from-[#ECE9FF] to-white z-[-1]"></div>
-      <Container className="my-32">
+      <Container className="my-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-20">
           <div>
             <FadeIn className="z-10">

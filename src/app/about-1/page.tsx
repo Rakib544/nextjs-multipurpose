@@ -51,25 +51,32 @@ const peoples = [
 export default function About1() {
   return (
     <div>
-      <FadeIn className="max-w-5xl mx-auto text-center z-10 mt-12 mb-0 md:mt-20 px-2">
-        <p className="uppercase text-xs tracking-wider text-center font-bold text-indigo-600 mb-3">
-          About Us
-        </p>
-        <h1 className="text-2xl font-extrabold md:text-4.5xl/tight text-indigo-950">
-          Discover the story behind our agency that’s dedicated to bring your
-          creative vision to life
-        </h1>
-        <p className="mt-3 mb-6 max-w-2xl mx-auto text-base md:text-lg text-gray-600 md:leading-8">
-          With a passion for technology and a commitment to excellence, we
-          empower businesses to thrive in the digital landscape.
-        </p>
-      </FadeIn>
-      <Image
-        src="https://sandbox.ui-lib.com/_next/image?url=%2Fimg%2Fphotos%2Fbg12.jpg&w=3840&q=75"
-        alt=""
-        height={400}
-        width={1400}
-      />
+      <Container>
+        <FadeIn className="max-w-5xl mx-auto text-left md:text-center z-10 mt-12 mb-0 md:mt-20">
+          <p className="uppercase text-xs tracking-wider text-left md:text-center font-bold text-indigo-600 mb-3">
+            About Us
+          </p>
+          <h1 className="text-2xl font-extrabold md:text-4.5xl/tight text-indigo-950">
+            Discover the story behind our agency that’s dedicated to bring your
+            creative vision to life
+          </h1>
+          <p className="mt-3 mb-6 lg:max-w-2xl mx-auto text-base md:text-lg text-gray-600 md:leading-8">
+            With a passion for technology and a commitment to excellence, we
+            empower businesses to thrive in the digital landscape.
+          </p>
+        </FadeIn>
+      </Container>
+      <Container>
+        <div className="">
+          <Image
+            src="/test.png"
+            alt=""
+            height={300}
+            width={1200}
+            className="object-cover"
+          />
+        </div>
+      </Container>
       <Container className="mt-20 md:mt-32">
         <StatList>
           <StatListItem label="Loyal Customers" value="200K+" />

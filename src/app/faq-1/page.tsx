@@ -34,7 +34,7 @@ export default function Faq1() {
             </svg>
           </span>{" "}
         </h1>
-        <p className="mt-3 text-base text-gray-600 leading-8">
+        <p className="mt-3 text-lg text-gray-600 leading-8">
           These are the most commonly asked questions about us and billing.
           Can&apos;t find what you are looking for? Chat to our Support Team!
         </p>

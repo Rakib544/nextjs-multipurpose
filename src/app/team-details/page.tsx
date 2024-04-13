@@ -10,15 +10,15 @@ export default function TeamDetails() {
       <Container className="mb-20 !max-w-5xl">
         <div className="relative">
           <div className="h-[200px] sm:h-[280px] bg-gradient-to-r from-indigo-200 to-violet-200 rounded-lg w-full"></div>
-          <div className="flex absolute gap-x-3 sm:gap-x-6 -bottom-24 sm:-bottom-20 items-end px-3 sm:px-5">
+          <div className="flex flex-col md:flex-row w-full absolute gap-x-3 sm:gap-x-6 -bottom-32 md:-bottom-24  items-center md:items-end sm:px-5">
             <Image
               src={userImage}
               alt=""
-              height={140}
-              width={140}
+              height={150}
+              width={150}
               className="rounded-full shrink-0 border-4 border-white"
             />
-            <div className="mb-4">
+            <div className="mb-4 text-center md:text-left w-full">
               <h1 className="text-xl sm:text-2xl font-extrabold">John Smith</h1>
               <p className="text-base text-gray-600">
                 Senior Software Engineer
@@ -26,8 +26,8 @@ export default function TeamDetails() {
             </div>
           </div>
         </div>
-        <div className="mt-32">
-          <p className="text-base leading-8 text-gray-600">
+        <div className="mt-36 lg:mt-32">
+          <p className="text-base leading-8 text-indigo-950">
             John Smith is a seasoned software engineer with over 10 years of
             experience in developing innovative software solutions. He holds a
             Bachelor&apos;s degree in Computer Science from XYZ University and
@@ -39,7 +39,7 @@ export default function TeamDetails() {
         </div>
         <div className="mt-12">
           <h2 className="text-xl font-bold mb-4">Responsibilities:</h2>
-          <p className="text-base leading-8 text-gray-600">
+          <p className="text-base leading-8 text-indigo-950">
             As a Senior Software Engineer, John is responsible for leading the
             development of key software projects, from initial concept to final
             implementation. He works closely with product managers and designers

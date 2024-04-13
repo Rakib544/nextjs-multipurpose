@@ -1,7 +1,6 @@
 import { Border } from "@/components/border";
 import CommentCreateForm from "@/components/comment-create-form";
 import { Container } from "@/components/container";
-import { GridPattern } from "@/components/grid-pattern";
 import { MessageCircle } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import coverImage from "@/images/hero.jpg";
@@ -11,15 +10,12 @@ import Image from "next/image";
 export default function BlogDetails1() {
   return (
     <div>
-      <div className="absolute inset-0 z-[-1] top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-        <GridPattern />
-      </div>
       <Container className="mt-20">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-sm text-neutral-700 font-medium mb-4">
             19 October, 2023
           </p>
-          <h1 className="text-2xl max-w-full md:text-3xl font-extrabold tracking-tight lg:text-4xl/tight">
+          <h1 className="text-3xl max-w-full font-extrabold tracking-tight lg:text-4.5xl/tight">
             The Future of Web Development: Our Predictions for 2023
           </h1>
           <p className="font-medium mt-3 text-sm text-neutral-900">
@@ -49,7 +45,9 @@ export default function BlogDetails1() {
               ))}
             </div>
           </div>
+          {/* <div className="p-4 rounded-xl bg-indigo-50 md:p-6"> */}
           <CommentCreateForm />
+          {/* </div> */}
         </div>
       </Container>
     </div>

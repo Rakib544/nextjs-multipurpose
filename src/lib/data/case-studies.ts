@@ -1,11 +1,13 @@
-import clientLogo from "@/images/case-studies/client.svg";
+import amazonLogo from "@/images/clients/amazon.svg";
+import bmwLogo from "@/images/clients/bmw.svg";
+import googleLogo from "@/images/clients/google.svg";
 
 export const caseStudies = [
   {
     id: 1,
     href: "/case-studies-details",
     client: "Rakib",
-    logo: clientLogo,
+    logo: googleLogo,
     year: "2023",
     date: "2023-12-21",
     title: "Skip the bank, borrow from those you trust",
@@ -28,7 +30,7 @@ export const caseStudies = [
     id: 2,
     href: "/case-studies-details",
     client: "Rakib",
-    logo: clientLogo,
+    logo: amazonLogo,
     year: "2023",
     date: "2023-12-21",
     title: "Skip the bank, borrow from those you trust",
@@ -51,7 +53,7 @@ export const caseStudies = [
     id: 3,
     href: "/case-studies-details",
     client: "Rakib",
-    logo: clientLogo,
+    logo: bmwLogo,
     year: "2023",
     date: "2023-12-21",
     title: "Skip the bank, borrow from those you trust",

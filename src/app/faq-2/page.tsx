@@ -13,7 +13,7 @@ import { testimonials } from "@/lib/data/testimonials-data";
 export default function Faq2() {
   return (
     <div>
-      <Container className="mt-20">
+      <Container className="my-20">
         <FadeIn className="max-w-2xl">
           <p className="uppercase text-xs tracking-wider font-bold text-indigo-600 mb-3">
             FAQ
@@ -33,13 +33,13 @@ export default function Faq2() {
               </svg>
             </span>{" "}
           </h1>
-          <p className="mt-3 text-base text-gray-600 leading-8">
+          <p className="mt-3 text-lg text-gray-600 leading-8">
             These are the most commonly asked questions about us and billing.
             Can&apos;t find what you are looking for? Chat to our Support Team!
           </p>
         </FadeIn>
       </Container>
-      <Container className="mt-12">
+      <Container className="">
         <div>
           <FadeInStagger faster>
             <div className="mt-6 grid grid-cols-12 gap-6">

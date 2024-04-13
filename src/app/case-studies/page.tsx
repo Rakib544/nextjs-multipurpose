@@ -9,7 +9,7 @@ export default function WorkStudies() {
     <div>
       <Container className="mb-32">
         <FadeIn className="max-w-3xl mx-auto text-center z-10 mt-20 mb-10">
-          <h1 className="text-3xl font-black md:text-4xl/tight text-indigo-950">
+          <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
             Proven solutions for
             <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
               {" "}
@@ -25,23 +25,21 @@ export default function WorkStudies() {
             </span>{" "}
             problems
           </h1>
-          <p className="mt-3 text-base text-gray-600 leading-8 max-w-xl mx-auto">
+          <p className="mt-3 text-lg text-gray-600 leading-8 max-w-2xl mx-auto">
             We believe in efficiency and maximizing our resources to provide the
-            best value to our clients. The primary way we do that is by re-using
-            the same five projects we’ve been developing for the past decade.
+            best value to our clients.
           </p>
         </FadeIn>
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3 mt-20">
+        <FadeInStagger className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-20">
           {caseStudies.map((caseStudy: any) => (
             <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-indigo-950/5 transition hover:bg-slate-50 hover:ring-indigo-950/10 sm:p-8">
                 <h3>
                   <Link href={caseStudy.href}>
                     <span className="absolute inset-0 rounded-3xl" />
                     <Image
                       src={caseStudy.logo}
                       alt={caseStudy.client}
-                      className="h-16 w-16"
                       unoptimized
                     />
                   </Link>

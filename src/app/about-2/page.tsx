@@ -93,7 +93,7 @@ export default function About2() {
             <Image
               height={450}
               width={450}
-              className="block ml-auto rounded-2xl"
+              className="block w-full lg:w-auto lg:ml-auto rounded-2xl"
               src="/about-intro-1.webp"
               alt=""
             />
@@ -185,7 +185,7 @@ export default function About2() {
           </Link>
         </div>
       </Container>
-      <div className="py-20 my-32 bg-indigo-50">
+      <div className="py-20 my-32 bg-[#F1EEFF]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-12 items-center">
             <div>
@@ -214,11 +214,13 @@ export default function About2() {
                 <Link
                   href="jobs/1"
                   key={job.slug}
-                  className="flex justify-between items-center p-4 bg-white rounded-xl border hover:bg-slate-50"
+                  className="flex justify-between items-center p-6 bg-white rounded-xl hover:bg-slate-50"
                 >
                   <div>
-                    <h3 className="font-bold">Senior Software Engineer</h3>
-                    <p className="text-sm text-gray-600">{job.address}</p>
+                    <h3 className="font-bold text-lg md:text-xl">
+                      Senior Software Engineer
+                    </h3>
+                    <p className="text-sm mt-1 text-gray-600">{job.address}</p>
                   </div>
                   <Button size="icon" variant="ghost">
                     &rarr;

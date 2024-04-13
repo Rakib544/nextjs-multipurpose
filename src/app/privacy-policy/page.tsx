@@ -1,5 +1,4 @@
 import { Container } from "@/components/container";
-import { GridPattern } from "@/components/grid-pattern";
 import { PageIntro } from "@/components/page-intro";
 import {
   Breadcrumb,
@@ -34,9 +33,6 @@ const sideMenus = [
 export default function privacyAndPolicy() {
   return (
     <div>
-      <div className="absolute z-[-1] inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-        <GridPattern />
-      </div>
       <PageIntro title="Privacy and Policy" centered>
         <Breadcrumb className="flex justify-center">
           <BreadcrumbList>

@@ -1,14 +1,16 @@
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
-import Image from "next/image";
-import Link from "next/link";
+import Projects from "./projects";
 
 export default function Portfolios() {
   return (
     <div>
       <Container className="mb-32">
-        <FadeIn className="max-w-3xl mx-auto text-center z-10 mt-20 mb-10">
-          <h1 className="text-3xl font-black md:text-4xl/tight text-indigo-950">
+        <FadeIn className="max-w-4xl mx-auto sm:text-center z-10 mt-20 mb-10">
+          <span className="uppercase text-xs tracking-wider text-center font-bold text-indigo-600 mb-3 inline-block">
+            Portfolios
+          </span>
+          <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
             We bring a wealth of
             <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
               {" "}
@@ -24,30 +26,12 @@ export default function Portfolios() {
             </span>{" "}
             from the wide range of backgrounds.
           </h1>
-          <p className="mt-3 text-base text-gray-600 leading-8 max-w-xl mx-auto">
+          <p className="mt-3 text-lg text-gray-600 leading-8 lg:max-w-xl mx-auto">
             Our philosophy is simple; hire great people and give them the
             resources and support to do their best work.
           </p>
         </FadeIn>
-        <div className="mt-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <Link
-              href="/portfolio-details"
-              className="block relative aspect-[16/11] border group rounded-md overflow-hidden"
-              key={i}
-            >
-              <Image
-                src="/app-landing-page.jpg"
-                fill
-                alt=""
-                className="object-cover object-center"
-              />
-              <div className="absolute inset-0 flex items-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t group-hover:  from-black/70 from-5%">
-                <h2 className="font-semibold text-white">Dropbox</h2>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <Projects />
       </Container>
     </div>
   );

@@ -15,7 +15,7 @@ export default function FaqCard2({
   return (
     <FadeIn {...(props as any)}>
       <div className="flex flex-col md:flex-row gap-x-4">
-        <div className="h-10 bg-indigo-600 text-white w-10 mb-2 md:mb-0 font-semibold rounded-lg shrink-0 flex justify-center items-center">
+        <div className="h-10 bg-indigo-600 text-white w-10 mb-2 md:mb-0 font-semibold rounded-xl shrink-0 flex justify-center items-center">
           {id.padStart(2, "0")}
         </div>
         <div>
