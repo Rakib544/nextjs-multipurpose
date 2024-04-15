@@ -148,7 +148,7 @@ export default function Navbar() {
         Contact
       </Link>
       <div className="lg:hidden">
-        <MobileNavigation />
+        <MobileNavigation navLinks={navLinks} />
       </div>
     </NavigationMenu>
   );

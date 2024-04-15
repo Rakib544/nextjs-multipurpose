@@ -1,8 +1,13 @@
 "use client";
-import { navLinks } from "@/lib/data/navigation-data";
 import Link from "next/link";
 import { useState } from "react";
 import { MobileNavIcon } from "./icons";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
 import { Button, buttonVariants } from "./ui/button";
 import {
   NavigationMenu,
@@ -13,8 +18,207 @@ import {
 } from "./ui/navigation-menu";
 import { Sheet, SheetContent } from "./ui/sheet";
 
-export default function MobileNavigation() {
+// export default function MobileNavigation() {
+//   const [isOpen, setIsOpen] = useState(false);
+//   return (
+//     <Sheet open={isOpen} onOpenChange={setIsOpen}>
+//       <Button
+//         aria-label="Open Navigation"
+//         variant="ghost"
+//         onClick={() => setIsOpen(true)}
+//       >
+//         <MobileNavIcon />
+//       </Button>
+
+//       <SheetContent className="overflow-y-auto">
+//         <NavigationMenu className="block max-w-none space-y-4">
+//           <NavigationMenuList className="flex-col items-start mt-8 w-full space-x-0 space-y-1">
+//             {navLinks.map((link) => (
+//               <NavigationMenuItem
+//                 key={link.id}
+//                 className="block w-full"
+//                 // onClick={() => setIsOpen(false)}
+//               >
+//                 {link?.submenus.length > 0 ? (
+//                   <Accordion type="multiple">
+//                     <AccordionItem
+//                       value={`item-${link.id}`}
+//                       className="border-none"
+//                     >
+//                       <AccordionTrigger className="py-3 px-4 rounded-lg hover:bg-gray-50">
+//                         {link.label}
+//                       </AccordionTrigger>
+//                       <AccordionContent>
+//                         {link.submenus.length > 0 ? (
+//                           <Accordion type="multiple" className="ml-4">
+//                             {link.submenus.map((l) => (
+//                               <>
+//                                 {l.submenus.length > 0 ? (
+//                                   <AccordionItem
+//                                     key={l.id}
+//                                     value={`item-${l.id}`}
+//                                     className="border-none"
+//                                   >
+//                                     <AccordionTrigger className="p-3 rounded-lg hover:bg-gray-50 text-base">
+//                                       {l.label}
+//                                     </AccordionTrigger>
+//                                     <AccordionContent>
+//                                       {l.submenus.map((s) => (
+//                                         <NavLink
+//                                           key={s.id}
+//                                           href={s.href}
+//                                           label={s.label}
+//                                           className="ml-2 p4"
+//                                         />
+//                                       ))}
+//                                     </AccordionContent>
+//                                   </AccordionItem>
+//                                 ) : (
+//                                   <NavLink
+//                                     href={l.href}
+//                                     label={l.label}
+//                                     className="ml-0 p4"
+//                                   />
+//                                 )}
+//                               </>
+//                             ))}
+//                           </Accordion>
+//                         ) : (
+//                           <NavLink href={link.href} label={link.label} />
+//                         )}
+//                       </AccordionContent>
+//                     </AccordionItem>
+//                   </Accordion>
+//                 ) : (
+//                   <NavLink href={link.href} label={link.label} />
+//                 )}
+//               </NavigationMenuItem>
+//             ))}
+//             <li className="w-full">
+//               <Link
+//                 href="/contact"
+//                 className={buttonVariants({ className: "mt-4 w-full" })}
+//               >
+//                 Contact
+//               </Link>
+//             </li>
+//           </NavigationMenuList>
+//         </NavigationMenu>
+//       </SheetContent>
+//     </Sheet>
+//   );
+// }
+
+// function NavLink({
+//   href,
+//   label,
+//   className = "",
+// }: {
+//   href: string;
+//   label: string;
+//   className?: string;
+// }) {
+//   return (
+//     <Link href={href} legacyBehavior passHref className="w-full">
+//       <NavigationMenuLink
+//         className={navigationMenuTriggerStyle({
+//           className: `!w-full !flex-start !p-4 text-base !justify-start ${className}`,
+//         })}
+//       >
+//         {label}
+//       </NavigationMenuLink>
+//     </Link>
+//   );
+// }
+
+interface NavLinkProps {
+  href: string;
+  label: string;
+  className?: string;
+  onClose?: () => void; // Callback function to close the sheet
+}
+
+interface SubmenuProps {
+  id: string | number;
+  label: string;
+  href: string;
+  submenus: NavLinkProps[];
+}
+
+interface MobileNavigationProps {
+  id: string | number;
+  label: string;
+  href: string;
+  submenus: SubmenuProps[];
+}
+
+function MobileNavigationItem({
+  link,
+  onClose,
+}: {
+  link: MobileNavigationProps;
+  onClose?: () => void;
+}) {
+  if (link.submenus.length > 0) {
+    return (
+      <Accordion type="multiple">
+        <AccordionItem value={`item-${link.id}`} className="border-none">
+          <AccordionTrigger className="py-3 px-4 rounded-lg hover:bg-gray-50">
+            {link.label}
+          </AccordionTrigger>
+          <AccordionContent>
+            <Submenus submenus={link.submenus} onClose={onClose} />
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    );
+  }
+
+  return <NavLink href={link.href} label={link.label} onClose={onClose} />;
+}
+
+function Submenus({
+  submenus,
+  onClose,
+}: {
+  submenus: NavLinkProps[];
+  onClose?: () => void;
+}) {
+  return (
+    <Accordion type="multiple" className="ml-4">
+      {submenus.map((submenu) => (
+        <Submenu key={submenu.href} submenu={submenu} onClose={onClose} />
+      ))}
+    </Accordion>
+  );
+}
+
+function Submenu({
+  submenu,
+  onClose,
+}: {
+  submenu: NavLinkProps;
+  onClose?: () => void;
+}) {
+  return (
+    <NavLink
+      href={submenu.href}
+      label={submenu.label}
+      className="ml-0 p4"
+      onClose={onClose}
+    />
+  );
+}
+
+const MobileNavigation: React.FC<{ navLinks: MobileNavigationProps[] }> = ({
+  navLinks,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <Button
@@ -25,35 +229,18 @@ export default function MobileNavigation() {
         <MobileNavIcon />
       </Button>
 
-      <SheetContent>
-        <NavigationMenu className="block max-w-none">
+      <SheetContent className="overflow-y-auto">
+        <NavigationMenu className="block max-w-none space-y-4">
           <NavigationMenuList className="flex-col items-start mt-8 w-full space-x-0 space-y-1">
             {navLinks.map((link) => (
-              <NavigationMenuItem
-                key={link.id}
-                className="block w-full"
-                onClick={() => setIsOpen(false)}
-              >
-                <Link
-                  href={link.href}
-                  legacyBehavior
-                  passHref
-                  className="w-full"
-                >
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle({
-                      className: "!w-full !flex-start ml-0 !justify-start",
-                    })}
-                  >
-                    {link.label}
-                  </NavigationMenuLink>
-                </Link>
+              <NavigationMenuItem key={link.id} className="block w-full">
+                <MobileNavigationItem link={link} onClose={handleClose} />
               </NavigationMenuItem>
             ))}
             <li className="w-full">
               <Link
                 href="/contact"
-                className={buttonVariants({ className: "mt-1 w-full" })}
+                className={buttonVariants({ className: "mt-4 w-full" })}
               >
                 Contact
               </Link>
@@ -63,4 +250,32 @@ export default function MobileNavigation() {
       </SheetContent>
     </Sheet>
   );
-}
+};
+
+const NavLink: React.FC<NavLinkProps> = ({
+  href,
+  label,
+  className = "",
+  onClose,
+}) => {
+  const handleClick = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
+
+  return (
+    <Link href={href} legacyBehavior passHref className="w-full">
+      <NavigationMenuLink
+        onClick={handleClick}
+        className={navigationMenuTriggerStyle({
+          className: `!w-full !flex-start !p-4 text-base !justify-start ${className}`,
+        })}
+      >
+        {label}
+      </NavigationMenuLink>
+    </Link>
+  );
+};
+
+export default MobileNavigation;

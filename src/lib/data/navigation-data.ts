@@ -1,3 +1,7 @@
+function generateUniqueId() {
+  return Math.random() + new Date().getTime();
+}
+
 export const navLinks = [
   {
     id: 1,
@@ -5,37 +9,37 @@ export const navLinks = [
     href: "",
     submenus: [
       {
-        id: 111,
+        id: generateUniqueId(),
         label: "Sass Agency",
         href: "/demo-1",
         submenus: [],
       },
       {
-        id: 112,
+        id: generateUniqueId(),
         label: "SEO Agency",
         href: "/demo-2",
         submenus: [],
       },
       {
-        id: 113,
+        id: generateUniqueId(),
         label: "Digital Agency",
         href: "/demo-3",
         submenus: [],
       },
       {
-        id: 114,
+        id: generateUniqueId(),
         label: "Marketing Agency",
         href: "/demo-4",
         submenus: [],
       },
       {
-        id: 114,
+        id: generateUniqueId(),
         label: "App Landing Page",
         href: "/demo-6",
         submenus: [],
       },
       {
-        id: 114,
+        id: generateUniqueId(),
         label: "Digital Studio",
         href: "/demo-8",
         submenus: [],
@@ -43,139 +47,139 @@ export const navLinks = [
     ],
   },
   {
-    id: 2,
+    id: generateUniqueId(),
     label: "Pages",
     href: "",
     submenus: [
       {
-        id: 115,
+        id: generateUniqueId(),
         label: "About",
         href: "",
         submenus: [
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "about-1",
             href: "/about-1",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "about-2",
             href: "/about-2",
           },
         ],
       },
       {
-        id: 1323423,
+        id: generateUniqueId(),
         label: "Team",
         href: "",
         submenus: [
           {
-            id: 32423,
+            id: generateUniqueId(),
             label: "Our Teams",
             href: "/teams",
           },
           {
-            id: 43423,
+            id: generateUniqueId(),
             label: "Team Details",
             href: "/team-details",
           },
         ],
       },
       {
-        id: 115,
+        id: generateUniqueId(),
         label: "Contact",
         href: "",
         submenus: [
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Contact-1",
             href: "/contact-1",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Contact-2",
             href: "/contact-2",
           },
         ],
       },
       {
-        id: 115,
+        id: generateUniqueId(),
         label: "Portfolio",
         href: "",
         submenus: [
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Portfolio",
             href: "/portfolios",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Portfolio Details",
             href: "/portfolio-details",
           },
         ],
       },
       {
-        id: 115,
+        id: generateUniqueId(),
         label: "FAQ",
         href: "",
         submenus: [
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "faq-1",
             href: "/faq-1",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "faq-2",
             href: "/faq-2",
           },
         ],
       },
       {
-        id: 115,
+        id: generateUniqueId(),
         label: "Services",
         href: "",
         submenus: [
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "services-1",
             href: "/services-1",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "services-2",
             href: "/services-2",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "service details",
             href: "/service-details",
           },
         ],
       },
       {
-        id: 115,
+        id: generateUniqueId(),
         label: "Career",
         href: "",
         submenus: [
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Career-1",
             href: "/career-1",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Career-2",
             href: "/career-2",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Job Details",
             href: "/jobs/1",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Job Apply",
             href: "/jobs/1/apply",
           },
@@ -183,76 +187,76 @@ export const navLinks = [
       },
 
       {
-        id: 115,
+        id: generateUniqueId(),
         label: "Utility",
         href: "",
         submenus: [
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "404 Not Found",
             href: "/not-found",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Login",
             href: "/auth/signin",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Register",
             href: "/auth/signup",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Forget Password",
             href: "/auth/forget-password",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Terms and Condition",
             href: "/terms-condition",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Privacy and Policy",
             href: "/privacy-policy",
           },
         ],
       },
       {
-        id: 115,
+        id: generateUniqueId(),
         label: "Pricing",
         href: "",
         submenus: [
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Pricing-1",
             href: "/pricing-1",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Pricing-2",
             href: "/pricing-2",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Pricing-3",
             href: "/pricing-3",
           },
         ],
       },
       {
-        id: 115,
+        id: generateUniqueId(),
         label: "Case Studies",
         href: "",
         submenus: [
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Case studies",
             href: "/case-studies",
           },
           {
-            id: 1111,
+            id: generateUniqueId(),
             label: "Case St. Details",
             href: "/case-studies-details",
           },
@@ -266,31 +270,31 @@ export const navLinks = [
     href: "",
     submenus: [
       {
-        id: 222,
+        id: generateUniqueId(),
         label: "Blog-1",
         href: "/blogs-1",
         submenus: [],
       },
       {
-        id: 223,
+        id: generateUniqueId(),
         label: "Blog-2",
         href: "/blogs-2",
         submenus: [],
       },
       {
-        id: 224,
+        id: generateUniqueId(),
         label: "Blog-3",
         href: "/blogs-3",
         submenus: [],
       },
       {
-        id: 224,
+        id: generateUniqueId(),
         label: "Blog-4",
         href: "/blogs-4",
         submenus: [],
       },
       {
-        id: 225,
+        id: generateUniqueId(),
         label: "Blog Details",
         href: "/blog-details",
         submenus: [],
@@ -298,13 +302,13 @@ export const navLinks = [
     ],
   },
   {
-    id: 8,
+    id: generateUniqueId(),
     label: "Dashboard",
     href: "/dashboard",
     submenus: [],
   },
   {
-    id: 7,
+    id: generateUniqueId(),
     label: "Documentation",
     href: "/documentation",
     submenus: [],
