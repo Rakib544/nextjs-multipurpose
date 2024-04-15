@@ -1,6 +1,5 @@
 import OurAwards from "@/components/awards";
 import { BlogCard2 } from "@/components/blog-card";
-import CallToAction from "@/components/call-to-action";
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import Portfolios from "@/components/portfolio";
@@ -16,6 +15,7 @@ import {
 import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
 import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
 import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
+import { blogsData } from "@/lib/data/blog-data";
 import { testimonials } from "@/lib/data/testimonials-data";
 import Image from "next/image";
 import Link from "next/link";
@@ -254,19 +254,25 @@ export default function CreativeDigitalStudio() {
           </p>
         </SectionIntro>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          <BlogCard2 />
-          <BlogCard2 />
-          <BlogCard2 />
+          {blogsData.slice(0, 3).map((blog, index) => (
+            <BlogCard2
+              createdAt={blog.createdAt}
+              subtitle={blog.subtitle}
+              title={blog.title}
+              thumbnail={blog.thumbnail}
+              key={index}
+            />
+          ))}
         </div>
       </Container>
-      <div className="mt-32">
+      {/* <div className="mt-32">
         <CallToAction
           title=" We would Be Interested In Learning More About Your Project."
           subtitle="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquid quam facilis temporibus cum hic voluptatibus, a laborum consequatur illum."
           btnText="Contact Us"
           link="/contact"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

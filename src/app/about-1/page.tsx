@@ -9,12 +9,6 @@ import TeamCard1 from "@/components/team-card/team-card-1";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
 import {
-  CallToAction,
-  CallToActionHeading,
-  CallToActionMenus,
-  CallToActionSubHeading,
-} from "@/components/ui/call-to-action";
-import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
@@ -250,7 +244,7 @@ export default function About1() {
           ))}
         </InfiniteMoving>
       </Container>
-      <CallToAction className="mt-20 md:mt-32 mb-0 md:mb-32">
+      {/* <CallToAction className="mt-20 md:mt-32 mb-0 md:mb-32">
         <CallToActionHeading>
           Let&apos;s maximize your online impact!
         </CallToActionHeading>
@@ -275,7 +269,7 @@ export default function About1() {
             Book a Demo &rarr;
           </Link>
         </CallToActionMenus>
-      </CallToAction>
+      </CallToAction> */}
     </div>
   );
 }

@@ -22,18 +22,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  CallToAction,
-  CallToActionHeading,
-  CallToActionMenus,
-  CallToActionSubHeading,
-} from "@/components/ui/call-to-action";
-import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
 import Workflow2 from "@/components/work-flow-2";
 import userImage2 from "@/images/testimonial_2.jpg";
 import userImage1 from "@/images/testimonial_3.jpg";
+import { blogsData } from "@/lib/data/blog-data";
 
 const features = [
   {
@@ -359,9 +354,15 @@ export default function AppLanding() {
           title="Our latest news and articles"
         />
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <BlogCard2 />
-          <BlogCard2 />
-          <BlogCard2 />
+          {blogsData.slice(0, 3).map((blog, index) => (
+            <BlogCard2
+              createdAt={blog.createdAt}
+              subtitle={blog.subtitle}
+              title={blog.title}
+              thumbnail={blog.thumbnail}
+              key={index}
+            />
+          ))}
         </div>
       </Container>
 
@@ -375,7 +376,7 @@ export default function AppLanding() {
         </SectionIntro>{" "}
         <Testimonials2 />
       </Container>
-      <CallToAction>
+      {/* <CallToAction>
         <CallToActionHeading>Download this app now</CallToActionHeading>
         <CallToActionSubHeading>
           This app is now available on both Apple store and app store. You can
@@ -399,7 +400,7 @@ export default function AppLanding() {
             Download Android
           </Link>
         </CallToActionMenus>
-      </CallToAction>
+      </CallToAction> */}
     </div>
   );
 }

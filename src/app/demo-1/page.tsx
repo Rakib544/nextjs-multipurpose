@@ -7,12 +7,6 @@ import { SectionIntro } from "@/components/section-intro";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
 import {
-  CallToAction,
-  CallToActionHeading,
-  CallToActionMenus,
-  CallToActionSubHeading,
-} from "@/components/ui/call-to-action";
-import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
@@ -204,7 +198,7 @@ export default function Home() {
         </div>
         <Pricing2 />
       </Container>
-      <CallToAction className="mt-20 mb-0 md:my-32">
+      {/* <CallToAction className="mt-20 mb-0 md:my-32">
         <CallToActionHeading>
           Let&apos;s maximize your online impact!
         </CallToActionHeading>
@@ -229,7 +223,7 @@ export default function Home() {
             Book a Demo &rarr;
           </Link>
         </CallToActionMenus>
-      </CallToAction>
+      </CallToAction> */}
     </div>
   );
 }

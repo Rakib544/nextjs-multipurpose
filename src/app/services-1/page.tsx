@@ -4,13 +4,6 @@ import { FaqCard2 } from "@/components/faq-card/index";
 import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
 import { Accordion } from "@/components/ui/accordion";
-import { buttonVariants } from "@/components/ui/button";
-import {
-  CallToAction,
-  CallToActionHeading,
-  CallToActionMenus,
-  CallToActionSubHeading,
-} from "@/components/ui/call-to-action";
 import { faqData } from "@/lib/data/faq-data";
 import { sassFeatures } from "@/lib/data/sass-features";
 import Image from "next/image";
@@ -128,7 +121,7 @@ export default function Services1() {
           </div>
         </Accordion>
       </Container>
-      <CallToAction className="mt-20 mb-0 md:mt-32 md:mb-32">
+      {/* <CallToAction className="mt-20 mb-0 md:mt-32 md:mb-32">
         <CallToActionHeading>
           Let&apos;s maximize your online impact!
         </CallToActionHeading>
@@ -153,7 +146,7 @@ export default function Services1() {
             Book a Demo &rarr;
           </Link>
         </CallToActionMenus>
-      </CallToAction>
+      </CallToAction> */}
     </div>
   );
 }

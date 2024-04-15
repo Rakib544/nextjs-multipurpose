@@ -6,12 +6,6 @@ import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import TeamCard1 from "@/components/team-card/team-card-1";
 import { Button, buttonVariants } from "@/components/ui/button";
-import {
-  CallToAction,
-  CallToActionHeading,
-  CallToActionMenus,
-  CallToActionSubHeading,
-} from "@/components/ui/call-to-action";
 import WhyChooseUs from "@/components/why-choose-us";
 import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
 import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
@@ -231,7 +225,7 @@ export default function About2() {
           </div>
         </Container>
       </div>
-      <CallToAction className="mt-20 mb-0 md:my-32">
+      {/* <CallToAction className="mt-20 mb-0 md:my-32">
         <CallToActionHeading>
           Let&apos;s maximize your online impact!
         </CallToActionHeading>
@@ -256,7 +250,7 @@ export default function About2() {
             Book a Demo &rarr;
           </Link>
         </CallToActionMenus>
-      </CallToAction>
+      </CallToAction> */}
     </div>
   );
 }

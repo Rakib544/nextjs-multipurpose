@@ -11,12 +11,6 @@ import { StatList, StatListItem } from "@/components/stat-list";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
 import {
-  CallToAction,
-  CallToActionHeading,
-  CallToActionMenus,
-  CallToActionSubHeading,
-} from "@/components/ui/call-to-action";
-import {
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -24,6 +18,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import WhyChooseUs from "@/components/why-choose-us";
+import { blogsData } from "@/lib/data/blog-data";
 import { seoServices } from "@/lib/data/seo-services";
 import { testimonials } from "@/lib/data/testimonials-data";
 import Image from "next/image";
@@ -243,12 +238,18 @@ export default function Demo2() {
           </p>
         </SectionIntro>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <BlogCard2 />
-          <BlogCard2 />
-          <BlogCard2 />
+          {blogsData.slice(0, 3).map((blog, index) => (
+            <BlogCard2
+              createdAt={blog.createdAt}
+              subtitle={blog.subtitle}
+              title={blog.title}
+              thumbnail={blog.thumbnail}
+              key={index}
+            />
+          ))}
         </div>
       </Container>
-      <CallToAction className="mt-20 mb-0 md:my-32">
+      {/* <CallToAction className="mt-20 mb-0 md:my-32">
         <CallToActionHeading>
           It&apos;s time to tell the world about it
         </CallToActionHeading>
@@ -264,7 +265,7 @@ export default function Demo2() {
             Start a SEO Audit
           </Link>
         </CallToActionMenus>
-      </CallToAction>
+      </CallToAction> */}
     </main>
   );
 }

@@ -1,5 +1,5 @@
 import { Border } from "@/components/border";
-import { ContactSection } from "@/components/contact-us-section";
+// import { ContactSection } from "@/components/contact-us-section";
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import { PageIntro } from "@/components/page-intro";
@@ -109,7 +109,7 @@ export default async function Blog() {
         </div>
       </Container>
 
-      <ContactSection />
+      {/* <ContactSection /> */}
     </>
   );
 }

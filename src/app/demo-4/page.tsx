@@ -1,6 +1,5 @@
 import OurAwards from "@/components/awards";
 import { BlogCard2 } from "@/components/blog-card";
-import CallToAction from "@/components/call-to-action";
 import CaseStudies1 from "@/components/case-studies-1";
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
@@ -10,6 +9,7 @@ import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
 import WhyChooseUs from "@/components/why-choose-us";
 import userImage from "@/images/testimonial_3.jpg";
+import { blogsData } from "@/lib/data/blog-data";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -181,17 +181,23 @@ export default function Demo4() {
           title="Our latest news and articles"
         />
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <BlogCard2 />
-          <BlogCard2 />
-          <BlogCard2 />
+          {blogsData.slice(0, 3).map((blog, index) => (
+            <BlogCard2
+              createdAt={blog.createdAt}
+              subtitle={blog.subtitle}
+              title={blog.title}
+              thumbnail={blog.thumbnail}
+              key={index}
+            />
+          ))}
         </div>
       </Container>
-      <CallToAction
+      {/* <CallToAction
         title="We'd Be Interested In Learning More About Your Project."
         subtitle=""
         btnText="Contact us"
         link="/contact"
-      />
+      /> */}
     </div>
   );
 }

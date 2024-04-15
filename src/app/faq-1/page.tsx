@@ -2,15 +2,7 @@ import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { FaqCard1 } from "@/components/faq-card";
 import { Accordion } from "@/components/ui/accordion";
-import { buttonVariants } from "@/components/ui/button";
-import {
-  CallToAction,
-  CallToActionHeading,
-  CallToActionMenus,
-  CallToActionSubHeading,
-} from "@/components/ui/call-to-action";
 import { faqData } from "@/lib/data/faq-data";
-import Link from "next/link";
 
 export default function Faq1() {
   return (
@@ -60,7 +52,7 @@ export default function Faq1() {
           </FadeInStagger>
         </div>
       </Container>
-      <CallToAction className="mt-20 mb-0 md:my-32">
+      {/* <CallToAction className="mt-20 mb-0 md:my-32">
         <CallToActionHeading>
           Let&apos;s maximize your online impact!
         </CallToActionHeading>
@@ -85,7 +77,7 @@ export default function Faq1() {
             Book a Demo &rarr;
           </Link>
         </CallToActionMenus>
-      </CallToAction>
+      </CallToAction> */}
     </div>
   );
 }

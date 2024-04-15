@@ -44,7 +44,7 @@ export function Testimonials() {
                     image: testimonial.image,
                   }}
                 >
-                  {testimonial.content}
+                  {testimonial.quote}
                 </Testimonial>
               </CarouselItem>
             ))}

@@ -3,12 +3,6 @@ import { List, ListItem } from "@/components/list";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
-import {
-  CallToAction,
-  CallToActionHeading,
-  CallToActionMenus,
-  CallToActionSubHeading,
-} from "@/components/ui/call-to-action";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -176,7 +170,7 @@ export default function ServiceDetails() {
           </StatList>
         </div>
       </Container>
-      <CallToAction className="mt-20 mb-0 md:mb-32 md:mt-32">
+      {/* <CallToAction className="mt-20 mb-0 md:mb-32 md:mt-32">
         <CallToActionHeading>
           Ready to elevate your digital product?
         </CallToActionHeading>
@@ -192,7 +186,7 @@ export default function ServiceDetails() {
             Contact us
           </Link>
         </CallToActionMenus>
-      </CallToAction>
+      </CallToAction> */}
     </div>
   );
 }
