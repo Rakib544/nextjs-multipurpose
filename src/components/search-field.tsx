@@ -2,14 +2,14 @@
 
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { ChangeEvent, useEffect } from "react";
+import { ChangeEvent, Suspense, useEffect } from "react";
 import { useDebounceValue } from "usehooks-ts";
 import { Input } from "./ui/input";
 
 interface SearchFieldProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-export default function SearchField({ className, ...props }: SearchFieldProps) {
+function Search({ className, ...props }: SearchFieldProps) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams()!;
@@ -55,5 +55,13 @@ export default function SearchField({ className, ...props }: SearchFieldProps) {
         <path d="m21 21-4.3-4.3" />
       </svg>
     </div>
+  );
+}
+
+export default function SearchField({ className, ...props }: SearchFieldProps) {
+  return (
+    <Suspense>
+      <Search className={className} {...props} />
+    </Suspense>
   );
 }

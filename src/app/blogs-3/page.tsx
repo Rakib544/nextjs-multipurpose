@@ -7,6 +7,7 @@ import Pagination from "@/components/ui/pagination";
 import { blogsData, categories, tags } from "@/lib/data/blog-data";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Blogs3() {
   return (
@@ -23,11 +24,13 @@ export default function Blogs3() {
             <div className="bg-white pr-5 rounded-lg">
               <h2 className="font-bold text-indigo-950 mb-2">Search Here</h2>
 
-              <SearchField
-                className="rounded-full"
-                type="search"
-                placeholder="Search"
-              />
+              <Suspense>
+                <SearchField
+                  className="rounded-full"
+                  type="search"
+                  placeholder="Search"
+                />
+              </Suspense>
             </div>
 
             <div className="bg-white pr-5 rounded-lg hidden lg:block">
