@@ -3,7 +3,7 @@ import { FadeIn } from "@/components/fade-in";
 import { JobCard } from "@/components/job-card";
 import JobFilter from "@/components/job-filter";
 import MobileFilterDrawer from "@/components/mobile-filter-drawer";
-import { Input } from "@/components/ui/input";
+import SearchField from "@/components/search-field";
 import Pagination from "@/components/ui/pagination";
 import { jobs } from "@/lib/data/job-data";
 
@@ -45,10 +45,9 @@ export default function Career2() {
       <Container className="mb-20 mt-12">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 md:col-span-8 space-y-4">
-            <Input
-              className="w-full"
-              placeholder="Search Job Title"
-              autoFocus
+            <SearchField
+              placeholder="Search by title"
+              className="rounded-full pl-10"
             />
             <div className="flex justify-end md:hidden">
               <MobileFilterDrawer />

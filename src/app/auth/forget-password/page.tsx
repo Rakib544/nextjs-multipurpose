@@ -6,10 +6,10 @@ export default function ForgetPassword() {
     <main className="min-h-screen flex justify-center items-center">
       <Container>
         <div className="w-full max-w-lg">
-          <h1 className="font-bold text-2xl text-indigo-950">
+          <h1 className="font-extrabold text-2xl text-indigo-950">
             Forgot your password?
           </h1>
-          <p className="text-neutral-700 mt-1 mb-6 text-base">
+          <p className="text-gray-600 mt-2 mb-6 text-base">
             Enter the email you registered with and we will send you a link to
             reset your password.
           </p>

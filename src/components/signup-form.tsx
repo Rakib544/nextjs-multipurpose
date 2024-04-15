@@ -57,7 +57,12 @@ export default function SignUpForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input autoFocus {...field} placeholder="Name" />
+                  <Input
+                    autoFocus
+                    {...field}
+                    placeholder="Name"
+                    className="rounded-full pl-6"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -69,7 +74,12 @@ export default function SignUpForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="email" placeholder="Email" {...field} />
+                  <Input
+                    type="email"
+                    placeholder="Email"
+                    {...field}
+                    className="rounded-full pl-6"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -81,7 +91,12 @@ export default function SignUpForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="password" placeholder="Password" {...field} />
+                  <Input
+                    type="password"
+                    placeholder="Password"
+                    className="rounded-full pl-6"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -96,6 +111,7 @@ export default function SignUpForm() {
                   <Input
                     type="password"
                     placeholder="Confirm Password"
+                    className="rounded-full pl-6"
                     {...field}
                   />
                 </FormControl>
@@ -112,7 +128,7 @@ export default function SignUpForm() {
               I agree with the terms and condition
             </label>
           </div>
-          <Button type="submit" size="lg" className="w-full !rounded-lg">
+          <Button type="submit" size="lg" className="w-full">
             Register
           </Button>
         </form>

@@ -5,6 +5,7 @@ import { MessageCircle } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import coverImage from "@/images/hero.jpg";
 import userImage from "@/images/testimonial_1.jpg";
+import { blogComments } from "@/lib/data/blog-data";
 import Image from "next/image";
 
 export default function BlogDetails1() {
@@ -40,8 +41,13 @@ export default function BlogDetails1() {
             <h3 className="font-bold text-xl mb-4">5 Comments</h3>
             <Border position="top" />
             <div className="space-y-8 mt-12">
-              {[1, 2, 3, 4].map((i) => (
-                <CommentCard key={i} />
+              {blogComments.map((comment, index) => (
+                <CommentCard
+                  author={comment.author}
+                  comment={comment.comment}
+                  createdAt={comment.createdAt}
+                  key={index}
+                />
               ))}
             </div>
           </div>
@@ -54,7 +60,15 @@ export default function BlogDetails1() {
   );
 }
 
-function CommentCard() {
+function CommentCard({
+  comment,
+  author,
+  createdAt,
+}: {
+  createdAt: string;
+  comment: string;
+  author: { name: string; image: string };
+}) {
   return (
     <div>
       <div className="flex justify-between items-center">
@@ -62,12 +76,12 @@ function CommentCard() {
           <Image
             src={userImage}
             className="h-14 w-14 rounded-full object-cover shrink-0"
-            alt=""
+            alt={author.name}
           />
           <div>
-            <h4 className="font-bold text-indigo-950">Md Rakib</h4>
+            <h4 className="font-bold text-indigo-950">{author.name}</h4>
             <p className="text-sm text-gray-600 font-medium">
-              19 October, 2023
+              {new Date(createdAt).toDateString()}
             </p>
           </div>
         </div>
@@ -75,13 +89,7 @@ function CommentCard() {
           <MessageCircle className="h-4 w-4 mr-1" /> Reply
         </Button>
       </div>
-      <p className="text-base text-gray-600 leading-7 mt-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, soluta
-        aut nihil quo mollitia cupiditate labore, ea cumque doloribus vel
-        tenetur odit doloremque consequatur? Earum tempora magnam ipsa minus
-        libero quo nulla pariatur natus nisi, illo, id adipisci similique
-        maiores?
-      </p>
+      <p className="text-base text-gray-600 leading-7 mt-4">{comment}</p>
 
       <CommentReplyCard />
     </div>

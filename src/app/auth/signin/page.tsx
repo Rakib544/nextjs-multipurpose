@@ -41,10 +41,10 @@ export default function SignIn() {
                 ></path>
               </svg>
             </Link>
-            <h1 className="font-bold text-2xl text-indigo-950">
+            <h1 className="font-extrabold text-2xl text-indigo-950">
               Login to your Account
             </h1>
-            <p className="text-neutral-700 leading-7 text-sm mt-1">
+            <p className="text-gray-600 leading-7 text-base mt-1">
               Welcome back! Select Method to login.
             </p>
             <LoginForm />

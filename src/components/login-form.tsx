@@ -42,7 +42,7 @@ export default function LoginForm() {
       <div className="flex flex-col sm:flex-row gap-x-4 mt-3">
         <Button
           variant="outline"
-          className="mt-4 w-full items-center gap-x-1 !rounded-lg"
+          className="mt-4 w-full items-center gap-x-1"
           size="lg"
           type="button"
         >
@@ -51,7 +51,7 @@ export default function LoginForm() {
         </Button>
         <Button
           variant="outline"
-          className="mt-4 w-full items-center gap-x-1 !rounded-lg"
+          className="mt-4 w-full items-center gap-x-1"
           size="lg"
           type="button"
         >
@@ -82,6 +82,7 @@ export default function LoginForm() {
                     placeholder="Email"
                     autoFocus
                     {...field}
+                    className="rounded-full pl-6"
                   />
                 </FormControl>
                 <FormMessage />
@@ -94,7 +95,12 @@ export default function LoginForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="password" placeholder="Password" {...field} />
+                  <Input
+                    type="password"
+                    placeholder="Password"
+                    {...field}
+                    className="rounded-full pl-6"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -117,7 +123,7 @@ export default function LoginForm() {
               Forgot your password?
             </Link>
           </div>
-          <Button type="submit" size="lg" className="w-full !rounded-lg">
+          <Button type="submit" size="lg" className="w-full">
             Log in
           </Button>
         </form>

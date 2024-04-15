@@ -23,7 +23,7 @@ export function PageIntro({
           <span className="sr-only"> - </span>
           <span
             className={clsx(
-              "mt-3 block text-3xl font-black md:text-4xl/tight",
+              "mt-3 block text-3xl font-black md:text-4.5xl/tight",
               centered && "mx-auto"
             )}
           >
@@ -32,7 +32,7 @@ export function PageIntro({
         </h1>
         <div
           className={clsx(
-            "mt-2 max-w-3xl text-base leading-8 text-gray-600",
+            "mt-2 max-w-3xl text-lg leading-8 text-gray-600",
 
             centered && "mx-auto"
           )}

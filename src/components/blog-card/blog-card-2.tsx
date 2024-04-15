@@ -13,21 +13,21 @@ export default function BlogCard2({
   thumbnail: string;
 }) {
   return (
-    <article>
-      <div className="aspect-video relative">
+    <article className="group ">
+      <div className="aspect-video relative overflow-hidden rounded-xl">
         <Image
           src={thumbnail}
           alt={title}
           fill
-          className="object-cover rounded-sm"
+          className="object-cover rounded-xl motion-safe:group-hover:scale-105 transition duration-500"
         />
       </div>
       <p className=" mt-4 mb-2 text-sm text-gray-600 font-medium">
         {new Date(createdAt).toDateString()}
       </p>
 
-      <Link href="">
-        <h2 className="text-lg font-bold tracking-tight text-indigo-950 line-clamp-2">
+      <Link href="/blog-details">
+        <h2 className="text-lg font-bold tracking-tight hover:text-indigo-600 text-indigo-950 line-clamp-2">
           {title}
         </h2>
       </Link>
@@ -35,7 +35,7 @@ export default function BlogCard2({
         {subtitle}
       </p>
       <Link
-        href=""
+        href="/blog-details"
         className={buttonVariants({ variant: "link", className: "!px-0" })}
       >
         Read More &rarr;

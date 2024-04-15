@@ -42,13 +42,18 @@ export default function ForgetPasswordForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="email" placeholder="Email" {...field} />
+                  <Input
+                    type="email"
+                    placeholder="Email"
+                    {...field}
+                    className="rounded-full pl-6"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit" size="lg" className="w-full !rounded-lg">
+          <Button type="submit" size="lg" className="w-full">
             Submit
           </Button>
         </form>
