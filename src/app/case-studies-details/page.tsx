@@ -1,6 +1,7 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { List, ListItem } from "@/components/list";
+import { PageIntro } from "@/components/page-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import coverImage from "@/images/hero.jpg";
 import { caseStudies } from "@/lib/data/case-studies";
@@ -11,9 +12,8 @@ export default function CaseStudiesDetails() {
   return (
     <div>
       <Container className="my-20 !max-w-5xl">
-        <h1 className="text-indigo-950 text-3xl font-extrabold tracking-tight lg:text-4xl/tight max-w-2xl">
-          Enhancing Online Presence for XYZ Corporation
-        </h1>
+        <PageIntro pageTitle="Enhancing Online Presence for XYZ Corporation"></PageIntro>
+
         <div className="grid grid-cols-1 md:grid-cols-3 mt-12 gap-6">
           <div>
             <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">

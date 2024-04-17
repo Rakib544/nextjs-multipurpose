@@ -2,6 +2,7 @@ import ContactForm from "@/components/contact-form";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { FaqCard1 } from "@/components/faq-card";
+import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { Accordion } from "@/components/ui/accordion";
 import { faqData } from "@/lib/data/faq-data";
@@ -14,18 +15,15 @@ export default function Contact2() {
       <Container className="my-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-20">
           <div>
+            <PageIntro
+              eyebrow="COntact Us"
+              pageTitle="Don’t hesitate to reach out"
+            >
+              Feel free to reach out to us through your preferred method of
+              contact. We are eager to connect with you and explore how our
+              digital marketing team can contribute to your success.
+            </PageIntro>
             <FadeIn className="z-10">
-              <p className="uppercase text-xs tracking-wider font-bold text-indigo-600 mb-3">
-                Contact
-              </p>
-              <h1 className="text-3xl font-extrabold md:text-4xl/tight text-indigo-950">
-                Don’t hesitate to reach out
-              </h1>
-              <p className="mt-3 mb-6 text-base text-gray-600 leading-8">
-                Feel free to reach out to us through your preferred method of
-                contact. We are eager to connect with you and explore how our
-                digital marketing team can contribute to your success.
-              </p>
               <div className="grid grid-cols-12 gap-6 mt-12">
                 <Link
                   href="mailto:md.rakib10122003@gmail.com"

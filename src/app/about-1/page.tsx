@@ -3,6 +3,7 @@ import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import { CheckIcon } from "@/components/icons";
+import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import TeamCard1 from "@/components/team-card/team-card-1";
@@ -46,19 +47,16 @@ export default function About1() {
   return (
     <div>
       <Container>
-        <FadeIn className="max-w-5xl mx-auto text-left md:text-center z-10 mt-12 mb-0 md:mt-20">
-          <p className="uppercase text-xs tracking-wider text-left md:text-center font-bold text-indigo-600 mb-3">
-            About Us
-          </p>
-          <h1 className="text-2xl font-extrabold md:text-4.5xl/tight text-indigo-950">
-            Discover the story behind our agency that’s dedicated to bring your
-            creative vision to life
-          </h1>
-          <p className="mt-3 mb-6 lg:max-w-2xl mx-auto text-base md:text-lg text-gray-600 md:leading-8">
-            With a passion for technology and a commitment to excellence, we
-            empower businesses to thrive in the digital landscape.
-          </p>
-        </FadeIn>
+        <PageIntro
+          className="max-w-5xl mx-auto z-10 mt-12 mb-0 md:mt-20"
+          eyebrow="About us"
+          pageTitle="Discover the story behind our agency that’s dedicated to bring your
+            creative vision to life"
+          centered
+        >
+          With a passion for technology and a commitment to excellence, we
+          empower businesses to thrive in the digital landscape.
+        </PageIntro>
       </Container>
       <Container>
         <div className="">

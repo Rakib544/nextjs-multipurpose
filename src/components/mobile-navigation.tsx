@@ -135,21 +135,21 @@ interface NavLinkProps {
   href: string;
   label: string;
   className?: string;
-  onClose?: () => void; // Callback function to close the sheet
+  onClose?: () => void;
 }
 
 interface SubmenuProps {
-  id: string | number;
+  id: number | string;
   label: string;
   href: string;
-  submenus: NavLinkProps[];
+  submenus?: NavLinkProps[];
 }
 
 interface MobileNavigationProps {
-  id: string | number;
+  id: number | string;
   label: string;
   href: string;
-  submenus: SubmenuProps[];
+  submenus?: (SubmenuProps | NavLinkProps)[];
 }
 
 function MobileNavigationItem({
@@ -159,7 +159,7 @@ function MobileNavigationItem({
   link: MobileNavigationProps;
   onClose?: () => void;
 }) {
-  if (link.submenus.length > 0) {
+  if (link.submenus && link.submenus.length > 0) {
     return (
       <Accordion type="multiple">
         <AccordionItem value={`item-${link.id}`} className="border-none">
@@ -167,7 +167,10 @@ function MobileNavigationItem({
             {link.label}
           </AccordionTrigger>
           <AccordionContent>
-            <Submenus submenus={link.submenus} onClose={onClose} />
+            <Submenus
+              submenus={link.submenus as SubmenuProps[]}
+              onClose={onClose}
+            />
           </AccordionContent>
         </AccordionItem>
       </Accordion>
@@ -181,13 +184,13 @@ function Submenus({
   submenus,
   onClose,
 }: {
-  submenus: NavLinkProps[];
+  submenus: SubmenuProps[];
   onClose?: () => void;
 }) {
   return (
     <Accordion type="multiple" className="ml-4">
       {submenus.map((submenu) => (
-        <Submenu key={submenu.href} submenu={submenu} onClose={onClose} />
+        <Submenu key={submenu.id} submenu={submenu} onClose={onClose} />
       ))}
     </Accordion>
   );
@@ -197,9 +200,29 @@ function Submenu({
   submenu,
   onClose,
 }: {
-  submenu: NavLinkProps;
+  submenu: SubmenuProps;
   onClose?: () => void;
 }) {
+  if (submenu.submenus && submenu.submenus.length > 0) {
+    return (
+      <AccordionItem
+        key={submenu.id}
+        value={`item-${submenu.id}`}
+        className="border-none"
+      >
+        <AccordionTrigger className="p-3 rounded-lg hover:bg-gray-50 text-base">
+          {submenu.label}
+        </AccordionTrigger>
+        <AccordionContent>
+          <Submenus
+            submenus={submenu.submenus as SubmenuProps[]}
+            onClose={onClose}
+          />
+        </AccordionContent>
+      </AccordionItem>
+    );
+  }
+
   return (
     <NavLink
       href={submenu.href}
@@ -265,9 +288,14 @@ const NavLink: React.FC<NavLinkProps> = ({
   };
 
   return (
-    <Link href={href} legacyBehavior passHref className="w-full">
+    <Link
+      href={href}
+      onClick={handleClick}
+      legacyBehavior
+      passHref
+      className="w-full"
+    >
       <NavigationMenuLink
-        onClick={handleClick}
         className={navigationMenuTriggerStyle({
           className: `!w-full !flex-start !p-4 text-base !justify-start ${className}`,
         })}

@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import { List, ListItem } from "@/components/list";
+import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
@@ -40,19 +41,18 @@ export default function ServiceDetails() {
       <Container className="my-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-16">
           <div>
-            <p className="uppercase text-xs tracking-wider font-bold text-indigo-600 mb-3">
-              Product Design Solution
-            </p>
-            <h1 className="text-3xl font-extrabold md:text-4xl/tight text-indigo-950">
-              Elevate Your Digital Experience with Expert UI/UX Design Services
-            </h1>
-            <p className="text-base text-neutral-800 leading-8 mt-3 mb-6">
+            <PageIntro
+              className="mt-0"
+              eyebrow="Product Design Solution"
+              pageTitle="Elevate Your Digital Experience with Expert UI/UX Design Services"
+            >
               In the dynamic digital landscape, crafting remarkable user
               experiences is paramount. User Experience (UX) design and User
               Interface (UI) design are the twin pillars that shape the digital
               realm. While UX focuses on enhancing usability and satisfaction,
               UI ensures an intuitive and visually captivating interface.
-            </p>
+            </PageIntro>
+
             <Link href="/audit" className={buttonVariants({ size: "lg" })}>
               Get A Free Audit <span className="ml-2">&rarr;</span>
             </Link>

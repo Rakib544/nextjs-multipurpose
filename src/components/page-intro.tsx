@@ -1,38 +1,40 @@
+import { cn } from "@/lib/utils";
 import clsx from "clsx";
-import { Container } from "./container";
 import { FadeIn } from "./fade-in";
+
+interface PageIntroProps extends React.HTMLAttributes<HTMLDivElement> {
+  eyebrow?: string;
+  pageTitle: string | React.ReactNode;
+  centered?: boolean;
+}
 
 export function PageIntro({
   eyebrow,
-  title,
+  pageTitle,
   children,
   centered = false,
-}: {
-  eyebrow?: any;
-  title: string;
-  children?: any;
-  centered?: boolean;
-}) {
+  className,
+}: PageIntroProps) {
   return (
-    <Container className={clsx("mt-24", centered && "text-center")}>
+    <div className={cn("mt-24", centered && "text-center", className)}>
       <FadeIn>
         <h1>
-          <span className="block font-display text-base font-semibold text-indigo-600">
+          <span className="uppercase block text-xs tracking-wider font-bold text-indigo-600 mb-3">
             {eyebrow}
           </span>
           <span className="sr-only"> - </span>
           <span
             className={clsx(
-              "mt-3 block text-3xl font-black md:text-4.5xl/tight",
+              "text-3xl font-extrabold block md:text-4.5xl/tight text-indigo-950",
               centered && "mx-auto"
             )}
           >
-            {title}
+            {pageTitle}
           </span>
         </h1>
         <div
           className={clsx(
-            "mt-2 max-w-3xl text-lg leading-8 text-gray-600",
+            "mt-3 mb-6 text-lg text-gray-600 leading-8 lg:max-w-2xl ",
 
             centered && "mx-auto"
           )}
@@ -40,6 +42,6 @@ export function PageIntro({
           {children}
         </div>
       </FadeIn>
-    </Container>
+    </div>
   );
 }

@@ -11,14 +11,16 @@ import { Suspense } from "react";
 export default function Blogs1() {
   return (
     <div>
-      <PageIntro eyebrow="Blogs" title="Insights & Trends">
-        <p>
-          Explore Our Latest Articles on UI/UX Design, Digital Trends, and
-          Innovation
-        </p>
-      </PageIntro>
+      <Container>
+        <PageIntro eyebrow="Blogs" pageTitle="Insights & Trends">
+          <p>
+            Explore Our Latest Articles on UI/UX Design, Digital Trends, and
+            Innovation
+          </p>
+        </PageIntro>
+      </Container>
       <Container className="my-20">
-        <div className="grid grid-cols-12 gap-y-8 gap-x-12">
+        <div className="grid grid-cols-12 gap-y-8 lg:gap-x-12">
           <div className="col-span-12 lg:col-span-4 space-y-8">
             <div className="bg-white pr-5 rounded-lg">
               <h2 className="font-bold text-indigo-950 mb-2">Search Here</h2>

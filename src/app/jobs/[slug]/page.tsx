@@ -16,13 +16,15 @@ import Link from "next/link";
 export default function JobDetails() {
   return (
     <div>
-      <PageIntro title="Senior WordPress Plugin Developer">
-        <p>
-          We are looking for Senior WordPress Plugin Developers with 5+ years of
-          experience. You must have excellent capabilities and experience of
-          WordPress Plugin Development.
-        </p>
-      </PageIntro>
+      <Container>
+        <PageIntro pageTitle="Senior WordPress Plugin Developer">
+          <p>
+            We are looking for Senior WordPress Plugin Developers with 5+ years
+            of experience. You must have excellent capabilities and experience
+            of WordPress Plugin Development.
+          </p>
+        </PageIntro>
+      </Container>
       <Container className="mt-12 mb-32">
         <FadeIn className="grid grid-cols-12 gap-6">
           <div className="col-span-12 lg:col-span-8">

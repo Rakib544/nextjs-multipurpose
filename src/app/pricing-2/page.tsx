@@ -1,6 +1,7 @@
 import { Container } from "@/components/container";
-import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { FadeInStagger } from "@/components/fade-in";
 import { FaqCard1 } from "@/components/faq-card";
+import { PageIntro } from "@/components/page-intro";
 import { Pricing1 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
 import { TestimonialCard } from "@/components/testimonial-card";
@@ -23,20 +24,22 @@ export default function Pricing() {
         }}
       ></div>
       <Container className="z-10">
-        <FadeIn className="max-w-xl mx-auto text-center z-10 mt-20 mb-10">
-          <span className="uppercase text-xs tracking-wider text-center font-bold text-indigo-600 mb-3 inline-block">
-            Pricing Plan
-          </span>
-          <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
-            Our plans scale with{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-              Your Business
-            </span>{" "}
-          </h1>
-          <p className="mt-3 text-lg text-gray-600 leading-8">
-            Pricing for businesses at every stage of growth.
-          </p>
-        </FadeIn>
+        <PageIntro
+          className="max-w-xl mx-auto"
+          eyebrow="Pricing Plan"
+          centered
+          pageTitle={
+            <>
+              Our plans scale with{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
+                Your Business
+              </span>{" "}
+            </>
+          }
+        >
+          Pricing for businesses at every stage of growth.
+        </PageIntro>
+
         <Pricing1 />
         <div className="mt-20 md:mt-32">
           <SectionIntro

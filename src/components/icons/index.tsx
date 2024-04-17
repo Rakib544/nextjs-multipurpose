@@ -35,6 +35,7 @@ import { PinIcon } from "./pin-icon";
 import { ShieldCheckIcon } from "./shield-check-icon";
 import { StandingPeopleIcon } from "./standing-people-icon";
 import { StarIcon } from "./start-icon";
+import { TextUnderline } from "./text-underline";
 import { TrashIcon } from "./trash-icon";
 import { TwitterIcon } from "./twitter-icon";
 import { UsersIcon } from "./users-icon";
@@ -78,6 +79,7 @@ export {
   ShieldCheckIcon,
   StandingPeopleIcon,
   StarIcon,
+  TextUnderline,
   TrashIcon,
   TwitterIcon,
   UsersIcon,

@@ -1,6 +1,7 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { List, ListItem } from "@/components/list";
+import { PageIntro } from "@/components/page-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
@@ -40,14 +41,11 @@ export default function PortfolioDetails() {
   return (
     <div>
       <Container className="my-20 !max-w-5xl">
-        <h1 className="text-indigo-950 text-3xl font-extrabold tracking-tight lg:text-4xl/tight max-w-2xl">
-          E-commerce Website Redesign for ABC Clothing Co.
-        </h1>
-        <p className="text-lg leading-8 text-gray-600 mt-4">
+        <PageIntro pageTitle="E-commerce Website Redesign for ABC Clothing Co.">
           Redesigned the existing e-commerce website for ABC Clothing Co. to
           enhance user experience, improve conversion rates, and align with
           modern design trends.
-        </p>
+        </PageIntro>
         <div className="grid grid-cols-1 md:grid-cols-3 mt-12 md:mt-20 gap-6">
           <div>
             <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
@@ -241,8 +239,8 @@ export default function PortfolioDetails() {
             <StatListItem value="10%" label="Less infra costs" />
           </StatList>
         </div>
-        <div className="mt-20">
-          <div className="max-w-3xl rounded-xl border border-indigo-50 bg-gradient-to-br from-indigo-50 to-white p-4 md:p-10">
+        <div className="mt-20 relative z-20 overflow-hidden">
+          <div className="max-w-3xl rounded-xl border border-indigo-50 bg-gradient-to-br from-indigo-50 to-white p-4 md:p-10 w-full">
             <TestimonialCard
               image={userImage}
               quote="Working with [Your Company Name] was a game-changer for our business. Their expertise in website design and development helped us transform our online presence and drive significant growth in sales."
