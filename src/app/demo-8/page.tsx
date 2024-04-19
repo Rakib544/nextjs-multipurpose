@@ -108,7 +108,7 @@ export default function CreativeDigitalStudio() {
         }}
       ></div>
       <span className="absolute h-80 w-80 top-40 bg-gradient-to-r from-indigo-50 to-white  z-[-1] rotate-45 -left-52"></span>
-      <Container className="relative overflow-x-hidden">
+      <Container className="relative overflow-x-hidden pt-6 md:pt-16">
         <span className="text-9xl -rotate-12 font-black absolute z-[-1] text-indigo-50 lg:bottom-48 -ml-10 lg:left-1/2">
           Design Studio
         </span>
@@ -121,14 +121,14 @@ export default function CreativeDigitalStudio() {
         <div className="grid grid-cols-12 items-center gap-y-6 lg:gap-x-10 z-10">
           <div className="col-span-12 lg:col-span-6 order-2 lg:order-1 pb-10">
             <div className="max-w-xl">
-              <h1 className="text-3xl font-black  md:text-4xl/tight">
+              <h1 className="text-3xl font-black text-indigo-950 md:text-4.5xl/tight">
                 Transform{" "}
                 <span className="-ml-1.5 inline-block bg-indigo-600 px-2 text-white rotate-2">
                   Your Brand&apos;s
                 </span>{" "}
                 Narrative with Remarkable Design
               </h1>
-              <p className="text-base mt-6 text-neutral-800 leading-8">
+              <p className="text-lg mt-4 text-gray-600 leading-8">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Voluptatibus libero placeat reprehenderit magni, maiores aliquam
                 atque nisi fugiat veniam dicta autem odio obcaecati,
@@ -137,7 +137,7 @@ export default function CreativeDigitalStudio() {
                 href=""
                 className={buttonVariants({
                   size: "lg",
-                  className: "mt-8 bg-indigo-600 text-white",
+                  className: "mt-4 bg-indigo-600 text-white",
                 })}
               >
                 Explore our works <span className="ml-2">&rarr;</span>
@@ -149,10 +149,9 @@ export default function CreativeDigitalStudio() {
           </div>
         </div>
       </Container>
-      <div className="bg-[#0A2540]">
-        <Container className="py-32">
+      <div className="bg-[#EAE7FF]">
+        <Container className="py-20 md:py-32">
           <SectionIntro
-            invert
             className="mb-12"
             title="We Providing Digital Services in USA."
           >
@@ -163,16 +162,16 @@ export default function CreativeDigitalStudio() {
             </p>
           </SectionIntro>
           <StatList>
-            <StatListItem invert value="10K" label="Project Completed" />
-            <StatListItem invert value="180" label="Skilled professionals" />
-            <StatListItem invert value="500" label="Visited Conference" />
-            <StatListItem invert value="50K" label="Happy Clients" />
+            <StatListItem value="10K" label="Project Completed" />
+            <StatListItem value="180" label="Skilled professionals" />
+            <StatListItem value="500" label="Visited Conference" />
+            <StatListItem value="50K" label="Happy Clients" />
           </StatList>
         </Container>
       </div>
-      <Container className="my-32 relative">
+      <Container className="mt-20 md:mt-32 relative">
         <SectionIntro
-          className="mb-8"
+          className="mb-12"
           eyebrow="Our Services"
           title="Comprehensive Digital Strategy Transformation"
         >
@@ -186,19 +185,15 @@ export default function CreativeDigitalStudio() {
             <Link
               href="/services/1"
               key={service.id}
-              className="border rounded-xl p-6 hover:bg-gradient-to-b from-indigo-50 hover:border-indigo-200 to-white"
+              className="border focus:ring-0 focus:bg-primary focus:outline-none focus:border-primary group rounded-xl p-6 hover:border-primary hover:bg-primary transition duration-300"
             >
-              <span>
-                <Image
-                  src={service.image}
-                  alt=""
-                  height={60}
-                  width={60}
-                  className="border px-5 py-1.5 border-indigo-200 rounded-full"
-                />
+              <span className="border inline-block px-5 py-1.5 group-hover:border-indigo-500 border-indigo-200 rounded-full transition-all duration-300 group-focus:border-indigo-500">
+                {service.image}
               </span>
-              <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
-              <p className="text-base leading-7 mt-3 text-gray-600">
+              <h3 className="text-lg font-bold mt-8 group-focus:text-white group-hover:text-white transition duration-300">
+                {service.title}
+              </h3>
+              <p className="text-base leading-7 group-focus:text-slate-200 mt-3 group-hover:text-slate-200 text-gray-600 transition-all duration-300">
                 {service.description}
               </p>
             </Link>
@@ -209,9 +204,9 @@ export default function CreativeDigitalStudio() {
       <OurAwards />
       <Portfolios />
 
-      <Container className="mt-32">
+      <Container className="mt-20 md:mt-32">
         <SectionIntro
-          className="mb-6"
+          className="mb-12"
           eyebrow="Reviews"
           title="Some Of Our Respected Happy Clients Says"
         >
@@ -239,13 +234,13 @@ export default function CreativeDigitalStudio() {
         </InfiniteMoving>
       </Container>
 
-      <Container className="mt-32">
+      <Container className="mt-20 md:mt-32">
         <OurTeam />
       </Container>
-      <Container className="mt-32">
+      <Container className="mt-20 md:mt-32">
         <Clients />
       </Container>
-      <Container className="mt-32">
+      <Container className="mt-20 md:mt-32">
         <SectionIntro eyebrow="Our Blogs" title="Latest News & Updates.">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -265,14 +260,6 @@ export default function CreativeDigitalStudio() {
           ))}
         </div>
       </Container>
-      {/* <div className="mt-32">
-        <CallToAction
-          title=" We would Be Interested In Learning More About Your Project."
-          subtitle="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquid quam facilis temporibus cum hic voluptatibus, a laborum consequatur illum."
-          btnText="Contact Us"
-          link="/contact"
-        />
-      </div> */}
     </div>
   );
 }

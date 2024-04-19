@@ -28,7 +28,7 @@ export default function Home() {
           <span className="font-medium items-center gap-x-2 mb-4 px-6 inline-flex py-2 rounded-full bg-indigo-50 text-sm text-indigo-700">
             <HomeIcon className="h-4 w-4" /> 55,000+ Business Trust
           </span>
-          <h1 className="text-3xl font-extrabold md:text-5xl/tight text-indigo-950">
+          <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
             Revolutionize
             <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
               {" "}
@@ -116,7 +116,7 @@ export default function Home() {
           ))}
         </div>
       </Container>
-      <div className="bg-gradient-to-b from-[#EFEDFF] to-white py-20 mt-20 md:py-32 md:mt-32">
+      <div className="bg-gradient-to-b from-[#EFEDFF] to-white pt-20 mt-20 md:pt-32 pb-10 md:mt-32">
         <Container className="">
           <SectionIntro
             eyebrow="Benefits"
@@ -164,7 +164,7 @@ export default function Home() {
           <div>
             {sassWorkflows.map((step, index) => (
               <WorkFlowCard key={index} id={(index + 1).toString()}>
-                <h3 className="text-lg font-extrabold mb-2">{step.title}</h3>
+                <h3 className="text-lg font-bold mb-2">{step.title}</h3>
                 <p className="text-base leading-7 mb-10 text-gray-600">
                   {step.description}
                 </p>

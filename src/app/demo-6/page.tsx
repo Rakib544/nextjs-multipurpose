@@ -94,9 +94,9 @@ export default function AppLanding() {
     <div>
       <div>
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mt-12 md:mt-20">
             <div className="order-2 lg:order-1">
-              <h1 className="text-3xl pr-10 font-black md:text-4xl/tight max-w-lg">
+              <h1 className="text-3xl pr-10 font-black md:text-4.5xl/tight text-indigo-950">
                 Transform{" "}
                 <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
                   {" "}
@@ -112,8 +112,8 @@ export default function AppLanding() {
                 </span>{" "}
                 Journey with FitLife Tracker
               </h1>
-              <p className="text-base leading-7 text-gray-600 font-medium mt-3">
-                Take Control of Your Health and Reach Your Goals Faster. Lorem,
+              <p className="text-lg leading-7 text-gray-600 mt-3">
+                Take control of your health and reach your goals faster. Lorem,
                 ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                 omnis.
               </p>
