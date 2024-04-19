@@ -10,8 +10,12 @@ import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
-import Workflow from "@/components/work-flow";
-import { sassBenefits, sassFeatures } from "@/lib/data/sass-features";
+import WorkFlowCard from "@/components/workflow-card";
+import {
+  sassBenefits,
+  sassFeatures,
+  sassWorkflows,
+} from "@/lib/data/sass-features";
 import { testimonials } from "@/lib/data/testimonials-data";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,7 +44,7 @@ export default function Home() {
             </span>{" "}
             with StreamlinePro
           </h1>
-          <p className="mt-3 mb-8 text-lg text-gray-600 leading-8">
+          <p className="mt-3 mb-5 text-lg text-gray-600 leading-8">
             Streamline Processes, Boost Productivity, and Achieve Success.
           </p>
           <div className="flex gap-4 justify-center flex-col sm:flex-row">
@@ -112,12 +116,11 @@ export default function Home() {
           ))}
         </div>
       </Container>
-      <div className="bg-indigo-600 py-20 mt-20 md:py-32 md:mt-32">
+      <div className="bg-gradient-to-b from-[#EFEDFF] to-white py-20 mt-20 md:py-32 md:mt-32">
         <Container className="">
           <SectionIntro
             eyebrow="Benefits"
             title="Unlock the Power of StreamlinePro"
-            invert
             className="mb-12"
           >
             <p>
@@ -131,7 +134,7 @@ export default function Home() {
               <Link
                 href="/services/1"
                 key={service.id}
-                className="rounded-xl bg-white p-6 hover:bg-slate-50"
+                className="rounded-xl bg-white p-6 border border-indigo-200/20"
               >
                 <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full">
                   {service.icon}
@@ -146,13 +149,29 @@ export default function Home() {
         </Container>
       </div>
       <Container className="mt-20 md:mt-32">
-        <SectionIntro eyebrow="How Work" title="How It Work?" className="mb-12">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-            perspiciatis dolores magnam adipisci totam. Minus!
-          </p>
-        </SectionIntro>
-        <Workflow />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <SectionIntro
+            eyebrow="How Work"
+            title="Get started with streamlinePro"
+            className="mb-12 max-w-md"
+          >
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              quia consequatur cumque, sapiente exercitationem veritatis omnis
+              facilis. Assumenda, fuga rem!
+            </p>
+          </SectionIntro>
+          <div>
+            {sassWorkflows.map((step, index) => (
+              <WorkFlowCard key={index} id={(index + 1).toString()}>
+                <h3 className="text-lg font-extrabold mb-2">{step.title}</h3>
+                <p className="text-base leading-7 mb-10 text-gray-600">
+                  {step.description}
+                </p>
+              </WorkFlowCard>
+            ))}
+          </div>
+        </div>
       </Container>
       <Container className="mt-20 md:mt-32">
         <SectionIntro

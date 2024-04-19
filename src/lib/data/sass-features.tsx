@@ -78,3 +78,31 @@ export const sassBenefits = [
     icon: <FastIcon className="h-5 w-5" />,
   },
 ];
+
+export const sassWorkflows = [
+  {
+    title: "Sign Up",
+    description:
+      "Create an account and get started with our platform. It's quick and easy!",
+  },
+  {
+    title: "Choose a Plan",
+    description:
+      "Select the subscription plan that best suits your needs. We offer flexible options for every business.",
+  },
+  {
+    title: "Setup Your Workspace",
+    description:
+      "Customize your dashboard and settings to tailor the platform to your specific requirements.",
+  },
+  {
+    title: "Start Using the Features",
+    description:
+      "Explore our range of powerful features designed to streamline your workflow and boost productivity.",
+  },
+  {
+    title: "Get Support",
+    description:
+      "Our dedicated support team is here to assist you 24/7. Reach out to us anytime!",
+  },
+];

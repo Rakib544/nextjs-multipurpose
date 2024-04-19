@@ -108,7 +108,7 @@ export function Footer2() {
         <Container className="py-20 md:py-24">
           <div className="grid grid-cols-12 gap-6 items-center">
             <div className="col-span-12 md:col-span-7 lg:col-span-6">
-              <h4 className="text-3xl md:text-4xl/tight font-extrabold text-indigo-950">
+              <h4 className="text-2xl md:text-4xl/tight font-extrabold text-indigo-950">
                 See how we can help your business grow with digital marketing
               </h4>
             </div>
