@@ -3,10 +3,10 @@ import { Button } from "./ui/button";
 export function NewsletterForm() {
   return (
     <form className="max-w-sm">
-      <h2 className="font-display text-lg font-bold text-indigo-950">
+      <h2 className="font-display text-xl font-extrabold text-indigo-950">
         Sign up for our newsletter
       </h2>
-      <p className="mt-6 text-gray-600">
+      <p className="mt-6 text-gray-600 text-[17px] leading-8">
         Subscribe to get the latest design news, articles, resources and
         inspiration.
       </p>

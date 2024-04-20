@@ -50,32 +50,6 @@ export default function Faq1() {
           </FadeInStagger>
         </div>
       </Container>
-      {/* <CallToAction className="mt-20 mb-0 md:my-32">
-        <CallToActionHeading>
-          Let&apos;s maximize your online impact!
-        </CallToActionHeading>
-        <CallToActionSubHeading>
-          More than just buzzwords for marketing concepts of SEO.
-        </CallToActionSubHeading>
-        <CallToActionMenus>
-          <Link
-            href=""
-            className={buttonVariants({ size: "lg", variant: "outline" })}
-          >
-            Get In Touch
-          </Link>
-          <Link
-            href=""
-            className={buttonVariants({
-              variant: "link",
-              size: "lg",
-              className: "!text-white",
-            })}
-          >
-            Book a Demo &rarr;
-          </Link>
-        </CallToActionMenus>
-      </CallToAction> */}
     </div>
   );
 }

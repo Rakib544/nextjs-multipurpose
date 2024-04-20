@@ -53,6 +53,13 @@ export const sassFeatures = [
     description:
       "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience.",
   },
+  {
+    id: 6,
+    title: "Scalable Solutions",
+    description:
+      "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience.",
+    icon: <FastIcon className="h-5 w-5" />,
+  },
 ];
 
 export const sassBenefits = [

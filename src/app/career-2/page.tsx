@@ -17,9 +17,10 @@ export default function Career2() {
 
   return (
     <div>
-      <Container className="mt-20">
+      <Container>
         <PageIntro
           eyebrow="Careers"
+          className="mt-20 mb-10"
           pageTitle={
             <>
               Join our team of

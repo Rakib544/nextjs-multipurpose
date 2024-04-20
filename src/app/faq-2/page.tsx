@@ -15,8 +15,9 @@ import { testimonials } from "@/lib/data/testimonials-data";
 export default function Faq2() {
   return (
     <div>
-      <Container className="my-20">
+      <Container>
         <PageIntro
+          className="mt-20 mb-10"
           eyebrow="Faq"
           pageTitle={
             <>

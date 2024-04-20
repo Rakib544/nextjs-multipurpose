@@ -50,8 +50,8 @@ export function SectionIntro({
       {children && (
         <div
           className={clsx(
-            "text-base leading-7",
-            invert ? "text-neutral-300" : "text-slate-600"
+            "text-[17px] leading-7",
+            invert ? "text-neutral-300" : "text-gray-600"
           )}
         >
           {children}

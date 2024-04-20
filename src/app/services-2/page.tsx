@@ -43,6 +43,7 @@ export default function Services2() {
     <div>
       <Container>
         <PageIntro
+          className="mt-20 mb-10"
           eyebrow="Our services"
           centered
           pageTitle={

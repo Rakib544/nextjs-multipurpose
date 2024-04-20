@@ -35,10 +35,11 @@ const peoples = [
 export default function Teams() {
   return (
     <div>
-      <Container className="mt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-0 gap-y-6 items-center">
+      <Container>
+        <div className=" grid grid-cols-1 lg:grid-cols-2 lg:gap-x-0 gap-y-6 items-center">
           <div>
             <PageIntro
+              className="mt-20 mb-10"
               eyebrow="Our Team"
               pageTitle={
                 <>

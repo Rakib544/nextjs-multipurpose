@@ -34,7 +34,7 @@ export function PageIntro({
         </h1>
         <div
           className={clsx(
-            "mt-3 mb-6 text-lg text-gray-600 leading-8 lg:max-w-2xl ",
+            "mt-3 mb-6 text-lg text-gray-800 leading-8 lg:max-w-2xl ",
 
             centered && "mx-auto"
           )}

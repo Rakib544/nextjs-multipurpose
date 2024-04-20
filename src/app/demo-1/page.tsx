@@ -11,11 +11,7 @@ import {
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
 import WorkFlowCard from "@/components/workflow-card";
-import {
-  sassBenefits,
-  sassFeatures,
-  sassWorkflows,
-} from "@/lib/data/sass-features";
+import { sassFeatures, sassWorkflows } from "@/lib/data/sass-features";
 import { testimonials } from "@/lib/data/testimonials-data";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,8 +40,9 @@ export default function Home() {
             </span>{" "}
             with StreamlinePro
           </h1>
-          <p className="mt-3 mb-5 text-lg text-gray-600 leading-8">
-            Streamline Processes, Boost Productivity, and Achieve Success.
+          <p className="mt-3 mb-5 text-lg text-gray-800 leading-8 max-w-xl mx-auto">
+            Streamline is a simple and intuitive expense tracker that helps you
+            manage your business expenses with ease and speed.
           </p>
           <div className="flex gap-4 justify-center flex-col sm:flex-row">
             <Link
@@ -83,18 +80,19 @@ export default function Home() {
       </div>
 
       <Container className="mt-12 md:mt-20">
+        <h2 className="text-xl mb-10 text-indigo-950 font-bold text-center">
+          Trusted by many top companies
+        </h2>
         <Clients />
       </Container>
       <Container className="mt-20 md:mt-32">
         <SectionIntro
-          title="Empower your saas solutions"
-          eyebrow="Solution"
+          title="Powerful features to help you manage your leads"
+          eyebrow="Features"
           className="mb-12"
         >
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem est
-            deleniti, molestias maxime laudantium eos?
-          </p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem est
+          deleniti, molestias maxime laudantium eos?
         </SectionIntro>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {sassFeatures.map((service) => (
@@ -116,7 +114,7 @@ export default function Home() {
           ))}
         </div>
       </Container>
-      <div className="bg-gradient-to-b from-[#EFEDFF] to-white pt-20 mt-20 md:pt-32 pb-10 md:mt-32">
+      {/* <div className="bg-gradient-to-b from-[#EFEDFF] to-white pt-20 mt-20 md:pt-32 pb-10 md:mt-32">
         <Container className="">
           <SectionIntro
             eyebrow="Benefits"
@@ -147,7 +145,7 @@ export default function Home() {
             ))}
           </div>
         </Container>
-      </div>
+      </div> */}
       <Container className="mt-20 md:mt-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <SectionIntro
@@ -164,10 +162,18 @@ export default function Home() {
           <div>
             {sassWorkflows.map((step, index) => (
               <WorkFlowCard key={index} id={(index + 1).toString()}>
-                <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-                <p className="text-base leading-7 mb-10 text-gray-600">
+                <h3 className="text-xl font-extrabold mb-2">{step.title}</h3>
+                <p className="text-[17px] leading-7 text-gray-600">
                   {step.description}
                 </p>
+                <div className="relative aspect-video mt-6 mb-12">
+                  <Image
+                    src="https://vue.hibotheme.com/prag/img/hw-img-1.52d1609a.webp"
+                    fill
+                    alt=""
+                    className="rounded-xl"
+                  />
+                </div>
               </WorkFlowCard>
             ))}
           </div>
@@ -175,15 +181,10 @@ export default function Home() {
       </Container>
       <Container className="mt-20 md:mt-32">
         <SectionIntro
-          eyebrow="Testimonials"
-          title="Loved by businesses worldwide."
+          eyebrow="Clients Review"
+          title="Here’s what our amazing clients are saying"
           className="mb-12"
-        >
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            explicabo illo necessitatibus quod qui deleniti?
-          </p>
-        </SectionIntro>
+        ></SectionIntro>
         <InfiniteMoving>
           {testimonials.map((testimonial) => (
             <InfiniteMovingItem

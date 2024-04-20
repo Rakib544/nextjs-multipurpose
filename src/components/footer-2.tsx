@@ -1,5 +1,6 @@
 "use client";
 import { footerNavigation } from "@/lib/data/footer-navigation";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Container } from "./container";
@@ -13,7 +14,7 @@ function Navigation() {
   const work = footerNavigation[0];
   return (
     <nav className="col-span-12 md:col-span-12 lg:col-span-8">
-      <ul className="grid grid-cols-12 md:gap-x-8 gap-y-16">
+      <ul className="grid grid-cols-12 md:gap-x-8 gap-y-12">
         <li className="col-span-12 sm:col-span-6">
           <div>
             <Link href="/" aria-label="Home">
@@ -49,7 +50,7 @@ function Navigation() {
                 ></path>
               </svg>
             </Link>
-            <p className="text-gray-600 mt-6 leading-7 mb-6">
+            <p className="text-gray-600 text-[17px] mt-6 leading-8 mb-6">
               We are developer studio working at the intersection of design and
               technology. It’s a really busy intersection though — a lot of our
               staff have been involved in hit and runs.
@@ -58,15 +59,15 @@ function Navigation() {
           </div>
         </li>
         <li className="col-span-6 sm:col-span-3">
-          <div className="font-display text-lg font-bold text-indigo-950">
+          <div className="font-display text-xl font-extrabold text-indigo-950">
             {company.title}
           </div>
           <ul role="list" className="mt-6 text-gray-600">
             {company.links.map((link: any) => (
-              <li key={link.title} className="mt-4">
+              <li key={link.title} className="mt-4 ">
                 <Link
                   href={link.href}
-                  className="transition hover:text-indigo-600"
+                  className="transition hover:text-indigo-600 text-[17px]"
                 >
                   {link.title}
                 </Link>
@@ -75,7 +76,7 @@ function Navigation() {
           </ul>
         </li>
         <li className="col-span-6 sm:col-span-3">
-          <div className="font-display text-lg font-bold text-indigo-950">
+          <div className="font-display text-xl font-extrabold text-indigo-950">
             {work.title}
           </div>
           <ul role="list" className="mt-6 text-gray-600">
@@ -83,7 +84,7 @@ function Navigation() {
               <li key={link.title} className="mt-4">
                 <Link
                   href={link.href}
-                  className="transition hover:text-indigo-600"
+                  className="transition hover:text-indigo-600 text-[17px]"
                 >
                   {link.title}
                 </Link>
@@ -103,32 +104,38 @@ export function Footer2() {
 
   const isFooterHidden = isAuthRoute || isDashboardRoute;
   return (
-    <footer className="bg-[#E9E5FF] rounded-t-[30px] mt-20 md:mt-32">
+    <footer
+      className={cn(
+        "bg-primary rounded-t-[30px] mt-20 md:mt-32",
+        isFooterHidden ? "hidden" : ""
+      )}
+    >
       <div>
         <Container className="py-20 md:py-24">
-          <div className="grid grid-cols-12 gap-6 items-center">
-            <div className="col-span-12 md:col-span-7 lg:col-span-6">
-              <h4 className="text-2xl md:text-3xl/tight font-extrabold text-indigo-950">
-                See how we can help your business grow with digital marketing
-              </h4>
-              <p className="text-base leading-7 mt-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                omnis aperiam dolores nihil necessitatibus? Doloremque enim
-                repudiandae aperiam dolorum corporis!
-              </p>
-            </div>
-            <div className="col-span-12 md:col-span-5 lg:col-span-6 flex md:justify-end">
-              <div>
-                <Link href="" className={buttonVariants({ size: "lg" })}>
-                  Get A Free Audit
-                </Link>
-              </div>
-            </div>
+          <div className="md:max-w-3xl mx-auto md:text-center">
+            <h4 className="text-2xl md:text-3xl/tight font-extrabold text-white">
+              See how we can help your business grow with digital marketing
+            </h4>
+            <p className="max-w-xl mx-auto text-gray-200 mt-2">
+              We&apos;ll focus on timezone problems, so you can focus on
+              building the parts of your business that deliver value to your
+              customers.
+            </p>
+            <Link
+              href=""
+              className={buttonVariants({
+                size: "lg",
+                className: "mt-4",
+                variant: "secondary",
+              })}
+            >
+              Get A Free Audit
+            </Link>
           </div>
         </Container>
       </div>
-      <div className="bg-slate-100 rounded-[40px]">
-        <Container className={`pt-24 w-full ${isFooterHidden ? "hidden" : ""}`}>
+      <div className="bg-slate-100 rounded-tr-[40px] rounded-tl-[40px]">
+        <Container className={`pt-24 w-full`}>
           <FadeIn className="lg:px-4">
             <div className="grid grid-cols-12 md:gap-x-8 gap-y-16">
               <Navigation />
@@ -136,11 +143,11 @@ export function Footer2() {
                 <NewsletterForm />
               </div>
             </div>
-            <div className="pb-10 mt-24 flex justify-between items-center border-t border-indigo-950/10 pt-12">
-              <p className="text-gray-600 text-sm">
+            <div className="pb-10 mt-24 flex justify-between flex-col sm:flex-row gap-y-4 items-center border-t border-indigo-950/10 pt-12">
+              <p className="text-gray-600 text-base">
                 © {new Date().getFullYear()}. All Right Reserved
               </p>
-              <div className="gap-x-4 text-gray-600 flex text-sm">
+              <div className="gap-x-4 text-gray-600 flex text-base">
                 <Link href="/privacy-policy" className="hover:text-indigo-600">
                   Privacy Policy
                 </Link>

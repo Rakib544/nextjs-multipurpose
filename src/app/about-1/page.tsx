@@ -97,8 +97,8 @@ export default function About1() {
                 <span className="h-6 w-6 inline-flex justify-center items-center rounded-full bg-indigo-600 ">
                   <CheckIcon className="h-5 w-5 fill-white" />
                 </span>
-                <p className="text-base font-bold mt-3">Expert Team Member</p>
-                <p className="text-sm text-gray-600 mt-1 leading-6">
+                <p className="text-xl font-bold mt-3">Expert Team Member</p>
+                <p className="text-base text-gray-600 mt-2">
                   An SEO Optimization agency is company that specializes
                 </p>
               </div>
@@ -106,8 +106,8 @@ export default function About1() {
                 <span className="h-6 w-6 inline-flex justify-center items-center rounded-full bg-indigo-600 ">
                   <CheckIcon className="h-5 w-5 fill-white" />
                 </span>
-                <p className="text-base font-bold mt-3">Expert Team Member</p>
-                <p className="text-sm text-gray-600 mt-1 leading-6">
+                <p className="text-xl font-bold mt-3">Expert Team Member</p>
+                <p className="text-base text-gray-600 mt-2">
                   An SEO Optimization agency is company that specializes
                 </p>
               </div>

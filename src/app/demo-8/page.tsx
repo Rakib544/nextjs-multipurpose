@@ -113,12 +113,7 @@ export default function CreativeDigitalStudio() {
           Design Studio
         </span>
 
-        <div className="absolute right-0 lg:right-10 bg-white shadow-xl p-5 rounded-xl bottom-96 lg:bottom-20">
-          <p className="font-bold">5000+</p>
-          <p className="text-sm text-gray-600 font-medium">Satisfied Clients</p>
-        </div>
-
-        <div className="grid grid-cols-12 items-center gap-y-6 lg:gap-x-10 z-10">
+        <div className="grid grid-cols-12 items-center gap-y-6 lg:gap-x-10 z-10 ">
           <div className="col-span-12 lg:col-span-6 order-2 lg:order-1 pb-10">
             <div className="max-w-xl">
               <h1 className="text-3xl font-black text-indigo-950 md:text-4.5xl/tight">
@@ -144,13 +139,22 @@ export default function CreativeDigitalStudio() {
               </Link>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-6 order-1 lg:order-2">
+          <div className="col-span-12 lg:col-span-6 order-1 lg:order-2 relative z-[-1] ">
+            <div className="h-10 w-full bg-gradient-to-t from-white to-transparent absolute bottom-0"></div>
             <Image src="/design-studio.png" alt="" height={577} width={517} />
+            <div className="absolute right-0 bg-white shadow-xl p-5 rounded-xl bottom-20">
+              <p className="font-bold">5000+</p>
+              <p className="text-sm text-gray-600 font-medium">
+                Satisfied Clients
+              </p>
+            </div>
           </div>
         </div>
       </Container>
-      <div className="bg-[#EAE7FF]">
-        <Container className="py-20 md:py-32">
+      <div
+      // className="bg-[#EAE7FF]"
+      >
+        <Container className="mt-20 md:mt-32">
           <SectionIntro
             className="mb-12"
             title="We Providing Digital Services in USA."
