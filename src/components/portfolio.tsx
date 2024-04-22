@@ -12,7 +12,7 @@ export default function Portfolios() {
       <SectionIntro
         eyebrow="Portfolios"
         className="mb-12"
-        title="Some Recent Project We Successfully Done"
+        title="Some recent project we successfully done"
       />
       <FadeIn>
         <ul className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

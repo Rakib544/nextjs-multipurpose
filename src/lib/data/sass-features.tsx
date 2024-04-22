@@ -58,7 +58,9 @@ export const sassFeatures = [
     title: "Scalable Solutions",
     description:
       "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience.",
-    icon: <FastIcon className="h-5 w-5" />,
+    icon: (
+      <FastIcon className="h-5 w-5 group-hover:fill-white group-focus:fill-white transition-all duration-300" />
+    ),
   },
 ];
 

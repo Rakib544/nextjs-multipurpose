@@ -72,7 +72,7 @@ function OurTeam() {
     <div>
       <SectionIntro
         eyebrow="Our Team"
-        title="Our Excellence Team That Can Digitalize Your Brand"
+        title="Our excellence team that can digitalize your brand"
       >
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio ex quis
@@ -157,7 +157,7 @@ export default function CreativeDigitalStudio() {
         <Container className="mt-20 md:mt-32">
           <SectionIntro
             className="mb-12"
-            title="We Providing Digital Services in USA."
+            title="We providing digital services in USA."
           >
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
@@ -177,7 +177,7 @@ export default function CreativeDigitalStudio() {
         <SectionIntro
           className="mb-12"
           eyebrow="Our Services"
-          title="Comprehensive Digital Strategy Transformation"
+          title="Comprehensive digital strategy transformation"
         >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
@@ -212,14 +212,8 @@ export default function CreativeDigitalStudio() {
         <SectionIntro
           className="mb-12"
           eyebrow="Reviews"
-          title="Some Of Our Respected Happy Clients Says"
-        >
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Dignissimos quibusdam aspernatur cumque doloremque odio. At est
-            mollitia iure itaque beatae.
-          </p>
-        </SectionIntro>
+          title="Here’s what our amazing clients are saying"
+        ></SectionIntro>
         <InfiniteMoving>
           {testimonials.map((testimonial) => (
             <InfiniteMovingItem

@@ -35,7 +35,7 @@ export default function OurAwards() {
     <Container className="mt-20 md:mt-32">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <SectionIntro
-          title="Recognizing Excellence Our Award Winning Work"
+          title="Recognizing excellence our award winning work"
           eyebrow="Our Awards"
           className="mb-12"
         >
@@ -60,7 +60,7 @@ export default function OurAwards() {
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold mt-2 text-xl text-indigo-950 md:text-lg">
+                    <h3 className="font-bold mt-2 text-xl text-indigo-950">
                       {award.title}
                     </h3>
                     <p className="text-base mt-2 leading-7 text-gray-600">

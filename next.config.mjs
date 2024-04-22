@@ -21,6 +21,10 @@ const nextConfig = {
         hostname: "sandbox.ui-lib.com",
         protocol: "https",
       },
+      {
+        hostname: "assets-global.website-files.com",
+        protocol: "https",
+      },
     ],
   },
 };

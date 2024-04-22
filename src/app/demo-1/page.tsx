@@ -10,6 +10,7 @@ import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
+import UseCases from "@/components/use-case";
 import WorkFlowCard from "@/components/workflow-card";
 import { sassFeatures, sassWorkflows } from "@/lib/data/sass-features";
 import { testimonials } from "@/lib/data/testimonials-data";
@@ -80,14 +81,14 @@ export default function Home() {
       </div>
 
       <Container className="mt-12 md:mt-20">
-        <h2 className="text-xl mb-10 text-indigo-950 font-bold text-center">
+        <h2 className="text-lg mb-8 text-indigo-950 font-semibold text-center">
           Trusted by many top companies
         </h2>
         <Clients />
       </Container>
       <Container className="mt-20 md:mt-32">
         <SectionIntro
-          title="Powerful features to help you manage your leads"
+          title="We deliver great features that helps everyday business"
           eyebrow="Features"
           className="mb-12"
         >
@@ -114,38 +115,41 @@ export default function Home() {
           ))}
         </div>
       </Container>
-      {/* <div className="bg-gradient-to-b from-[#EFEDFF] to-white pt-20 mt-20 md:pt-32 pb-10 md:mt-32">
-        <Container className="">
-          <SectionIntro
-            eyebrow="Benefits"
-            title="Unlock the Power of StreamlinePro"
-            className="mb-12"
-          >
-            <p>
-              Discover How StreamlinePro Can Revolutionize Your Workflow and
-              Boost Productivity to New Heights.
-            </p>
-          </SectionIntro>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sassBenefits.map((service) => (
-              <Link
-                href="/services/1"
-                key={service.id}
-                className="rounded-xl bg-white p-6 border border-indigo-200/20"
-              >
-                <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full">
-                  {service.icon}
-                </span>
-                <h3 className="text-lg font-bold mt-8">{service.title}</h3>
-                <p className="text-base leading-7 mt-3 text-gray-600">
-                  {service.description}
-                </p>
-              </Link>
-            ))}
+      {/* 
+      <Container className="mt-20 md:mt-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-20 items-center">
+          <div>
+            <SectionIntro title="The best way to improve your users' experience">
+              <p className="mb-6">
+                Crafted for world-class performance and developed with unmatched
+                expertise, Pulse will deliver outstanding results every time,
+                without fail.
+              </p>
+              <List>
+                <ListItem className="font-medium">
+                  Scale your business and sales model.
+                </ListItem>
+                <ListItem className="font-medium">
+                  Unlock the power of data analytics.
+                </ListItem>
+                <ListItem className="font-medium">
+                  A complete digital solution.
+                </ListItem>
+              </List>
+            </SectionIntro>
           </div>
-        </Container>
-      </div> */}
+          <div>
+            <Image
+              src="https://assets-global.website-files.com/5fbd60e9c0e04c6e2ff0c2e0/5fc7de61b8c2af6afc0d7200_image-advantage-2-software-ui-kit.svg"
+              alt=""
+              height={400}
+              width={400}
+              className="w-full rounded-xl"
+            />
+          </div>
+        </div>
+      </Container> */}
+      <UseCases />
       <Container className="mt-20 md:mt-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <SectionIntro

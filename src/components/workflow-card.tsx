@@ -72,7 +72,7 @@ export default function WorkFlowCard({
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop stopColor="#4f46e5"></stop>
-                  <stop offset="1" stop-color="#4f46e5" stopOpacity="0"></stop>
+                  <stop offset="1" stopColor="#4f46e5" stopOpacity="0"></stop>
                 </linearGradient>
               </defs>
             </svg>

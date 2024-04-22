@@ -367,13 +367,11 @@ export default function AppLanding() {
       </Container>
 
       <Container className="my-32">
-        <SectionIntro title="What Our Clients Says" className="mb-8">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
-            laboriosam earum possimus deserunt sapiente quod nihil voluptates
-            voluptas dignissimos explicabo?
-          </p>
-        </SectionIntro>{" "}
+        <SectionIntro
+          className="mb-12"
+          eyebrow="Reviews"
+          title="Here’s what our amazing clients are saying"
+        ></SectionIntro>
         <Testimonials2 />
       </Container>
       {/* <CallToAction>

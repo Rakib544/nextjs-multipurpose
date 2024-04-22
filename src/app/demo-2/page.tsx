@@ -29,7 +29,7 @@ function Testimonials() {
     <Container className="mt-20 md:mt-32 relative">
       <SectionIntro
         eyebrow="Testimonials"
-        title="Loved by businesses worldwide."
+        title="Here’s what our amazing clients are saying"
       >
         <p className="text-neutral-700 leading-7 text-base">
           Our software is so simple that people can’t help but fall in love with
