@@ -167,17 +167,17 @@ export default function Home() {
             {sassWorkflows.map((step, index) => (
               <WorkFlowCard key={index} id={(index + 1).toString()}>
                 <h3 className="text-xl font-extrabold mb-2">{step.title}</h3>
-                <p className="text-[17px] leading-7 text-gray-600">
+                <p className="text-base pb-10 leading-7 text-gray-600">
                   {step.description}
                 </p>
-                <div className="relative aspect-video mt-6 mb-12">
+                {/* <div className="relative aspect-video mt-6 mb-12">
                   <Image
                     src="https://vue.hibotheme.com/prag/img/hw-img-1.52d1609a.webp"
                     fill
                     alt=""
                     className="rounded-xl"
                   />
-                </div>
+                </div> */}
               </WorkFlowCard>
             ))}
           </div>

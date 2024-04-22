@@ -90,28 +90,33 @@ export const sassBenefits = [
 
 export const sassWorkflows = [
   {
-    title: "Sign Up",
+    title: "Sign Up for Free",
     description:
-      "Create an account and get started with our platform. It's quick and easy!",
+      "Begin your journey by signing up for our platform. It's quick, easy, and absolutely free! Just provide your email address, create a password, and you're good to go.",
   },
   {
-    title: "Choose a Plan",
+    title: "Customize Your Experience",
     description:
-      "Select the subscription plan that best suits your needs. We offer flexible options for every business.",
+      "Once you're in, personalize your dashboard to suit your needs. Choose from a variety of widgets, themes, and layouts to make your workspace truly your own.",
   },
   {
-    title: "Setup Your Workspace",
+    title: "Integrate Your Data",
     description:
-      "Customize your dashboard and settings to tailor the platform to your specific requirements.",
+      "Connect your existing tools and data sources effortlessly. Our platform supports seamless integration with popular CRM systems, marketing platforms, and more.",
   },
   {
-    title: "Start Using the Features",
+    title: "Explore Features and Tools",
     description:
-      "Explore our range of powerful features designed to streamline your workflow and boost productivity.",
+      "Take some time to explore the array of features and tools we offer. From advanced analytics and reporting to automation and collaboration tools, there's something for everyone.",
   },
   {
-    title: "Get Support",
+    title: "Start Achieving Results",
     description:
-      "Our dedicated support team is here to assist you 24/7. Reach out to us anytime!",
+      "With everything set up, you're ready to start leveraging the full potential of our platform. Monitor performance, automate tasks, and streamline workflows to achieve your business goals faster and more efficiently.",
+  },
+  {
+    title: "Get Support When You Need It",
+    description:
+      "We're here to help every step of the way. Our dedicated support team is available 24/7 to assist you with any questions or issues you may encounter.",
   },
 ];
