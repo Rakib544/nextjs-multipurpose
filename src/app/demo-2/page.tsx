@@ -1,9 +1,11 @@
 import { BlogCard2 } from "@/components/blog-card";
+import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import {
   AnalyticsIcon,
   DollarBagIcon,
+  HomeIcon,
   MegaphoneIcon,
 } from "@/components/icons";
 import { SectionIntro } from "@/components/section-intro";
@@ -17,8 +19,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import WhyChooseUs from "@/components/why-choose-us";
+import WorkFlowCard from "@/components/workflow-card";
 import { blogsData } from "@/lib/data/blog-data";
+import { seoRevenueEarningProcess } from "@/lib/data/seo-agency";
 import { seoServices } from "@/lib/data/seo-services";
 import { testimonials } from "@/lib/data/testimonials-data";
 import Image from "next/image";
@@ -30,13 +33,7 @@ function Testimonials() {
       <SectionIntro
         eyebrow="Testimonials"
         title="Here’s what our amazing clients are saying"
-      >
-        <p className="text-neutral-700 leading-7 text-base">
-          Our software is so simple that people can’t help but fall in love with
-          it. Simplicity is easy when you just skip tons of mission-critical
-          features.
-        </p>
-      </SectionIntro>
+      ></SectionIntro>
 
       <Carousel
         className="w-full md:max-w-full rounded-xl relative mt-12"
@@ -72,57 +69,69 @@ function Testimonials() {
 export default function Demo2() {
   return (
     <main>
-      <div className="absolute top-0 left-0 z-[-1] w-full min-h-screen bg-gradient-to-b from-[#ECE9FF] to-white from-40%"></div>
-      <Container className="py-12 md:py-20 ">
-        <div className="grid grid-cols-12 gap-6 items-center">
-          <div className="col-span-12 lg:col-span-7">
-            <FadeIn className="order-2 lg:order-1 z-10">
-              {/* <span className="font-medium items-center gap-x-2 mb-4 px-6 inline-flex py-2 rounded-full bg-indigo-50 text-sm text-indigo-700">
-                <HomeIcon className="h-4 w-4" /> 55,000+ Business Trust
-              </span> */}
-              <h1 className="text-3xl max-w-xl text-indigo-950 pr-10 font-black tracking md:text-4.5xl/tight">
-                {/* Boost Your{" "}
-                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-transparent bg-clip-text">
-                  Online Presence
-                </span>{" "}
-                with Expert SEO Solutions */}
-                Increase your online visibility and drive more traffic
-              </h1>
-              <p className="mt-3 text-lg text-gray-600 leading-8 max-w-xl">
-                Elevating your online presence: our strategies drive traffic,
-                boost rankings, and enhance visibility in search engine results.
-              </p>
-              <div className="flex gap-4 mt-6">
-                <Link
-                  href="/about-us"
-                  className={buttonVariants({
-                    size: "lg",
-                  })}
-                >
-                  Get A Free Audit
-                </Link>
-              </div>
-            </FadeIn>
-          </div>
-          <div className="col-span-12 lg:col-span-5 relative">
-            <Image
-              src="/header1.png"
-              alt=""
-              height={300}
-              width={300}
-              className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl"
-            />
+      <div
+        style={{
+          backgroundImage: `linear-gradient(180deg,#6754E9 0%,#4534B8 100%)`,
+        }}
+        className="rounded-bl-[40px] rounded-br-[40px] z-20 relative"
+      >
+        <Container className="py-12 md:py-20">
+          <div className="grid grid-cols-12 gap-6 items-center">
+            <div className="col-span-12 lg:col-span-7">
+              <FadeIn className="order-2 lg:order-1 z-10">
+                <span className="inline-flex px-5 py-1 text-sm rounded-full border border-indigo-400 mb-2 bg-[#6754E9] text-white">
+                  <HomeIcon className="h-4 w-4 mr-1 fill-white" /> Most trusted
+                  seo agency
+                </span>
+                <h1 className="text-3xl max-w-xl text-white pr-10 font-extrabold md:text-4xl/tight">
+                  Increase your online visibility and drive more traffic
+                </h1>
+                <p className="mt-3 text-base text-white leading-8 max-w-lg">
+                  Elevating your online presence: our strategies drive traffic,
+                  boost rankings, and enhance visibility in search engine
+                  results.
+                </p>
+                <div className="flex gap-4 mt-6">
+                  <Link
+                    href="/about-us"
+                    className={buttonVariants({
+                      size: "lg",
+                      variant: "secondary",
+                    })}
+                  >
+                    Get A Free Audit
+                  </Link>
+                </div>
+              </FadeIn>
+            </div>
+            <div className="col-span-12 lg:col-span-5 relative">
+              <Image
+                src="/header1.png"
+                alt=""
+                height={300}
+                width={300}
+                className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl"
+              />
 
-            <Image
-              src="/header2.png"
-              alt=""
-              height={200}
-              width={300}
-              className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl mt-4 ml-4"
-            />
+              <Image
+                src="/header2.png"
+                alt=""
+                height={200}
+                width={300}
+                className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl mt-4 ml-4"
+              />
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
+      <div className="bg-[#F7F7FA] -mt-10 z-[-1] rounded-bl-[40px] rounded-br-[40px] pt-12 pb-2">
+        <Container>
+          {/* <p className="text-center pb-3 font-bold text-xs text-primary uppercase tracking-wider pt-7">
+            global partners
+          </p> */}
+          <Clients />
+        </Container>
+      </div>
       <Container className="mt-20 md:mt-32">
         <SectionIntro
           className="mb-12"
@@ -206,11 +215,42 @@ export default function Demo2() {
           ))}
         </div>
       </Container>
-      <WhyChooseUs />
+      <Container className="mt-20 md:mt-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full relative">
+          <div>
+            <div className="sticky top-6">
+              <SectionIntro
+                eyebrow="Why choose us"
+                title="How we drive revenue"
+              >
+                We start by conducting in-depth SEO audits to identify
+                opportunities and areas for improvement. Our team analyzes your
+                website&apos;s current performance, content, and technical setup
+                to create a tailored strategy.
+              </SectionIntro>
+            </div>
+          </div>
+          <div>
+            {seoRevenueEarningProcess.map((process, index) => (
+              <WorkFlowCard key={index} id={(index + 1).toString()}>
+                <span className="size-12 md:size-14  rounded-full bg-indigo-50 inline-flex justify-center items-center mb-4">
+                  {process.icon}
+                </span>
+                <h3 className="text-lg sm:text-xl text-indigo-950 font-bold mb-2">
+                  {process.title}
+                </h3>
+                <p className="text-base leading-8 pb-10 text-gray-600">
+                  {process.description}
+                </p>
+              </WorkFlowCard>
+            ))}
+          </div>
+        </div>
+      </Container>
       <Container className="mt-20 md:mt-32">
         <SectionIntro
           className="mb-12"
-          title="We are the best online software firm in the world."
+          title="We are the best online seo marketing agency in the world."
         >
           <p>
             You can help customer in real time across all of your channels from
@@ -218,12 +258,13 @@ export default function Demo2() {
           </p>
         </SectionIntro>
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="2B" label="Related keywords" />
+          <StatListItem value="100M" label="Competitors keywords" />
+          <StatListItem value="2K" label="Supported locations" />
+          <StatListItem value="2011" label="Year founded" />
         </StatList>
       </Container>
+
       <Testimonials />
       <Container className="mt-20 md:mt-32">
         <SectionIntro
@@ -249,23 +290,6 @@ export default function Demo2() {
           ))}
         </div>
       </Container>
-      {/* <CallToAction className="mt-20 mb-0 md:my-32">
-        <CallToActionHeading>
-          It&apos;s time to tell the world about it
-        </CallToActionHeading>
-        <CallToActionSubHeading>
-          We will shows you exactly what content you should write to make it to
-          the top of search engine results and drive the traffic you want.
-        </CallToActionSubHeading>
-        <CallToActionMenus>
-          <Link
-            href=""
-            className={buttonVariants({ size: "lg", variant: "outline" })}
-          >
-            Start a SEO Audit
-          </Link>
-        </CallToActionMenus>
-      </CallToAction> */}
     </main>
   );
 }

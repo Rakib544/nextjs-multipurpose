@@ -151,18 +151,22 @@ export default function Home() {
       </Container> */}
       <UseCases />
       <Container className="mt-20 md:mt-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <SectionIntro
-            eyebrow="How Work"
-            title="Get started with streamlinePro"
-            className="mb-12 max-w-md"
-          >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              quia consequatur cumque, sapiente exercitationem veritatis omnis
-              facilis. Assumenda, fuga rem!
-            </p>
-          </SectionIntro>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+          <div>
+            <div className="sticky top-6">
+              <SectionIntro
+                eyebrow="How Work"
+                title="Get started with streamlinePro"
+                className="mb-12 max-w-md"
+              >
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                  quia consequatur cumque, sapiente exercitationem veritatis
+                  omnis facilis. Assumenda, fuga rem!
+                </p>
+              </SectionIntro>
+            </div>
+          </div>
           <div>
             {sassWorkflows.map((step, index) => (
               <WorkFlowCard key={index} id={(index + 1).toString()}>

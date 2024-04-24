@@ -5,9 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Container } from "./container";
 import { FadeIn } from "./fade-in";
+import { List, ListItem } from "./list";
 import { NewsletterForm } from "./newsletter-form";
 import { SocialMediaProfiles } from "./social-media-profiles";
-import { buttonVariants } from "./ui/button";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 
 function Navigation() {
   const company = footerNavigation[1];
@@ -112,25 +114,52 @@ export function Footer2() {
     >
       <div>
         <Container className="py-20 md:py-24">
-          <div className="md:max-w-3xl mx-auto md:text-center">
-            <h4 className="text-2xl md:text-3xl/tight font-extrabold text-white">
-              See how we can help your business grow with digital marketing
-            </h4>
-            <p className="max-w-xl mx-auto text-gray-200 mt-3 leading-7">
-              We&apos;ll focus on timezone problems, so you can focus on
-              building the parts of your business that deliver value to your
-              customers.
-            </p>
-            <Link
-              href=""
-              className={buttonVariants({
-                size: "lg",
-                className: "mt-6",
-                variant: "secondary",
-              })}
-            >
-              Get A Free Audit
-            </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 items-end">
+            <div className="">
+              <h4 className="max-w-sm text-2xl md:text-3xl/tight font-extrabold text-white">
+                Get a Free consultation to boost your business
+              </h4>
+              <p className="lg:max-w-xl mx-auto text-gray-200 mt-3 leading-7">
+                We&apos;ll focus on timezone problems, so you can focus on
+                building the parts of your business that deliver value to your
+                customers.
+              </p>
+              <List className="mt-4 border-t pt-6 border-indigo-400">
+                <ListItem invert>
+                  A marketing audit is an evaluation of your company&apos;s
+                  marketing efforts and their effectiveness. Here what you will
+                  get:
+                </ListItem>
+                <ListItem invert>
+                  Evaluate your target audience to see if they have changed or
+                  if you need to adjust your messaging to better reach them
+                </ListItem>
+                <ListItem invert>
+                  Analyze your website to ensure it is user-friendly,
+                  mobile-responsive, and optimized for search engines.
+                </ListItem>
+              </List>
+            </div>
+            <div>
+              <div className="bg-white p-7 sm:p-10 rounded-[40px]">
+                <h5 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-10">
+                  Get Your free audit
+                </h5>
+                <form className="space-y-6">
+                  <Input
+                    placeholder="Your name"
+                    className="rounded-full pl-6"
+                  />
+                  <Input
+                    placeholder="your email"
+                    className="rounded-full pl-6"
+                  />
+                  <Button size="lg" className="w-full">
+                    Next &rarr;
+                  </Button>
+                </form>
+              </div>
+            </div>
           </div>
         </Container>
       </div>
