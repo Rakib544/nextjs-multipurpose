@@ -80,7 +80,7 @@ export default function Demo2() {
               {/* <span className="font-medium items-center gap-x-2 mb-4 px-6 inline-flex py-2 rounded-full bg-indigo-50 text-sm text-indigo-700">
                 <HomeIcon className="h-4 w-4" /> 55,000+ Business Trust
               </span> */}
-              <h1 className="text-3xl max-w-xl text-indigo-950 pr-10 font-extrabold tracking md:text-5xl/tight">
+              <h1 className="text-3xl max-w-xl text-indigo-950 pr-10 font-black tracking md:text-4.5xl/tight">
                 {/* Boost Your{" "}
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-transparent bg-clip-text">
                   Online Presence
@@ -88,18 +88,18 @@ export default function Demo2() {
                 with Expert SEO Solutions */}
                 Increase your online visibility and drive more traffic
               </h1>
-              <p className="mt-3 text-base text-gray-600 leading-7 max-w-xl">
-                Elevating Your Online Presence: Our Strategies Drive Traffic,
-                Boost Rankings, and Enhance Visibility in Search Engine Results.
+              <p className="mt-3 text-lg text-gray-600 leading-8 max-w-xl">
+                Elevating your online presence: our strategies drive traffic,
+                boost rankings, and enhance visibility in search engine results.
               </p>
-              <div className="flex gap-4 mt-8">
+              <div className="flex gap-4 mt-6">
                 <Link
                   href="/about-us"
                   className={buttonVariants({
                     size: "lg",
                   })}
                 >
-                  Get Started
+                  Get A Free Audit
                 </Link>
               </div>
             </FadeIn>

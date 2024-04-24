@@ -10,7 +10,7 @@ export default function Blogs2() {
   return (
     <div>
       <Container className="my-20">
-        <div className="grid grid-cols-12 gap-y-4 md:gap-x-12 p-4 md:p-10 rounded-3xl bg-[#E9E5FF] mb-20">
+        <div className="grid grid-cols-12 gap-y-4 md:gap-x-12 p-4 md:p-10 rounded-3xl bg-slate-50 hover:bg-slate-100 mb-20">
           <div className="col-span-12 md:col-span-8 order-2 md:order-1 max-w-xl">
             <p className=" mt-4 mb-2 text-sm text-gray-600 font-medium">
               {new Date(blogsData[0].createdAt).toDateString()}

@@ -116,7 +116,7 @@ export function Footer2() {
             <h4 className="text-2xl md:text-3xl/tight font-extrabold text-white">
               See how we can help your business grow with digital marketing
             </h4>
-            <p className="max-w-xl mx-auto text-gray-200 mt-2">
+            <p className="max-w-xl mx-auto text-gray-200 mt-3 leading-7">
               We&apos;ll focus on timezone problems, so you can focus on
               building the parts of your business that deliver value to your
               customers.
@@ -125,7 +125,7 @@ export function Footer2() {
               href=""
               className={buttonVariants({
                 size: "lg",
-                className: "mt-4",
+                className: "mt-6",
                 variant: "secondary",
               })}
             >

@@ -112,7 +112,7 @@ export default function AppLanding() {
                 </span>{" "}
                 Journey with FitLife Tracker
               </h1>
-              <p className="text-lg leading-7 text-gray-600 mt-3">
+              <p className="text-lg leading-8 text-gray-600 mt-3">
                 Take control of your health and reach your goals faster. Lorem,
                 ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
                 omnis.
@@ -374,31 +374,6 @@ export default function AppLanding() {
         ></SectionIntro>
         <Testimonials2 />
       </Container>
-      {/* <CallToAction>
-        <CallToActionHeading>Download this app now</CallToActionHeading>
-        <CallToActionSubHeading>
-          This app is now available on both Apple store and app store. You can
-          download it and enjoy it now.
-        </CallToActionSubHeading>
-        <CallToActionMenus>
-          <Link
-            href=""
-            className={buttonVariants({ variant: "outline", size: "lg" })}
-          >
-            Download IOS
-          </Link>
-          <Link
-            href=""
-            className={buttonVariants({
-              variant: "link",
-              className: "text-white",
-              size: "lg",
-            })}
-          >
-            Download Android
-          </Link>
-        </CallToActionMenus>
-      </CallToAction> */}
     </div>
   );
 }
