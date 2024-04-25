@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Container } from "./container";
 import { FadeIn } from "./fade-in";
 import { SectionIntro } from "./section-intro";
-import { buttonVariants } from "./ui/button";
+import { InfiniteMoving, InfiniteMovingItem } from "./ui/infinite-moving";
 
 export default function Portfolios() {
   return (
@@ -12,12 +12,15 @@ export default function Portfolios() {
       <SectionIntro
         eyebrow="Portfolios"
         className="mb-12"
-        title="Some recent project we successfully done"
-      />
+        title="Explore our award-winning portfolio solutions"
+      >
+        Diversify your investments and grow your wealth with our tailored
+        portfolio management services.
+      </SectionIntro>
       <FadeIn>
-        <ul className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {portfoliosData.slice(0, 3).map((portfolio, index) => (
-            <li key={index}>
+        <InfiniteMoving>
+          {portfoliosData.slice(0, 4).map((portfolio, index) => (
+            <InfiniteMovingItem key={index} className="bg-red-500 !w-[300px]">
               <Link
                 href="/portfolio-details"
                 className="block relative aspect-square border group rounded-2xl overflow-hidden"
@@ -39,15 +42,38 @@ export default function Portfolios() {
                   </div>
                 </div>
               </Link>
-            </li>
+            </InfiniteMovingItem>
           ))}
-        </ul>
-
-        <div className="mt-12 flex justify-center">
-          <Link href="/portfolios" className={buttonVariants({ size: "lg" })}>
-            View More &rarr;
-          </Link>
-        </div>
+        </InfiniteMoving>
+      </FadeIn>
+      <FadeIn>
+        <InfiniteMoving direction="right">
+          {portfoliosData.slice(4, 8).map((portfolio, index) => (
+            <InfiniteMovingItem key={index} className="!w-[300px]">
+              <Link
+                href="/portfolio-details"
+                className="block relative aspect-square border group rounded-2xl overflow-hidden"
+              >
+                <Image
+                  src={portfolio.image}
+                  fill
+                  alt=""
+                  className="object-cover object-center transition duration-500 motion-safe:group-hover:scale-105"
+                />
+                <div className="absolute inset-0 flex items-end p-4 md:p-8 bg-gradient-to-t from-black/70 from-5%">
+                  <div>
+                    <h2 className="font-semibold text-white text-lg md:text-xl ">
+                      {portfolio.client}
+                    </h2>
+                    <p className="text-slate-200 text-sm mt-1">
+                      {portfolio.category}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </InfiniteMovingItem>
+          ))}
+        </InfiniteMoving>
       </FadeIn>
     </Container>
   );

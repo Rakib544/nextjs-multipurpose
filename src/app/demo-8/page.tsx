@@ -4,10 +4,9 @@ import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import Portfolios from "@/components/portfolio";
 import { SectionIntro } from "@/components/section-intro";
-import { StatList, StatListItem } from "@/components/stat-list";
 import TeamCard1 from "@/components/team-card/team-card-1";
 import { TestimonialCard } from "@/components/testimonial-card";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   InfiniteMoving,
   InfiniteMovingItem,
@@ -115,7 +114,7 @@ export default function CreativeDigitalStudio() {
 
         <div className="grid grid-cols-12 items-center gap-y-6 lg:gap-x-10 z-10 ">
           <div className="col-span-12 lg:col-span-6 order-2 lg:order-1 pb-10">
-            <div className="max-w-xl">
+            <div className="md:max-w-xl">
               <h1 className="text-3xl font-black text-indigo-950 md:text-4.5xl/tight">
                 Transform{" "}
                 <span className="-ml-1.5 inline-block bg-indigo-600 px-2 text-white rotate-2">
@@ -124,9 +123,9 @@ export default function CreativeDigitalStudio() {
                 Narrative with Remarkable Design
               </h1>
               <p className="text-lg mt-4 text-gray-600 leading-8">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus libero placeat reprehenderit magni, maiores aliquam
-                atque nisi fugiat veniam dicta autem odio obcaecati,
+                Elevate your brand&apos;s storytelling capabilities and
+                captivate your target audience with our exceptional and
+                innovative design solutions tailored to meet your unique needs.
               </p>
               <Link
                 href=""
@@ -151,60 +150,72 @@ export default function CreativeDigitalStudio() {
           </div>
         </div>
       </Container>
-      <div
-      // className="bg-[#EAE7FF]"
-      >
-        <Container className="mt-20 md:mt-32">
-          <SectionIntro
-            className="mb-12"
-            title="We providing digital services in USA."
+      <div>
+        <Container className="mt-20 text-center">
+          <p className="block font-display uppercase text-xs tracking-wider font-bold text-primary">
+            Our journey story{" "}
+          </p>
+          <h2 className="text-3xl max-w-5xl leading-normal font-bold mb-6 mt-3 mx-auto">
+            Leading digital agency with solid design and development expertise.
+            We build ready made websites, mobile applications, and elaborate
+            online business services.
+          </h2>
+          <Link
+            href="/about-1"
+            className={buttonVariants({ variant: "outline", size: "lg" })}
           >
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
-              assumenda voluptatibus quos voluptate asperiores impedit veniam
-              sed illum soluta explicabo?
-            </p>
-          </SectionIntro>
-          <StatList>
-            <StatListItem value="10K" label="Project Completed" />
-            <StatListItem value="180" label="Skilled professionals" />
-            <StatListItem value="500" label="Visited Conference" />
-            <StatListItem value="50K" label="Happy Clients" />
-          </StatList>
+            Learn More
+          </Link>
         </Container>
       </div>
-      <Container className="mt-20 md:mt-32 relative">
-        <SectionIntro
-          className="mb-12"
-          eyebrow="Our Services"
-          title="Comprehensive digital strategy transformation"
-        >
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            officiis ipsa veniam perspiciatis harum facere.
-          </p>
-        </SectionIntro>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((service) => (
-            <Link
-              href="/services/1"
-              key={service.id}
-              className="border focus:ring-0 focus:bg-primary focus:outline-none focus:border-primary group rounded-xl p-6 hover:border-primary hover:bg-primary transition duration-300"
-            >
-              <span className="border inline-block px-5 py-1.5 group-hover:border-indigo-500 border-indigo-200 rounded-full transition-all duration-300 group-focus:border-indigo-500">
-                {service.image}
-              </span>
-              <h3 className="text-lg font-bold mt-8 group-focus:text-white group-hover:text-white transition duration-300">
-                {service.title}
-              </h3>
-              <p className="text-base leading-7 group-focus:text-slate-200 mt-3 group-hover:text-slate-200 text-gray-600 transition-all duration-300">
-                {service.description}
-              </p>
-            </Link>
-          ))}
-        </div>
-        {/* <TestingSection /> */}
-      </Container>
+      <div className="bg-indigo-600 py-20 md:py-32 rounded-[40px] mt-20 md:mt-32 ">
+        <Container className="relative">
+          <SectionIntro
+            className="mb-12"
+            eyebrow="Services"
+            invert
+            title="Our comprehensive digital strategy transformation"
+          >
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur officiis ipsa veniam perspiciatis harum facere.
+            </p>
+          </SectionIntro>
+          <div className="space-y-4">
+            {services.map((service, index) => (
+              <Link
+                href="/services/1"
+                key={service.id}
+                className="block group border-t border-indigo-500"
+              >
+                <div className="grid grid-cols-12 gap-6 items-end py-4">
+                  <div className="col-span-12 md:col-span-4">
+                    <span className="text-xl font-bold text-white/80">
+                      {(index + 1).toString().padStart(2, "0")}
+                    </span>
+                    <h3 className="text-2xl font-bold text-white mt-1">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <div className="col-span-12 md:col-span-4">
+                    <p className="text-base leading-7 text-white/80">
+                      {service.description}
+                    </p>
+                  </div>
+                  <div className="col-span-12 md:col-span-4 flex justify-end md:justify-center">
+                    <Button
+                      size="icon"
+                      className="border-[1.5px] group-hover:bg-white group-hover:text-indigo-600"
+                    >
+                      &rarr;
+                    </Button>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </div>
       <OurAwards />
       <Portfolios />
 

@@ -33,18 +33,19 @@ const awards = [
 export default function OurAwards() {
   return (
     <Container className="mt-20 md:mt-32">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <SectionIntro
-          title="Recognizing excellence our award winning work"
-          eyebrow="Our Awards"
-          className="mb-12"
-        >
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-            deserunt earum commodi placeat assumenda repudiandae aliquid nulla
-            similique eligendi debitis?
-          </p>
-        </SectionIntro>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+        <div>
+          <div className="sticky top-6">
+            <SectionIntro
+              title="Recognizing excellence our award winning work"
+              eyebrow="Our Awards"
+              className="mb-12"
+            >
+              Discover the industry recognition and accolades that highlight our
+              commitment to excellence and innovation.
+            </SectionIntro>
+          </div>
+        </div>
         <div>
           <div>
             {awards.map((award, index) => (
