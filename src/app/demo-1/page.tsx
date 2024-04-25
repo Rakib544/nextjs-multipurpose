@@ -174,14 +174,6 @@ export default function Home() {
                 <p className="text-base pb-10 leading-7 text-gray-600">
                   {step.description}
                 </p>
-                {/* <div className="relative aspect-video mt-6 mb-12">
-                  <Image
-                    src="https://vue.hibotheme.com/prag/img/hw-img-1.52d1609a.webp"
-                    fill
-                    alt=""
-                    className="rounded-xl"
-                  />
-                </div> */}
               </WorkFlowCard>
             ))}
           </div>
@@ -226,32 +218,6 @@ export default function Home() {
         </div>
         <Pricing2 />
       </Container>
-      {/* <CallToAction className="mt-20 mb-0 md:my-32">
-        <CallToActionHeading>
-          Let&apos;s maximize your online impact!
-        </CallToActionHeading>
-        <CallToActionSubHeading>
-          More than just buzzwords for marketing concepts of SEO.
-        </CallToActionSubHeading>
-        <CallToActionMenus>
-          <Link
-            href=""
-            className={buttonVariants({ size: "lg", variant: "outline" })}
-          >
-            Get In Touch
-          </Link>
-          <Link
-            href=""
-            className={buttonVariants({
-              variant: "link",
-              size: "lg",
-              className: "!text-white",
-            })}
-          >
-            Book a Demo &rarr;
-          </Link>
-        </CallToActionMenus>
-      </CallToAction> */}
     </div>
   );
 }

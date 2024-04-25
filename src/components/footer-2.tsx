@@ -120,23 +120,19 @@ export function Footer2() {
                 Get a Free consultation to boost your business
               </h4>
               <p className="lg:max-w-xl mx-auto text-gray-200 mt-3 leading-7">
-                We&apos;ll focus on timezone problems, so you can focus on
-                building the parts of your business that deliver value to your
-                customers.
+                We&apos;ll focus on timezone problems
               </p>
-              <List className="mt-4 border-t pt-6 border-indigo-400">
+              <List className="mt-4 border-indigo-400">
                 <ListItem invert>
                   A marketing audit is an evaluation of your company&apos;s
-                  marketing efforts and their effectiveness. Here what you will
-                  get:
+                  marketing efforts
                 </ListItem>
                 <ListItem invert>
-                  Evaluate your target audience to see if they have changed or
-                  if you need to adjust your messaging to better reach them
+                  Evaluate your target audience to see if they have changed
                 </ListItem>
                 <ListItem invert>
                   Analyze your website to ensure it is user-friendly,
-                  mobile-responsive, and optimized for search engines.
+                  mobile-responsive
                 </ListItem>
               </List>
             </div>

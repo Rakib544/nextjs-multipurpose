@@ -1,34 +1,29 @@
 import { Container } from "@/components/container";
 import {
   AnalyticsIcon,
-  CheckIcon,
   ClockIcon,
   MagicIcon,
   StandingPeopleIcon,
   StarIcon,
+  TextUnderline,
   UsersIcon,
 } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-import { BlogCard2 } from "@/components/blog-card";
+import { Clients } from "@/components/clients";
+import { Pricing2 } from "@/components/pricing";
 import { SectionIntro } from "@/components/section-intro";
 import Testimonials2 from "@/components/testimonials-2";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
-import Workflow2 from "@/components/work-flow-2";
+import WorkFlowCard from "@/components/workflow-card";
 import userImage2 from "@/images/testimonial_2.jpg";
 import userImage1 from "@/images/testimonial_3.jpg";
-import { blogsData } from "@/lib/data/blog-data";
+import { workingSteps } from "@/lib/data/app-data";
 
 const features = [
   {
@@ -96,21 +91,13 @@ export default function AppLanding() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mt-12 md:mt-20">
             <div className="order-2 lg:order-1">
-              <h1 className="text-3xl pr-10 font-black md:text-4.5xl/tight text-indigo-950">
-                Transform{" "}
+              <h1 className="text-3xl md:pr-10 font-black md:text-4xl/tight text-indigo-950">
+                Fastest way to manage payment anytime you want with{" "}
                 <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
                   {" "}
-                  <span className="relative">Your Fitness</span>{" "}
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 418 42"
-                    className="absolute left-0 top-2/3 h-[0.58em] w-full z-[-1] fill-indigo-300/70"
-                    preserveAspectRatio="none"
-                  >
-                    <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path>
-                  </svg>
+                  <span className="relative">Financial.io</span>{" "}
+                  <TextUnderline />
                 </span>{" "}
-                Journey with FitLife Tracker
               </h1>
               <p className="text-lg leading-8 text-gray-600 mt-3">
                 Take control of your health and reach your goals faster. Lorem,
@@ -173,162 +160,130 @@ export default function AppLanding() {
           </div>
         </Container>
       </div>
-      <Container className="mt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="relative">
-            <Image
-              src="https://vue.hibotheme.com/prag/img/about-img.df163752.webp"
-              alt=""
-              height={500}
-              width={400}
-              className="block mx-auto rounded-xl"
-            />
-            <div className="absolute bottom-10 bg-white p-4 rounded-xl shadow-xl">
-              <span className="text-lg font-semibold flex">
-                <CheckIcon className="h-7 w-7 fill-indigo-600 shrink-0" /> 24/7
-                Community Support
-              </span>
-              <span className="text-base font-medium leading-7">
-                We’re servicing 24/7 support for all
-              </span>
-            </div>
-            <div className="absolute top-10 bg-white p-4 rounded-xl shadow-xl">
-              <span className="text-lg font-semibold flex">
-                <CheckIcon className="h-7 w-7 fill-indigo-600 shrink-0" />{" "}
-                Personalized Plan
-              </span>
-            </div>
-            <div className="absolute right-0 bottom-32 bg-white p-4 rounded-xl shadow-xl">
-              <span className="text-lg font-semibold flex">
-                <CheckIcon className="h-7 w-7 fill-indigo-600 shrink-0" />{" "}
-                Analytics
-              </span>
-              <span className="text-base font-medium leading-7">
-                Lorem ipsum dolor sit amet.
-              </span>
-            </div>
-          </div>
-          <div>
-            <SectionIntro
-              eyebrow="Why choose us"
-              title="Why FitLife Is THe Right Choice For You"
-            >
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
-                expedita, culpa enim praesentium amet necessitatibus.
-              </p>
-            </SectionIntro>
-            <Accordion
-              type="single"
-              defaultValue="item-1"
-              className="mt-12 space-y-3"
-            >
-              {whyChooseData.map((data) => (
-                <AccordionItem
-                  key={data.id}
-                  value={`item-${data.id}`}
-                  className="border rounded-xl text-base py-1 px-4 data-[state=open]:bg-indigo-600 data-[state=open]:text-white"
-                >
-                  <AccordionTrigger className="font-semibold">
-                    {data.id.toString().padStart(2, "0")}. {data.title}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-slate-200 leading-8 text-base">
-                    {data.description}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </div>
+      <Container className="mt-20">
+        <p className="text-base font-medium text-center">
+          Trusted by top companies
+        </p>
+        <Clients />
       </Container>
       <div className="my-32">
         <Container>
           <SectionIntro
             eyebrow="Our Features"
-            title="Some excellent features for you"
-          >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis iusto impedit fugiat laboriosam odio dolore fuga quo
-              natus nobis. Voluptates?
-            </p>
-          </SectionIntro>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-            {features.map((service) => (
-              <Link
-                href="/services/1"
-                key={service.id}
-                className="border rounded-xl bg-indigo-50 transition-all duration-500  p-6 hover:bg-gradient-to-b from-indigo-50 hover:border-indigo-200 to-white"
-              >
-                <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full">
-                  {service.icon}
-                </span>
-                <h3 className="text-lg font-extrabold mt-8">{service.title}</h3>
-                <p className="text-base leading-7 mt-3 text-gray-600">
-                  {service.description}
-                </p>
-              </Link>
-            ))}
+            title="Experience your product as you create it."
+            className="mb-12"
+          ></SectionIntro>
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-12 md:col-span-8 p-10 bg-slate-100 rounded-[40px]">
+              <div className="relative aspect-[16/7]">
+                <Image
+                  src="https://assets-global.website-files.com/6207f5adfd8e615d3d70498b/6476d6c96421f487199b8408_Blink%20Copilot%20launch%20image-p-1080.png"
+                  alt=""
+                  fill
+                  className="rounded-xl block object-cover"
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
+                Secure & Convenient
+              </h3>
+              <p className="text-base leading-8 text-gray-600">
+                Enjoy peace of mind with advanced security features and
+                easy-to-use interface.
+              </p>
+            </div>
+            <div className="col-span-12 md:col-span-4 p-10 bg-slate-100 rounded-[40px]">
+              <div className="relative aspect-video">
+                <Image
+                  src="/header1.png"
+                  alt=""
+                  fill
+                  className="rounded-xl block object-cover"
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
+                Real-Time Transactions
+              </h3>
+              <p className="text-base leading-8 text-gray-600">
+                Stay updated with real-time transaction alerts and balance
+                notifications.
+              </p>
+            </div>
+            <div className="col-span-12 md:col-span-4 p-10 bg-slate-100 rounded-[40px]">
+              <div className="relative aspect-video">
+                <Image
+                  src="/header1.png"
+                  alt=""
+                  fill
+                  className="rounded-xl block object-cover"
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
+                Real-Time Transactions
+              </h3>
+              <p className="text-base leading-8 text-gray-600">
+                Stay updated with real-time transaction alerts and balance
+                notifications.
+              </p>
+            </div>
+            <div className="col-span-12 md:col-span-8 p-10 bg-slate-100 rounded-[40px]">
+              <div className="relative aspect-[16/7]">
+                <Image
+                  src="https://assets-global.website-files.com/6207f5adfd8e615d3d70498b/6476d6c96421f487199b8408_Blink%20Copilot%20launch%20image-p-1080.png"
+                  alt=""
+                  fill
+                  className="rounded-xl block object-cover"
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
+                Secure & Convenient
+              </h3>
+              <p className="text-base leading-8 text-gray-600">
+                Enjoy peace of mind with advanced security features and
+                easy-to-use interface.
+              </p>
+            </div>
           </div>
         </Container>
       </div>
-      <Container className="my-32">
-        <SectionIntro
-          eyebrow="Working Steps"
-          title="How it works?"
-          className="mb-12"
-        >
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis iusto impedit fugiat laboriosam odio dolore fuga quo
-            natus nobis. Voluptates?
-          </p>
-        </SectionIntro>
-        <Workflow2 />
-        {/* <TestingSection /> */}
-      </Container>
-      {/* <div className="my-32 py-20 bg-slate-100">
-        <Container>
-          <SectionIntro
-            eyebrow="Benefits"
-            title="Some excellent features for you"
-          >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis iusto impedit fugiat laboriosam odio dolore fuga quo
-              natus nobis. Voluptates?
-            </p>
-          </SectionIntro>
-          <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {features.map((feature) => (
-              <div key={feature.id} className="p-5 bg-white rounded-xl">
-                <Image src={feature.icon} alt="" height={60} width={60} />
-                <h3 className="font-bold text-lg text-indigo-950 mt-4">
-                  {feature.title}
+      <Container className="mt-20 md:mt-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
+          <div>
+            <div className="sticky top-6">
+              <SectionIntro
+                eyebrow="Working Steps"
+                title="How Financial.io works?"
+                className="mb-12"
+              >
+                Discover how Financial.io simplifies your banking experience
+                with our user-friendly interface, secure transactions, and
+                convenient features all designed to help you manage your
+                finances effortlessly.
+              </SectionIntro>
+            </div>
+          </div>
+          <div>
+            {workingSteps.map((step, index) => (
+              <WorkFlowCard key={index} id={(index + 1).toString()}>
+                <h3 className="text-xl font-extrabold text-indigo-950 mb-1">
+                  {step.title}
                 </h3>
-                <p className="text-gray-600 leading-7 mt-2 text-base">
-                  {feature.description}
+                <p className="text-base text-gray-600 leading-8 pb-10">
+                  {step.description}
                 </p>
-                <Link
-                  href=""
-                  className={buttonVariants({
-                    variant: "link",
-                    className: "!px-0 mt-3",
-                  })}
-                >
-                  Learn More &rarr;
-                </Link>
-              </div>
+              </WorkFlowCard>
             ))}
           </div>
-        </Container>
-      </div> */}
-      <Container className="my-32">
+        </div>
+      </Container>
+      <Container className="mt-20 md:mt-32">
         <SectionIntro
           eyebrow="COOL & AMAZING DESIGN"
           className="mb-8"
-          title="SLEEK & ELEGANT DESIGN"
-        />
+          title="Experience Financial.io"
+        >
+          Take a closer look at our app&apos;s user-friendly interface and
+          powerful features.
+        </SectionIntro>
         <InfiniteMoving>
           {[
             "/cool-amazing-3.png",
@@ -348,31 +303,57 @@ export default function AppLanding() {
           ))}
         </InfiniteMoving>
       </Container>
-      <Container className="my-32">
-        <SectionIntro
-          eyebrow="Our Blogs"
-          title="Our latest news and articles"
-        />
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogsData.slice(0, 3).map((blog, index) => (
-            <BlogCard2
-              createdAt={blog.createdAt}
-              subtitle={blog.subtitle}
-              title={blog.title}
-              thumbnail={blog.thumbnail}
-              key={index}
-            />
-          ))}
-        </div>
-      </Container>
-
-      <Container className="my-32">
+      <Container className="mt-20 md:mt-32">
         <SectionIntro
           className="mb-12"
           eyebrow="Reviews"
           title="Here’s what our amazing clients are saying"
         ></SectionIntro>
         <Testimonials2 />
+      </Container>
+      <Container className="mt-20 md:mt-32">
+        <div className="bg-slate-100 rounded-[40px] py-20 md:py-32 px-4">
+          <SectionIntro
+            eyebrow="Download now"
+            title="Start using Financial.io now"
+            className="sm:mx-auto sm:text-center"
+          >
+            Start your free trial now and see how easy it is to track, manage,
+            and optimize your time.
+            <div className="flex gap-x-4 items-center justify-center mt-6">
+              <Link href="">
+                <Image
+                  src="https://assets-global.website-files.com/643e8219320d012584af3b6d/643e8219320d013be4af3ba9_App%20Store%20badge.svg"
+                  alt=""
+                  height={80}
+                  width={200}
+                />
+              </Link>
+              <Link href="">
+                <Image
+                  src="https://assets-global.website-files.com/643e8219320d012584af3b6d/643e8219320d011c39af3baa_Mobile%20App%20Store%20Badge.svg"
+                  alt=""
+                  height={80}
+                  width={200}
+                />
+              </Link>
+            </div>
+          </SectionIntro>
+        </div>
+      </Container>
+      <Container className="mt-20 md:mt-32">
+        <div className="flex">
+          <SectionIntro
+            eyebrow="Pricing"
+            title="We offer great prices for your
+            business."
+            className="mb-12 md:mb-0"
+          >
+            Explore our flexible pricing options designed to fit your banking
+            needs and budget.
+          </SectionIntro>
+        </div>
+        <Pricing2 />
       </Container>
     </div>
   );

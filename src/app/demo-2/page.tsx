@@ -75,7 +75,7 @@ export default function Demo2() {
         }}
         className="rounded-bl-[40px] rounded-br-[40px] z-20 relative"
       >
-        <Container className="py-12 md:py-20">
+        <Container className="py-16 md:py-20">
           <div className="grid grid-cols-12 gap-6 items-center">
             <div className="col-span-12 lg:col-span-7">
               <FadeIn className="order-2 lg:order-1 z-10">
@@ -104,7 +104,7 @@ export default function Demo2() {
                 </div>
               </FadeIn>
             </div>
-            <div className="col-span-12 lg:col-span-5 relative">
+            <div className="col-span-12 lg:col-span-5 relative hidden lg:block">
               <Image
                 src="/header1.png"
                 alt=""
@@ -118,7 +118,7 @@ export default function Demo2() {
                 alt=""
                 height={200}
                 width={300}
-                className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl mt-4 ml-4"
+                className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl mt-4 lg:ml-4"
               />
             </div>
           </div>
