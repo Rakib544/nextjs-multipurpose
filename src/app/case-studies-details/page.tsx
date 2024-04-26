@@ -14,37 +14,42 @@ export default function CaseStudiesDetails() {
       <Container className="my-20 !max-w-5xl">
         <PageIntro pageTitle="Enhancing Online Presence for XYZ Corporation"></PageIntro>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-12 gap-6">
-          <div>
+        <FadeInStagger
+          faster
+          className="grid grid-cols-1 md:grid-cols-3 mt-12 gap-6"
+        >
+          <FadeIn>
             <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
               Client
             </span>
             <p className="text-base font-medium mt-1">
               Faulsk Company Inc Canada
             </p>
-          </div>
-          <div>
+          </FadeIn>
+          <FadeIn>
             <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
               Date
             </span>
             <p className="text-base font-medium mt-1">
               05 Dec 2022 - 01 Jan 2023
             </p>
-          </div>
-          <div>
+          </FadeIn>
+          <FadeIn>
             <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
               Services
             </span>
             <p className="text-base font-medium mt-1">
               UX Research, Wireframing, UI Design
             </p>
-          </div>
-        </div>
-        <Image
-          src={coverImage}
-          alt=""
-          className="aspect-[16/9] block rounded-xl mt-12 object-cover"
-        />
+          </FadeIn>
+        </FadeInStagger>
+        <FadeIn>
+          <Image
+            src={coverImage}
+            alt=""
+            className="aspect-[16/9] block rounded-xl mt-12 object-cover"
+          />
+        </FadeIn>
         <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Background</h2>
           <p className="text-base leading-8 font-medium text-gray-600">

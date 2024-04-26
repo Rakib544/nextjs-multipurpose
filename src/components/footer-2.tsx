@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Container } from "./container";
-import { FadeIn } from "./fade-in";
+import { FadeIn, FadeInStagger } from "./fade-in";
 import { List, ListItem } from "./list";
 import { NewsletterForm } from "./newsletter-form";
 import { SocialMediaProfiles } from "./social-media-profiles";
@@ -114,8 +114,11 @@ export function Footer2() {
     >
       <div>
         <Container className="py-20 md:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 items-end">
-            <div className="">
+          <FadeInStagger
+            faster
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 items-end"
+          >
+            <FadeIn className="">
               <h4 className="max-w-sm text-2xl md:text-3xl/tight font-extrabold text-white">
                 Get a Free consultation to boost your business
               </h4>
@@ -135,8 +138,8 @@ export function Footer2() {
                   mobile-responsive
                 </ListItem>
               </List>
-            </div>
-            <div>
+            </FadeIn>
+            <FadeIn>
               <div className="bg-white p-7 sm:p-10 rounded-[40px]">
                 <h5 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-10">
                   Get Your free audit
@@ -155,8 +158,8 @@ export function Footer2() {
                   </Button>
                 </form>
               </div>
-            </div>
-          </div>
+            </FadeIn>
+          </FadeInStagger>
         </Container>
       </div>
       <div className="bg-slate-100 rounded-tr-[40px] rounded-tl-[40px]">

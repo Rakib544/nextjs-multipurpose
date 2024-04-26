@@ -119,7 +119,8 @@ export const categories = [
 
 export const blogComments = [
   {
-    comment: "This is the first comment.",
+    comment:
+      "Thank you for this insightful post! I've been struggling with time management lately, and your tips are really helpful.",
     createdAt: "2024-04-14T12:00:00Z",
     author: {
       name: "John Doe",
@@ -128,7 +129,8 @@ export const blogComments = [
     replies: [],
   },
   {
-    comment: "This is the second comment.",
+    comment:
+      "I couldn't agree more! Effective time management is crucial in today's busy world. Your suggestions are practical and easy to implement.",
     createdAt: "2024-04-14T13:00:00Z",
     author: {
       name: "Emily Brown",
@@ -136,7 +138,8 @@ export const blogComments = [
     },
     replies: [
       {
-        comment: "Reply to the second comment.",
+        comment:
+          "Absolutely, Emily! It's all about finding what works best for you and sticking to it.",
         createdAt: "2024-04-14T13:10:00Z",
         author: {
           name: "Bob Johnson",
@@ -146,12 +149,66 @@ export const blogComments = [
     ],
   },
   {
-    comment: "This is the third comment with no replies.",
+    comment:
+      "This post couldn't have come at a better time! I've been feeling overwhelmed with my workload, and your advice gives me hope that I can get back on track.",
     createdAt: "2024-04-14T14:00:00Z",
     author: {
       name: "Alice Smith",
       image: "https://example.com/alicesmith.jpg",
     },
-    replies: [],
+    replies: [
+      {
+        comment:
+          "You're not alone, Alice. We're all in this together! Remember to take it one step at a time.",
+        createdAt: "2024-04-14T14:05:00Z",
+        author: {
+          name: "John Doe",
+          image: "https://example.com/johndoe.jpg",
+        },
+      },
+    ],
   },
 ];
+
+export const blogDetails = `<h3>1. Set Clear Goals</h3>
+
+<p>Before you start managing your time, it's essential to set clear and achievable goals. Identify what you want to accomplish and break it down into smaller, actionable tasks.</p>
+
+<h3>2. Prioritize Your Tasks</h3>
+
+<p>Not all tasks are created equal. Prioritize your tasks based on their importance and urgency. Focus on completing high-priority tasks first to ensure you're making progress towards your goals.</p>
+
+<h3>3. Use a Calendar or Planner</h3>
+
+<p>Utilize a calendar or planner to organize your schedule and keep track of important deadlines and appointments. Set reminders and allocate specific time slots for each task to stay on track.</p>
+
+<h3>4. Minimize Distractions</h3>
+
+<p>Avoid distractions such as social media, email notifications, or unnecessary meetings that can derail your focus and productivity. Create a conducive work environment free from distractions to maximize your efficiency.</p>
+
+<h3>5. Break Tasks into Smaller Steps</h3>
+
+<p>If you're facing a large or daunting task, break it down into smaller, more manageable steps. This approach makes the task less overwhelming and allows you to make progress incrementally.</p>
+
+<h3>6. Set Time Limits</h3>
+
+<p>Allocate specific time limits for each task to prevent them from dragging on indefinitely. Use techniques such as the Pomodoro Technique, which involves working for 25 minutes followed by a short break, to maintain focus and productivity.</p>
+
+<h3>7. Learn to Delegate</h3>
+
+<p>Recognize when you're overwhelmed or when tasks can be better handled by someone else. Delegate tasks that are outside your expertise or that can be done more efficiently by others, freeing up your time for more critical activities.</p>
+
+<h3>8. Take Regular Breaks</h3>
+
+<p>Rest and relaxation are essential for maintaining productivity and avoiding burnout. Take regular breaks throughout the day to recharge and rejuvenate your mind and body.</p>
+
+<h3>9. Review and Adjust</h3>
+
+<p>Periodically review your time management strategies and assess their effectiveness. Identify areas for improvement and adjust your approach accordingly to optimize your productivity.</p>
+
+<h3>10. Practice Self-Discipline</h3>
+
+<p>Effective time management requires discipline and commitment. Stay disciplined in sticking to your schedule and following through with your plans, even when faced with challenges or distractions.</p>
+
+<p>By implementing these tips into your daily routine, you can enhance your time management skills and achieve greater productivity and success in all areas of your life.</p>
+`;

@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import { FadeIn } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
@@ -57,7 +58,7 @@ export default function Teams() {
               resources and support to do their best work.
             </PageIntro>
           </div>
-          <div>
+          <FadeIn>
             <Image
               height={450}
               width={450}
@@ -65,7 +66,7 @@ export default function Teams() {
               src="/about-intro-1.webp"
               alt=""
             />
-          </div>
+          </FadeIn>
         </div>
       </Container>
       <Container className="mt-20 md:mb-32">

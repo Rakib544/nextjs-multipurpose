@@ -1,6 +1,7 @@
 import { Border } from "@/components/border";
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
@@ -67,7 +68,7 @@ export default function About2() {
               who are actually creating content.
             </PageIntro>
           </div>
-          <div>
+          <FadeIn>
             <Image
               height={450}
               width={450}
@@ -75,7 +76,7 @@ export default function About2() {
               src="/about-intro-1.webp"
               alt=""
             />
-          </div>
+          </FadeIn>
         </div>
       </Container>
 
@@ -100,13 +101,11 @@ export default function About2() {
           eyebrow="Core Values"
           className="mb-12"
         >
-          <p>
-            Discover Our Commitment to Driving Growth and Making a Positive
-            Impact in Every Interaction
-          </p>
+          Discover Our Commitment to Driving Growth and Making a Positive Impact
+          in Every Interaction
         </SectionIntro>
-        <div className="grid grid-cols-1 lg:grid-cols-3 mt-12 gap-6">
-          <div>
+        <FadeInStagger className="grid grid-cols-1 lg:grid-cols-3 mt-12 gap-6">
+          <FadeIn>
             <Border position="left" className="pl-8">
               <p className="text-base leading-8 text-gray-600">
                 <span className="font-bold text-indigo-600">Integrity. </span>
@@ -114,8 +113,8 @@ export default function About2() {
                 embrace creativity and strive for improvement.
               </p>
             </Border>
-          </div>
-          <div>
+          </FadeIn>
+          <FadeIn>
             <Border position="left" className="pl-8">
               <p className="text-base leading-8 text-gray-600">
                 <span className="font-bold text-indigo-600">
@@ -125,8 +124,8 @@ export default function About2() {
                 value.
               </p>
             </Border>
-          </div>
-          <div>
+          </FadeIn>
+          <FadeIn>
             <Border position="left" className="pl-8">
               <p className="text-base leading-8 text-gray-600">
                 <span className="font-bold text-indigo-600">Teamwork. </span>
@@ -134,8 +133,8 @@ export default function About2() {
                 support each others success.
               </p>
             </Border>
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
       <Container className="mt-20 md:mt-32">
         <SectionIntro
@@ -157,11 +156,11 @@ export default function About2() {
             </li>
           ))}
         </ul>
-        <div className="flex justify-center mt-12">
+        <FadeIn className="flex justify-center mt-12">
           <Link href="/teams" className={buttonVariants({ variant: "link" })}>
             View All Team &rarr;
           </Link>
-        </div>
+        </FadeIn>
       </Container>
       <div className="py-20 my-32 bg-[#F1EEFF]">
         <Container>
@@ -187,25 +186,28 @@ export default function About2() {
                 </Link>
               </SectionIntro>
             </div>
-            <div className="space-y-4">
+            <FadeInStagger faster className="space-y-4">
               {jobs.slice(0, 4).map((job) => (
-                <Link
-                  href="jobs/1"
-                  key={job.slug}
-                  className="flex justify-between items-center p-6 bg-white rounded-xl hover:bg-slate-50"
-                >
-                  <div>
-                    <h3 className="font-bold text-lg md:text-xl">
-                      Senior Software Engineer
-                    </h3>
-                    <p className="text-sm mt-1 text-gray-600">{job.address}</p>
-                  </div>
-                  <Button size="icon" variant="ghost">
-                    &rarr;
-                  </Button>
-                </Link>
+                <FadeIn key={job.slug}>
+                  <Link
+                    href="jobs/1"
+                    className="flex justify-between items-center p-6 bg-white rounded-xl hover:bg-slate-50"
+                  >
+                    <div>
+                      <h3 className="font-bold text-lg md:text-xl">
+                        Senior Software Engineer
+                      </h3>
+                      <p className="text-sm mt-1 text-gray-600">
+                        {job.address}
+                      </p>
+                    </div>
+                    <Button size="icon" variant="ghost">
+                      &rarr;
+                    </Button>
+                  </Link>
+                </FadeIn>
               ))}
-            </div>
+            </FadeInStagger>
           </div>
         </Container>
       </div>

@@ -1,7 +1,7 @@
 import { Border } from "@/components/border";
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
-import { FadeIn } from "@/components/fade-in";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { CheckIcon } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
@@ -59,7 +59,7 @@ export default function About1() {
         </PageIntro>
       </Container>
       <Container>
-        <div className="">
+        <FadeIn className="">
           <Image
             src="/test.png"
             alt=""
@@ -67,7 +67,7 @@ export default function About1() {
             width={1200}
             className="object-cover"
           />
-        </div>
+        </FadeIn>
       </Container>
       <Container className="mt-20 md:mt-32">
         <StatList>
@@ -85,11 +85,9 @@ export default function About1() {
               className="mb-12"
               title="Nubi was founded in 2015 by a group of passionate people who believed in the power of design."
             >
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Adipisci quam natus, unde harum fugiat laudantium eligendi
-                mollitia reprehenderit? Quasi, inventore!
-              </p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
+              quam natus, unde harum fugiat laudantium eligendi mollitia
+              reprehenderit? Quasi, inventore!
             </SectionIntro>
 
             <FadeIn className="mt-6 grid grid-cols-2 gap-6 border-t pt-10">
@@ -113,7 +111,7 @@ export default function About1() {
               </div>
             </FadeIn>
           </div>
-          <div className="relative">
+          <FadeIn className="relative">
             <div className="absolute w-[210px] p-5 bottom-10 left-10 bg-indigo-600 text-white rounded-xl">
               <span className="block text-sm">We Have</span>
               <span className="text-lg font-bold mt-3 block leading-6">
@@ -125,9 +123,9 @@ export default function About1() {
               alt=""
               height={300}
               width={400}
-              className="block ml-auto"
+              className="block ml-auto w-full lg:w-[400px]"
             />
-          </div>
+          </FadeIn>
         </div>
       </Container>
       <Container className="mt-20 md:mt-32">
@@ -136,13 +134,14 @@ export default function About1() {
           eyebrow="Core Values"
           className="mb-12"
         >
-          <p>
-            Discover Our Commitment to Driving Growth and Making a Positive
-            Impact in Every Interaction
-          </p>
+          Discover Our Commitment to Driving Growth and Making a Positive Impact
+          in Every Interaction
         </SectionIntro>
-        <div className="grid grid-cols-1 lg:grid-cols-3 mt-12 gap-6">
-          <div>
+        <FadeInStagger
+          faster
+          className="grid grid-cols-1 lg:grid-cols-3 mt-12 gap-6"
+        >
+          <FadeIn>
             <Border position="left" className="pl-8">
               <p className="text-base leading-8 text-gray-600">
                 <span className="font-bold text-indigo-600">Integrity. </span>
@@ -150,8 +149,8 @@ export default function About1() {
                 embrace creativity and strive for improvement.
               </p>
             </Border>
-          </div>
-          <div>
+          </FadeIn>
+          <FadeIn>
             <Border position="left" className="pl-8">
               <p className="text-base leading-8 text-gray-600">
                 <span className="font-bold text-indigo-600">
@@ -161,8 +160,8 @@ export default function About1() {
                 value.
               </p>
             </Border>
-          </div>
-          <div>
+          </FadeIn>
+          <FadeIn>
             <Border position="left" className="pl-8">
               <p className="text-base leading-8 text-gray-600">
                 <span className="font-bold text-indigo-600">Teamwork. </span>
@@ -170,8 +169,8 @@ export default function About1() {
                 support each others success.
               </p>
             </Border>
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
       <Container className="mt-20 md:mt-32">
         <SectionIntro

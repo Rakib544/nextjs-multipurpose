@@ -9,7 +9,7 @@ export default function TeamDetails() {
     <div>
       <Container className="mb-20 !max-w-5xl">
         <div className="relative">
-          <div className="h-[200px] sm:h-[280px] bg-gradient-to-r from-indigo-200 to-violet-200 rounded-lg w-full"></div>
+          <div className="h-[200px] sm:h-[280px] bg-gradient-to-r from-indigo-300 to-violet-300 rounded-lg w-full"></div>
           <div className="flex flex-col md:flex-row w-full absolute gap-x-3 sm:gap-x-6 -bottom-32 md:-bottom-24  items-center md:items-end sm:px-5">
             <Image
               src={userImage}

@@ -2,6 +2,7 @@ import OurAwards from "@/components/awards";
 import { BlogCard2 } from "@/components/blog-card";
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import Portfolios from "@/components/portfolio";
 import { SectionIntro } from "@/components/section-intro";
 import TeamCard1 from "@/components/team-card/team-card-1";
@@ -107,13 +108,22 @@ export default function CreativeDigitalStudio() {
         }}
       ></div>
       <span className="absolute h-80 w-80 top-40 bg-gradient-to-r from-indigo-50 to-white  z-[-1] rotate-45 -left-52"></span>
-      <Container className="relative overflow-x-hidden pt-6 md:pt-16">
-        <span className="text-9xl -rotate-12 font-black absolute z-[-1] text-indigo-50 lg:bottom-48 -ml-10 lg:left-1/2">
+      <Container className="relative overflow-x-hidden overflow-y-hidden pt-6 md:pt-16">
+        <FadeIn
+          variants={{
+            hidden: { opacity: 0, y: 0, zIndex: -1 },
+            visible: { opacity: 1, y: 0, zIndex: -1 },
+          }}
+          className="text-9xl -rotate-12 font-black absolute z-[-1] text-indigo-50 lg:bottom-48 -ml-10 lg:left-1/2"
+        >
           Design Studio
-        </span>
+        </FadeIn>
 
-        <div className="grid grid-cols-12 items-center gap-y-6 lg:gap-x-10 z-10 ">
-          <div className="col-span-12 lg:col-span-6 order-2 lg:order-1 pb-10">
+        <FadeInStagger
+          faster
+          className="grid grid-cols-12 items-center gap-y-6 lg:gap-x-10 !z-20"
+        >
+          <FadeIn className="col-span-12 lg:col-span-6 order-2 lg:order-1 pb-10">
             <div className="md:max-w-xl">
               <h1 className="text-3xl font-black text-indigo-950 md:text-4.5xl/tight">
                 Transform{" "}
@@ -137,8 +147,8 @@ export default function CreativeDigitalStudio() {
                 Explore our works <span className="ml-2">&rarr;</span>
               </Link>
             </div>
-          </div>
-          <div className="col-span-12 lg:col-span-6 order-1 lg:order-2 relative z-[-1] ">
+          </FadeIn>
+          <FadeIn className="col-span-12 lg:col-span-6 order-1 lg:order-2 relative z-[-1] ">
             <div className="h-10 w-full bg-gradient-to-t from-white to-transparent absolute bottom-0"></div>
             <Image src="/design-studio.png" alt="" height={577} width={517} />
             <div className="absolute right-0 bg-white shadow-xl p-5 rounded-xl bottom-20">
@@ -147,25 +157,27 @@ export default function CreativeDigitalStudio() {
                 Satisfied Clients
               </p>
             </div>
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
       <div>
         <Container className="mt-20 text-center">
-          <p className="block font-display uppercase text-xs tracking-wider font-bold text-primary">
-            Our journey story{" "}
-          </p>
-          <h2 className="text-3xl max-w-5xl leading-normal font-bold mb-6 mt-3 mx-auto">
-            Leading digital agency with solid design and development expertise.
-            We build ready made websites, mobile applications, and elaborate
-            online business services.
-          </h2>
-          <Link
-            href="/about-1"
-            className={buttonVariants({ variant: "outline", size: "lg" })}
-          >
-            Learn More
-          </Link>
+          <FadeIn>
+            <p className="block font-display uppercase text-xs tracking-wider font-bold text-primary">
+              Our journey story{" "}
+            </p>
+            <h2 className="text-3xl max-w-5xl leading-normal font-bold mb-6 mt-3 mx-auto">
+              Leading digital agency with solid design and development
+              expertise. We build ready made websites, mobile applications, and
+              elaborate online business services.
+            </h2>
+            <Link
+              href="/about-1"
+              className={buttonVariants({ variant: "outline", size: "lg" })}
+            >
+              Learn More
+            </Link>
+          </FadeIn>
         </Container>
       </div>
       <div className="bg-indigo-600 py-20 md:py-32 rounded-[40px] mt-20 md:mt-32 ">
@@ -176,44 +188,43 @@ export default function CreativeDigitalStudio() {
             invert
             title="Our comprehensive digital strategy transformation"
           >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur officiis ipsa veniam perspiciatis harum facere.
-            </p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            officiis ipsa veniam perspiciatis harum facere.
           </SectionIntro>
-          <div className="space-y-4">
+          <FadeInStagger faster className="space-y-4">
             {services.map((service, index) => (
-              <Link
-                href="/services/1"
-                key={service.id}
-                className="block group border-t border-indigo-500"
-              >
-                <div className="grid grid-cols-12 gap-6 items-end py-4">
-                  <div className="col-span-12 md:col-span-4">
-                    <span className="text-xl font-bold text-white/80">
-                      {(index + 1).toString().padStart(2, "0")}
-                    </span>
-                    <h3 className="text-2xl font-bold text-white mt-1">
-                      {service.title}
-                    </h3>
+              <FadeIn key={service.id}>
+                <Link
+                  href="/services/1"
+                  className="block group border-t border-indigo-500"
+                >
+                  <div className="grid grid-cols-12 gap-6 items-end py-4">
+                    <div className="col-span-12 md:col-span-4">
+                      <span className="text-xl font-bold text-white/80">
+                        {(index + 1).toString().padStart(2, "0")}
+                      </span>
+                      <h3 className="text-2xl font-bold text-white mt-1">
+                        {service.title}
+                      </h3>
+                    </div>
+                    <div className="col-span-12 md:col-span-4">
+                      <p className="text-base leading-7 text-white/80">
+                        {service.description}
+                      </p>
+                    </div>
+                    <div className="col-span-12 md:col-span-4 flex justify-end md:justify-center">
+                      <Button
+                        size="icon"
+                        className="border-[1.5px] group-hover:bg-white group-hover:text-indigo-600"
+                      >
+                        &rarr;
+                      </Button>
+                    </div>
                   </div>
-                  <div className="col-span-12 md:col-span-4">
-                    <p className="text-base leading-7 text-white/80">
-                      {service.description}
-                    </p>
-                  </div>
-                  <div className="col-span-12 md:col-span-4 flex justify-end md:justify-center">
-                    <Button
-                      size="icon"
-                      className="border-[1.5px] group-hover:bg-white group-hover:text-indigo-600"
-                    >
-                      &rarr;
-                    </Button>
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </FadeIn>
             ))}
-          </div>
+          </FadeInStagger>
         </Container>
       </div>
       <OurAwards />
@@ -257,7 +268,7 @@ export default function CreativeDigitalStudio() {
             labore quia quam!
           </p>
         </SectionIntro>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <FadeIn className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {blogsData.slice(0, 3).map((blog, index) => (
             <BlogCard2
               createdAt={blog.createdAt}
@@ -267,7 +278,7 @@ export default function CreativeDigitalStudio() {
               key={index}
             />
           ))}
-        </div>
+        </FadeIn>
       </Container>
     </div>
   );

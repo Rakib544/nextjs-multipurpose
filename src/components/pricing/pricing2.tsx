@@ -2,6 +2,7 @@
 
 import { pricingData } from "@/lib/data/pricing-data";
 import { useState } from "react";
+import { FadeIn } from "../fade-in";
 import { Switch } from "../ui/switch";
 import { PlanCard1 } from "./plan-card-1";
 
@@ -10,7 +11,7 @@ export function Pricing2() {
     "monthly"
   );
   return (
-    <section>
+    <FadeIn>
       <div className="flex justify-end item-center gap-x-1">
         <span
           className={
@@ -56,6 +57,6 @@ export function Pricing2() {
           ))}
         </div>
       </section>
-    </section>
+    </FadeIn>
   );
 }

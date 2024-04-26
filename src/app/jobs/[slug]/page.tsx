@@ -48,8 +48,8 @@ export default function JobDetails() {
                 Average Salary
               </span>
               <div className="flex gap-x-2 mt-4">
-                <span className="inline-flex justify-center items-center h-10 w-10 rounded-full bg-slate-100 border">
-                  <MailIcon className="h-4 w-4" />
+                <span className="inline-flex justify-center items-center h-10 w-10 rounded-full bg-indigo-50 border">
+                  <MailIcon className="h-4 w-4 text-indigo-500" />
                 </span>
                 <div>
                   <p className="font-bold text-indigo-950 text-sm">
@@ -59,8 +59,8 @@ export default function JobDetails() {
                 </div>
               </div>
               <div className="flex gap-x-2 mt-4">
-                <span className="inline-flex justify-center items-center h-10 w-10 rounded-full bg-slate-100 border">
-                  <BriefcaseIcon className="h-4 w-4" />
+                <span className="inline-flex justify-center items-center h-10 w-10 rounded-full bg-indigo-50 border">
+                  <BriefcaseIcon className="h-4 w-4 text-indigo-500" />
                 </span>
                 <div>
                   <p className="font-bold text-indigo-950 text-sm">Full Time</p>
@@ -68,8 +68,8 @@ export default function JobDetails() {
                 </div>
               </div>
               <div className="flex gap-x-2 mt-4">
-                <span className="inline-flex justify-center items-center h-10 w-10 rounded-full bg-slate-100 border">
-                  <CalenderIcon className="h-4 w-4" />
+                <span className="inline-flex justify-center items-center h-10 w-10 rounded-full bg-indigo-50 border">
+                  <CalenderIcon className="h-4 w-4 text-indigo-500" />
                 </span>
                 <div>
                   <p className="font-bold text-indigo-950 text-sm">
@@ -79,19 +79,19 @@ export default function JobDetails() {
                 </div>
               </div>
               <div className="flex gap-x-2 mt-4">
-                <span className="inline-flex justify-center items-center h-10 w-10 rounded-full bg-slate-100 border">
-                  <ClockIcon className="h-4 w-4" />
+                <span className="inline-flex justify-center items-center h-10 w-10 rounded-full bg-indigo-50 border">
+                  <ClockIcon className="h-4 w-4 text-indigo-500" />
                 </span>
                 <div>
                   <p className="font-bold text-indigo-950 text-sm">
                     8 AM – 5 PM
                   </p>
-                  <p className="text-sm text-gray-600">Working Hours</p>
+                  <p className="text-sm text-gray-600 ">Working Hours</p>
                 </div>
               </div>
               <div className="flex gap-x-2 mt-4">
-                <span className="inline-flex justify-center items-center h-10 w-10 rounded-full bg-slate-100 border">
-                  <FileTextIcon className="h-4 w-4" />
+                <span className="inline-flex justify-center items-center h-10 w-10 rounded-full bg-indigo-50 border">
+                  <FileTextIcon className="h-4 w-4 text-indigo-500" />
                 </span>
                 <div>
                   <p className="font-bold text-indigo-950 text-sm">5 Years</p>

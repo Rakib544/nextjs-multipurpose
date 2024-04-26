@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { JobCard } from "@/components/job-card";
 import JobFilter from "@/components/job-filter";
@@ -38,8 +39,8 @@ export default function Career2() {
         </PageIntro>
       </Container>
       <Container className="mb-20 mt-12">
-        <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 md:col-span-8 space-y-4">
+        <FadeInStagger faster className="grid grid-cols-12 gap-6">
+          <FadeIn className="col-span-12 md:col-span-8 space-y-4">
             <Suspense>
               <SearchField
                 placeholder="Search by title"
@@ -47,29 +48,32 @@ export default function Career2() {
                 className="rounded-full pl-10"
               />
             </Suspense>
-            <div className="flex justify-end md:hidden">
+            <FadeIn className="flex justify-end md:hidden">
               <MobileFilterDrawer />
-            </div>
-            {jobs.map((job, index) => (
-              <JobCard
-                key={index}
-                address={job.address}
-                category={job.category}
-                salary={job.category}
-                jobType={job.jobType}
-                slug={job.slug}
-                subtitle={job.subtitle}
-                title={job.title}
-              />
-            ))}
-            <div className="pt-12">
+            </FadeIn>
+            <FadeInStagger faster className="space-y-4">
+              {jobs.map((job, index) => (
+                <FadeIn key={index}>
+                  <JobCard
+                    address={job.address}
+                    category={job.category}
+                    salary={job.category}
+                    jobType={job.jobType}
+                    slug={job.slug}
+                    subtitle={job.subtitle}
+                    title={job.title}
+                  />
+                </FadeIn>
+              ))}
+            </FadeInStagger>
+            <FadeIn className="pt-12">
               <Pagination perPageItems={10} totalItems={45} />
-            </div>
-          </div>
-          <div className="col-span-12 md:col-span-4 hidden md:block">
+            </FadeIn>
+          </FadeIn>
+          <FadeIn className="col-span-12 md:col-span-4 hidden md:block">
             <JobFilter categories={jobCategories} jobTypes={uniqueJobType} />
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
     </div>
   );

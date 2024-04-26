@@ -1,38 +1,34 @@
-import { Container } from "@/components/container";
-import { FadeIn } from "@/components/fade-in";
 import { buttonVariants } from "@/components/ui/button";
-import heroImage from "@/images/office.jpg";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Demo3() {
   return (
     <div>
-      <div className="h-full relative">
-        <Image src={heroImage} alt="" fill />
-        <div className="absolute inset-0 bg-slate-800/50 " />
-        <Container className="py-32 grid grid-cols-12 gap-x-4 items-center">
-          <FadeIn className="col-span-12 lg:col-span-6 z-10">
-            <h1 className="text-3xl font-bold md:text-5xl/tight text-white">
-              We bring solutions to make life easier
-            </h1>
-            <p className="mt-3 text-lg leading-8 text-white">
-              We are a creative company that focuses on long term relationships
-              with customers.
-            </p>
-            <div className="mt-7">
-              <Link
-                href="/about-us"
-                className={buttonVariants({
-                  size: "lg",
-                })}
-              >
-                Get Started
-              </Link>
-            </div>
-          </FadeIn>
-        </Container>
-      </div>
+      <section
+        className="w-full py-20 md:py-32 "
+        style={{
+          backgroundImage: `linear-gradient(180deg,#6754E9 0%,#4534B8 100%)`,
+        }}
+      >
+        <div className="container px-4 md:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl md:text-5xl/tight font-extrabold text-white leading-tight max-w-3xl mx-auto">
+            Elevate Your Digital Presence with Our Expertise
+          </h1>
+          <p className="text-base md:text-lg leading-8 text-gray-200 mt-6 max-w-2xl mx-auto">
+            As a leading digital agency, we specialize in crafting captivating
+            websites, developing powerful web applications, and delivering
+            innovative digital solutions that drive your business forward.
+          </p>
+          <div className="mt-6">
+            <Link
+              className={buttonVariants({ variant: "secondary", size: "lg" })}
+              href="#"
+            >
+              Free consultation
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

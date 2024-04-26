@@ -1,7 +1,7 @@
 import { BlogCard2 } from "@/components/blog-card";
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
-import { FadeIn } from "@/components/fade-in";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import {
   AnalyticsIcon,
   DollarBagIcon,
@@ -35,34 +35,36 @@ function Testimonials() {
         title="Here’s what our amazing clients are saying"
       ></SectionIntro>
 
-      <Carousel
-        className="w-full md:max-w-full rounded-xl relative mt-12"
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-      >
-        <CarouselContent className="mb-6">
-          {testimonials.map((testimonial, index) => (
-            <CarouselItem
-              className="basis-full md:basis-[50%] bg-gradient-to-br from-indigo-50 to-white mx-2 py-2 md:py-10 rounded-xl border px-6 md:px-10"
-              key={index}
-            >
-              <TestimonialCard
-                image={testimonial.image}
-                name={testimonial.name}
-                quote={testimonial.quote}
-                rating={testimonial.rating}
-                role={testimonial.role}
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <div className="flex justify-end gap-x-4 items-center">
-          <CarouselPrevious className="!-left-4" />
-          <CarouselNext className="!-right-4" />
-        </div>
-      </Carousel>
+      <FadeIn>
+        <Carousel
+          className="w-full md:max-w-full rounded-xl relative mt-12"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="mb-6">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem
+                className="basis-full md:basis-[50%] bg-gradient-to-br from-indigo-50 to-white mx-2 py-2 md:py-10 rounded-xl border px-6 md:px-10"
+                key={index}
+              >
+                <TestimonialCard
+                  image={testimonial.image}
+                  name={testimonial.name}
+                  quote={testimonial.quote}
+                  rating={testimonial.rating}
+                  role={testimonial.role}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-end gap-x-4 items-center">
+            <CarouselPrevious className="!-left-4" />
+            <CarouselNext className="!-right-4" />
+          </div>
+        </Carousel>
+      </FadeIn>
     </Container>
   );
 }
@@ -104,31 +106,35 @@ export default function Demo2() {
                 </div>
               </FadeIn>
             </div>
-            <div className="col-span-12 lg:col-span-5 relative hidden lg:block">
-              <Image
-                src="/header1.png"
-                alt=""
-                height={300}
-                width={300}
-                className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl"
-              />
+            <FadeInStagger
+              faster
+              className="col-span-12 lg:col-span-5 relative hidden lg:block"
+            >
+              <FadeIn>
+                <Image
+                  src="/header1.png"
+                  alt=""
+                  height={300}
+                  width={300}
+                  className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl"
+                />
+              </FadeIn>
 
-              <Image
-                src="/header2.png"
-                alt=""
-                height={200}
-                width={300}
-                className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl mt-4 lg:ml-4"
-              />
-            </div>
+              <FadeIn>
+                <Image
+                  src="/header2.png"
+                  alt=""
+                  height={200}
+                  width={300}
+                  className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl mt-4 lg:ml-4"
+                />
+              </FadeIn>
+            </FadeInStagger>
           </div>
         </Container>
       </div>
       <div className="bg-[#F7F7FA] -mt-10 z-[-1] rounded-bl-[40px] rounded-br-[40px] pt-12 pb-2">
         <Container>
-          {/* <p className="text-center pb-3 font-bold text-xs text-primary uppercase tracking-wider pt-7">
-            global partners
-          </p> */}
           <Clients />
         </Container>
       </div>
@@ -142,8 +148,11 @@ export default function Demo2() {
           Focused on business outcomes — we bring a unique set of expertise and
           skills to the party.
         </SectionIntro>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="border rounded-2xl p-8">
+        <FadeInStagger
+          faster
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <FadeIn className="border rounded-2xl p-8">
             <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
               <MegaphoneIcon className="fill-indigo-600 text-indigo-600  h-7 w-7" />
             </span>
@@ -155,8 +164,8 @@ export default function Demo2() {
               customers and 2,000+ custom variables to build custom predictive
               models.
             </p>
-          </div>
-          <div className="border rounded-2xl p-8">
+          </FadeIn>
+          <FadeIn className="border rounded-2xl p-8">
             <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
               <AnalyticsIcon className="fill-indigo-600 text-indigo-600  h-7 w-7" />
             </span>
@@ -168,8 +177,8 @@ export default function Demo2() {
               customers and 2,000+ custom variables to build custom predictive
               models.
             </p>
-          </div>
-          <div className="border rounded-2xl p-8">
+          </FadeIn>
+          <FadeIn className="border rounded-2xl p-8">
             <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
               <DollarBagIcon className="fill-indigo-600 text-indigo-600  h-7 w-7" />
             </span>
@@ -181,8 +190,8 @@ export default function Demo2() {
               customers and 2,000+ custom variables to build custom predictive
               models.
             </p>
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
       <Container className="mt-20 md:mt-32">
         <SectionIntro
@@ -190,9 +199,9 @@ export default function Demo2() {
           className="mb-12"
           title="Optimized to the unique needs of each business we work with"
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {seoServices.map((service) => (
-            <div className="border rounded-2xl p-6" key={service.id}>
+            <FadeIn className="border rounded-2xl p-6" key={service.id}>
               <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
                 <MegaphoneIcon className="fill-indigo-600 text-indigo-600  h-7 w-7" />
               </span>
@@ -211,9 +220,9 @@ export default function Demo2() {
               >
                 Learn More &rarr;
               </Link>
-            </div>
+            </FadeIn>
           ))}
-        </div>
+        </FadeInStagger>
       </Container>
       <Container className="mt-20 md:mt-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full relative">
@@ -230,7 +239,7 @@ export default function Demo2() {
               </SectionIntro>
             </div>
           </div>
-          <div>
+          <FadeIn>
             {seoRevenueEarningProcess.map((process, index) => (
               <WorkFlowCard key={index} id={(index + 1).toString()}>
                 <span className="size-12 md:size-14  rounded-full bg-indigo-50 inline-flex justify-center items-center mb-4">
@@ -244,7 +253,7 @@ export default function Demo2() {
                 </p>
               </WorkFlowCard>
             ))}
-          </div>
+          </FadeIn>
         </div>
       </Container>
       <Container className="mt-20 md:mt-32">
@@ -272,23 +281,25 @@ export default function Demo2() {
           title="Check out our blog posts"
           className="mb-12"
         >
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            quo quibusdam omnis deleniti itaque praesentium enim repellendus,
-            nisi porro odit?
-          </p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quo
+          quibusdam omnis deleniti itaque praesentium enim repellendus, nisi
+          porro odit?
         </SectionIntro>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <FadeInStagger
+          faster
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {blogsData.slice(0, 3).map((blog, index) => (
-            <BlogCard2
-              createdAt={blog.createdAt}
-              subtitle={blog.subtitle}
-              title={blog.title}
-              thumbnail={blog.thumbnail}
-              key={index}
-            />
+            <FadeIn key={index}>
+              <BlogCard2
+                createdAt={blog.createdAt}
+                subtitle={blog.subtitle}
+                title={blog.title}
+                thumbnail={blog.thumbnail}
+              />
+            </FadeIn>
           ))}
-        </div>
+        </FadeInStagger>
       </Container>
     </main>
   );

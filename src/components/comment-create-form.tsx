@@ -39,7 +39,7 @@ export default function CommentCreateForm() {
     <div className="text-left mt-16">
       <h3 className="text-2xl font-bold text-left">Add a comment</h3>
       <p className="leading-7 text-base text-gray-600 mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Your email address will not be published.
       </p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-4">

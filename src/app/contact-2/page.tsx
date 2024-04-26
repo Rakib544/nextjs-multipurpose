@@ -63,10 +63,10 @@ export default function Contact2() {
               </div>
             </FadeIn>
           </div>
-          <div className="bg-white py-10 lg:p-10 rounded-2xl shadow-sm">
+          <FadeIn className="bg-white py-10 lg:p-10 rounded-2xl shadow-sm">
             <h3 className="text-xl font-bold mb-8">Contact Us</h3>
             <ContactForm />
-          </div>
+          </FadeIn>
         </div>
       </Container>
       <div className="bg-indigo-600 py-20 md:py-32 mt-20 md:mt-32">

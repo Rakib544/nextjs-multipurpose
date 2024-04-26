@@ -1,6 +1,6 @@
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
-import { FadeIn } from "@/components/fade-in";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { HomeIcon } from "@/components/icons";
 import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
@@ -81,10 +81,12 @@ export default function Home() {
       </div>
 
       <Container className="mt-12 md:mt-20">
-        <h2 className="text-lg mb-8 text-indigo-950 font-semibold text-center">
-          Trusted by many top companies
-        </h2>
-        <Clients />
+        <FadeIn>
+          <h2 className="text-lg mb-8 text-indigo-950 font-semibold text-center">
+            Trusted by many top companies
+          </h2>
+          <Clients />
+        </FadeIn>
       </Container>
       <Container className="mt-20 md:mt-32">
         <SectionIntro
@@ -95,60 +97,30 @@ export default function Home() {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem est
           deleniti, molestias maxime laudantium eos?
         </SectionIntro>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <FadeInStagger
+          faster
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
           {sassFeatures.map((service) => (
-            <Link
-              href="/services/1"
-              key={service.id}
-              className="border focus:ring-0 focus:bg-primary focus:outline-none focus:border-primary group rounded-xl p-6 hover:border-primary hover:bg-primary transition duration-300"
-            >
-              <span className="border inline-block px-5 py-1.5 group-hover:border-indigo-500 border-indigo-200 rounded-full transition-all duration-300 group-focus:border-indigo-500">
-                {service.icon}
-              </span>
-              <h3 className="text-lg font-bold mt-8 group-focus:text-white group-hover:text-white transition duration-300">
-                {service.title}
-              </h3>
-              <p className="text-base leading-7 group-focus:text-slate-200 mt-3 group-hover:text-slate-200 text-gray-600 transition-all duration-300">
-                {service.description}
-              </p>
-            </Link>
+            <FadeIn key={service.id}>
+              <Link
+                href="/services/1"
+                className="block border focus:ring-0 focus:bg-primary focus:outline-none focus:border-primary group rounded-xl p-6 hover:border-primary hover:bg-primary transition duration-300"
+              >
+                <span className="border inline-block px-5 py-1.5 group-hover:border-indigo-500 border-indigo-200 rounded-full transition-all duration-300 group-focus:border-indigo-500">
+                  {service.icon}
+                </span>
+                <h3 className="text-lg font-bold mt-8 group-focus:text-white group-hover:text-white transition duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-base leading-7 group-focus:text-slate-200 mt-3 group-hover:text-slate-200 text-gray-600 transition-all duration-300">
+                  {service.description}
+                </p>
+              </Link>
+            </FadeIn>
           ))}
-        </div>
+        </FadeInStagger>
       </Container>
-      {/* 
-      <Container className="mt-20 md:mt-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-20 items-center">
-          <div>
-            <SectionIntro title="The best way to improve your users' experience">
-              <p className="mb-6">
-                Crafted for world-class performance and developed with unmatched
-                expertise, Pulse will deliver outstanding results every time,
-                without fail.
-              </p>
-              <List>
-                <ListItem className="font-medium">
-                  Scale your business and sales model.
-                </ListItem>
-                <ListItem className="font-medium">
-                  Unlock the power of data analytics.
-                </ListItem>
-                <ListItem className="font-medium">
-                  A complete digital solution.
-                </ListItem>
-              </List>
-            </SectionIntro>
-          </div>
-          <div>
-            <Image
-              src="https://assets-global.website-files.com/5fbd60e9c0e04c6e2ff0c2e0/5fc7de61b8c2af6afc0d7200_image-advantage-2-software-ui-kit.svg"
-              alt=""
-              height={400}
-              width={400}
-              className="w-full rounded-xl"
-            />
-          </div>
-        </div>
-      </Container> */}
       <UseCases />
       <Container className="mt-20 md:mt-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
@@ -167,7 +139,7 @@ export default function Home() {
               </SectionIntro>
             </div>
           </div>
-          <div>
+          <FadeIn>
             {sassWorkflows.map((step, index) => (
               <WorkFlowCard key={index} id={(index + 1).toString()}>
                 <h3 className="text-xl font-extrabold mb-2">{step.title}</h3>
@@ -176,7 +148,7 @@ export default function Home() {
                 </p>
               </WorkFlowCard>
             ))}
-          </div>
+          </FadeIn>
         </div>
       </Container>
       <Container className="mt-20 md:mt-32">

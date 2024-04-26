@@ -1,5 +1,5 @@
 import { Container } from "@/components/container";
-import { FadeInStagger } from "@/components/fade-in";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { FaqCard1 } from "@/components/faq-card";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
@@ -37,9 +37,9 @@ export default function Component() {
           Enjoy lifetime access, community support, and no subscription fees.
         </PageIntro>
 
-        <div className="bg-white border rounded mt-12 md:mt-20">
+        <FadeIn className="bg-white border rounded mt-12 md:mt-20">
           <PriceComparisonTable />
-        </div>
+        </FadeIn>
         <div className="mt-20 md:mt-32">
           <SectionIntro
             eyebrow="Reviews"

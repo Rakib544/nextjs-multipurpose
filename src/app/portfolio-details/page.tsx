@@ -41,37 +41,40 @@ export default function PortfolioDetails() {
   return (
     <div>
       <Container className="my-20 !max-w-5xl">
-        <PageIntro pageTitle="E-commerce Website Redesign for ABC Clothing Co.">
+        <PageIntro pageTitle="E-commerce website redesign for ABC Clothing Co.">
           Redesigned the existing e-commerce website for ABC Clothing Co. to
           enhance user experience, improve conversion rates, and align with
           modern design trends.
         </PageIntro>
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-12 md:mt-20 gap-6">
-          <div>
+        <FadeInStagger
+          faster
+          className="grid grid-cols-1 md:grid-cols-3 mt-12 md:mt-20 gap-6"
+        >
+          <FadeIn>
             <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
               Client
             </span>
             <p className="text-base font-medium mt-1">
               Faulsk Company Inc Canada
             </p>
-          </div>
-          <div>
+          </FadeIn>
+          <FadeIn>
             <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
               Date
             </span>
             <p className="text-base font-medium mt-1">
               05 Dec 2022 - 01 Jan 2023
             </p>
-          </div>
-          <div>
+          </FadeIn>
+          <FadeIn>
             <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
               Services
             </span>
             <p className="text-base font-medium mt-1">
               UX Research, Wireframing, UI Design
             </p>
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
         <Image
           src="https://images.unsplash.com/photo-1588590560438-5e27fe3f6b71?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""

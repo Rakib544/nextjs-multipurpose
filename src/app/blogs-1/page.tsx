@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { PageIntro } from "@/components/page-intro";
 import SearchField from "@/components/search-field";
 import { buttonVariants } from "@/components/ui/button";
@@ -20,8 +21,8 @@ export default function Blogs1() {
         </PageIntro>
       </Container>
       <Container className="my-20">
-        <div className="grid grid-cols-12 gap-y-8 lg:gap-x-12">
-          <div className="col-span-12 lg:col-span-4 space-y-8">
+        <FadeInStagger faster className="grid grid-cols-12 gap-y-8 lg:gap-x-12">
+          <FadeIn className="col-span-12 lg:col-span-4 space-y-8">
             <div className="bg-white pr-5 rounded-lg">
               <h2 className="font-bold text-indigo-950 mb-2">Search Here</h2>
 
@@ -93,8 +94,8 @@ export default function Blogs1() {
                 ))}
               </ul>
             </div>
-          </div>
-          <div className="col-span-12 lg:col-span-8">
+          </FadeIn>
+          <FadeIn className="col-span-12 lg:col-span-8">
             <div className="space-y-8">
               {blogsData.map((blog, index) => (
                 <div
@@ -139,8 +140,8 @@ export default function Blogs1() {
             <div className="flex justify-center mt-20">
               <Pagination perPageItems={5} totalItems={100} />
             </div>
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
     </div>
   );

@@ -1,5 +1,6 @@
 import { BlogCard2 } from "@/components/blog-card/index";
 import { Container } from "@/components/container";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { PageIntro } from "@/components/page-intro";
 import SearchField from "@/components/search-field";
 import { buttonVariants } from "@/components/ui/button";
@@ -21,8 +22,8 @@ export default function Blogs3() {
         </PageIntro>
       </Container>
       <Container className="my-20 md:mt-20 md:mb-32">
-        <div className="grid grid-cols-12 gap-y-8 lg:gap-x-12">
-          <div className="col-span-12 lg:col-span-8 order-2 lg:order-1">
+        <FadeInStagger faster className="grid grid-cols-12 gap-y-8 lg:gap-x-12">
+          <FadeIn className="col-span-12 lg:col-span-8 order-2 lg:order-1">
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-8">
               {blogsData.slice(0, 6).map((blog, index) => (
                 <BlogCard2
@@ -37,8 +38,8 @@ export default function Blogs3() {
             <div className="flex justify-center mt-20">
               <Pagination perPageItems={5} totalItems={100} />
             </div>
-          </div>
-          <div className="col-span-12 lg:col-span-4 space-y-8 order-1 lg:order-2">
+          </FadeIn>
+          <FadeIn className="col-span-12 lg:col-span-4 space-y-8 order-1 lg:order-2">
             <div className="bg-white pr-5 rounded-lg">
               <h2 className="font-bold text-indigo-950 mb-2">Search Here</h2>
 
@@ -110,8 +111,8 @@ export default function Blogs3() {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
     </div>
   );

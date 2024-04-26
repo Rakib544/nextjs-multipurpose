@@ -1,5 +1,6 @@
 import { Border } from "@/components/border";
 import { Container } from "@/components/container";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { JobCard } from "@/components/job-card";
 import { PageIntro } from "@/components/page-intro";
@@ -31,7 +32,7 @@ export default function Career1() {
               complex challenges.
             </PageIntro>
           </div>
-          <div>
+          <FadeIn>
             <Image
               height={450}
               width={450}
@@ -39,25 +40,19 @@ export default function Career1() {
               src="/about-intro-1.webp"
               alt=""
             />
-          </div>
+          </FadeIn>
         </div>
       </Container>
-      {/* <PageIntro title="Start doing works that matters">
-        <p>
-          Our Philosophy is simple - hire a team of diverse, passionate people
-          and foster a culture that empowers you to do your best work.
-        </p>
-      </PageIntro> */}
       <Container className="my-12">
         <Border />
-        <div className="grid grid-cols-12 py-10 gap-y-6">
-          <div className="col-span-12 lg:col-span-5">
+        <FadeInStagger faster className="grid grid-cols-12 py-10 gap-y-6">
+          <FadeIn className="col-span-12 lg:col-span-5">
             <h2 className="text-lg font-bold text-indigo-950 mb-2">Design</h2>
             <p className="text-base text-gray-600">
               Open Positions for our design team
             </p>
-          </div>
-          <div className="col-span-12 lg:col-span-7 space-y-4">
+          </FadeIn>
+          <FadeIn className="col-span-12 lg:col-span-7 space-y-4">
             {jobs
               .filter((item) => item.category.toLowerCase() === "design")
               .map((job, index) => (
@@ -72,21 +67,21 @@ export default function Career1() {
                   title={job.title}
                 />
               ))}
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
       <Container className="my-12">
         <Border />
-        <div className="grid grid-cols-12 py-10 gap-y-6">
-          <div className="col-span-12 lg:col-span-5">
+        <FadeInStagger faster className="grid grid-cols-12 py-10 gap-y-6">
+          <FadeIn className="col-span-12 lg:col-span-5">
             <h2 className="text-lg font-bold text-indigo-950 mb-2">
               Marketing
             </h2>
             <p className="text-base text-gray-600">
               Open Positions for our design team
             </p>
-          </div>
-          <div className="col-span-12 lg:col-span-7 space-y-4">
+          </FadeIn>
+          <FadeIn className="col-span-12 lg:col-span-7 space-y-4">
             {jobs
               .filter((item) => item.category.toLowerCase() === "marketing")
               .map((job, index) => (
@@ -101,8 +96,8 @@ export default function Career1() {
                   title={job.title}
                 />
               ))}
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
     </div>
   );

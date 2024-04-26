@@ -1,4 +1,5 @@
 import { testimonials } from "@/lib/data/testimonials-data";
+import { FadeIn } from "./fade-in";
 import { TestimonialCard } from "./testimonial-card";
 import {
   Carousel,
@@ -11,7 +12,7 @@ import {
 
 export default function Testimonials2() {
   return (
-    <div>
+    <FadeIn>
       <Carousel>
         <CarouselContent className="gap-x-4">
           {testimonials.map((testimonial) => (
@@ -35,6 +36,6 @@ export default function Testimonials2() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-    </div>
+    </FadeIn>
   );
 }

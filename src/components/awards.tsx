@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "./container";
+import { FadeIn } from "./fade-in";
 import { SectionIntro } from "./section-intro";
 import WorkFlowCard from "./workflow-card";
 
@@ -47,7 +48,7 @@ export default function OurAwards() {
           </div>
         </div>
         <div>
-          <div>
+          <FadeIn>
             {awards.map((award, index) => (
               <WorkFlowCard key={award.id} id={(index + 1).toString()}>
                 <div className="pb-10">
@@ -77,7 +78,7 @@ export default function OurAwards() {
                 </div>
               </WorkFlowCard>
             ))}
-          </div>
+          </FadeIn>
         </div>
       </div>
     </Container>
