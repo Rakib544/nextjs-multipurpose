@@ -32,7 +32,7 @@ export default function PlateEditor() {
     {
       id: "1",
       type: ELEMENT_PARAGRAPH,
-      children: [{ text: "Hello, World!" }],
+      children: [{ text: "Write content" }],
     },
   ];
 
@@ -60,7 +60,7 @@ export default function PlateEditor() {
               </FixedToolbar>
 
               <Editor
-                className="p-8 bg-[#F6F7F8]"
+                className="px-5 py-3 bg-[#F6F7F8] text-[#919EAB]"
                 autoFocus
                 focusRing={false}
                 variant="ghost"

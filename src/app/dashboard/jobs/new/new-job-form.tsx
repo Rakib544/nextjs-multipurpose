@@ -2,6 +2,8 @@
 
 import PlateEditor from "@/components/plate-editor";
 import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -11,9 +13,25 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
-import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { format } from "date-fns";
+import { CalendarIcon, Clock } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -32,19 +50,23 @@ const FormSchema = z.object({
     .trim()
     .min(1, { message: "Twitter URL is required" }),
   location: z.string().trim().min(1, { message: "Dribble URL is required" }),
-  expired: z.string().trim().min(1, { message: "Dribble URL is required" }),
+  expiredDate: z.date({
+    required_error: "Expired date is required.",
+  }),
   salaryType: z.string().trim().min(1, { message: "Dribble URL is required" }),
   salary: z.string().trim().min(1, { message: "Dribble URL is required" }),
-  isNegotiable: z
-    .string()
-    .trim()
-    .min(1, { message: "Dribble URL is required" }),
-  benefits: z.string().trim().min(1, { message: "Dribble URL is required" }),
+  isNegotiable: z.boolean().default(false).optional(),
+  benefits: z.array(z.string()).refine((value) => value.some((item) => item), {
+    message: "You have to select at least one item.",
+  }),
   isPublished: z.string().trim().min(1, { message: "Required" }),
 });
 export default function JobCreateForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
+    defaultValues: {
+      benefits: [],
+    },
   });
   type FormValues = z.infer<typeof FormSchema>;
 
@@ -73,7 +95,7 @@ export default function JobCreateForm() {
                       <Input
                         autoFocus
                         {...field}
-                        placeholder="John Doe"
+                        placeholder="Ex: Software Engineer"
                         className=""
                       />
                     </FormControl>
@@ -108,15 +130,33 @@ export default function JobCreateForm() {
                 control={form.control}
                 name="employmentType"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="space-y-3">
                     <FormLabel>Employment Type</FormLabel>
                     <FormControl>
-                      <Input
-                        autoFocus
-                        {...field}
-                        placeholder="John Doe"
-                        className=""
-                      />
+                      <RadioGroup
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                        className="flex flex-col sm:flex-row gap-x-8 space-y-1"
+                      >
+                        {[
+                          "Full-time",
+                          "Part-time",
+                          "On Demand",
+                          "Negotiable",
+                        ].map((item) => (
+                          <FormItem
+                            className="flex items-center space-x-1 space-y-0"
+                            key={item}
+                          >
+                            <FormControl>
+                              <RadioGroupItem value={item} />
+                            </FormControl>
+                            <FormLabel className="font-normal">
+                              {item}
+                            </FormLabel>
+                          </FormItem>
+                        ))}
+                      </RadioGroup>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -126,14 +166,33 @@ export default function JobCreateForm() {
                 control={form.control}
                 name="experience"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="space-y-3">
                     <FormLabel>Experience</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="Software Engineer"
-                        {...field}
-                        className=""
-                      />
+                      <RadioGroup
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                        className="flex flex-col sm:flex-row gap-x-8 space-y-1"
+                      >
+                        {[
+                          "No experience",
+                          "1 year exp",
+                          "2 year exp",
+                          "> 3 year exp",
+                        ].map((item) => (
+                          <FormItem
+                            className="flex items-center space-x-1 space-y-0"
+                            key={item}
+                          >
+                            <FormControl>
+                              <RadioGroupItem value={item} />
+                            </FormControl>
+                            <FormLabel className="font-normal">
+                              {item}
+                            </FormLabel>
+                          </FormItem>
+                        ))}
+                      </RadioGroup>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -145,9 +204,36 @@ export default function JobCreateForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Role</FormLabel>
-                    <FormControl>
-                      <Textarea rows={5} placeholder="description" {...field} />
-                    </FormControl>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select role" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <ScrollArea className="h-48">
+                          {[
+                            "Software Engineer",
+                            "Product Manager",
+                            "Marketing Specialist",
+                            "Human Resources Manager",
+                            "Sales Representative",
+                            "Financial Analyst",
+                            "Customer Support Specialist",
+                            "Data Scientist",
+                            "Operations Manager",
+                            "Content Writer/Editor",
+                          ].map((item) => (
+                            <SelectItem value={item} key={item}>
+                              {item}
+                            </SelectItem>
+                          ))}
+                        </ScrollArea>
+                      </SelectContent>
+                    </Select>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -159,7 +245,7 @@ export default function JobCreateForm() {
                   <FormItem>
                     <FormLabel>Location</FormLabel>
                     <FormControl>
-                      <Textarea rows={5} placeholder="description" {...field} />
+                      <Input placeholder="Ex: Dhaka, Bangladesh" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -167,13 +253,42 @@ export default function JobCreateForm() {
               />
               <FormField
                 control={form.control}
-                name="expired"
+                name="expiredDate"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Expired</FormLabel>
-                    <FormControl>
-                      <Textarea rows={5} placeholder="description" {...field} />
-                    </FormControl>
+                  <FormItem className="flex flex-col">
+                    <FormLabel className="mb-1">Expired Date</FormLabel>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+                              "w-full !rounded-lg pl-4 !py-6 text-left font-normal",
+                              !field.value && "text-[#9CA3AF]"
+                            )}
+                          >
+                            {field.value ? (
+                              format(field.value, "PPP")
+                            ) : (
+                              <span>Pick a date</span>
+                            )}
+                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={field.value}
+                          onSelect={field.onChange}
+                          disabled={(date) =>
+                            date > new Date() || date < new Date("1900-01-01")
+                          }
+                          initialFocus
+                        />
+                      </PopoverContent>
+                    </Popover>
+
                     <FormMessage />
                   </FormItem>
                 )}
@@ -181,24 +296,48 @@ export default function JobCreateForm() {
               <FormField
                 control={form.control}
                 name="salaryType"
+                defaultValue="Monthly"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>SalaryType</FormLabel>
+                    <FormLabel>Salary</FormLabel>
                     <FormControl>
-                      <Textarea rows={5} placeholder="description" {...field} />
+                      <RadioGroup
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                        className="grid grid-cols-2 gap-6"
+                      >
+                        {["Hourly", "Monthly"].map((item) => (
+                          <FormItem
+                            className="has-[:checked]:border-primary has-[:checked]:border-2 h-28 w-full flex items-center justify-center border rounded-lg relative"
+                            key={item}
+                            onClick={() => form.setValue("salaryType", item)}
+                          >
+                            <FormControl>
+                              <RadioGroupItem
+                                value={item}
+                                className="hidden"
+                              ></RadioGroupItem>
+                            </FormControl>
+                            <FormLabel className="absolute inset-0 flex flex-col justify-center items-center gap-y-3">
+                              <Clock className="h-5 w-5" />
+                              {item}
+                            </FormLabel>
+                          </FormItem>
+                        ))}
+                      </RadioGroup>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
+
               <FormField
                 control={form.control}
                 name="salary"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Salary</FormLabel>
                     <FormControl>
-                      <Textarea rows={5} placeholder="description" {...field} />
+                      <Input {...field} placeholder="$ 0.00" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -208,24 +347,97 @@ export default function JobCreateForm() {
                 control={form.control}
                 name="isNegotiable"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Is Negotiable</FormLabel>
+                  <FormItem className="flex flex-row items-center space-x-3">
                     <FormControl>
-                      <Textarea rows={5} placeholder="description" {...field} />
+                      <Switch
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
                     </FormControl>
-                    <FormMessage />
+
+                    <FormLabel className="!mt-0">
+                      Salary is negotiable
+                    </FormLabel>
                   </FormItem>
                 )}
               />
               <FormField
                 control={form.control}
                 name="benefits"
-                render={({ field }) => (
+                render={() => (
                   <FormItem>
-                    <FormLabel>Benifits</FormLabel>
-                    <FormControl>
-                      <Textarea rows={5} placeholder="description" {...field} />
-                    </FormControl>
+                    <div className="mb-4">
+                      <FormLabel className="text-base">Benefits</FormLabel>
+                    </div>
+                    {[
+                      {
+                        label: "Competitive salary",
+                        id: "Competitive salary",
+                      },
+                      {
+                        label: "Career growth opportunities",
+                        id: "Career growth opportunities",
+                      },
+                      {
+                        label: "Work-life balance",
+                        id: "Work-life balance",
+                      },
+                      {
+                        label: "Professional development",
+                        id: "Professional development",
+                      },
+                      {
+                        label: "Health and wellness",
+                        id: "Health and wellness",
+                      },
+                      {
+                        label: "Positive work culture",
+                        id: "Positive work culture",
+                      },
+                      {
+                        label: "Recognition and rewards",
+                        id: "Recognition and rewards",
+                      },
+                      {
+                        label: "Learning opportunities",
+                        id: "Learning opportunities",
+                      },
+                    ].map((item) => (
+                      <FormField
+                        key={item.id}
+                        control={form.control}
+                        name="benefits"
+                        render={({ field }) => {
+                          return (
+                            <FormItem
+                              key={item.id}
+                              className="flex flex-row items-start space-x-3 space-y-0"
+                            >
+                              <FormControl>
+                                <Checkbox
+                                  checked={field.value?.includes(item.id)}
+                                  onCheckedChange={(checked) => {
+                                    return checked
+                                      ? field.onChange([
+                                          ...field?.value,
+                                          item.id,
+                                        ])
+                                      : field.onChange(
+                                          field.value?.filter(
+                                            (value) => value !== item.id
+                                          )
+                                        );
+                                  }}
+                                />
+                              </FormControl>
+                              <FormLabel className="text-sm font-normal">
+                                {item.label}
+                              </FormLabel>
+                            </FormItem>
+                          );
+                        }}
+                      />
+                    ))}
                     <FormMessage />
                   </FormItem>
                 )}
