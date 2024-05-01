@@ -1,5 +1,6 @@
 import DashboardMobileNavigation from "@/components/dashboard-mobile-navigation";
 import DashboardSidebar from "@/components/dashboard-sidebar";
+import { SearchModal } from "@/components/search-modal";
 import UserNav from "@/components/user-nav";
 
 export default function DashboardLayout({
@@ -15,11 +16,12 @@ export default function DashboardLayout({
           <DashboardSidebar />
         </div>
         <div className="ml-auto w-full lg:w-4/5">
-          <div className="sticky top-0 z-30 mb-8 flex items-center justify-between bg-white px-4 py-3 lg:px-8">
+          <div className="sticky top-0 z-30 mb-6 flex items-center justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/40 px-4 py-3 lg:px-8">
             <div className="flex items-center gap-x-4 mt-2">
               <div className="block lg:hidden">
                 <DashboardMobileNavigation />
               </div>
+              <SearchModal />
             </div>
             <UserNav />
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { CloudUploadIcon, TrashIcon } from "@/components/icons";
+import { TrashIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -198,18 +198,25 @@ export default function TeamMemberAddForm() {
                   <div
                     {...field}
                     {...getRootProps()}
-                    className="py-16 bg-indigo-50 px-6 rounded-xl text-center"
+                    className="py-14 bg-[#F9F9FA] px-6 rounded-xl text-center border border-dashed"
                   >
                     <input {...getInputProps()} />
-                    <span className="inline-block mx-auto">
-                      <CloudUploadIcon className="h-8 w-8 text-indigo-600" />
-                    </span>
-                    <p className="text-indigo-950 font-semibold text-base text-center">
-                      <span className="text-indigo-600">Click to upload</span>{" "}
-                      or drag and drop
+
+                    <Image
+                      src="/file-upload.svg"
+                      alt=""
+                      height={100}
+                      width={200}
+                      className="block mx-auto"
+                    />
+
+                    <p className="text-indigo-950 font-bold text-lg mt-5 text-center">
+                      Drop or Select File
                     </p>
-                    <p className="text-center text-base text-gray-600 mt-3 font-medium">
-                      Only .png, .jpg, .jpeg, .webp file are allowed
+                    <p className="text-center text-sm text-gray-600 mt-3 font-medium">
+                      Drop files here or click{" "}
+                      <span className="underline text-indigo-600">browse</span>{" "}
+                      thorough your machine
                     </p>
                   </div>
                 </FormControl>

@@ -1,6 +1,7 @@
 import { AnalyticsIcon } from "./analytics-icon";
 import { ArrowLeft } from "./arrow-left-icon";
 import { ArrowRight } from "./arrow-right-icon";
+import { ArrowUpDown } from "./arrow-up-down";
 import { BriefcaseIcon } from "./briefcase-icon";
 import { CalenderIcon } from "./calender-icon";
 import { ChatIcon } from "./chat-icon";
@@ -9,6 +10,7 @@ import { CheckRoundIcon } from "./check-round-icon";
 import { ChevronLeft } from "./chervon-left-icon";
 import { ChevronRight } from "./chervon-right-icon";
 import { ChevronDown } from "./chevron-down-icon";
+import { CirclePlus } from "./circle-plus-icon";
 import { ClockIcon } from "./clock-icon";
 import { CloudUploadIcon } from "./cloud-upload-icon";
 import { DollarBagIcon } from "./dollar-bag-icon";
@@ -45,6 +47,7 @@ export {
   AnalyticsIcon,
   ArrowLeft,
   ArrowRight,
+  ArrowUpDown,
   BriefcaseIcon,
   CalenderIcon,
   ChatIcon,
@@ -53,6 +56,7 @@ export {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
+  CirclePlus,
   ClockIcon,
   CloudUploadIcon,
   DollarBagIcon,

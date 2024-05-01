@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { BriefcaseIcon } from "./icons";
 import { buttonVariants } from "./ui/button";
 
-const userMenus = [
+export const adminMenus = [
   {
     id: 1,
     href: "/dashboard",
@@ -116,7 +116,7 @@ export default function DashboardSidebar({
             </svg>
           </Link>
           <div className="space-y-1">
-            {userMenus.map((menu) => (
+            {adminMenus.map((menu) => (
               <Link
                 key={menu.href}
                 href={menu.href}
