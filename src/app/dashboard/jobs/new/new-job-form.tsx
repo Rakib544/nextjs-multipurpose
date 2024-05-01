@@ -1,5 +1,6 @@
 "use client";
 
+import PlateEditor from "@/components/plate-editor";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -87,7 +88,7 @@ export default function JobCreateForm() {
                   <FormItem>
                     <FormLabel>Content</FormLabel>
                     <FormControl>
-                      <Textarea rows={5} placeholder="description" {...field} />
+                      <PlateEditor />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
