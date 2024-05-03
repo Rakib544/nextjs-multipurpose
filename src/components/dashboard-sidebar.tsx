@@ -1,72 +1,9 @@
 "use client";
+import { dashboardMenus } from "@/lib/data/dashboard-menus";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BriefcaseIcon } from "./icons";
 import { buttonVariants } from "./ui/button";
-
-export const adminMenus = [
-  {
-    id: 1,
-    href: "/dashboard",
-    label: "Dashboard",
-    icon: <BriefcaseIcon className="mr-2 h-4 w-4 text-indigo-950" />,
-  },
-  {
-    id: 2,
-    href: "/dashboard/jobs",
-    label: "Jobs",
-    icon: <BriefcaseIcon className="mr-2 h-4 w-4 text-indigo-950" />,
-  },
-  {
-    id: 3,
-    href: "/dashboard/job-applications",
-    label: "Job applications",
-    icon: <BriefcaseIcon className="mr-2 h-4 w-4 text-indigo-950" />,
-  },
-  {
-    id: 4,
-    href: "/dashboard/articles",
-    label: "Articles",
-    icon: <BriefcaseIcon className="mr-2 h-4 w-4 text-indigo-950" />,
-  },
-  {
-    id: 5,
-    href: "/dashboard/case-studies",
-    label: "Case Studies",
-    icon: <BriefcaseIcon className="mr-2 h-4 w-4 text-indigo-950" />,
-  },
-  {
-    id: 6,
-    href: "/dashboard/portfolios",
-    label: "Portfolios",
-    icon: <BriefcaseIcon className="mr-2 h-4 w-4 text-indigo-950" />,
-  },
-  {
-    id: 7,
-    href: "/dashboard/teams",
-    label: "Teams",
-    icon: <BriefcaseIcon className="mr-2 h-4 w-4 text-indigo-950" />,
-  },
-  {
-    id: 8,
-    href: "/dashboard/faq",
-    label: "Faq",
-    icon: <BriefcaseIcon className="mr-2 h-4 w-4 text-indigo-950" />,
-  },
-  {
-    id: 9,
-    href: "/dashboard/privacy-policy",
-    label: "Privacy & policy",
-    icon: <BriefcaseIcon className="mr-2 h-4 w-4 text-indigo-950" />,
-  },
-  {
-    id: 10,
-    href: "/dashboard/terms-condition",
-    label: "Terms & condition",
-    icon: <BriefcaseIcon className="mr-2 h-4 w-4 text-indigo-950" />,
-  },
-];
 
 export default function DashboardSidebar({
   className,
@@ -116,20 +53,21 @@ export default function DashboardSidebar({
             </svg>
           </Link>
           <div className="space-y-1">
-            {adminMenus.map((menu) => (
+            {dashboardMenus.map((menu) => (
               <Link
                 key={menu.href}
                 href={menu.href}
+                data-state={pathname === menu.href ? "active" : "inactive"}
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
                   pathname === menu.href
-                    ? " !border-indigo-700 bg-muted hover:bg-muted"
+                    ? "bg-muted !text-indigo-500 hover:bg-indigo-50"
                     : "hover:bg-muted",
-                  "flex items-center font-medium justify-start !rounded-none border-l-4 border-transparent"
+                  "flex !items-center group gap-x-1.5 text-gray-600 font-semibold justify-start min-h-11 !rounded-lg"
                 )}
               >
                 {menu.icon}
-                {menu.label}
+                <span className="mt-0.5">{menu.label}</span>
               </Link>
             ))}
           </div>

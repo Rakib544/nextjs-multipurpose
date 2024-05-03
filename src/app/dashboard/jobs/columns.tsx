@@ -53,6 +53,7 @@ export const columns: ColumnDef<Job>[] = [
       return (
         <Button
           variant="ghost"
+          className="px-0 font-semibold"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Posted Date
@@ -67,7 +68,7 @@ export const columns: ColumnDef<Job>[] = [
   },
   {
     accessorKey: "jobType",
-    header: "Job Type",
+    header: "Position",
   },
   {
     accessorKey: "status",

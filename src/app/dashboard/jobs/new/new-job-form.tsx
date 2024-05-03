@@ -32,29 +32,25 @@ import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { format } from "date-fns";
 import { CalendarIcon, Clock } from "lucide-react";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useDebounceValue } from "usehooks-ts";
 import { z } from "zod";
 
 const FormSchema = z.object({
-  title: z.string().trim().min(1, { message: "Name is required" }),
-  content: z.string().trim().min(1, { message: "Job title is required" }),
-  employmentType: z
-    .string()
-    .trim()
-    .min(6, { message: "Description is required" }),
-  experience: z.any().refine((val) => val, "Profile image is required"),
-  role: z.string().trim().min(1, { message: "Facebook URL is required" }),
-  skills: z.string().trim().min(1, { message: "Instagram URL is required" }),
-  workingSchedule: z
-    .string()
-    .trim()
-    .min(1, { message: "Twitter URL is required" }),
-  location: z.string().trim().min(1, { message: "Dribble URL is required" }),
+  title: z.string().trim().min(1, { message: "Title is required" }),
+  content: z.string().trim().min(1, { message: "Content is required." }),
+  employmentType: z.string().trim().min(1, { message: "Required" }),
+  experience: z.string().trim().min(1, { message: "Required" }),
+  role: z.string().trim().min(1, { message: "Required" }),
+  skills: z.string().trim().min(1, { message: "Required" }),
+  workingSchedule: z.string().trim().min(1, { message: "Required" }),
+  location: z.string().trim().min(1, { message: "Required" }),
   expiredDate: z.date({
     required_error: "Expired date is required.",
   }),
-  salaryType: z.string().trim().min(1, { message: "Dribble URL is required" }),
-  salary: z.string().trim().min(1, { message: "Dribble URL is required" }),
+  salaryType: z.string().trim().min(1, { message: "Required" }),
+  salary: z.string().trim().min(1, { message: "Required" }),
   isNegotiable: z.boolean().default(false).optional(),
   benefits: z.array(z.string()).refine((value) => value.some((item) => item), {
     message: "You have to select at least one item.",
@@ -73,6 +69,18 @@ export default function JobCreateForm() {
   async function onSubmit(data: FormValues) {
     console.log(data);
   }
+
+  const [debounceValue, updateDebounceValue] = useDebounceValue("", 500);
+
+  const onInputChange = (data: string) => {
+    updateDebounceValue(data);
+  };
+
+  useEffect(() => {
+    form.setValue("content", debounceValue);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debounceValue]);
+
   return (
     <div>
       <Form {...form}>
@@ -110,7 +118,7 @@ export default function JobCreateForm() {
                   <FormItem>
                     <FormLabel>Content</FormLabel>
                     <FormControl>
-                      <PlateEditor />
+                      <PlateEditor onInputChange={onInputChange} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

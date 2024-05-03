@@ -1,6 +1,7 @@
 import DashboardMobileNavigation from "@/components/dashboard-mobile-navigation";
 import DashboardSidebar from "@/components/dashboard-sidebar";
 import { SearchModal } from "@/components/search-modal";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import UserNav from "@/components/user-nav";
 
 export default function DashboardLayout({
@@ -11,9 +12,11 @@ export default function DashboardLayout({
   return (
     <div className="w-full ">
       <div className="flex min-h-screen flex-col rounded-md lg:flex-row">
-        <div className=" fixed bottom-0 left-0 top-0 hidden max-h-screen w-1/5  overflow-y-auto border-r border-slate-200 bg-white px-3 lg:block">
+        <div className=" fixed bottom-0 left-0 top-0 hidden max-h-screen w-1/5  overflow-y-auto border-r border-slate-200 bg-white mx-3 lg:block">
           {" "}
-          <DashboardSidebar />
+          <ScrollArea className="h-screen">
+            <DashboardSidebar />
+          </ScrollArea>
         </div>
         <div className="ml-auto w-full lg:w-4/5">
           <div className="sticky top-0 z-30 mb-6 flex items-center justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/40 px-4 py-3 lg:px-8">

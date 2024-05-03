@@ -119,13 +119,13 @@ export function DataTable<TData, TValue>({
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow
-                className="border-b odd:bg-white transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                className="border-b !bg-[#F4F6F8] transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
                 key={headerGroup.id}
               >
                 {headerGroup.headers.map((header) => {
                   return (
                     <TableHead
-                      className="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+                      className="h-16 px-4 text-left align-middle font-semibold text-[#637381] [&:has([role=checkbox])]:pr-0"
                       key={header.id}
                     >
                       {header.isPlaceholder

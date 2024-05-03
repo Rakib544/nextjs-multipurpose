@@ -7,14 +7,14 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import { dashboardMenus } from "@/lib/data/dashboard-menus";
 import Link from "next/link";
 import { ChangeEvent, useState } from "react";
-import { adminMenus } from "./dashboard-sidebar";
 import { UsersIcon } from "./icons";
 import { ScrollArea } from "./ui/scroll-area";
 
 const menus = [
-  ...adminMenus,
+  ...dashboardMenus,
   {
     id: 22,
     label: "Create Job",
