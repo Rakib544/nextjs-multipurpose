@@ -18,17 +18,24 @@ import { TooltipProvider } from "./plate-ui/tooltip";
 
 export default function PlateEditor({
   onInputChange,
-}: {
-  onInputChange: (data: string) => void;
-}) {
-  const containerRef = useRef(null);
-  const initialValue = [
+  initialValue = [
     {
       id: "1",
       type: ELEMENT_PARAGRAPH,
       children: [{ text: "Write content" }],
     },
-  ];
+  ],
+}: {
+  onInputChange: (data: string) => void;
+  initialValue?:
+    | Array<{
+        id: string;
+        type: string;
+        children: Array<{ text: string }>;
+      }>
+    | any;
+}) {
+  const containerRef = useRef(null);
 
   return (
     <>
@@ -53,7 +60,7 @@ export default function PlateEditor({
                 </FixedToolbar>
 
                 <Editor
-                  className="px-5 py-3 bg-[#F6F7F8] text-[#919EAB]"
+                  className="px-5 py-3 "
                   autoFocus
                   focusRing={false}
                   variant="ghost"

@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import Description from "@/components/description";
 import { PageIntro } from "@/components/page-intro";
 import {
   Breadcrumb,
@@ -72,10 +73,7 @@ export default function TermsAndCondition() {
             </ul>
           </div>
           <div className="col-span-12 md:col-span-9">
-            <div
-              dangerouslySetInnerHTML={{ __html: termsConditionData }}
-              className="prose prose-slate max-w-none prose-base  prose-h3:font-bold prose-h3:text-lg"
-            />
+            <Description description={termsConditionData} />
           </div>
         </div>
       </Container>

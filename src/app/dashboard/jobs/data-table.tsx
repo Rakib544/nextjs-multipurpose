@@ -125,7 +125,7 @@ export function DataTable<TData, TValue>({
                 {headerGroup.headers.map((header) => {
                   return (
                     <TableHead
-                      className="h-16 px-4 text-left align-middle font-semibold text-[#637381] [&:has([role=checkbox])]:pr-0"
+                      className="h-16 px-4 text-left align-middle font-semibold text-indigo-950 [&:has([role=checkbox])]:pr-0"
                       key={header.id}
                     >
                       {header.isPlaceholder
@@ -149,7 +149,7 @@ export function DataTable<TData, TValue>({
                   data-state={row.getIsSelected() && "selected"}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell className="font-medium" key={cell.id}>
+                    <TableCell className="font-normal text-sm" key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()

@@ -11,6 +11,16 @@ export default function DashboardSidebar({
   className?: string;
 }) {
   const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    const slicedPath = path.slice(10);
+    const slicedCurrentPath = pathname.slice(10);
+    if (slicedPath === "") {
+      return slicedPath === slicedCurrentPath;
+    }
+    return pathname.slice(10).startsWith(path.slice(10));
+  };
+
   return (
     <div className={cn("pb-12", className)}>
       <div className="space-y-4 py-4">
@@ -57,13 +67,13 @@ export default function DashboardSidebar({
               <Link
                 key={menu.href}
                 href={menu.href}
-                data-state={pathname === menu.href ? "active" : "inactive"}
+                data-state={isActive(menu.href) ? "active" : "inactive"}
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
-                  pathname === menu.href
-                    ? "bg-muted !text-indigo-500 hover:bg-indigo-50"
+                  isActive(menu.href)
+                    ? "bg-indigo-50 !text-indigo-500 hover:bg-indigo-50"
                     : "hover:bg-muted",
-                  "flex !items-center group gap-x-1.5 text-gray-600 font-semibold justify-start min-h-11 !rounded-lg"
+                  "flex !items-center group gap-x-1.5 text-gray-600 font-medium justify-start min-h-11 !rounded-lg"
                 )}
               >
                 {menu.icon}
