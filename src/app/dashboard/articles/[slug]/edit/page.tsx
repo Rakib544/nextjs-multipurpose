@@ -7,13 +7,13 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import Link from "next/link";
-import ArticleCreateForm from "./new-article-form";
+import ArticleEditForm from "./article-edit-form";
 
-export default function CreateJob() {
+export default function ArticleEditPage() {
   return (
     <div>
       <h2 className="text-xl md:text-2xl font-bold text-indigo-950 mb-3">
-        Create a new post
+        Edit Article
       </h2>
       <Breadcrumb>
         <BreadcrumbList>
@@ -31,13 +31,13 @@ export default function CreateJob() {
           <BreadcrumbSeparator />
           <BreadcrumbItem className="text-sm">
             <BreadcrumbPage className="text-muted-foreground">
-              Create
+              How to become a software engineer
             </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
       <div className="py-10">
-        <ArticleCreateForm />
+        <ArticleEditForm />
       </div>
     </div>
   );

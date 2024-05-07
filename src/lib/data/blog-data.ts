@@ -170,45 +170,195 @@ export const blogComments = [
   },
 ];
 
-export const blogDetails = `<h3>1. Set Clear Goals</h3>
-
-<p>Before you start managing your time, it's essential to set clear and achievable goals. Identify what you want to accomplish and break it down into smaller, actionable tasks.</p>
-
-<h3>2. Prioritize Your Tasks</h3>
-
-<p>Not all tasks are created equal. Prioritize your tasks based on their importance and urgency. Focus on completing high-priority tasks first to ensure you're making progress towards your goals.</p>
-
-<h3>3. Use a Calendar or Planner</h3>
-
-<p>Utilize a calendar or planner to organize your schedule and keep track of important deadlines and appointments. Set reminders and allocate specific time slots for each task to stay on track.</p>
-
-<h3>4. Minimize Distractions</h3>
-
-<p>Avoid distractions such as social media, email notifications, or unnecessary meetings that can derail your focus and productivity. Create a conducive work environment free from distractions to maximize your efficiency.</p>
-
-<h3>5. Break Tasks into Smaller Steps</h3>
-
-<p>If you're facing a large or daunting task, break it down into smaller, more manageable steps. This approach makes the task less overwhelming and allows you to make progress incrementally.</p>
-
-<h3>6. Set Time Limits</h3>
-
-<p>Allocate specific time limits for each task to prevent them from dragging on indefinitely. Use techniques such as the Pomodoro Technique, which involves working for 25 minutes followed by a short break, to maintain focus and productivity.</p>
-
-<h3>7. Learn to Delegate</h3>
-
-<p>Recognize when you're overwhelmed or when tasks can be better handled by someone else. Delegate tasks that are outside your expertise or that can be done more efficiently by others, freeing up your time for more critical activities.</p>
-
-<h3>8. Take Regular Breaks</h3>
-
-<p>Rest and relaxation are essential for maintaining productivity and avoiding burnout. Take regular breaks throughout the day to recharge and rejuvenate your mind and body.</p>
-
-<h3>9. Review and Adjust</h3>
-
-<p>Periodically review your time management strategies and assess their effectiveness. Identify areas for improvement and adjust your approach accordingly to optimize your productivity.</p>
-
-<h3>10. Practice Self-Discipline</h3>
-
-<p>Effective time management requires discipline and commitment. Stay disciplined in sticking to your schedule and following through with your plans, even when faced with challenges or distractions.</p>
-
-<p>By implementing these tips into your daily routine, you can enhance your time management skills and achieve greater productivity and success in all areas of your life.</p>
-`;
+export const blogDetails = [
+  {
+    type: "h3",
+    lineHeight: 2,
+    align: "left",
+    children: [{ text: "1. Set Clear Goals", bold: true }],
+    id: "x4vvx",
+  },
+  {
+    type: "p",
+    align: "left",
+    children: [
+      {
+        text: "Before you start managing your time, it's essential to set clear and achievable goals. Identify what you want to accomplish and break it down into smaller, actionable tasks.",
+      },
+    ],
+    id: "ifevs",
+    lineHeight: 2,
+  },
+  {
+    type: "h3",
+    lineHeight: 2,
+    align: "left",
+    children: [{ text: "2. Prioritize Your Tasks", bold: true }],
+    id: "gdad0",
+  },
+  {
+    type: "p",
+    align: "left",
+    children: [
+      {
+        text: "Not all tasks are created equal. Prioritize your tasks based on their importance and urgency. Focus on completing high-priority tasks first to ensure you're making progress towards your goals.",
+      },
+    ],
+    id: "6o99c",
+    lineHeight: 2,
+  },
+  {
+    type: "h3",
+    lineHeight: 2,
+    align: "left",
+    children: [{ text: "3. Use a Calendar or Planner", bold: true }],
+    id: "kq9hz",
+  },
+  {
+    type: "p",
+    align: "left",
+    children: [
+      {
+        text: "Utilize a calendar or planner to organize your schedule and keep track of important deadlines and appointments. Set reminders and allocate specific time slots for each task to stay on track.",
+      },
+    ],
+    id: "ijrpc",
+    lineHeight: 2,
+  },
+  {
+    type: "h3",
+    lineHeight: 2,
+    align: "left",
+    children: [{ text: "4. Minimize Distractions", bold: true }],
+    id: "fn6oi",
+  },
+  {
+    type: "p",
+    align: "left",
+    children: [
+      {
+        text: "Avoid distractions such as social media, email notifications, or unnecessary meetings that can derail your focus and productivity. Create a conducive work environment free from distractions to maximize your efficiency.",
+      },
+    ],
+    id: "8vx6s",
+    lineHeight: 2,
+  },
+  {
+    type: "h3",
+    lineHeight: 2,
+    align: "left",
+    children: [{ text: "5. Break Tasks into Smaller Steps", bold: true }],
+    id: "kgdm4",
+  },
+  {
+    type: "p",
+    align: "left",
+    children: [
+      {
+        text: "If you're facing a large or daunting task, break it down into smaller, more manageable steps. This approach makes the task less overwhelming and allows you to make progress incrementally.",
+      },
+    ],
+    id: "07g9f",
+    lineHeight: 2,
+  },
+  {
+    type: "h3",
+    lineHeight: 2,
+    align: "left",
+    children: [{ text: "6. Set Time Limits", bold: true }],
+    id: "zlfel",
+  },
+  {
+    type: "p",
+    align: "left",
+    children: [
+      {
+        text: "Allocate specific time limits for each task to prevent them from dragging on indefinitely. Use techniques such as the Pomodoro Technique, which involves working for 25 minutes followed by a short break, to maintain focus and productivity.",
+      },
+    ],
+    id: "y7ppu",
+    lineHeight: 2,
+  },
+  {
+    type: "h3",
+    lineHeight: 2,
+    align: "left",
+    children: [{ text: "7. Learn to Delegate", bold: true }],
+    id: "h92h4",
+  },
+  {
+    type: "p",
+    align: "left",
+    children: [
+      {
+        text: "Recognize when you're overwhelmed or when tasks can be better handled by someone else. Delegate tasks that are outside your expertise or that can be done more efficiently by others, freeing up your time for more critical activities.",
+      },
+    ],
+    id: "jee0u",
+    lineHeight: 2,
+  },
+  {
+    type: "h3",
+    lineHeight: 2,
+    align: "left",
+    children: [{ text: "8. Take Regular Breaks", bold: true }],
+    id: "i6vtj",
+  },
+  {
+    type: "p",
+    align: "left",
+    children: [
+      {
+        text: "Rest and relaxation are essential for maintaining productivity and avoiding burnout. Take regular breaks throughout the day to recharge and rejuvenate your mind and body.",
+      },
+    ],
+    id: "6ce12",
+    lineHeight: 2,
+  },
+  {
+    type: "h3",
+    lineHeight: 2,
+    align: "left",
+    children: [{ text: "9. Review and Adjust", bold: true }],
+    id: "u15a8",
+  },
+  {
+    type: "p",
+    align: "left",
+    children: [
+      {
+        text: "Periodically review your time management strategies and assess their effectiveness. Identify areas for improvement and adjust your approach accordingly to optimize your productivity.",
+      },
+    ],
+    id: "fuo52",
+    lineHeight: 2,
+  },
+  {
+    type: "h3",
+    lineHeight: 2,
+    align: "left",
+    children: [{ text: "10. Practice Self-Discipline", bold: true }],
+    id: "ievys",
+  },
+  {
+    type: "p",
+    align: "left",
+    children: [
+      {
+        text: "Effective time management requires discipline and commitment. Stay disciplined in sticking to your schedule and following through with your plans, even when faced with challenges or distractions.",
+      },
+    ],
+    id: "he2a8",
+    lineHeight: 2,
+  },
+  {
+    id: "1",
+    type: "p",
+    children: [
+      {
+        text: "By implementing these tips into your daily routine, you can enhance your time management skills and achieve greater productivity and success in all areas of your life.Write content",
+      },
+    ],
+    lineHeight: 2,
+  },
+];

@@ -42,9 +42,23 @@ const FormSchema = z.object({
   twitterURL: z.string().trim().min(1, { message: "Twitter URL is required" }),
   dribbleURL: z.string().trim().min(1, { message: "Dribble URL is required" }),
 });
-export default function TeamMemberAddForm() {
+export default function TeamMemberEditForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
+    defaultValues: {
+      name: "John Doe",
+      address: "Gazipur, Dhaka, Bangladesh",
+      city: "Gazipur",
+      country: "Bangladesh",
+      zip: "1743",
+      phone: "+8804293829382",
+      state: "Dhaka",
+      jobTitle: "Software Engineer",
+      twitterURL: "https://twitter.com/",
+      dribbleURL: "https://dribble.com/",
+      facebookURL: "https://facebook.com/",
+      instagramURL: "https://instagram.com/",
+    },
   });
   type FormValues = z.infer<typeof FormSchema>;
 

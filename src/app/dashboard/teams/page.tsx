@@ -39,22 +39,24 @@ const users: Payment[] = [
 export default async function Students() {
   return (
     <div>
-      <Breadcrumb className="lg:fixed top-6 z-50">
+      <h2 className="text-xl md:text-2xl font-bold text-indigo-950 mb-3">
+        Manage team members
+      </h2>
+      <Breadcrumb>
         <BreadcrumbList>
-          <BreadcrumbItem>
+          <BreadcrumbItem className="text-sm text-gray-800 font-medium">
             <BreadcrumbLink asChild>
               <Link href="/dashboard">Dashboard</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
-          <BreadcrumbItem>
+          <BreadcrumbItem className="text-sm text-gray-800 font-medium">
             <BreadcrumbLink asChild>
-              <Link href="/dashboard/teams">Teams</Link>
+              <Link href="/dashboard/articles">Teams</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <h2 className="text-xl md:text-2xl font-bold">Manage team members</h2>
       <div className="mx-auto w-full overflow-x-auto py-10">
         <DataTable columns={columns} data={users} />
       </div>

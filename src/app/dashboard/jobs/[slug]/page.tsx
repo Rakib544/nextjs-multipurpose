@@ -23,7 +23,7 @@ export default function JobDetails() {
       >
         <ArrowLeft className="h-4 w-4 mr-1.5" /> Back
       </Link>
-      <FadeIn className="mt-12">
+      <FadeIn className="mt-12 mb-6">
         <h1 className="font-extrabold text-2xl md:text-3xl">
           Senior Software Engineer
         </h1>

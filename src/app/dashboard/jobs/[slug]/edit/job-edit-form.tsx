@@ -483,9 +483,7 @@ export default function JobEditForm() {
                   </FormItem>
                 )}
               />
-              {/* <div className="flex items-center gap-x-2 font-bold text-sm text-indigo-950">
-                <Switch /> Publish
-              </div> */}
+
               <Button type="submit" size="lg">
                 Create Job
               </Button>

@@ -1,6 +1,5 @@
 "use client";
 
-import { TrashIcon } from "@/components/icons";
 import PlateEditor from "@/components/plate-editor";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,7 +11,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { TrashIcon } from "lucide-react";
 import Image from "next/image";
 import { useEffect } from "react";
 import { useDropzone } from "react-dropzone";
@@ -21,30 +23,23 @@ import { useDebounceValue } from "usehooks-ts";
 import { z } from "zod";
 
 const FormSchema = z.object({
-  name: z.string().trim().min(1, { message: "Name is required" }),
-  jobTitle: z.string().trim().min(1, { message: "Job title is required" }),
-  phone: z.string().trim().min(1, { message: "Required" }),
-  country: z.string().trim().min(1, { message: "Required" }),
-  state: z.string().trim().min(1, { message: "Required" }),
-  city: z.string().trim().min(1, { message: "Required" }),
-  address: z.string().trim().min(1, { message: "Required" }),
-  zip: z.string().trim().min(1, { message: "Required" }),
-  description: z.string().trim().min(6, { message: "Description is required" }),
-  image: z.any().refine((val) => val, "Profile image is required"),
-  facebookURL: z
+  title: z.string().trim().min(1, { message: "Title is required" }),
+  shortDescription: z
     .string()
     .trim()
-    .min(1, { message: "Facebook URL is required" }),
-  instagramURL: z
-    .string()
-    .trim()
-    .min(1, { message: "Instagram URL is required" }),
-  twitterURL: z.string().trim().min(1, { message: "Twitter URL is required" }),
-  dribbleURL: z.string().trim().min(1, { message: "Dribble URL is required" }),
+    .min(1, { message: "Short description is required" }),
+  content: z.string().trim().min(1, { message: "Content is required." }),
+  cover: z.any().refine((val) => val, "Cover image is required"),
+  tags: z.string().trim().min(1, { message: "Required" }),
+  metaTitle: z.string().trim().min(1, { message: "Required" }),
+  metaDescription: z.string().trim().min(1, { message: "Required" }),
+  metaKeywords: z.string().trim().min(1, { message: "Required" }),
+  isPublished: z.boolean().optional(),
 });
-export default function TeamMemberAddForm() {
+export default function ArticleCreateForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
+    defaultValues: {},
   });
   type FormValues = z.infer<typeof FormSchema>;
 
@@ -59,17 +54,17 @@ export default function TeamMemberAddForm() {
   };
 
   useEffect(() => {
-    form.setValue("description", debounceValue);
+    form.setValue("content", debounceValue);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debounceValue]);
 
   const onDrop = (acceptedFiles: any, rejectedFiles: any) => {
     if (acceptedFiles.length > 0) {
-      form.setValue("image", acceptedFiles[0]);
+      form.setValue("cover", acceptedFiles[0]);
     }
 
     if (rejectedFiles.length > 0) {
-      form.setError("image", { message: "Please upload image only file." });
+      form.setError("cover", { message: "Please upload image file." });
     }
   };
 
@@ -82,12 +77,13 @@ export default function TeamMemberAddForm() {
 
   const removeFile = () => {
     acceptedFiles.splice(0, 1);
-    form.resetField("image");
+    form.resetField("cover");
   };
+
   return (
     <div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)}>
           <div className="grid grid-cols-12 gap-6 mt-12">
             <div className="col-span-12 md:col-span-4">
               <h3 className="text-lg font-bold">Details</h3>
@@ -98,15 +94,15 @@ export default function TeamMemberAddForm() {
             <div className="col-span-12 md:col-span-8 shadow-custom bg-white border-border/40 border p-6  rounded-lg space-y-6">
               <FormField
                 control={form.control}
-                name="name"
+                name="title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>Title</FormLabel>
                     <FormControl>
                       <Input
                         autoFocus
                         {...field}
-                        placeholder="John Doe"
+                        placeholder="Ex: Software Engineer"
                         className=""
                       />
                     </FormControl>
@@ -116,113 +112,27 @@ export default function TeamMemberAddForm() {
               />
               <FormField
                 control={form.control}
-                name="phone"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Phone</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Phone number"
-                        {...field}
-                        className=""
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="country"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Country</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Bangladesh" {...field} className="" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="state"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>State/Region</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="State/Region"
-                        {...field}
-                        className=""
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="city"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>City</FormLabel>
-                    <FormControl>
-                      <Input placeholder="City" {...field} className="" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="address"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Address</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Address" {...field} className="" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="zip"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Zip/Code</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Zip/Code" {...field} className="" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="jobTitle"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Position</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Software Engineer"
-                        {...field}
-                        className=""
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="description"
+                name="shortDescription"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Description</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        {...field}
+                        placeholder="Description"
+                        className=""
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="content"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Content</FormLabel>
                     <FormControl>
                       <PlateEditor onInputChange={onInputChange} />
                     </FormControl>
@@ -232,7 +142,7 @@ export default function TeamMemberAddForm() {
               />
               <FormField
                 control={form.control}
-                name="image"
+                name="cover"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Profile Image</FormLabel>
@@ -269,14 +179,13 @@ export default function TeamMemberAddForm() {
                 )}
               />
 
-              {form.watch("image") ? (
-                <div className="relative p-4 border rounded-xl">
+              {form.watch("cover") ? (
+                <div className="relative p-4 border rounded-xl aspect-video">
                   <Image
-                    src={URL.createObjectURL(form.getValues("image") as Blob)}
+                    src={URL.createObjectURL(form.getValues("cover") as Blob)}
                     alt="demo"
-                    className="object-cover object-center h-20 w-20 rounded-full border"
-                    width={80}
-                    height={80}
+                    fill
+                    className="object-cover object-center border"
                   />
 
                   <Button
@@ -291,24 +200,50 @@ export default function TeamMemberAddForm() {
               ) : null}
             </div>
           </div>
-
           <div className="grid grid-cols-12 gap-6 mt-12">
             <div className="col-span-12 md:col-span-4">
               <h3 className="text-lg font-bold">Properties</h3>
-              <p className="text-base text-gray-600">social profiles, ....</p>
+              <p className="text-base text-gray-600">
+                Additional functions and attributes...
+              </p>
             </div>
             <div className="col-span-12 md:col-span-8 shadow-custom bg-white border-border/40 border p-6  rounded-lg space-y-6">
               <FormField
                 control={form.control}
-                name="facebookURL"
+                name="tags"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Facebook URL</FormLabel>
+                    <FormLabel>Tags</FormLabel>
+                    <FormControl>
+                      <Input {...field} placeholder="tags" className="" />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="metaTitle"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Meta Title</FormLabel>
+                    <FormControl>
+                      <Input {...field} placeholder="meta title" className="" />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="metaDescription"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Meta Description</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="https://facebook.com/userId"
-                        type="url"
                         {...field}
+                        placeholder="meta description"
                         className=""
                       />
                     </FormControl>
@@ -318,53 +253,12 @@ export default function TeamMemberAddForm() {
               />
               <FormField
                 control={form.control}
-                name="instagramURL"
+                name="metaKeywords"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Instagram URL</FormLabel>
+                    <FormLabel>Meta Keywords</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="https://instagram.com/userId"
-                        type="url"
-                        {...field}
-                        className=""
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="twitterURL"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Twitter URL</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="https://twitter.com/userId"
-                        type="url"
-                        {...field}
-                        className=""
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="dribbleURL"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>DribbleURL URL</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="https://dribble.com/userId"
-                        type="url"
-                        {...field}
-                        className=""
-                      />
+                      <Input {...field} placeholder="keywords" className="" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -375,9 +269,25 @@ export default function TeamMemberAddForm() {
 
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-4"></div>
-            <div className="col-span-12 md:col-span-8 flex justify-end mt-8">
+            <div className="col-span-12 md:col-span-8 flex justify-between mt-8">
+              <FormField
+                control={form.control}
+                name="isPublished"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-center space-x-3">
+                    <FormControl>
+                      <Switch
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                    </FormControl>
+
+                    <FormLabel className="!mt-0">Published</FormLabel>
+                  </FormItem>
+                )}
+              />
               <Button type="submit" size="lg">
-                Add Member
+                Create Job
               </Button>
             </div>
           </div>

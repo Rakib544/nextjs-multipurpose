@@ -55,7 +55,7 @@ const FormSchema = z.object({
   benefits: z.array(z.string()).refine((value) => value.some((item) => item), {
     message: "You have to select at least one item.",
   }),
-  isPublished: z.string().trim().min(1, { message: "Required" }),
+  isPublished: z.boolean().optional(),
 });
 export default function JobCreateForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -456,9 +456,22 @@ export default function JobCreateForm() {
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-4"></div>
             <div className="col-span-12 md:col-span-8 flex justify-between mt-8">
-              <div className="flex items-center gap-x-2 font-bold text-sm text-indigo-950">
-                <Switch /> Publish
-              </div>
+              <FormField
+                control={form.control}
+                name="isPublished"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-center space-x-3">
+                    <FormControl>
+                      <Switch
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                    </FormControl>
+
+                    <FormLabel className="!mt-0">Published</FormLabel>
+                  </FormItem>
+                )}
+              />
               <Button type="submit" size="lg">
                 Create Job
               </Button>

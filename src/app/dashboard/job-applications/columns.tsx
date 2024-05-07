@@ -8,25 +8,25 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { type ColumnDef } from "@tanstack/react-table";
-import Image from "next/image";
 import Link from "next/link";
 
-export type Payment = {
-  id: string;
-  user: {
-    name: string;
-    image: string;
-  };
+export type Application = {
+  id: number;
+  applicantName: string;
+  applicantEmail: string;
+  jobTitle: string;
+  appliedDate: string;
+  position: string;
+  status: string;
   phone: string;
-  status: "active" | "suspended";
-  email: string;
-  country: string;
+  bio: string;
 };
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Application>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -47,52 +47,36 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "user",
-    header: "User",
+    accessorKey: "applicantEmail",
+    header: "Applicant",
     cell: ({ row }) => {
-      const { user } = row.original;
-
+      const { applicantName, applicantEmail } = row.original;
       return (
-        <div className="flex items-center gap-x-2">
-          <div className="shrink-0 size-10">
-            <Image
-              src={user.image}
-              alt={user.name}
-              height={30}
-              width={30}
-              // placeholder="blur"
-              // blurDataURL={generateBlurImageURL()}
-              className="h-full w-full object-cover object-center rounded-full"
-            />
-          </div>
-          <div>
-            <h3>{user.name}</h3>
-          </div>
+        <div>
+          <h3 className="font-bold">{applicantName}</h3>
+          <p>{applicantEmail}</p>
         </div>
       );
     },
   },
   {
-    accessorKey: "email",
+    accessorKey: "appliedDate",
     header: ({ column }) => {
       return (
         <Button
           variant="ghost"
+          className="px-0 font-semibold"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Email
+          Applied Date
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
     },
   },
   {
-    accessorKey: "phone",
-    header: "Phone",
-  },
-  {
-    accessorKey: "country",
-    header: "Country",
+    accessorKey: "position",
+    header: "Position",
   },
   {
     accessorKey: "status",
@@ -101,8 +85,6 @@ export const columns: ColumnDef<Payment>[] = [
   {
     id: "actions",
     cell: ({ row }) => {
-      const payment = row.original;
-
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -113,14 +95,15 @@ export const columns: ColumnDef<Payment>[] = [
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem asChild>
-              <Link href="/dashboard/teams/1/edit">Edit</Link>
+
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <Link href="/dashboard/jobs/1">View</Link>
             </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
-            >
-              Delete
+            <DropdownMenuItem>
+              <Link href="/dashboard/jobs/1/edit">Edit</Link>
             </DropdownMenuItem>
+            <DropdownMenuItem>Delete</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );
