@@ -14,7 +14,7 @@ export default function JobDetails() {
   return (
     <div>
       <Link
-        href="/dashboard/jobs"
+        href="/dashboard/articles"
         className={buttonVariants({ variant: "ghost" })}
       >
         <ArrowLeft className="h-4 w-4 mr-1.5" /> Back

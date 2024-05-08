@@ -7,13 +7,13 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import Link from "next/link";
-import TeamMemberAddForm from "./team-member-add-form";
+import PortfoliosEditForm from "./portfolios-edit-form";
 
-export default function AddNewMember() {
+export default function ArticleEditPage() {
   return (
     <div>
       <h2 className="text-xl md:text-2xl font-bold text-indigo-950 mb-3">
-        Add new member
+        Edit Portfolio
       </h2>
       <Breadcrumb>
         <BreadcrumbList>
@@ -25,19 +25,19 @@ export default function AddNewMember() {
           <BreadcrumbSeparator />
           <BreadcrumbItem className="text-sm text-gray-800 font-medium">
             <BreadcrumbLink asChild>
-              <Link href="/dashboard/teams">Teams</Link>
+              <Link href="/dashboard/portfolios">Portfolios</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem className="text-sm">
             <BreadcrumbPage className="text-muted-foreground">
-              New
+              Edit
             </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
       <div className="py-10">
-        <TeamMemberAddForm />
+        <PortfoliosEditForm />
       </div>
     </div>
   );

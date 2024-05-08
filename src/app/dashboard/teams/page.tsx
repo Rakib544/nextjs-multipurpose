@@ -52,7 +52,7 @@ export default async function Students() {
           <BreadcrumbSeparator />
           <BreadcrumbItem className="text-sm text-gray-800 font-medium">
             <BreadcrumbLink asChild>
-              <Link href="/dashboard/articles">Teams</Link>
+              <Link href="/dashboard/teams">Teams</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>

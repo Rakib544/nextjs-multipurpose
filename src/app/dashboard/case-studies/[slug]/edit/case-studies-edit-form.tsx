@@ -59,10 +59,18 @@ const FormSchema = z.object({
   conclusion: z.string().trim().min(1, { message: "Conclusion is required" }),
   isPublished: z.boolean().optional(),
 });
-export default function PortfolioCreateForm() {
+export default function CaseStudiesEditForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
+      clientName: "Fullstack Company LTD.",
+      title: "Enhanced website performance",
+      shortDescription:
+        "Following the launch of the new website, XYZ Corporation experienced a significant increase in online visibility and organic traffic.",
+      conclusion:
+        "Following the launch of the new website, XYZ Corporation experienced a significant increase in online visibility and organic traffic.",
+      isPublished: true,
+      services: "Web development, SEO",
       objectives: [
         {
           value: "Design and develop a modern, user-centric website.",

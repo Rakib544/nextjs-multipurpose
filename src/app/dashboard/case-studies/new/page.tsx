@@ -7,31 +7,38 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import Link from "next/link";
-import CaseStudiesCreateForm from "./case-studies-create-form";
+import CaseStudiesCreateForm from "./new-case-studies-form";
 
-export default function CreateCaseStudies() {
+export default function CreateJob() {
   return (
     <div>
-      <Breadcrumb className="fixed top-6 z-50">
+      <h2 className="text-xl md:text-2xl font-bold text-indigo-950 mb-3">
+        Create a new case studies
+      </h2>
+      <Breadcrumb>
         <BreadcrumbList>
-          <BreadcrumbItem>
+          <BreadcrumbItem className="text-sm text-gray-800 font-medium">
             <BreadcrumbLink asChild>
               <Link href="/dashboard">Dashboard</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
-          <BreadcrumbItem>
+          <BreadcrumbItem className="text-sm text-gray-800 font-medium">
             <BreadcrumbLink asChild>
               <Link href="/dashboard/case-studies">Case Studies</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>New</BreadcrumbPage>
+          <BreadcrumbItem className="text-sm">
+            <BreadcrumbPage className="text-muted-foreground">
+              Create
+            </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <CaseStudiesCreateForm />
+      <div className="py-10">
+        <CaseStudiesCreateForm />
+      </div>
     </div>
   );
 }

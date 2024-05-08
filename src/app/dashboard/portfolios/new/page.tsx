@@ -7,31 +7,38 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import Link from "next/link";
-import PortfolioCreateForm from "./portfolio-create-form";
+import CaseStudiesCreateForm from "./portfolio-create-form";
 
-export default function CreateCaseStudies() {
+export default function CreatePortfolio() {
   return (
     <div>
-      <Breadcrumb className="fixed top-6 z-50">
+      <h2 className="text-xl md:text-2xl font-bold text-indigo-950 mb-3">
+        Add a new portfolio
+      </h2>
+      <Breadcrumb>
         <BreadcrumbList>
-          <BreadcrumbItem>
+          <BreadcrumbItem className="text-sm text-gray-800 font-medium">
             <BreadcrumbLink asChild>
               <Link href="/dashboard">Dashboard</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
-          <BreadcrumbItem>
+          <BreadcrumbItem className="text-sm text-gray-800 font-medium">
             <BreadcrumbLink asChild>
               <Link href="/dashboard/portfolios">Portfolios</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>New</BreadcrumbPage>
+          <BreadcrumbItem className="text-sm">
+            <BreadcrumbPage className="text-muted-foreground">
+              Create
+            </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <PortfolioCreateForm />
+      <div className="py-10">
+        <CaseStudiesCreateForm />
+      </div>
     </div>
   );
 }

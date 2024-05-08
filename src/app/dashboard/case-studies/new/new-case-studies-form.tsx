@@ -59,7 +59,7 @@ const FormSchema = z.object({
   conclusion: z.string().trim().min(1, { message: "Conclusion is required" }),
   isPublished: z.boolean().optional(),
 });
-export default function PortfolioCreateForm() {
+export default function CaseStudiesCreateForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
