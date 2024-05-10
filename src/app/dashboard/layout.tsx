@@ -1,5 +1,6 @@
 import DashboardMobileNavigation from "@/components/dashboard-mobile-navigation";
 import DashboardSidebar from "@/components/dashboard-sidebar";
+import NotificationDrawer from "@/components/notification-drawer";
 import { SearchModal } from "@/components/search-modal";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import UserNav from "@/components/user-nav";
@@ -10,26 +11,32 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full ">
-      <div className="flex min-h-screen flex-col rounded-md lg:flex-row">
-        <div className=" fixed bottom-0 left-0 top-0 hidden max-h-screen w-1/5  overflow-y-auto border-r border-slate-200 bg-white mx-3 lg:block">
-          {" "}
-          <ScrollArea className="h-screen">
-            <DashboardSidebar />
-          </ScrollArea>
-        </div>
-        <div className="ml-auto w-full lg:w-4/5">
-          <div className="sticky top-0 z-30 mb-6 flex items-center justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/40 px-4 py-3 lg:px-8">
-            <div className="flex items-center gap-x-4 mt-2">
-              <div className="block lg:hidden">
-                <DashboardMobileNavigation />
-              </div>
-              <SearchModal />
-            </div>
-            <UserNav />
+    <div>
+      <header className="fixed w-full lg:w-[calc(100%-281px)] ml-auto top-0 right-0 left-auto z-30 mb-6 flex items-center justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 h-20">
+        <div className="flex items-center gap-x-4 mt-2 relative">
+          <div className="block lg:hidden">
+            <DashboardMobileNavigation />
           </div>
-          <div className="px-4 pb-10 lg:px-8">{children}</div>
+          <SearchModal />
         </div>
+        <div className="flex gap-x-4">
+          <NotificationDrawer />
+          <UserNav />
+        </div>
+      </header>
+      <div className="min-h-full flex flex-column lg:flex-row">
+        <aside className="shrink-0 hidden lg:block lg:w-[280px]">
+          <div className="flex flex-col h-full w-[280px] fixed border-r border-dotted">
+            <ScrollArea className="h-full px-4">
+              <DashboardSidebar />
+            </ScrollArea>
+          </div>
+        </aside>
+        <main className="flex-grow min-h-full flex flex-col w-full lg:width-[calc(100%-280px)] py-24 px-4">
+          <div className="w-full max-w-[1536px] block mr-auto ml-auto lg:px-6">
+            {children}
+          </div>
+        </main>
       </div>
     </div>
   );
