@@ -310,7 +310,7 @@ export const navLinks = [
   {
     id: generateUniqueId(),
     label: "Documentation",
-    href: "/documentation",
+    href: "/docs",
     submenus: [],
   },
 ];
