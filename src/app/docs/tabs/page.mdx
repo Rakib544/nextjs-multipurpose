@@ -1,0 +1,73 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+
+# Tabs
+
+    <Tabs defaultValue="account" className="w-[400px] not-prose">
+      <TabsList className="grid w-full grid-cols-2">
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">
+        <div className="rounded-lg shadow-custom p-5" >
+          <div >
+            <h3 className="font-bold text-lg">Account</h3>
+            <div className="mb-2">
+              Make changes to your account here. Click save when you're done.
+            </div>
+          </div>
+          <div className="space-y-2">
+            <div className="space-y-1">
+              <Label htmlFor="name">Name</Label>
+              <Input id="name" defaultValue="Pedro Duarte" />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="username">Username</Label>
+              <Input id="username" defaultValue="@peduarte" />
+            </div>
+          </div>
+          <div className="mt-3">
+            <Button>Save changes</Button>
+          </div>
+        </div>
+      </TabsContent>
+      <TabsContent value="password">
+        <div className="rounded-lg shadow-custom p-5" >
+          <div>
+            <h3 className="text-lg font-bold">Password</h3>
+            <div className="mb-2">
+              Change your password here. After saving, you'll be logged out.
+            </div>
+          </div>
+          <div className="space-y-2">
+            <div className="space-y-1">
+              <Label htmlFor="current">Current password</Label>
+              <Input id="current" type="password" />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="new">New password</Label>
+              <Input id="new" type="password" />
+            </div>
+          </div>
+          <div className="mt-3">
+            <Button>Save password</Button>
+          </div>
+        </div>
+      </TabsContent>
+    </Tabs>
+
+#### View example's code
+
+```js
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+<Tabs defaultValue="account" className="w-[400px]">
+  <TabsList>
+    <TabsTrigger value="account">Account</TabsTrigger>
+    <TabsTrigger value="password">Password</TabsTrigger>
+  </TabsList>
+  <TabsContent value="account">Make changes to your account here.</TabsContent>
+  <TabsContent value="password">Change your password here.</TabsContent>
+</Tabs>;
+```

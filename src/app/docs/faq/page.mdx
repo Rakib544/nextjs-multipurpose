@@ -1,0 +1,65 @@
+import { Button, buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+
+## Frequently Asked Questions
+
+If you don't see an answer to your question here, please feel free to contact us with the links below:
+
+<Link
+  target="_blank"
+  href="mailto:md.rakib10122003@gmail.com"
+
+>
+
+  <Button size='lg'>Contact Support</Button>
+</Link>
+
+<Accordion type="multiple">
+  <AccordionItem
+    value="item-1"
+    className="border-none bg-slate-100 px-3 md:px-4 rounded-xl  text-indigo-950 [&>h3]:text-red-500"
+  >
+    <AccordionTrigger className="text-base font-semibold py-0">
+      How can i remove unwanted package or library?
+    </AccordionTrigger>
+    <AccordionContent className="py-0">
+      <p className="text-base -mt-4">
+        All third-party plugin JS files are located in `npm uninstall
+        package-name`
+      </p>
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem
+    value="item-2"
+    className="border-none bg-slate-100 px-3 md:px-4 rounded-xl  text-indigo-950"
+  >
+    <AccordionTrigger className="text-base font-semibold py-0">
+      Why am i getting error while installing to wordpress?
+    </AccordionTrigger>
+    <AccordionContent className="py-0">
+      <p className="text-base -mt-4">
+        Sandbox is an nextjs template, not a Wordpress theme. So it cannot be
+        installed in Wordpress
+      </p>
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem
+    value="item-3"
+    className="border-none bg-slate-100 px-3 md:px-4 rounded-xl  text-indigo-950"
+  >
+    <AccordionTrigger className="text-base font-semibold py-0">
+      What font is used on this template?
+    </AccordionTrigger>
+    <AccordionContent className="py-0">
+      <p className="text-base -mt-4">
+        The font used in the Sandbox logo is Inter google font
+      </p>
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>

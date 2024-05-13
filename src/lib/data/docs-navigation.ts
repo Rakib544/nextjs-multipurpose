@@ -90,11 +90,6 @@ export const docsNavigation = [
         label: "Tabs",
         href: "/docs/tabs",
       },
-      {
-        id: 40,
-        label: "Tabs",
-        href: "/docs/tabs",
-      },
     ],
   },
   {

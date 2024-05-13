@@ -73,7 +73,7 @@ export default function DashboardLayout({
           </div>
         </aside>
         <main className="flex-grow min-h-full flex flex-col w-full lg:width-[calc(100%-280px)] py-12 px-4">
-          <div className="w-full prose-base max-w-3xl block lg:px-6 prose prose-gray prose-headings:mt-8 prose-headings:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg prose-h5:text-lg prose-h6:text-lg prose-p:leading-8">
+          <div className="w-full prose-base max-w-3xl block lg:px-6 prose prose-gray prose-headings:mt-8 prose-headings:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg prose-h5:text-lg prose-h6:text-lg">
             {children}
           </div>
         </main>

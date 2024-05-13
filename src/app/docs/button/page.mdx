@@ -1,0 +1,127 @@
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRightIcon } from "lucide-react";
+
+# Button
+
+### Usage
+
+```
+import { Button } from "@/components/ui/button";
+```
+
+```
+<Button>Button</Button>
+```
+
+### Link
+
+You can use the buttonVariants helper to create a link that looks like a button.
+
+```
+import { buttonVariants } from "@/components/ui/button";
+```
+
+```
+<Link href="/" className={buttonVariants({ variant: "outline" })}>
+  Click here
+</Link>
+```
+
+Alternatively, you can set the asChild parameter and nest the link component.
+
+```
+<Button asChild>
+  <Link href="/login">Login</Link>
+</Button>
+```
+
+---
+
+## Examples
+
+### Primary
+
+<Button>Click Here </Button>
+
+#### View Example code
+
+```js
+<Button>Click Here </Button>
+```
+
+---
+
+### Secondary
+
+<Button variant="secondary">Click Here </Button>
+
+#### View Example code
+
+```js
+<Button variant="secondary">Click Here </Button>
+```
+
+---
+
+### Outline
+
+<Button variant="outline">Click Here </Button>
+
+#### View Example code
+
+```js
+<Button variant="outline">Click Here </Button>
+```
+
+---
+
+### Ghost
+
+<Button variant="ghost">Click Here </Button>
+
+#### View Example code
+
+```js
+<Button variant="ghost">Click Here </Button>
+```
+
+---
+
+### Destructive
+
+<Button variant="destructive">Click Here </Button>
+
+#### View Example code
+
+```js
+<Button variant="destructive">Click Here </Button>
+```
+
+---
+
+### Link
+
+<Button variant="link">Click Here </Button>
+
+#### View Example code
+
+```js
+<Button variant="link">Click Here </Button>
+```
+
+---
+
+### Icon
+
+<Button size="icon">
+  <ArrowRightIcon className="h-5 w-5" />
+</Button>
+
+#### View Example code
+
+```js
+<Button size="icon">
+  <ArrowRightIcon className="h-5 w-5" />
+</Button>
+```

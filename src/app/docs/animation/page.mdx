@@ -1,0 +1,83 @@
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
+
+# Animation
+
+### Fadein Animation
+
+<FadeIn className="not-prose">
+  <div className="max-w-xl bg-primary text-white p-5 rounded-lg text-white/80 text-[15px] leading-7">
+    <h3 className="font-bold text-base mb-2 text-white">
+      What types of services does your agency serves?
+    </h3>
+    Our agency specializes in a wide range of services including web design, digital
+    marketing, branding, and content creation.
+  </div>
+</FadeIn>
+
+#### View example's code
+
+```js
+import { FadeIn } from "@/components/fade-in";
+
+<FadeIn className="not-prose">
+  <div className="max-w-xl bg-primary text-white p-5 rounded-lg text-white/80">
+    <h3 className="font-bold text-lg mb-2 text-white">
+      What types of services does your agency serves?
+    </h3>
+    Our agency specializes in a wide range of services including web design, digital
+    marketing, branding, and content creation.
+  </div>
+</FadeIn>;
+```
+
+### Fadein Stagger Animation
+
+<FadeInStagger className="space-y-4">
+  <FadeIn className="not-prose">
+    <div className="max-w-xl bg-primary text-white p-5 rounded-lg text-white/80 text-[15px] leading-7">
+      <h3 className="font-bold text-base mb-2 text-white">
+        What types of services does your agency serves?
+      </h3>
+      Our agency specializes in a wide range of services including web design, digital
+      marketing, branding, and content creation.
+    </div>
+  </FadeIn>
+  <FadeIn className="not-prose">
+    <div className="max-w-xl bg-primary text-white p-5 rounded-lg text-white/80">
+      <h3 className="font-bold text-base mb-2 text-white text-[15px] leading-7">
+        How do i get started?
+      </h3>
+      Getting started is easy! Simply reach out to us via our contact page or email,
+      and one of our representatives will get in touch with you to discuss your project
+      needs.
+    </div>
+  </FadeIn>
+</FadeInStagger>
+
+#### View example's code
+
+```js
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
+
+<FadeInStagger className="space-y-4">
+  <FadeIn className="not-prose">
+    <div className="max-w-xl bg-primary text-white p-5 rounded-lg text-white/80">
+      <h3 className="font-bold text-lg mb-2 text-white">
+        What types of services does your agency serves?
+      </h3>
+      Our agency specializes in a wide range of services including web design, digital
+      marketing, branding, and content creation.
+    </div>
+  </FadeIn>
+  <FadeIn className="not-prose">
+    <div className="max-w-xl bg-primary text-white p-5 rounded-lg text-white/80">
+      <h3 className="font-bold text-lg mb-2 text-white">
+        How do i get started?
+      </h3>
+      Getting started is easy! Simply reach out to us via our contact page or email,
+      and one of our representatives will get in touch with you to discuss your project
+      needs.
+    </div>
+  </FadeIn>
+</FadeInStagger>;
+```

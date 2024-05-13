@@ -1,0 +1,134 @@
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Switch } from "@/components/ui/switch";
+
+# Form Elements
+
+### Input
+
+<Input placeholder="Text Input" />
+
+#### View example's code
+
+```js
+import { Input } from "@/components/ui/input";
+<Input placeholder="Text Input" />;
+```
+
+---
+
+### Textarea
+
+<Textarea placeholder="Text area" />
+
+#### View example's code
+
+```js
+import { Textarea } from "@/components/ui/textarea";
+<Textarea placeholder="Text Input" />;
+```
+
+---
+
+### Checkbox
+
+<div className="flex not-prose ">
+  <Checkbox /> Default checkbox
+</div>
+<div className="flex not-prose items-center">
+  <Checkbox checked /> Checked checkbox
+</div>
+
+#### View example's code
+
+```js
+import { Checkbox } from "@/components/ui/checkbox"
+<Checkbox checked /> Checked checkbox
+<Checkbox /> Default checkbox
+```
+
+---
+
+### Radio
+
+<RadioGroup defaultValue="option-one" className="not-prose">
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-one" id="option-one" />
+    <Label htmlFor="option-one">Option One</Label>
+  </div>
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-two" id="option-two" />
+    <Label htmlFor="option-two">Option Two</Label>
+  </div>
+</RadioGroup>
+
+#### View example's code
+
+```js
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+
+<RadioGroup defaultValue="option-one">
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-one" id="option-one" />
+    <Label htmlFor="option-one">Option One</Label>
+  </div>
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-two" id="option-two" />
+    <Label htmlFor="option-two">Option Two</Label>
+  </div>
+</RadioGroup>;
+```
+
+---
+
+### Select
+
+<Select className="not-prose">
+  <SelectTrigger className="w-[180px]">
+    <SelectValue placeholder="Theme" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="light">Light</SelectItem>
+    <SelectItem value="dark">Dark</SelectItem>
+    <SelectItem value="system">System</SelectItem>
+  </SelectContent>
+</Select>
+
+#### View example's code
+
+```js
+<Select>
+  <SelectTrigger className="w-[180px]">
+    <SelectValue placeholder="Theme" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="light">Light</SelectItem>
+    <SelectItem value="dark">Dark</SelectItem>
+    <SelectItem value="system">System</SelectItem>
+  </SelectContent>
+</Select>
+```
+
+---
+
+### Switch
+
+<Switch />
+
+#### View example's code
+
+```js
+import { Switch } from "@/components/ui/switch";
+<Switch />;
+```
