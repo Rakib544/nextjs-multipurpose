@@ -4,15 +4,10 @@ import { FaqCard1 } from "@/components/faq-card";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
-import { TestimonialCard } from "@/components/testimonial-card";
 import { Accordion } from "@/components/ui/accordion";
-import {
-  InfiniteMoving,
-  InfiniteMovingItem,
-} from "@/components/ui/infinite-moving";
 import { faqData } from "@/lib/data/faq-data";
 import { sassFeatures } from "@/lib/data/sass-features";
-import { testimonials } from "@/lib/data/testimonials-data";
+import { Testimonial1 } from "@/sections/testimonial";
 import Link from "next/link";
 
 const processSteps = [
@@ -107,34 +102,7 @@ export default function Services2() {
           ))}
         </div>
       </Container>
-      <Container className="mt-20 md:mt-32">
-        <SectionIntro
-          eyebrow="Testimonials"
-          title="What people say about our creative service"
-          className="mx-auto text-center mb-12"
-        >
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At qui
-            soluta voluptatem tempore, maxime voluptatibus architecto!
-          </p>
-        </SectionIntro>
-        <InfiniteMoving>
-          {testimonials.map((testimonial) => (
-            <InfiniteMovingItem
-              key={testimonial.id}
-              className="md:w-[350px] bg-slate-50 text-left"
-            >
-              <TestimonialCard
-                name={testimonial.name}
-                image={testimonial.image}
-                quote={testimonial.quote}
-                rating={testimonial.rating}
-                role={testimonial.role}
-              />
-            </InfiniteMovingItem>
-          ))}
-        </InfiniteMoving>
-      </Container>
+      <Testimonial1 centered />
 
       <Container className="my-20 md:my-32">
         <SectionIntro

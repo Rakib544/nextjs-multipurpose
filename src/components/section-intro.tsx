@@ -9,6 +9,7 @@ export function SectionIntro({
   className = "",
   smaller = false,
   invert = false,
+  centered = false,
   ...props
 }: {
   eyebrow?: string;
@@ -18,10 +19,17 @@ export function SectionIntro({
   smaller?: boolean;
   invert?: boolean;
   props?: any;
+  centered?: boolean;
 }) {
   return (
-    <FadeIn className={cn("max-w-xl", className)}>
-      <h2 className="">
+    <FadeIn
+      className={cn(
+        "max-w-xl",
+        className,
+        centered ? "mx-auto text-center" : ""
+      )}
+    >
+      <h2>
         {eyebrow && (
           <>
             <span

@@ -1,4 +1,4 @@
-import { BlogCard2 } from "@/components/blog-card/index";
+import BlogCard from "@/components/blog-card";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { buttonVariants } from "@/components/ui/button";
@@ -51,7 +51,7 @@ export default function Blogs2() {
         >
           {blogsData.slice(1).map((blog, index) => (
             <FadeIn key={index}>
-              <BlogCard2
+              <BlogCard
                 thumbnail={blog.thumbnail}
                 title={blog.title}
                 subtitle={blog.subtitle}

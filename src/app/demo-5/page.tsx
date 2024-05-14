@@ -1,166 +1,199 @@
+import BlogCard from "@/components/blog-card";
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
-import { FadeIn } from "@/components/fade-in";
-import { GridPattern } from "@/components/grid-pattern";
-import { PhoneIcon } from "@/components/icons";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { SectionIntro } from "@/components/section-intro";
-import { buttonVariants } from "@/components/ui/button";
-import Workflow from "@/components/work-flow";
-import officeImage from "@/images/office.jpg";
-import Image from "next/image";
+import TeamCard1 from "@/components/team-card/team-card-1";
+import { Button, buttonVariants } from "@/components/ui/button";
+import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
+import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
+import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
+import { blogsData } from "@/lib/data/blog-data";
+import OurAwards from "@/sections/awards";
+import { Hero5 } from "@/sections/hero";
+import OurPortfolios from "@/sections/our-portfolios";
+import { Testimonial1 } from "@/sections/testimonial";
 import Link from "next/link";
+
+const peoples = [
+  {
+    name: "Leslie Alexander",
+    role: "Co-Founder / CEO",
+    image: { src: imageLeslieAlexander },
+  },
+  {
+    name: "Michael Foster",
+    role: "Co-Founder / CTO",
+    image: { src: imageMichaelFoster },
+  },
+  {
+    name: "Dries Vincent",
+    role: "Partner & Business Relations",
+    image: { src: imageDriesVincent },
+  },
+  {
+    name: "Michael Foster",
+    role: "Co-Founder / CTO",
+    image: { src: imageMichaelFoster },
+  },
+];
 
 const services = [
   {
     id: 1,
-    title: "24/7 Support",
+    title: "UI/UX Design",
     description:
-      "Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.",
-    icon: <PhoneIcon className="h-4 w-4" />,
+      "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience",
+    image: "/ui-ux.webp",
   },
   {
     id: 2,
-    title: "24/7 Support",
+    title: "Web Development",
     description:
-      "Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.",
-    icon: <PhoneIcon className="h-4 w-4" />,
-  },
-  {
-    id: 3,
-    title: "24/7 Support",
-    description:
-      "Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.",
-    icon: <PhoneIcon className="h-4 w-4" />,
+      "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience",
+    image: "/web-development.webp",
   },
   {
     id: 4,
-    title: "24/7 Support",
+    title: "App Development",
     description:
-      "Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.",
-    icon: <PhoneIcon className="h-4 w-4" />,
+      "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience",
+    image: "/app-development.webp",
   },
 ];
 
-export default function Demo5() {
+function OurTeam() {
   return (
     <div>
-      <Container className="mt-16 lg:mt-24">
-        <div className="absolute inset-0 top-0 text-slate-900/10 [mask-image:linear-gradient(white,transparent)]">
-          <GridPattern />
-        </div>
-        <FadeIn className="max-w-4xl mx-auto col-span-12 text-center order-2 lg:order-1 z-10">
-          <h1 className="text-3xl font-bold tracking-tighter md:text-5xl/tight">
-            Experience the workflow the best frontend teams love.
-          </h1>
-          <p className="mt-3 text-lg text-gray-600 leading-8">
-            We are developer studio working at the intersection of design and
-            technology. It’s a really busy intersection though — a lot of our
-            staff have been involved in hit and runs.
-          </p>
-          <div className="flex gap-4 mt-7 justify-center flex-col sm:flex-row">
-            <Link
-              href="/about-us"
-              className={buttonVariants({
-                size: "lg",
-              })}
-            >
-              Get Started
-            </Link>
+      <SectionIntro
+        eyebrow="Our Team"
+        title="Our excellence team that can digitalize your brand"
+      >
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio ex quis
+          earum possimus tempore dolore praesentium ad esse non iste!
+        </p>
+      </SectionIntro>
+      <div className="mt-12 grid grid-cols-12 gap-6">
+        {peoples.map((people) => (
+          <div
+            key={people.name}
+            className="col-span-12 md:col-span-6 lg:col-span-3"
+          >
+            <TeamCard1
+              name={people.name}
+              role={people.role}
+              image={people.image.src}
+            />
           </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function CreativeDigitalStudio() {
+  return (
+    <div>
+      <Hero5 />
+      <div>
+        <Container className="mt-20 text-center">
+          <FadeIn>
+            <p className="block font-display uppercase text-xs tracking-wider font-bold text-primary">
+              Our journey story{" "}
+            </p>
+            <h2 className="text-3xl max-w-5xl leading-normal font-bold mb-6 mt-3 mx-auto">
+              Leading digital agency with solid design and development
+              expertise. We build ready made websites, mobile applications, and
+              elaborate online business services.
+            </h2>
+            <Link
+              href="/about-1"
+              className={buttonVariants({ variant: "outline", size: "lg" })}
+            >
+              Learn More
+            </Link>
+          </FadeIn>
+        </Container>
+      </div>
+      <div className="bg-indigo-600 py-20 md:py-32 rounded-[40px] mt-20 md:mt-32 ">
+        <Container className="relative">
+          <SectionIntro
+            className="mb-12"
+            eyebrow="Services"
+            invert
+            title="Our comprehensive digital strategy transformation"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            officiis ipsa veniam perspiciatis harum facere.
+          </SectionIntro>
+          <FadeInStagger faster className="space-y-4">
+            {services.map((service, index) => (
+              <FadeIn key={service.id}>
+                <Link
+                  href="/services/1"
+                  className="block group border-t border-indigo-500"
+                >
+                  <div className="grid grid-cols-12 gap-6 items-end py-4">
+                    <div className="col-span-12 md:col-span-4">
+                      <span className="text-xl font-bold text-white/80">
+                        {(index + 1).toString().padStart(2, "0")}
+                      </span>
+                      <h3 className="text-2xl font-bold text-white mt-1">
+                        {service.title}
+                      </h3>
+                    </div>
+                    <div className="col-span-12 md:col-span-4">
+                      <p className="text-base leading-7 text-white/80">
+                        {service.description}
+                      </p>
+                    </div>
+                    <div className="col-span-12 md:col-span-4 flex justify-end md:justify-center">
+                      <Button
+                        size="icon"
+                        className="border-[1.5px] group-hover:bg-white group-hover:text-indigo-600"
+                      >
+                        &rarr;
+                      </Button>
+                    </div>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </FadeInStagger>
+        </Container>
+      </div>
+      <OurAwards />
+      <OurPortfolios />
+
+      <Testimonial1 />
+
+      <Container className="mt-20 md:mt-32">
+        <OurTeam />
+      </Container>
+      <Container className="mt-20 md:mt-32">
+        <Clients />
+      </Container>
+      <Container className="mt-20 md:mt-32">
+        <SectionIntro eyebrow="Our Blogs" title="Latest News & Updates.">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            ratione consectetur iusto hic sapiente perspiciatis delectus unde
+            labore quia quam!
+          </p>
+        </SectionIntro>
+        <FadeIn className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          {blogsData.slice(0, 3).map((blog, index) => (
+            <BlogCard
+              createdAt={blog.createdAt}
+              subtitle={blog.subtitle}
+              title={blog.title}
+              thumbnail={blog.thumbnail}
+              key={index}
+            />
+          ))}
         </FadeIn>
       </Container>
-      <div className="mt-96 bg-neutral-950 py-12">
-        <Container>
-          <div className="flex justify-center text-center relative">
-            <div className="absolute h-[450px] w-full -top-1/2 -translate-y-1/2">
-              <Image src={officeImage} alt="" fill className="rounded-2xl" />
-            </div>
-            <SectionIntro
-              className="max-w-2xl pt-44"
-              title="The service we offer is specifically designed to meet your needs."
-              invert
-            />
-          </div>
-          <div className="grid grid-cols-12 gap-4 text-white my-16">
-            {services.map((service) => (
-              <div
-                className="col-span-12 md:col-span-6 lg:col-span-3"
-                key={service.id}
-              >
-                <span className="bg-slate-900 h-12 w-12 rounded-full inline-flex justify-center items-center">
-                  {service.icon}
-                </span>
-                <h3 className="text-lg font-bold mt-4">{service.title}</h3>
-                <p className="text-base leading-7 text-neutral-200">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </div>
-      <div className="mt-24">
-        <Container className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 lg:col-span-6">
-            <SectionIntro title="We make spending stress free so you have the perfect control.">
-              <p className="text-base leading-7 text-neutral-700">
-                Etiam porta sem malesuada magna mollis euismod. Donec
-                ullamcorper nulla non metus auctor fringilla. Morbi leo risus,
-                porta ac consectetur ac, vestibulum at eros. Fusce dapibus,
-                tellus ac cursus commodo.
-              </p>
-              <ul className="text-base mt-6 text-neutral-700 list-disc list-inside space-y-1">
-                <li>Aenean quam ornare curabitur blandit consectetur.</li>
-                <li>Nullam quis risus eget urna mollis ornare aenean leo.</li>
-                <li>Etiam porta euismod malesuada mollis nisl ornare.</li>
-                <li>Vivamus sagittis lacus augue rutrum maecenas odio.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-              </ul>
-            </SectionIntro>
-          </div>
-          <div className="col-span-12 lg:col-span-6">
-            <Image
-              src={officeImage}
-              alt=""
-              height={800}
-              width={400}
-              className="h-full w-full object-cover rounded"
-            />
-          </div>
-        </Container>
-      </div>
-      <div className="mt-24">
-        <Container className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 lg:col-span-6">
-            <Image
-              src={officeImage}
-              alt=""
-              height={800}
-              width={400}
-              className="h-full w-full object-cover rounded"
-            />
-          </div>
-          <div className="col-span-12 lg:col-span-6">
-            <SectionIntro title="We bring solutions to manage your finance the way works best.">
-              <p className="text-base leading-7 text-neutral-700">
-                Etiam porta sem malesuada magna mollis euismod. Donec
-                ullamcorper nulla non metus auctor fringilla. Morbi leo risus,
-                porta ac consectetur ac, vestibulum at eros. Fusce dapibus,
-                tellus ac cursus commodo.
-              </p>
-              <ul className="text-base mt-6 text-neutral-700 list-disc list-inside space-y-1">
-                <li>Aenean quam ornare curabitur blandit consectetur.</li>
-                <li>Nullam quis risus eget urna mollis ornare aenean leo.</li>
-                <li>Etiam porta euismod malesuada mollis nisl ornare.</li>
-                <li>Vivamus sagittis lacus augue rutrum maecenas odio.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-              </ul>
-            </SectionIntro>
-          </div>
-        </Container>
-      </div>
-      <Workflow />
-      <Clients />
     </div>
   );
 }

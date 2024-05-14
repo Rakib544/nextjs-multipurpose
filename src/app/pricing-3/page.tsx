@@ -5,14 +5,9 @@ import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import PriceComparisonTable from "@/components/pricing/price-comparison-table";
 import { SectionIntro } from "@/components/section-intro";
-import { TestimonialCard } from "@/components/testimonial-card";
 import { Accordion } from "@/components/ui/accordion";
-import {
-  InfiniteMoving,
-  InfiniteMovingItem,
-} from "@/components/ui/infinite-moving";
 import { faqData } from "@/lib/data/faq-data";
-import { testimonials } from "@/lib/data/testimonials-data";
+import { Testimonial1 } from "@/sections/testimonial";
 
 export default function Component() {
   return (
@@ -40,29 +35,7 @@ export default function Component() {
         <FadeIn className="bg-white border rounded mt-12 md:mt-20">
           <PriceComparisonTable />
         </FadeIn>
-        <div className="mt-20 md:mt-32">
-          <SectionIntro
-            eyebrow="Reviews"
-            title="Clients feedback"
-            className="max-w-2xl mx-auto mb-6 text-center"
-          ></SectionIntro>
-          <InfiniteMoving>
-            {testimonials.map((testimonial) => (
-              <InfiniteMovingItem
-                key={testimonial.id}
-                className="md:w-[350px] bg-gradient-to-br from-indigo-50 to-white"
-              >
-                <TestimonialCard
-                  image={testimonial.image}
-                  quote={testimonial.quote}
-                  name={testimonial.name}
-                  rating={testimonial.rating}
-                  role={testimonial.role}
-                />
-              </InfiniteMovingItem>
-            ))}
-          </InfiniteMoving>
-        </div>
+        <Testimonial1 centered />
         <div className="my-20 md:my-32">
           <SectionIntro
             title="Got questions? We’ve got answers"

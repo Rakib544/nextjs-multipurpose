@@ -1,64 +1,20 @@
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
-import { HomeIcon, TextUnderline } from "@/components/icons";
 import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
-import { TestimonialCard } from "@/components/testimonial-card";
-import { buttonVariants } from "@/components/ui/button";
-import {
-  InfiniteMoving,
-  InfiniteMovingItem,
-} from "@/components/ui/infinite-moving";
 import UseCases from "@/components/use-case";
 import WorkFlowCard from "@/components/workflow-card";
 import { sassFeatures, sassWorkflows } from "@/lib/data/sass-features";
-import { testimonials } from "@/lib/data/testimonials-data";
+import { Hero1 } from "@/sections/hero";
+import { Testimonial1 } from "@/sections/testimonial";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
-      <Container>
-        <FadeIn className="max-w-3xl mx-auto text-center z-10 my-20">
-          <span className="font-medium items-center gap-x-2 mb-4 px-6 inline-flex py-2 rounded-full bg-indigo-50 text-sm text-indigo-700">
-            <HomeIcon className="h-4 w-4" /> 55,000+ Business Trust
-          </span>
-          <h1 className="text-3xl font-black md:text-4.5xl/tight text-indigo-950">
-            Revolutionize
-            <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
-              {" "}
-              <span className="relative">Your Workflow</span> <TextUnderline />
-            </span>{" "}
-            with StreamlinePro
-          </h1>
-          <p className="mt-3 mb-5 text-lg text-gray-800 leading-8 max-w-xl mx-auto">
-            Streamline is a simple and intuitive expense tracker that helps you
-            manage your business expenses with ease and speed.
-          </p>
-          <div className="flex gap-4 justify-center flex-col sm:flex-row">
-            <Link
-              href="/about-us"
-              className={buttonVariants({
-                size: "lg",
-              })}
-            >
-              Get Started
-            </Link>
-            <Link
-              href="/about-us"
-              className={buttonVariants({
-                variant: "outline",
-
-                size: "lg",
-              })}
-            >
-              Free Trail
-            </Link>
-          </div>
-        </FadeIn>
-      </Container>
+      <Hero1 />
       <div className="relative">
         <Container>
           <Image
@@ -143,29 +99,7 @@ export default function Home() {
           </FadeIn>
         </div>
       </Container>
-      <Container className="mt-20 md:mt-32">
-        <SectionIntro
-          eyebrow="Clients Review"
-          title="Here’s what our amazing clients are saying"
-          className="mb-12"
-        ></SectionIntro>
-        <InfiniteMoving>
-          {testimonials.map((testimonial) => (
-            <InfiniteMovingItem
-              key={testimonial.id}
-              className="md:w-[400px] bg-gradient-to-br from-indigo-50 to-white"
-            >
-              <TestimonialCard
-                image={testimonial.image}
-                name={testimonial.name}
-                quote={testimonial.quote}
-                rating={testimonial.rating}
-                role={testimonial.role}
-              />
-            </InfiniteMovingItem>
-          ))}
-        </InfiniteMoving>
-      </Container>
+      <Testimonial1 />
       <Container className="mt-20 md:mt-32">
         <div className="flex">
           <SectionIntro

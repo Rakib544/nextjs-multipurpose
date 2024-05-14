@@ -1,12 +1,15 @@
 import { portfoliosData } from "@/lib/data/portfolio-data";
 import Image from "next/image";
 import Link from "next/link";
-import { Container } from "./container";
-import { FadeIn } from "./fade-in";
-import { SectionIntro } from "./section-intro";
-import { InfiniteMoving, InfiniteMovingItem } from "./ui/infinite-moving";
+import { Container } from "../components/container";
+import { FadeIn } from "../components/fade-in";
+import { SectionIntro } from "../components/section-intro";
+import {
+  InfiniteMoving,
+  InfiniteMovingItem,
+} from "../components/ui/infinite-moving";
 
-export default function Portfolios() {
+export default function OurPortfolios() {
   return (
     <Container className="mt-20 md:mt-32">
       <SectionIntro

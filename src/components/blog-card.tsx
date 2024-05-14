@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { buttonVariants } from "../ui/button";
-export default function BlogCard2({
+import { buttonVariants } from "./ui/button";
+
+export default function BlogCard({
   title,
   subtitle,
   createdAt,

@@ -28,20 +28,14 @@ export const navLinks = [
       },
       {
         id: generateUniqueId(),
-        label: "Marketing Agency",
+        label: "App Landing Page",
         href: "/demo-4",
         submenus: [],
       },
       {
         id: generateUniqueId(),
-        label: "App Landing Page",
-        href: "/demo-6",
-        submenus: [],
-      },
-      {
-        id: generateUniqueId(),
         label: "Digital Studio",
-        href: "/demo-8",
+        href: "/demo-5",
         submenus: [],
       },
     ],

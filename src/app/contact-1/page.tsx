@@ -10,15 +10,10 @@ import {
 } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
-import { TestimonialCard } from "@/components/testimonial-card";
 import { Accordion } from "@/components/ui/accordion";
 import { buttonVariants } from "@/components/ui/button";
-import {
-  InfiniteMoving,
-  InfiniteMovingItem,
-} from "@/components/ui/infinite-moving";
 import { faqData } from "@/lib/data/faq-data";
-import { testimonials } from "@/lib/data/testimonials-data";
+import { Testimonial1 } from "@/sections/testimonial";
 import Link from "next/link";
 
 const contactData = [
@@ -206,29 +201,7 @@ export default function Contact1() {
           </FadeInStagger>
         </div>
       </Container>
-      <Container className="my-20 md:my-32 ">
-        <SectionIntro
-          eyebrow="Reviews"
-          title="Clients feedback"
-          className="max-w-2xl mx-auto mb-12 text-center"
-        ></SectionIntro>
-        <InfiniteMoving>
-          {testimonials.map((testimonial) => (
-            <InfiniteMovingItem
-              key={testimonial.id}
-              className="md:w-[350px] bg-gradient-to-br from-indigo-50 to-white"
-            >
-              <TestimonialCard
-                image={testimonial.image}
-                quote={testimonial.quote}
-                name={testimonial.name}
-                rating={testimonial.rating}
-                role={testimonial.role}
-              />
-            </InfiniteMovingItem>
-          ))}
-        </InfiniteMoving>
-      </Container>
+      <Testimonial1 centered />
     </div>
   );
 }

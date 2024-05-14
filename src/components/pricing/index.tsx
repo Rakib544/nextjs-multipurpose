@@ -1,4 +1,4 @@
-import { Pricing1 } from "./pricing1";
-import { Pricing2 } from "./pricing2";
+import { Pricing1 } from "./pricing-1";
+import { Pricing2 } from "./pricing-2";
 
 export { Pricing1, Pricing2 };

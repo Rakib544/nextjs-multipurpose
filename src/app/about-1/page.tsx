@@ -7,16 +7,11 @@ import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import TeamCard1 from "@/components/team-card/team-card-1";
-import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
-import {
-  InfiniteMoving,
-  InfiniteMovingItem,
-} from "@/components/ui/infinite-moving";
 import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
 import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
 import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
-import { testimonials } from "@/lib/data/testimonials-data";
+import { Testimonial1 } from "@/sections/testimonial";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -213,60 +208,7 @@ export default function About1() {
         <Clients />
       </Container>
 
-      <Container className="mt-20 md:mt-32">
-        <SectionIntro
-          eyebrow="Clients Feedback"
-          title="Our Customer Feedback"
-          className="mb-12"
-        >
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
-            incidunt a? Saepe.
-          </p>
-        </SectionIntro>
-        <InfiniteMoving>
-          {testimonials.map((testimonial) => (
-            <InfiniteMovingItem
-              key={testimonial.id}
-              className="md:w-[350px] bg-gradient-to-br from-indigo-50 to-white"
-            >
-              <TestimonialCard
-                image={testimonial.image}
-                quote={testimonial.quote}
-                name={testimonial.name}
-                rating={testimonial.rating}
-                role={testimonial.role}
-              />
-            </InfiniteMovingItem>
-          ))}
-        </InfiniteMoving>
-      </Container>
-      {/* <CallToAction className="mt-20 md:mt-32 mb-0 md:mb-32">
-        <CallToActionHeading>
-          Let&apos;s maximize your online impact!
-        </CallToActionHeading>
-        <CallToActionSubHeading>
-          More than just buzzwords for marketing concepts of SEO.
-        </CallToActionSubHeading>
-        <CallToActionMenus>
-          <Link
-            href=""
-            className={buttonVariants({ size: "lg", variant: "outline" })}
-          >
-            Get In Touch
-          </Link>
-          <Link
-            href=""
-            className={buttonVariants({
-              variant: "link",
-              size: "lg",
-              className: "!text-white",
-            })}
-          >
-            Book a Demo &rarr;
-          </Link>
-        </CallToActionMenus>
-      </CallToAction> */}
+      <Testimonial1 />
     </div>
   );
 }

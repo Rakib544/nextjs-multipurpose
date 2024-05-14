@@ -8,11 +8,11 @@ import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import TeamCard1 from "@/components/team-card/team-card-1";
 import { Button, buttonVariants } from "@/components/ui/button";
-import WhyChooseUs from "@/components/why-choose-us";
 import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
 import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
 import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
 import { jobs } from "@/lib/data/job-data";
+import WhyChooseUs from "@/sections/why-choose-us";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -211,32 +211,6 @@ export default function About2() {
           </div>
         </Container>
       </div>
-      {/* <CallToAction className="mt-20 mb-0 md:my-32">
-        <CallToActionHeading>
-          Let&apos;s maximize your online impact!
-        </CallToActionHeading>
-        <CallToActionSubHeading>
-          More than just buzzwords for marketing concepts of SEO.
-        </CallToActionSubHeading>
-        <CallToActionMenus>
-          <Link
-            href=""
-            className={buttonVariants({ size: "lg", variant: "outline" })}
-          >
-            Get In Touch
-          </Link>
-          <Link
-            href=""
-            className={buttonVariants({
-              variant: "link",
-              size: "lg",
-              className: "!text-white",
-            })}
-          >
-            Book a Demo &rarr;
-          </Link>
-        </CallToActionMenus>
-      </CallToAction> */}
     </div>
   );
 }

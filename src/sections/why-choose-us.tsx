@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { Container } from "./container";
-import { CheckIcon } from "./icons";
-import { SectionIntro } from "./section-intro";
+import { Container } from "../components/container";
+import { CheckIcon } from "../components/icons";
+import { SectionIntro } from "../components/section-intro";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "./ui/accordion";
+} from "../components/ui/accordion";
 
 const whyChooseData = [
   {

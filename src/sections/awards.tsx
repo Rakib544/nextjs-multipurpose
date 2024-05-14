@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Container } from "./container";
-import { FadeIn } from "./fade-in";
-import { SectionIntro } from "./section-intro";
-import WorkFlowCard from "./workflow-card";
+import { Container } from "../components/container";
+import { FadeIn } from "../components/fade-in";
+import { SectionIntro } from "../components/section-intro";
+import WorkFlowCard from "../components/workflow-card";
 
 const awards = [
   {
