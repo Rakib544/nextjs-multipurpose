@@ -1,12 +1,9 @@
 import { Container } from "@/components/container";
-import { FadeInStagger } from "@/components/fade-in";
-import { FaqCard1 } from "@/components/faq-card";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
-import { Accordion } from "@/components/ui/accordion";
-import { faqData } from "@/lib/data/faq-data";
 import { sassFeatures } from "@/lib/data/sass-features";
+import { Faq1 } from "@/sections/faq";
 import { Testimonial1 } from "@/sections/testimonial";
 import Link from "next/link";
 
@@ -104,37 +101,7 @@ export default function Services2() {
       </Container>
       <Testimonial1 centered />
 
-      <Container className="my-20 md:my-32">
-        <SectionIntro
-          title="Got questions? We’ve got answers"
-          eyebrow="Our FAQ"
-          className="max-w-2xl mx-auto text-center"
-        >
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            sed soluta voluptates?
-          </p>
-        </SectionIntro>
-        <div className="max-w-2xl mx-auto mt-16">
-          <FadeInStagger faster>
-            <Accordion
-              type="single"
-              collapsible
-              defaultValue="item-1"
-              className="mt-6"
-            >
-              {faqData.slice(0, 10).map((faq) => (
-                <FaqCard1
-                  key={faq.id}
-                  id={faq.id.toString()}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
-              ))}
-            </Accordion>
-          </FadeInStagger>
-        </div>
-      </Container>
+      <Faq1 />
     </div>
   );
 }

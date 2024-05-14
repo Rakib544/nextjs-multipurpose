@@ -1,6 +1,5 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
-import { FaqCard1 } from "@/components/faq-card";
 import {
   ChatIcon,
   NotificationIcon,
@@ -10,9 +9,8 @@ import {
 } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
-import { Accordion } from "@/components/ui/accordion";
 import { buttonVariants } from "@/components/ui/button";
-import { faqData } from "@/lib/data/faq-data";
+import { Faq1 } from "@/sections/faq";
 import { Testimonial1 } from "@/sections/testimonial";
 import Link from "next/link";
 
@@ -169,38 +167,7 @@ export default function Contact1() {
         </Container>
       </div>
 
-      <Container className="mt-20 lg:mt-32">
-        <SectionIntro
-          title="Got questions? We’ve got answers"
-          eyebrow="Our FAQ"
-          className="max-w-2xl mx-auto text-center mb-12"
-        >
-          <p>
-            In order to make sure your website is user friendly and optimized
-            for Google’s algorithm, our on-site optimization experts clean up
-            the code and copy.
-          </p>
-        </SectionIntro>
-        <div className="max-w-2xl mx-auto">
-          <FadeInStagger faster>
-            <Accordion
-              type="single"
-              collapsible
-              defaultValue="item-1"
-              className="mt-6"
-            >
-              {faqData.slice(0, 8).map((faq) => (
-                <FaqCard1
-                  key={faq.id}
-                  id={faq.id.toString()}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
-              ))}
-            </Accordion>
-          </FadeInStagger>
-        </div>
-      </Container>
+      <Faq1 />
       <Testimonial1 centered />
     </div>
   );

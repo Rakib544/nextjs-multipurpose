@@ -1,4 +1,3 @@
-import BlogCard from "@/components/blog-card";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import {
@@ -10,9 +9,9 @@ import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
 import WorkFlowCard from "@/components/workflow-card";
-import { blogsData } from "@/lib/data/blog-data";
 import { seoRevenueEarningProcess } from "@/lib/data/seo-agency";
 import { seoServices } from "@/lib/data/seo-services";
+import Blogs from "@/sections/blogs";
 import { Hero2 } from "@/sections/hero";
 import { Testimonial2 } from "@/sections/testimonial";
 import Link from "next/link";
@@ -158,32 +157,7 @@ export default function Demo2() {
       </Container>
 
       <Testimonial2 />
-      <Container className="mt-20 md:mt-32">
-        <SectionIntro
-          eyebrow="NEWS & EVENTS"
-          title="Check out our blog posts"
-          className="mb-12"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quo
-          quibusdam omnis deleniti itaque praesentium enim repellendus, nisi
-          porro odit?
-        </SectionIntro>
-        <FadeInStagger
-          faster
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {blogsData.slice(0, 3).map((blog, index) => (
-            <FadeIn key={index}>
-              <BlogCard
-                createdAt={blog.createdAt}
-                subtitle={blog.subtitle}
-                title={blog.title}
-                thumbnail={blog.thumbnail}
-              />
-            </FadeIn>
-          ))}
-        </FadeInStagger>
-      </Container>
+      <Blogs />
     </main>
   );
 }

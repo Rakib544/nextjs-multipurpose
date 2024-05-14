@@ -1,4 +1,3 @@
-import BlogCard from "@/components/blog-card";
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
@@ -8,8 +7,8 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
 import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
 import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
-import { blogsData } from "@/lib/data/blog-data";
 import OurAwards from "@/sections/awards";
+import Blogs from "@/sections/blogs";
 import { Hero5 } from "@/sections/hero";
 import OurPortfolios from "@/sections/our-portfolios";
 import { Testimonial1 } from "@/sections/testimonial";
@@ -174,26 +173,7 @@ export default function CreativeDigitalStudio() {
       <Container className="mt-20 md:mt-32">
         <Clients />
       </Container>
-      <Container className="mt-20 md:mt-32">
-        <SectionIntro eyebrow="Our Blogs" title="Latest News & Updates.">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            ratione consectetur iusto hic sapiente perspiciatis delectus unde
-            labore quia quam!
-          </p>
-        </SectionIntro>
-        <FadeIn className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          {blogsData.slice(0, 3).map((blog, index) => (
-            <BlogCard
-              createdAt={blog.createdAt}
-              subtitle={blog.subtitle}
-              title={blog.title}
-              thumbnail={blog.thumbnail}
-              key={index}
-            />
-          ))}
-        </FadeIn>
-      </Container>
+      <Blogs />
     </div>
   );
 }

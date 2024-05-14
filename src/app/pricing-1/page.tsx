@@ -1,12 +1,8 @@
 import { Container } from "@/components/container";
-import { FadeInStagger } from "@/components/fade-in";
-import { FaqCard1 } from "@/components/faq-card";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { Pricing2 } from "@/components/pricing/index";
-import { SectionIntro } from "@/components/section-intro";
-import { Accordion } from "@/components/ui/accordion";
-import { faqData } from "@/lib/data/faq-data";
+import { Faq1 } from "@/sections/faq";
 
 export default function Pricing() {
   return (
@@ -31,37 +27,7 @@ export default function Pricing() {
         </PageIntro>
 
         <Pricing2 />
-        <div className="my-20 md:my-32">
-          <SectionIntro
-            title="Got questions? We’ve got answers"
-            eyebrow="Our FAQ"
-            className="max-w-2xl mx-auto text-center mb-12"
-          >
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-              sed soluta voluptates?
-            </p>
-          </SectionIntro>
-          <div className="max-w-2xl mx-auto mt-16">
-            <FadeInStagger faster>
-              <Accordion
-                type="single"
-                collapsible
-                defaultValue="item-1"
-                className="mt-6"
-              >
-                {faqData.slice(0, 10).map((faq) => (
-                  <FaqCard1
-                    key={faq.id}
-                    id={faq.id.toString()}
-                    question={faq.question}
-                    answer={faq.answer}
-                  />
-                ))}
-              </Accordion>
-            </FadeInStagger>
-          </div>
-        </div>
+        <Faq1 />
       </Container>
     </div>
   );

@@ -1,13 +1,11 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
-import { FaqCard2 } from "@/components/faq-card/index";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
-import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { faqData } from "@/lib/data/faq-data";
+import { Faq2 } from "@/sections/faq";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -134,31 +132,7 @@ export default function Services1() {
         </SectionIntro>
         <Pricing2 />
       </Container>
-      <Container className="mt-20 md:mt-32">
-        <SectionIntro
-          eyebrow="FAQ"
-          className="mb-12"
-          title="Frequently asked questions"
-        >
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at
-            quam, doloremque maiores fuga numquam!
-          </p>
-        </SectionIntro>
-
-        <Accordion type="multiple">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-6">
-            {faqData.slice(0, 6).map((faq) => (
-              <FaqCard2
-                key={faq.id}
-                id={faq.id.toString()}
-                question={faq.question}
-                answer={faq.answer}
-              />
-            ))}
-          </div>
-        </Accordion>
-      </Container>
+      <Faq2 />
     </div>
   );
 }
