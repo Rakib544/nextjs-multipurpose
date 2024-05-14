@@ -3,16 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Clients } from "@/components/clients";
-import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { FadeIn } from "@/components/fade-in";
 import { Pricing2 } from "@/components/pricing";
 import { SectionIntro } from "@/components/section-intro";
 import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
-import WorkFlowCard from "@/components/workflow-card";
 import { workingSteps } from "@/lib/data/app-data";
+import { Features5 } from "@/sections/features";
 import { Hero4 } from "@/sections/hero";
+import { Process1 } from "@/sections/process";
 import { Testimonial4 } from "@/sections/testimonial";
 
 export default function AppLanding() {
@@ -27,117 +28,16 @@ export default function AppLanding() {
           <Clients />
         </FadeIn>
       </Container>
-      <div className="my-32">
-        <Container>
-          <SectionIntro
-            eyebrow="Our Features"
-            title="Experience your product as you create it."
-            className="mb-12"
-          ></SectionIntro>
-          <FadeInStagger faster className="grid grid-cols-12 gap-6">
-            <FadeIn className="col-span-12 md:col-span-8 p-10 bg-slate-100 rounded-[40px]">
-              <div className="relative aspect-[16/7]">
-                <Image
-                  src="https://assets-global.website-files.com/6207f5adfd8e615d3d70498b/6476d6c96421f487199b8408_Blink%20Copilot%20launch%20image-p-1080.png"
-                  alt=""
-                  fill
-                  className="rounded-xl block object-cover"
-                />
-              </div>
-              <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
-                Secure & Convenient
-              </h3>
-              <p className="text-base leading-8 text-gray-600">
-                Enjoy peace of mind with advanced security features and
-                easy-to-use interface.
-              </p>
-            </FadeIn>
-            <FadeIn className="col-span-12 md:col-span-4 p-10 bg-slate-100 rounded-[40px]">
-              <div className="relative aspect-video">
-                <Image
-                  src="/header1.png"
-                  alt=""
-                  fill
-                  className="rounded-xl block object-cover"
-                />
-              </div>
-              <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
-                Real-Time Transactions
-              </h3>
-              <p className="text-base leading-8 text-gray-600">
-                Stay updated with real-time transaction alerts and balance
-                notifications.
-              </p>
-            </FadeIn>
-            <FadeIn className="col-span-12 md:col-span-4 p-10 bg-slate-100 rounded-[40px]">
-              <div className="relative aspect-video">
-                <Image
-                  src="/header1.png"
-                  alt=""
-                  fill
-                  className="rounded-xl block object-cover"
-                />
-              </div>
-              <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
-                Real-Time Transactions
-              </h3>
-              <p className="text-base leading-8 text-gray-600">
-                Stay updated with real-time transaction alerts and balance
-                notifications.
-              </p>
-            </FadeIn>
-            <FadeIn className="col-span-12 md:col-span-8 p-10 bg-slate-100 rounded-[40px]">
-              <div className="relative aspect-[16/7]">
-                <Image
-                  src="https://assets-global.website-files.com/6207f5adfd8e615d3d70498b/6476d6c96421f487199b8408_Blink%20Copilot%20launch%20image-p-1080.png"
-                  alt=""
-                  fill
-                  className="rounded-xl block object-cover"
-                />
-              </div>
-              <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
-                Secure & Convenient
-              </h3>
-              <p className="text-base leading-8 text-gray-600">
-                Enjoy peace of mind with advanced security features and
-                easy-to-use interface.
-              </p>
-            </FadeIn>
-          </FadeInStagger>
-        </Container>
-      </div>
-      <Container className="mt-20 md:mt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
-          <div>
-            <div className="sticky top-6">
-              <SectionIntro
-                eyebrow="Working Steps"
-                title="How Financial.io works?"
-                className="mb-12"
-              >
-                Discover how Financial.io simplifies your banking experience
+      <Features5 />
+      <Process1
+        eyebrow="Working Steps"
+        title="How Financial.io works?"
+        subtitle="Discover how Financial.io simplifies your banking experience
                 with our user-friendly interface, secure transactions, and
                 convenient features all designed to help you manage your
-                finances effortlessly.
-              </SectionIntro>
-            </div>
-          </div>
-          <FadeInStagger faster>
-            {workingSteps.map((step, index) => (
-              <FadeIn key={index}>
-                <WorkFlowCard key={index} id={(index + 1).toString()}>
-                  <h3 className="text-xl font-extrabold text-indigo-950 mb-1">
-                    {step.title}
-                  </h3>
-                  <p className="text-base text-gray-600 leading-8 pb-10">
-                    {step.description}
-                  </p>
-                </WorkFlowCard>
-              </FadeIn>
-            ))}
-          </FadeInStagger>
-        </div>
-      </Container>
+                finances effortlessly."
+        processes={workingSteps}
+      />
       <Container className="mt-20 md:mt-32">
         <SectionIntro
           eyebrow="COOL & AMAZING DESIGN"

@@ -11,8 +11,8 @@ import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
 import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
 import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
 import { jobs } from "@/lib/data/job-data";
+import { About5 } from "@/sections/about";
 import Team from "@/sections/team";
-import WhyChooseUs from "@/sections/why-choose-us";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -84,7 +84,7 @@ export default function About2() {
         <Clients />
       </Container>
 
-      <WhyChooseUs />
+      <About5 />
 
       <Container className="mt-20 md:mt-32">
         <StatList>

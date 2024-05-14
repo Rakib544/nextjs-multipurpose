@@ -1,13 +1,12 @@
 import { Container } from "@/components/container";
-import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { FadeIn } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
-import { Button } from "@/components/ui/button";
 import { Faq2 } from "@/sections/faq";
+import { Features6 } from "@/sections/features";
 import Image from "next/image";
-import Link from "next/link";
 
 const services = [
   {
@@ -72,56 +71,10 @@ export default function Services1() {
         </div>
       </Container>
 
-      <div className="bg-indigo-600 py-20 md:py-32 rounded-[40px] mt-20 md:mt-32 ">
-        <Container className="relative">
-          <SectionIntro
-            className="mb-12"
-            eyebrow="Services"
-            invert
-            title="Our comprehensive digital strategy transformation"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            officiis ipsa veniam perspiciatis harum facere.
-          </SectionIntro>
-          <FadeInStagger faster className="space-y-4">
-            {services.map((service, index) => (
-              <FadeIn key={service.id}>
-                <Link
-                  href="/services/1"
-                  className="block group border-t border-indigo-500"
-                >
-                  <div className="grid grid-cols-12 gap-6 items-end py-4">
-                    <div className="col-span-12 md:col-span-4">
-                      <span className="text-xl font-bold text-white/80">
-                        {(index + 1).toString().padStart(2, "0")}
-                      </span>
-                      <h3 className="text-2xl font-bold text-white mt-1">
-                        {service.title}
-                      </h3>
-                    </div>
-                    <div className="col-span-12 md:col-span-4">
-                      <p className="text-base leading-7 text-white/80">
-                        {service.description}
-                      </p>
-                    </div>
-                    <div className="col-span-12 md:col-span-4 flex justify-end md:justify-center">
-                      <Button
-                        size="icon"
-                        className="border-[1.5px] group-hover:bg-white group-hover:text-indigo-600"
-                      >
-                        &rarr;
-                      </Button>
-                    </div>
-                  </div>
-                </Link>
-              </FadeIn>
-            ))}
-          </FadeInStagger>
-        </Container>
-      </div>
+      <Features6 />
       <Container className="mt-20 md:mt-32">
         <SectionIntro
-          title="The Best Package Just For You!"
+          title="The best package just for you!"
           eyebrow="Pricing Plan"
           className="mb-6"
         >

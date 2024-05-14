@@ -1,13 +1,13 @@
-import Image from "next/image";
-import { Container } from "../components/container";
-import { CheckIcon } from "../components/icons";
-import { SectionIntro } from "../components/section-intro";
+import { Container } from "@/components/container";
+import { CheckIcon } from "@/components/icons";
+import { SectionIntro } from "@/components/section-intro";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../components/ui/accordion";
+} from "@/components/ui/accordion";
+import Image from "next/image";
 
 const whyChooseData = [
   {
@@ -30,7 +30,7 @@ const whyChooseData = [
   },
 ];
 
-export default function WhyChooseUs() {
+export default function About5() {
   return (
     <section className="mt-20 md:mt-32">
       <Container>
