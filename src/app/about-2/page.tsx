@@ -6,12 +6,12 @@ import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
-import TeamCard1 from "@/components/team-card/team-card-1";
 import { Button, buttonVariants } from "@/components/ui/button";
 import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
 import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
 import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
 import { jobs } from "@/lib/data/job-data";
+import Team from "@/sections/team";
 import WhyChooseUs from "@/sections/why-choose-us";
 import Image from "next/image";
 import Link from "next/link";
@@ -136,32 +136,7 @@ export default function About2() {
           </FadeIn>
         </FadeInStagger>
       </Container>
-      <Container className="mt-20 md:mt-32">
-        <SectionIntro
-          title="Experience Team Member"
-          className="mb-12"
-          eyebrow="Team Member"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quis ea
-          natus repellendus error ipsam.
-        </SectionIntro>
-        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
-          {peoples.map((person) => (
-            <li key={person.name}>
-              <TeamCard1
-                image={person.image.src}
-                name={person.name}
-                role={person.role}
-              />
-            </li>
-          ))}
-        </ul>
-        <FadeIn className="flex justify-center mt-12">
-          <Link href="/teams" className={buttonVariants({ variant: "link" })}>
-            View All Team &rarr;
-          </Link>
-        </FadeIn>
-      </Container>
+      <Team />
       <div className="py-20 my-32 bg-[#F1EEFF]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-12 items-center">

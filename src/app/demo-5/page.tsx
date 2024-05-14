@@ -2,40 +2,14 @@ import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { SectionIntro } from "@/components/section-intro";
-import TeamCard1 from "@/components/team-card/team-card-1";
 import { Button, buttonVariants } from "@/components/ui/button";
-import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
-import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
-import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
 import OurAwards from "@/sections/awards";
 import Blogs from "@/sections/blogs";
 import { Hero5 } from "@/sections/hero";
 import OurPortfolios from "@/sections/our-portfolios";
+import Team from "@/sections/team";
 import { Testimonial1 } from "@/sections/testimonial";
 import Link from "next/link";
-
-const peoples = [
-  {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
-    image: { src: imageLeslieAlexander },
-  },
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    image: { src: imageMichaelFoster },
-  },
-  {
-    name: "Dries Vincent",
-    role: "Partner & Business Relations",
-    image: { src: imageDriesVincent },
-  },
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    image: { src: imageMichaelFoster },
-  },
-];
 
 const services = [
   {
@@ -60,36 +34,6 @@ const services = [
     image: "/app-development.webp",
   },
 ];
-
-function OurTeam() {
-  return (
-    <div>
-      <SectionIntro
-        eyebrow="Our Team"
-        title="Our excellence team that can digitalize your brand"
-      >
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio ex quis
-          earum possimus tempore dolore praesentium ad esse non iste!
-        </p>
-      </SectionIntro>
-      <div className="mt-12 grid grid-cols-12 gap-6">
-        {peoples.map((people) => (
-          <div
-            key={people.name}
-            className="col-span-12 md:col-span-6 lg:col-span-3"
-          >
-            <TeamCard1
-              name={people.name}
-              role={people.role}
-              image={people.image.src}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function CreativeDigitalStudio() {
   return (
@@ -164,12 +108,8 @@ export default function CreativeDigitalStudio() {
       </div>
       <OurAwards />
       <OurPortfolios />
-
       <Testimonial1 />
-
-      <Container className="mt-20 md:mt-32">
-        <OurTeam />
-      </Container>
+      <Team />
       <Container className="mt-20 md:mt-32">
         <Clients />
       </Container>
