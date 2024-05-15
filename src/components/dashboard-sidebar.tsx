@@ -23,8 +23,8 @@ export default function DashboardSidebar({
 
   return (
     <div className={cn("pb-12", className)}>
-      <div className="space-y-4 py-4">
-        <div className="px-1 py-2">
+      <div className=" py-4">
+        <div className="px-1 py-2 space-y-8">
           <Link
             aria-label="Home"
             href="/"
@@ -71,9 +71,9 @@ export default function DashboardSidebar({
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
                   isActive(menu.href)
-                    ? "bg-indigo-50 !text-indigo-500 hover:bg-indigo-50"
+                    ? "bg-indigo-600 !text-white hover:bg-indigo-600"
                     : "hover:bg-muted",
-                  "flex !items-center group gap-x-0.5 text-gray-700 font-medium justify-start min-h-11 !rounded-lg"
+                  "flex !items-center group gap-x-0.5 text-gray-700 justify-start min-h-11"
                 )}
               >
                 {menu.icon}

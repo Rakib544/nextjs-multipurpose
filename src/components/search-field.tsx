@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { SearchIcon } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ChangeEvent, Suspense, useEffect } from "react";
 import { useDebounceValue } from "usehooks-ts";
@@ -41,19 +42,7 @@ function Search({ className, ...props }: SearchFieldProps) {
         {...props}
         onChange={handleChange}
       />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="absolute h-5 w-5 text-gray-500 top-1/2 left-4 -translate-y-1/2"
-      >
-        <circle cx="11" cy="11" r="8" />
-        <path d="m21 21-4.3-4.3" />
-      </svg>
+      <SearchIcon className="absolute h-5 w-5 text-gray-500 top-1/2 left-4 -translate-y-1/2" />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { dashboardMenus } from "@/lib/data/dashboard-menus";
+import { Search } from "lucide-react";
 import Link from "next/link";
 import { ChangeEvent, useState } from "react";
 import { UsersIcon } from "./icons";
@@ -76,19 +77,7 @@ export function SearchModal() {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <Button variant="ghost" size="icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className=" h-5 w-5 text-gray-500 "
-          >
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.3-4.3" />
-          </svg>
+          <Search className="h-5 w-5 text-gray-700" />
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[525px]">

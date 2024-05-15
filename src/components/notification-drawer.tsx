@@ -10,7 +10,7 @@ export default function NotificationDrawer() {
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon">
-          <Bell className="size-5 text-gray-600" />
+          <Bell className="size-5 text-gray-700" />
         </Button>
       </SheetTrigger>
       <SheetContent className="px-0">
@@ -25,7 +25,7 @@ export default function NotificationDrawer() {
                 href=""
                 className="flex gap-x-2 p-4 hover:bg-slate-50 border-b border-border/40"
               >
-                <div className="h-10 shrink-0 w-10 flex items-center justify-center rounded-full bg-slate-100">
+                <div className="h-10 shrink-0 w-10 flex items-center justify-center rounded-full bg-indigo-50">
                   <BriefcaseIcon className="h-4 w-4" />
                 </div>
                 <div>
