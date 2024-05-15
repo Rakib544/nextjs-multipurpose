@@ -73,11 +73,11 @@ export default function DashboardSidebar({
                   isActive(menu.href)
                     ? "bg-indigo-50 !text-indigo-500 hover:bg-indigo-50"
                     : "hover:bg-muted",
-                  "flex !items-center group gap-x-1.5 text-gray-600 font-medium justify-start min-h-11 !rounded-lg"
+                  "flex !items-center group gap-x-0.5 text-gray-700 font-medium justify-start min-h-11 !rounded-lg"
                 )}
               >
                 {menu.icon}
-                <span className="mt-0.5">{menu.label}</span>
+                <span className="mt-[1px]">{menu.label}</span>
               </Link>
             ))}
           </div>
