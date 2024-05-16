@@ -65,7 +65,7 @@ export default function Features6() {
                   <div className="col-span-12 md:col-span-4 flex justify-end md:justify-center">
                     <Button
                       size="icon"
-                      className="border-[1.5px] group-hover:bg-white group-hover:text-indigo-600"
+                      className="border-[1.5px] group-hover:bg-white group-hover:text-primary"
                     >
                       &rarr;
                     </Button>

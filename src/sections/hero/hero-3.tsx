@@ -13,7 +13,7 @@ export default function Hero3() {
         <h1 className="text-3xl md:text-5xl/tight font-extrabold text-white leading-tight max-w-3xl mx-auto">
           Elevate Your Digital Presence with Our Expertise
         </h1>
-        <p className="text-base md:text-[17px] leading-8 text-gray-200 mt-6 max-w-2xl mx-auto">
+        <p className="text-base md:text-[17px] leading-8 text-primary-foreground mt-6 max-w-2xl mx-auto">
           As a leading digital agency, we specialize in crafting captivating
           websites, developing powerful web applications, and delivering
           innovative digital solutions that drive your business forward.

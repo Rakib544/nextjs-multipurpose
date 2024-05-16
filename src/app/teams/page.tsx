@@ -45,7 +45,7 @@ export default function Teams() {
               pageTitle={
                 <>
                   We bring a wealth of
-                  <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+                  <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                     {" "}
                     <span className="relative">experience</span>{" "}
                     <TextUnderline />

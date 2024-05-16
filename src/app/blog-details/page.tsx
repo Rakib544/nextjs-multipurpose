@@ -13,13 +13,13 @@ export default function BlogDetails1() {
     <div>
       <Container className="mt-20">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-sm text-neutral-700 font-medium mb-4">
+          <p className="text-sm text-muted-foreground font-medium mb-4">
             19 October, 2023
           </p>
-          <h1 className="text-3xl max-w-full font-extrabold tracking-tight lg:text-4.5xl/tight text-indigo-950">
+          <h1 className="text-3xl max-w-full font-extrabold tracking-tight lg:text-4.5xl/tight text-foreground">
             The Future of Web Development: Our Predictions for 2023
           </h1>
-          <p className="font-medium mt-3 text-sm text-neutral-900">
+          <p className="font-medium mt-3 text-sm text-muted-foreground">
             by Chelsea Hagon, Senior Developer
           </p>
           <Image

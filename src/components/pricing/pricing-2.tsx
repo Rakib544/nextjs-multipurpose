@@ -16,8 +16,8 @@ export function Pricing2() {
         <span
           className={
             pricingType === "monthly"
-              ? "text-indigo-950 font-bold text-sm"
-              : "text-neutral-700 font-bold text-sm"
+              ? "text-foreground font-bold text-sm"
+              : "text-muted-foreground font-bold text-sm"
           }
         >
           Monthly
@@ -30,8 +30,8 @@ export function Pricing2() {
         <span
           className={
             pricingType === "yearly"
-              ? "text-indigo-950 font-bold text-sm"
-              : "text-neutral-700 font-bold text-sm"
+              ? "text-foreground font-bold text-sm"
+              : "text-muted-foreground font-bold text-sm"
           }
         >
           Yearly

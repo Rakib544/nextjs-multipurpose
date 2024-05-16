@@ -53,7 +53,7 @@ export default function DashboardLayout({
               <ul className="space-y-8">
                 {docsNavigation.map((nav) => (
                   <li key={nav.id}>
-                    <h3 className="mb-4 font-bold text-xs uppercase text-indigo-950">
+                    <h3 className="mb-4 font-bold text-xs uppercase text-foreground">
                       {nav.label}
                     </h3>
                     <ul className="pl-3 border-l-[1.5px] space-y-3">

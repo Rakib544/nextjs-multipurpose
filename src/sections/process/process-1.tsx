@@ -39,7 +39,7 @@ export default function Process1({
                 </span>
               )}
               <h3 className="text-xl font-extrabold mb-2">{step.title}</h3>
-              <p className="text-base pb-10 leading-7 text-gray-600">
+              <p className="text-base pb-10 leading-7 text-muted-foreground">
                 {step.description}
               </p>
             </WorkFlowCard>

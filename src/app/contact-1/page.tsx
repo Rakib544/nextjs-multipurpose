@@ -59,16 +59,17 @@ export default function Contact1() {
           centered
           pageTitle={
             <>
-              Don’t hesitate to
-              <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+              Let&apos;s build an awesome project together for
+              <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                 {" "}
-                <span className="relative">contact us</span> <TextUnderline />
+                <span className="relative">your business</span>{" "}
+                <TextUnderline />
               </span>{" "}
             </>
           }
         >
-          Ready to help your company grow faster? Let&apos;s chat about how we
-          can help.
+          Transforming ideas into tangible success stories - together, every
+          step counts towards achievement
         </PageIntro>
       </Container>
 
@@ -82,10 +83,10 @@ export default function Contact1() {
               <span className="border inline-block px-5 py-1.5 border-indigo-200 rounded-full mb-4">
                 {contactInfo.icon}
               </span>
-              <h2 className="text-xl font-bold text-indigo-950 mb-1">
+              <h2 className="text-xl font-bold text-foreground mb-1">
                 {contactInfo.title}
               </h2>
-              <p className="text-base text-gray-600 mb-4">
+              <p className="text-base text-muted-foreground mb-4">
                 {contactInfo.subtitle}
               </p>
               <Link
@@ -122,10 +123,10 @@ export default function Contact1() {
                 <h4 className="text-white font-bold text-base md:text-lg ">
                   Copenhagen
                 </h4>
-                <p className="text-base mt-1 text-slate-200">
+                <p className="text-base mt-1 text-primary-foreground">
                   1 Carlsberg Gate
                 </p>
-                <p className="text-base text-slate-200">
+                <p className="text-base text-primary-foreground">
                   1260, København, Denmark
                 </p>
               </FadeIn>
@@ -133,10 +134,10 @@ export default function Contact1() {
                 <h4 className="text-white font-bold text-base md:text-lg ">
                   London
                 </h4>
-                <p className="text-base mt-1 text-slate-200">
+                <p className="text-base mt-1 text-primary-foreground">
                   1 Carlsberg Gate
                 </p>
-                <p className="text-base text-slate-200">
+                <p className="text-base text-primary-foreground">
                   1260, København, Denmark
                 </p>
               </FadeIn>
@@ -144,10 +145,10 @@ export default function Contact1() {
                 <h4 className="text-white font-bold text-base md:text-lg ">
                   Sydney
                 </h4>
-                <p className="text-base mt-1 text-slate-200">
+                <p className="text-base mt-1 text-primary-foreground">
                   1 Carlsberg Gate
                 </p>
-                <p className="text-base text-slate-200">
+                <p className="text-base text-primary-foreground">
                   1260, København, Denmark
                 </p>
               </FadeIn>
@@ -155,10 +156,10 @@ export default function Contact1() {
                 <h4 className="text-white font-bold text-base md:text-lg ">
                   New York
                 </h4>
-                <p className="text-base mt-1 text-slate-200">
+                <p className="text-base mt-1 text-primary-foreground">
                   1 Carlsberg Gate
                 </p>
-                <p className="text-base text-slate-200">
+                <p className="text-base text-primary-foreground">
                   1260, København, Denmark
                 </p>
               </FadeIn>

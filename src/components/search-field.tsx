@@ -42,7 +42,7 @@ function Search({ className, ...props }: SearchFieldProps) {
         {...props}
         onChange={handleChange}
       />
-      <SearchIcon className="absolute h-5 w-5 text-gray-500 top-1/2 left-4 -translate-y-1/2" />
+      <SearchIcon className="absolute h-5 w-5 text-muted-foreground top-1/2 left-4 -translate-y-1/2" />
     </div>
   );
 }

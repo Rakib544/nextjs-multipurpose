@@ -25,7 +25,7 @@ export default function Blogs3() {
         <FadeInStagger faster className="grid grid-cols-12 gap-y-8 lg:gap-x-12">
           <FadeIn className="col-span-12 lg:col-span-4 space-y-8">
             <div className="bg-white pr-5 rounded-lg">
-              <h2 className="font-bold text-indigo-950 mb-2">Search Here</h2>
+              <h2 className="font-bold text-foreground mb-2">Search Here</h2>
 
               <Suspense>
                 <SearchField
@@ -37,7 +37,7 @@ export default function Blogs3() {
             </div>
 
             <div className="bg-white pr-5 rounded-lg hidden lg:block">
-              <h2 className="font-bold text-indigo-950 mb-2">Popular Posts</h2>
+              <h2 className="font-bold text-foreground mb-2">Popular Posts</h2>
               <div className="space-y-3">
                 {blogsData.slice(0, 3).map((blog, index) => (
                   <Link
@@ -54,10 +54,10 @@ export default function Blogs3() {
                       />
                     </div>
                     <div className="col-span-8">
-                      <time className="text-xs font-medium text-gray-600">
+                      <time className="text-xs font-medium text-muted-foreground">
                         {new Date(blog.createdAt).toDateString()}
                       </time>
-                      <h3 className="font-bold hover:text-indigo-600 text-sm text-indigo-950 line-clamp-2">
+                      <h3 className="font-bold hover:text-primary text-sm text-foreground line-clamp-2">
                         {blog.title}
                       </h3>
                     </div>
@@ -66,13 +66,13 @@ export default function Blogs3() {
               </div>
             </div>
             <div className="bg-white pr-5 rounded-lg hidden lg:block">
-              <h2 className="font-bold text-indigo-950 mb-2">Categories</h2>
-              <ul className="list-disc list-inside text-base space-y-2 font-medium text-gray-600">
+              <h2 className="font-bold text-foreground mb-2">Categories</h2>
+              <ul className="list-disc list-inside text-base space-y-2 font-medium text-muted-foreground">
                 {categories.slice(0, 6).map((category, index) => (
                   <li key={index}>
                     <Link
                       href={`?category=${category.slug}`}
-                      className="hover:text-indigo-600"
+                      className="hover:text-primary"
                     >
                       {category.name}
                     </Link>
@@ -81,7 +81,7 @@ export default function Blogs3() {
               </ul>
             </div>
             <div className="bg-white pr-5 rounded-lg">
-              <h2 className="font-bold text-indigo-950 mb-2">Tags</h2>
+              <h2 className="font-bold text-foreground mb-2">Tags</h2>
               <ul className="flex flex-wrap gap-2">
                 {tags.slice(0, 5).map((tag, index) => (
                   <li key={index}>

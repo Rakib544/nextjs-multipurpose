@@ -32,14 +32,14 @@ export default function Hero5() {
         >
           <FadeIn className="col-span-12 lg:col-span-6 order-2 lg:order-1 pb-10">
             <div className="md:max-w-xl">
-              <h1 className="text-3xl font-black text-indigo-950 md:text-4.5xl/tight">
+              <h1 className="text-3xl font-black text-foreground md:text-4.5xl/tight">
                 Transform{" "}
                 <span className="-ml-1.5 inline-block bg-indigo-600 px-2 text-white rotate-2">
                   Your Brand&apos;s
                 </span>{" "}
                 Narrative with Remarkable Design
               </h1>
-              <p className="text-lg mt-4 text-gray-600 leading-8">
+              <p className="text-lg mt-4 text-muted-foreground leading-8">
                 Elevate your brand&apos;s storytelling capabilities and
                 captivate your target audience with our exceptional and
                 innovative design solutions tailored to meet your unique needs.
@@ -60,7 +60,7 @@ export default function Hero5() {
             <Image src="/design-studio.png" alt="" height={577} width={517} />
             <div className="absolute right-0 bg-white shadow-xl p-5 rounded-xl bottom-20">
               <p className="font-bold">5000+</p>
-              <p className="text-sm text-gray-600 font-medium">
+              <p className="text-sm text-muted-foreground font-medium">
                 Satisfied Clients
               </p>
             </div>

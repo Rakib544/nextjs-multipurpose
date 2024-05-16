@@ -62,10 +62,10 @@ export default function OurAwards() {
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold mt-2 text-xl text-indigo-950">
+                    <h3 className="font-bold mt-2 text-xl text-foreground">
                       {award.title}
                     </h3>
-                    <p className="text-base mt-2 leading-7 text-gray-600">
+                    <p className="text-base mt-2 leading-7 text-muted-foreground">
                       Welcome to our digital agency We specialize in helping
                       business most like yours succeed online. From website
                       design.

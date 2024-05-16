@@ -16,14 +16,14 @@ export default function Hero4() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mt-12 md:mt-20"
         >
           <FadeIn className="order-2 lg:order-1">
-            <h1 className="text-3xl md:pr-10 font-black md:text-4xl/tight text-indigo-950">
+            <h1 className="text-3xl md:pr-10 font-black md:text-4xl/tight text-foreground">
               Fastest way to manage payment anytime you want with{" "}
-              <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+              <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                 {" "}
                 <span className="relative">Financial.io</span> <TextUnderline />
               </span>{" "}
             </h1>
-            <p className="text-lg leading-8 text-gray-600 mt-3">
+            <p className="text-lg leading-8 text-muted-foreground mt-3">
               Take control of your health and reach your goals faster. Lorem,
               ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
               omnis.
@@ -60,7 +60,7 @@ export default function Hero4() {
                 </div>
                 <div>
                   <span className="text-xl font-bold">4,353</span>
-                  <span className="block text-base text-gray-600">
+                  <span className="block text-base text-muted-foreground">
                     Happy Clients
                   </span>
                 </div>
@@ -73,7 +73,7 @@ export default function Hero4() {
                   <StarIcon className="h-4 w-4 fill-yellow-400" />
                   <StarIcon className="h-4 w-4 fill-yellow-400" />
                   <StarIcon className="h-4 w-4 fill-gray-300" />
-                  <span className="text-gray-600 text-sm">Rating</span>
+                  <span className="text-muted-foreground text-sm">Rating</span>
                 </span>
               </div>
             </div>

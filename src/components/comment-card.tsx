@@ -28,8 +28,8 @@ export function CommentCard({
             alt={author.name}
           />
           <div>
-            <h4 className="font-bold text-indigo-950">{author.name}</h4>
-            <p className="text-sm text-gray-600 font-medium">
+            <h4 className="font-bold text-foreground">{author.name}</h4>
+            <p className="text-sm text-muted-foreground font-medium">
               {new Date(createdAt).toDateString()}
             </p>
           </div>
@@ -38,7 +38,7 @@ export function CommentCard({
           <MessageCircle className="h-4 w-4 mr-1" /> Reply
         </Button>
       </div>
-      <p className="text-base text-gray-800 leading-7 mt-4">{comment}</p>
+      <p className="text-base text-foreground leading-7 mt-4">{comment}</p>
 
       <CommentReplyCard replies={replies} />
     </div>
@@ -70,17 +70,17 @@ export function CommentReplyCard({
                   alt=""
                 />
                 <div>
-                  <h4 className="font-bold text-indigo-950 text-sm">
+                  <h4 className="font-bold text-foreground text-sm">
                     {reply.author.name}
                   </h4>
-                  <p className="text-xs text-gray-600 font-medium">
+                  <p className="text-xs text-muted-foreground font-medium">
                     {new Date(reply.createdAt).toDateString()}
                   </p>
                 </div>
               </div>
             </div>
 
-            <p className="text-base text-gray-800 leading-7 mt-4">
+            <p className="text-base text-foreground leading-7 mt-4">
               {reply.comment}
             </p>
           </div>

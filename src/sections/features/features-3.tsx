@@ -18,12 +18,12 @@ export default function Features3() {
         {seoServices.map((service) => (
           <FadeIn className="border rounded-2xl p-6" key={service.id}>
             <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
-              <MegaphoneIcon className="fill-indigo-600 text-indigo-600  h-7 w-7" />
+              <MegaphoneIcon className="fill-indigo-600 text-primary  h-7 w-7" />
             </span>
-            <h3 className="text-lg font-bold mt-6 text-indigo-950">
+            <h3 className="text-lg font-bold mt-6 text-foreground">
               {service.title}
             </h3>
-            <p className="text-base leading-7 mt-3 text-gray-600">
+            <p className="text-base leading-7 mt-3 text-muted-foreground">
               {service.description}
             </p>
             <Link

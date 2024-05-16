@@ -32,10 +32,8 @@ export default function Process2() {
         eyebrow="Our process"
         className="mb-12 mx-auto text-center"
       >
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
-          at.
-        </p>
+        Streamline your business workflow with our smart and effective process
+        for optimal results
       </SectionIntro>
       <div className="grid grid-cols-1 md:grid-cold-2 lg:grid-cols-4">
         {processSteps.map((p, index) => (
@@ -44,7 +42,9 @@ export default function Process2() {
               {index + 1}
             </span>
             <h3 className="mt-4 text-lg font-bold mb-3">{p.title}</h3>
-            <p className="text-base leading-7 text-gray-600">{p.description}</p>
+            <p className="text-base leading-7 text-muted-foreground">
+              {p.description}
+            </p>
           </div>
         ))}
       </div>

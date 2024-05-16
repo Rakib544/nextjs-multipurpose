@@ -5,9 +5,9 @@ import Link from "next/link";
 export default function SignIn() {
   return (
     <div className="min-h-screen h-full">
-      <div className="grid grid-cols-12 gap-6 items-center">
-        <div className="col-span-12 lg:col-span-6 mt-20 lg:mt-0">
-          <div className="max-w-lg mx-auto px-6">
+      <div className="grid grid-cols-12 gap-6 items-center min-h-screen">
+        <div className="col-span-12 lg:col-span-6 mt-20 lg:mt-0 h-full flex items-center ">
+          <div className="max-w-lg w-full mx-auto px-6">
             <Link href="/" aria-label="Home" className="mb-6 inline-block">
               <svg viewBox="0 0 130 32" aria-hidden="true" className="h-8">
                 <svg
@@ -41,34 +41,33 @@ export default function SignIn() {
                 ></path>
               </svg>
             </Link>
-            <h1 className="font-extrabold text-2xl text-indigo-950">
+            <h1 className="font-extrabold text-2xl text-foreground">
               Login to your Account
             </h1>
-            <p className="text-gray-600 leading-7 text-base mt-1">
+            <p className="text-muted-foreground leading-7 text-base mt-1">
               Welcome back! Select Method to login.
             </p>
             <LoginForm />
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-6 relative h-full min-h-screen hidden lg:block">
-          <div className="absolute inset-0 bg-slate-900/30 z-50 flex justify-center items-end">
-            <div className="mb-20 max-w-md mx-auto text-center">
-              <h2 className="text-xl font-bold text-white">
-                Connect with every Application.
-              </h2>
-              <p className="text-slate-200 text-sm leading-6 mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit, nulla quo fugit perspiciatis accusantium ex nemo
-                laboriosam explicabo omnis illum!
-              </p>
-            </div>
+        <div className="col-span-12 lg:col-span-6 relative h-full hidden lg:flex items-center bg-primary lg:mt-0">
+          <div className="lg:max-w-xl mx-auto px-6">
+            <h2 className="text-2xl max-w-md font-bold text-white mt-20">
+              The simplest way to manage your agency
+            </h2>
+            <p className="mt-2 text-primary-foreground max-w-md">
+              Enter your credentials to get started! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Neque, necessitatibus!
+            </p>
+            <Image
+              src="/sass-landing-banner.webp"
+              alt=""
+              height={800}
+              width={500}
+              className="my-8 w-full rounded-lg h-[300px] object-cover object-center"
+            />
+            {/* <Clients /> */}
           </div>
-          <Image
-            src="/login.jpg"
-            alt=""
-            fill
-            className="object-cover object-center"
-          />
         </div>
       </div>
     </div>

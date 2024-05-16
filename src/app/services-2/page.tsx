@@ -12,22 +12,22 @@ export default function Services2() {
     <div>
       <Container>
         <PageIntro
-          className="mt-20 mb-10"
+          className="max-w-3xl mx-auto mt-20 mb-10"
           eyebrow="Our services"
           centered
           pageTitle={
             <>
-              Customized solutions to
-              <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+              Explore how we customize services to fit your
+              <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                 {" "}
-                <span className="relative">your business</span>{" "}
+                <span className="relative">business needs</span>{" "}
                 <TextUnderline />
               </span>{" "}
             </>
           }
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          dignissimos? Nihil suscipit alias inventore nisi!
+          Unlock your business&apos;s full potential with customized solutions
+          tailored specifically to address your unique needs and goals
         </PageIntro>
       </Container>
       <Container className="mt-20">
@@ -44,7 +44,7 @@ export default function Services2() {
               <h3 className="text-lg font-bold mt-8 group-focus:text-white group-hover:text-white transition duration-300">
                 {service.title}
               </h3>
-              <p className="text-base leading-7 group-focus:text-slate-200 mt-3 group-hover:text-slate-200 text-gray-600 transition-all duration-300">
+              <p className="text-base leading-7 group-focus:text-primary-foreground mt-3 group-hover:text-primary-foreground text-muted-foreground transition-all duration-300">
                 {service.description}
               </p>
             </Link>

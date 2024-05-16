@@ -10,7 +10,7 @@ export default function NotificationDrawer() {
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon">
-          <Bell className="size-5 text-gray-700" />
+          <Bell className="size-5 text-muted-foreground" />
         </Button>
       </SheetTrigger>
       <SheetContent className="px-0">
@@ -29,12 +29,12 @@ export default function NotificationDrawer() {
                   <BriefcaseIcon className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-sm text-indigo-950 leading-6">
+                  <p className="text-sm text-foreground leading-6">
                     <span className="font-semibold">Henry Wilson</span> applied
                     for a job{" "}
                     <span className="font-semibold">Product Designer</span>
                   </p>
-                  <span className="text-xs text-gray-600">
+                  <span className="text-xs text-muted-foreground">
                     {i} days ago - Job application
                   </span>
                 </div>

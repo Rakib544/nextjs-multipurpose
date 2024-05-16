@@ -22,10 +22,10 @@ export default function Features5() {
                 className="rounded-xl block object-cover"
               />
             </div>
-            <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
+            <h3 className="text-xl md:text-2xl font-extrabold text-foreground mt-8">
               Secure & Convenient
             </h3>
-            <p className="text-base leading-8 text-gray-600">
+            <p className="text-base leading-8 text-muted-foreground">
               Enjoy peace of mind with advanced security features and
               easy-to-use interface.
             </p>
@@ -39,10 +39,10 @@ export default function Features5() {
                 className="rounded-xl block object-cover"
               />
             </div>
-            <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
+            <h3 className="text-xl md:text-2xl font-extrabold text-foreground mt-8">
               Real-Time Transactions
             </h3>
-            <p className="text-base leading-8 text-gray-600">
+            <p className="text-base leading-8 text-muted-foreground">
               Stay updated with real-time transaction alerts and balance
               notifications.
             </p>
@@ -56,10 +56,10 @@ export default function Features5() {
                 className="rounded-xl block object-cover"
               />
             </div>
-            <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
+            <h3 className="text-xl md:text-2xl font-extrabold text-foreground mt-8">
               Real-Time Transactions
             </h3>
-            <p className="text-base leading-8 text-gray-600">
+            <p className="text-base leading-8 text-muted-foreground">
               Stay updated with real-time transaction alerts and balance
               notifications.
             </p>
@@ -73,10 +73,10 @@ export default function Features5() {
                 className="rounded-xl block object-cover"
               />
             </div>
-            <h3 className="text-xl md:text-2xl font-extrabold text-indigo-950 mt-8">
+            <h3 className="text-xl md:text-2xl font-extrabold text-foreground mt-8">
               Secure & Convenient
             </h3>
-            <p className="text-base leading-8 text-gray-600">
+            <p className="text-base leading-8 text-muted-foreground">
               Enjoy peace of mind with advanced security features and
               easy-to-use interface.
             </p>

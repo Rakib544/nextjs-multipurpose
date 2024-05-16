@@ -6,12 +6,12 @@ import Link from "next/link";
 export default function About3() {
   return (
     <div>
-      <Container className="mt-20 text-center">
+      <Container className="mt-20 text-left md:text-center">
         <FadeIn>
           <p className="block font-display uppercase text-xs tracking-wider font-bold text-primary">
             Our journey story{" "}
           </p>
-          <h2 className="text-3xl max-w-5xl leading-normal font-bold mb-6 mt-3 mx-auto">
+          <h2 className="text-xl !leading-normal md:text-3xl max-w-5xl font-bold mb-6 mt-3 mx-auto">
             Leading digital agency with solid design and development expertise.
             We build ready made websites, mobile applications, and elaborate
             online business services.

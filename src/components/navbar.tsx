@@ -83,7 +83,7 @@ export default function Navbar() {
                         <li key={subLink.id} className="text-left">
                           {subLink.submenus.length > 0 ? (
                             <div className="py-4">
-                              <p className="px-4 text-xs mb-1 text-indigo-600 font-bold tracking-wider uppercase">
+                              <p className="px-4 text-xs mb-1 text-primary font-bold tracking-wider uppercase">
                                 {subLink.label}
                               </p>
                               <ul className="w-full">

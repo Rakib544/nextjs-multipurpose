@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
       <h2 className="text-xl md:text-2xl font-bold mb-2">Privacy and policy</h2>
       <Breadcrumb>
         <BreadcrumbList>
-          <BreadcrumbItem className="text-sm text-gray-800 font-medium">
+          <BreadcrumbItem className="text-sm text-foreground font-medium">
             <BreadcrumbLink asChild>
               <Link href="/dashboard">Dashboard</Link>
             </BreadcrumbLink>

@@ -2,6 +2,7 @@ import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
+import Pagination from "@/components/ui/pagination";
 import { caseStudies } from "@/lib/data/case-studies";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,17 +12,16 @@ export default function WorkStudies() {
     <div>
       <Container className="mb-32">
         <PageIntro
-          eyebrow="Case studies"
+          className="max-w-2xl mx-auto"
+          eyebrow="Pricing Plan"
           centered
           pageTitle={
             <>
-              {" "}
-              Proven solutions for
-              <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+              Explore our proven solutions for real-world
+              <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                 {" "}
-                <span className="relative">real-world</span> <TextUnderline />
+                <span className="relative">problems</span> <TextUnderline />
               </span>{" "}
-              problems
             </>
           }
         >
@@ -43,25 +43,28 @@ export default function WorkStudies() {
                     />
                   </Link>
                 </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-indigo-950">
+                <p className="mt-6 flex gap-x-2 text-sm text-foreground">
                   <time dateTime={caseStudy.year} className="font-semibold">
                     {caseStudy.date.split("-")[0]}
                   </time>
-                  <span className="text-neutral-300" aria-hidden="true">
+                  <span className="text-muted-foreground" aria-hidden="true">
                     /
                   </span>
                   <span className="font-medium">Case study</span>
                 </p>
-                <p className="mt-6 font-display text-xl font-extrabold text-indigo-950">
+                <p className="mt-6 font-display text-xl font-extrabold text-foreground">
                   {caseStudy.title}
                 </p>
-                <p className="mt-4 text-base leading-7 text-gray-600">
+                <p className="mt-4 text-base leading-7 text-muted-foreground">
                   {caseStudy.description}
                 </p>
               </article>
             </FadeIn>
           ))}
         </FadeInStagger>
+        <div className="mt-20 md:mt-32 flex justify-center">
+          <Pagination totalItems={60} perPageItems={10} />
+        </div>
       </Container>
     </div>
   );

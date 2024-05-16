@@ -31,19 +31,19 @@ const TestimonialCard = React.forwardRef<HTMLDivElement, TestimonialCardProps>(
               className="h-12 w-12 rounded-full object-center object-cover"
             />
             <div>
-              <span className="block text-base font-semibold leading-[1.6] text-indigo-950">
+              <span className="block text-base font-semibold leading-[1.6] text-foreground">
                 {name}
               </span>
-              <span className="block text-sm  text-gray-600 font-medium">
+              <span className="block text-sm  text-muted-foreground font-medium">
                 {role}
               </span>
             </div>
           </div>
-          <span className="flex items-center font-medium text-indigo-950 text-sm gap-x-1">
+          <span className="flex items-center font-medium text-foreground text-sm gap-x-1">
             {rating} <StarIcon className="h-4 w-4 fill-yellow-500" />
           </span>
         </figcaption>
-        <blockquote className=" relative z-20 text-[15px] font-medium leading-7 text-neutral-700 block mt-6">
+        <blockquote className=" relative z-20 text-[15px] font-medium leading-7 text-muted-foreground block mt-6">
           &quot;{quote}&quot;
         </blockquote>
       </figure>

@@ -29,7 +29,7 @@ export default function Home() {
       </div>
       <Container className="mt-12 md:mt-20">
         <FadeIn>
-          <h2 className="text-lg mb-8 text-indigo-950 font-semibold text-center">
+          <h2 className="text-lg mb-8 text-foreground font-semibold text-center">
             Trusted by many top companies
           </h2>
           <Clients />

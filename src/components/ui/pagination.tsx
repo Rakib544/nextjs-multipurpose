@@ -55,7 +55,7 @@ export default function Pagination({
       {totalPage > 1 && (
         <>
           <Button
-            className="h-10 w-10 rounded-full p-0 text-slate-600"
+            className="h-10 w-10 rounded-full p-0 text-muted-foreground"
             variant="outline"
             onClick={prevPage}
             disabled={currentPage === 1}
@@ -107,7 +107,7 @@ export default function Pagination({
             </Button>
           )}
           <Button
-            className="h-10 w-10 rounded-full p-0 text-slate-600"
+            className="h-10 w-10 rounded-full p-0 text-muted-foreground"
             variant="outline"
             onClick={nextPage}
             disabled={currentPage === totalPage}

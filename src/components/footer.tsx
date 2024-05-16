@@ -10,15 +10,15 @@ function Navigation() {
       <ul className="grid grid-cols-2 gap-8 sm:grid-cols-3">
         {footerNavigation.map((section) => (
           <li key={section.title}>
-            <div className="font-display text-lg font-bold text-indigo-950">
+            <div className="font-display text-lg font-bold text-foreground">
               {section.title}
             </div>
-            <ul role="list" className="mt-4 text-neutral-700">
+            <ul role="list" className="mt-4 text-muted-foreground">
               {section.links.map((link: any) => (
                 <li key={link.title} className="mt-4">
                   <Link
                     href={link.href}
-                    className="transition hover:text-indigo-950"
+                    className="transition hover:text-foreground"
                   >
                     {link.title}
                   </Link>
@@ -43,7 +43,7 @@ export function Footer() {
               <NewsletterForm />
             </div>
           </div>
-          <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+          <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-border/40 pt-12">
             <Link href="/" aria-label="Home">
               <svg viewBox="0 0 130 32" aria-hidden="true" className="h-8">
                 <svg
@@ -77,7 +77,7 @@ export function Footer() {
                 ></path>
               </svg>
             </Link>
-            <p className="text-sm text-neutral-700">
+            <p className="text-sm text-muted-foreground">
               © Rakib {new Date().getFullYear()}
             </p>
           </div>

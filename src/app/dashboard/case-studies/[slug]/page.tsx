@@ -18,7 +18,7 @@ export default function JobDetails() {
         <ArrowLeft className="h-4 w-4 mr-1.5" /> Back
       </Link>
       <div className="max-w-3xl mx-auto text-left mt-12">
-        <h1 className="text-3xl max-w-full font-extrabold tracking-tight lg:text-4.5xl/tight text-indigo-950">
+        <h1 className="text-3xl max-w-full font-extrabold tracking-tight lg:text-4.5xl/tight text-foreground">
           The Future of Web Development: Our Predictions for 2023
         </h1>
         <FadeInStagger
@@ -26,7 +26,7 @@ export default function JobDetails() {
           className="grid grid-cols-1 md:grid-cols-3 mt-12 gap-6"
         >
           <FadeIn>
-            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+            <span className="text-xs uppercase text-primary font-bold tracking-wider ">
               Client
             </span>
             <p className="text-base font-medium mt-1">
@@ -34,7 +34,7 @@ export default function JobDetails() {
             </p>
           </FadeIn>
           <FadeIn>
-            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+            <span className="text-xs uppercase text-primary font-bold tracking-wider ">
               Date
             </span>
             <p className="text-base font-medium mt-1">
@@ -42,7 +42,7 @@ export default function JobDetails() {
             </p>
           </FadeIn>
           <FadeIn>
-            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+            <span className="text-xs uppercase text-primary font-bold tracking-wider ">
               Services
             </span>
             <p className="text-base font-medium mt-1">
@@ -59,7 +59,7 @@ export default function JobDetails() {
         </FadeIn>
         <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Background</h2>
-          <p className="text-base leading-8 font-medium text-gray-600">
+          <p className="text-base leading-8 font-medium text-muted-foreground">
             XYZ Corporation, a leading provider of innovative software
             solutions, approached our agency with the goal of revamping their
             outdated website. Their existing site lacked visual appeal,
@@ -147,7 +147,7 @@ export default function JobDetails() {
         </div>
         <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Conclusion</h2>
-          <p className="text-base leading-8 text-gray-600">
+          <p className="text-base leading-8 text-muted-foreground">
             By partnering with our agency to redesign and optimize their
             website, XYZ Corporation was able to overcome various challenges and
             enhance their online presence, attract more visitors, and generate

@@ -15,11 +15,11 @@ export default function GlobalError({
     <main className="flex justify-center items-center text-center">
       <Container>
         <FadeIn className="my-32 max-w-xl">
-          <span className="text-6xl font-extrabold text-indigo-600">500</span>
-          <h1 className="text-2xl mt-3 mb-2 font-extrabold text-indigo-950">
+          <span className="text-6xl font-extrabold text-primary">500</span>
+          <h1 className="text-2xl mt-3 mb-2 font-extrabold text-foreground">
             Internal Server Error
           </h1>
-          <p className="text-neutral-700">
+          <p className="text-muted-foreground">
             Sorry, The server encountered an temporary error and could not
             complete your request. Please try again in 30 seconds.
           </p>

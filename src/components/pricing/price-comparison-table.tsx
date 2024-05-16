@@ -40,12 +40,12 @@ export default function PriceComparisonTable() {
                       setPricingType(value as "monthly" | "yearly")
                     }
                   >
-                    <Label className="flex items-center gap-x-2 text-slate-800">
+                    <Label className="flex items-center gap-x-2 text-foreground">
                       <RadioGroupItem value="monthly" />
                       Monthly Billing
                     </Label>
 
-                    <Label className="flex items-center gap-x-2 text-slate-800">
+                    <Label className="flex items-center gap-x-2 text-foreground">
                       <RadioGroupItem value="yearly" />
                       Yearly Billing
                     </Label>
@@ -56,11 +56,11 @@ export default function PriceComparisonTable() {
           </TableHead>
           <TableHead className="pb-8 min-w-[230px]">
             <div className="text-center w-full py-8 ">
-              <p>Free Plan</p>
-              <p className="font-display mt-4 text-4xl font-bold tracking-tight text-indigo-950">
+              <p className="text-foreground">Free Plan</p>
+              <p className="font-display mt-4 text-4xl font-bold tracking-tight text-foreground">
                 {pricingComparison.free.pricing[pricingType]}
               </p>
-              <p className="mt-2 text-gray-600 mb-6">
+              <p className="mt-2 text-muted-foreground mb-6">
                 {pricingType === "monthly" ? "Per Month" : "Per Year"}
               </p>
               <div>
@@ -82,7 +82,7 @@ export default function PriceComparisonTable() {
               <p className="font-display mt-4 text-4xl font-bold tracking-tight text-white">
                 {pricingComparison.standard.pricing[pricingType]}
               </p>
-              <p className="mt-2 text-slate-200 mb-6">
+              <p className="mt-2 text-primary-foreground mb-6">
                 {pricingType === "monthly" ? "Per Month" : "Per Year"}
               </p>
               <div>
@@ -100,11 +100,11 @@ export default function PriceComparisonTable() {
           </TableHead>
           <TableHead className="min-w-[230px]">
             <div className="text-center w-full py-8 ">
-              <p>Enterprise Plan</p>
-              <p className="font-display mt-4 text-4xl font-bold tracking-tight text-indigo-950">
+              <p className="text-foreground">Enterprise Plan</p>
+              <p className="font-display mt-4 text-4xl font-bold tracking-tight text-foreground">
                 {pricingComparison.premium.pricing[pricingType]}
               </p>
-              <p className="mt-2 text-gray-600 mb-6">
+              <p className="mt-2 text-muted-foreground mb-6">
                 {pricingType === "monthly" ? "Per Month" : "Per Year"}
               </p>
               <div>

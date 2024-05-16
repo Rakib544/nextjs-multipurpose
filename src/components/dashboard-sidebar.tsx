@@ -73,7 +73,7 @@ export default function DashboardSidebar({
                   isActive(menu.href)
                     ? "bg-indigo-600 !text-white hover:bg-indigo-600"
                     : "hover:bg-muted",
-                  "flex !items-center group gap-x-0.5 text-gray-700 justify-start min-h-11"
+                  "flex !items-center group gap-x-0.5 text-muted-foreground justify-start min-h-11"
                 )}
               >
                 {menu.icon}

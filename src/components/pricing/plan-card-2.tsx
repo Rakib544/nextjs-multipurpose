@@ -26,31 +26,33 @@ export function PlanCard2({
         "flex flex-col rounded-lg  px-6 sm:px-8  py-8 bg-white shadow-sm border relative",
         featured
           ? "order-first lg:order-none w-full h-full border-[1.5px] border-indigo-600"
-          : "border-slate-200"
+          : "border-border/40"
       )}
     >
       {featured && (
-        <span className="absolute top-2 right-2 px-4 py-2 bg-indigo-50 text-indigo-600 font-semibold text-xs tracking-wide rounded-md">
+        <span className="absolute top-2 right-2 px-4 py-2 bg-indigo-50 text-primary font-semibold text-xs tracking-wide rounded-md">
           Popular
         </span>
       )}
-      <h3 className="mb-3 font-display text-base font-medium text-indigo-950">
+      <h3 className="mb-3 font-display text-base font-medium text-foreground">
         {name}
       </h3>
 
-      <div className="flex items-end gap-x-1 text-indigo-950">
+      <div className="flex items-end gap-x-1 text-foreground">
         <p className="font-display text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-indigo-500 text-transparent bg-clip-text">
           {price}
         </p>
-        <span className="text-sm text-gray-600">/</span>
-        <span className="text-sm text-gray-600 font-medium">
+        <span className="text-sm text-muted-foreground">/</span>
+        <span className="text-sm text-muted-foreground font-medium">
           {pricingType === "monthly" ? "month" : "year"}
         </span>
       </div>
-      <p className="mt-4 text-base leading-6 text-neutral-700">{description}</p>
-      <ul className="mt-6 flex flex-col gap-y-4 text-sm text-neutral-700">
+      <p className="mt-4 text-base leading-6 text-muted-foreground">
+        {description}
+      </p>
+      <ul className="mt-6 flex flex-col gap-y-4 text-sm text-muted-foreground">
         {features.map((feature) => (
-          <li key={feature} className="flex font-medium text-gray-600">
+          <li key={feature} className="flex font-medium text-muted-foreground">
             <span className="h-6 w-6 rounded-full bg-indigo-50">
               <CheckIcon className="fill-indigo-600 h-6 w-6" />
             </span>

@@ -21,7 +21,7 @@ const ListItem = ({
       className={cn(
         "!leading-8 flex gap-x-1",
         className,
-        invert ? "text-white" : "text-indigo-950"
+        invert ? "text-white" : "text-foreground"
       )}
       {...props}
     >

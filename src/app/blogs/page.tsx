@@ -72,14 +72,14 @@ export default async function Blog() {
                     <div className="">
                       <dl>
                         <dt className="sr-only">Published</dt>
-                        <dd className="text-sm text-indigo-950 ">
+                        <dd className="text-sm text-foreground ">
                           <time dateTime={article.date}>{article.date}</time>
                         </dd>
                       </dl>
-                      <h2 className="font-display text-xl mt-4 font-semibold text-indigo-950">
+                      <h2 className="font-display text-xl mt-4 font-semibold text-foreground">
                         <Link href={article.href}>{article.title}</Link>
                       </h2>
-                      <p className="mt-4 max-w-2xl text-base text-gray-600">
+                      <p className="mt-4 max-w-2xl text-base text-muted-foreground">
                         {article.description}
                       </p>
                       <dl className="">
@@ -92,7 +92,7 @@ export default async function Blog() {
                               className="h-12 w-12 object-cover grayscale"
                             />
                           </div>
-                          <div className="text-sm text-indigo-950">
+                          <div className="text-sm text-foreground">
                             <div className="font-semibold">
                               {article.author.name}
                             </div>

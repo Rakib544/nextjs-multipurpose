@@ -75,7 +75,7 @@ export default function ProjectAnalyticsChart() {
   return (
     <div>
       <div className="flex justify-between items-center">
-        <h3 className="font-bold text-indigo-950">Projects Analytics</h3>
+        <h3 className="font-bold text-foreground">Projects Analytics</h3>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline">Filter</Button>

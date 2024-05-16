@@ -2,13 +2,13 @@ import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { List, ListItem } from "@/components/list";
 import { PageIntro } from "@/components/page-intro";
+import PortfolioCard from "@/components/portfolio-card";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
 import userImage from "@/images/testimonial_1.jpg";
 import { portfoliosData } from "@/lib/data/portfolio-data";
 import Image from "next/image";
-import Link from "next/link";
 
 const serviceProcess = [
   {
@@ -51,7 +51,7 @@ export default function PortfolioDetails() {
           className="grid grid-cols-1 md:grid-cols-3 mt-12 md:mt-20 gap-6"
         >
           <FadeIn>
-            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+            <span className="text-xs uppercase text-primary font-bold tracking-wider ">
               Client
             </span>
             <p className="text-base font-medium mt-1">
@@ -59,7 +59,7 @@ export default function PortfolioDetails() {
             </p>
           </FadeIn>
           <FadeIn>
-            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+            <span className="text-xs uppercase text-primary font-bold tracking-wider ">
               Date
             </span>
             <p className="text-base font-medium mt-1">
@@ -67,7 +67,7 @@ export default function PortfolioDetails() {
             </p>
           </FadeIn>
           <FadeIn>
-            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+            <span className="text-xs uppercase text-primary font-bold tracking-wider ">
               Services
             </span>
             <p className="text-base font-medium mt-1">
@@ -84,7 +84,7 @@ export default function PortfolioDetails() {
         />
         <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Background</h2>
-          <p className="text-base leading-8 font-medium text-gray-600">
+          <p className="text-base leading-8 font-medium text-muted-foreground">
             ABC Clothing Co. is a leading fashion retailer specializing in
             high-quality apparel and accessories for men and women.
           </p>
@@ -138,7 +138,7 @@ export default function PortfolioDetails() {
                   {process.id.toString().padStart(2, "0")}
                 </span>
                 <h3 className="text-lg font-bold mt-6 mb-2">{process.title}</h3>
-                <p className="text-base leading-8 text-gray-600">
+                <p className="text-base leading-8 text-muted-foreground">
                   {process.description}
                 </p>
               </div>
@@ -255,7 +255,7 @@ export default function PortfolioDetails() {
         </div>
         <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Next Step</h2>
-          <p className="text-base leading-8 font-medium text-gray-600">
+          <p className="text-base leading-8 font-medium text-muted-foreground">
             Offering ongoing maintenance and support to ensure the continued
             success and performance of the website.
           </p>
@@ -268,27 +268,11 @@ export default function PortfolioDetails() {
           >
             {portfoliosData.slice(0, 3).map((portfolio, index) => (
               <FadeIn key={index}>
-                <Link
-                  href="/portfolio-details"
-                  className="block relative aspect-square border group rounded-2xl overflow-hidden"
-                >
-                  <Image
-                    src={portfolio.image}
-                    fill
-                    alt=""
-                    className="object-cover object-center transition duration-500 motion-safe:group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 flex items-end p-4 md:p-8 bg-gradient-to-t from-black/70 from-5%">
-                    <div>
-                      <h2 className="font-semibold text-white text-lg md:text-xl ">
-                        {portfolio.client}
-                      </h2>
-                      <p className="text-slate-200 text-sm mt-1">
-                        {portfolio.category}
-                      </p>
-                    </div>
-                  </div>
-                </Link>
+                <PortfolioCard
+                  category={portfolio.category}
+                  client={portfolio.client}
+                  image={portfolio.image}
+                />
               </FadeIn>
             ))}
           </FadeInStagger>

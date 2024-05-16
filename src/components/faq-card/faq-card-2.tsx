@@ -19,8 +19,10 @@ export default function FaqCard2({
           {id.padStart(2, "0")}
         </div>
         <div>
-          <h2 className="font-bold text-lg text-indigo-950">{question}</h2>
-          <p className="text-base leading-7 text-gray-600 mt-2">{answer}</p>
+          <h2 className="font-bold text-lg text-foreground">{question}</h2>
+          <p className="text-base leading-7 text-muted-foreground mt-2">
+            {answer}
+          </p>
         </div>
       </div>
     </FadeIn>

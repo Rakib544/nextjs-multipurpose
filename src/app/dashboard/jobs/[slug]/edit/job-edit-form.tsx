@@ -99,7 +99,7 @@ export default function JobEditForm() {
           <div className="grid grid-cols-12 gap-6 mt-12">
             <div className="col-span-12 md:col-span-4">
               <h3 className="text-lg font-bold">Details</h3>
-              <p className="text-base text-gray-600">
+              <p className="text-base text-muted-foreground">
                 Title, description, image....
               </p>
             </div>
@@ -140,7 +140,7 @@ export default function JobEditForm() {
           <div className="grid grid-cols-12 gap-6 mt-12">
             <div className="col-span-12 md:col-span-4">
               <h3 className="text-lg font-bold">Properties</h3>
-              <p className="text-base text-gray-600">
+              <p className="text-base text-muted-foreground">
                 Additional functions and attributes...
               </p>
             </div>

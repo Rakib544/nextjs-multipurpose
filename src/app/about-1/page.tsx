@@ -61,8 +61,8 @@ export default function About1() {
         >
           <FadeIn>
             <Border position="left" className="pl-8">
-              <p className="text-base leading-8 text-gray-600">
-                <span className="font-bold text-indigo-600">Integrity. </span>
+              <p className="text-base leading-8 text-muted-foreground">
+                <span className="font-bold text-primary">Integrity. </span>
                 We upholds the highest ethical standards in all our dealings and
                 embrace creativity and strive for improvement.
               </p>
@@ -70,10 +70,8 @@ export default function About1() {
           </FadeIn>
           <FadeIn>
             <Border position="left" className="pl-8">
-              <p className="text-base leading-8 text-gray-600">
-                <span className="font-bold text-indigo-600">
-                  Customer Focus.{" "}
-                </span>
+              <p className="text-base leading-8 text-muted-foreground">
+                <span className="font-bold text-primary">Customer Focus. </span>
                 We are dedicated to exceeding customer exceptions and delivering
                 value.
               </p>
@@ -81,8 +79,8 @@ export default function About1() {
           </FadeIn>
           <FadeIn>
             <Border position="left" className="pl-8">
-              <p className="text-base leading-8 text-gray-600">
-                <span className="font-bold text-indigo-600">Teamwork. </span>
+              <p className="text-base leading-8 text-muted-foreground">
+                <span className="font-bold text-primary">Teamwork. </span>
                 We collaborate openly, respect diversity, help each other and
                 support each others success.
               </p>

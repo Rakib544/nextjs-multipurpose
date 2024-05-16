@@ -24,10 +24,10 @@ export default function About1() {
               <span className="size-12 md:size-14  rounded-full bg-indigo-50 inline-flex justify-center items-center mb-4">
                 {process.icon}
               </span>
-              <h3 className="text-lg sm:text-xl text-indigo-950 font-bold mb-2">
+              <h3 className="text-lg sm:text-xl text-foreground font-bold mb-2">
                 {process.title}
               </h3>
-              <p className="text-base leading-8 pb-10 text-gray-600">
+              <p className="text-base leading-8 pb-10 text-muted-foreground">
                 {process.description}
               </p>
             </WorkFlowCard>

@@ -14,16 +14,17 @@ export default function Pricing() {
           centered
           pageTitle={
             <>
-              Take a tour of our
-              <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+              Explore our pricing plans that fit your
+              <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                 {" "}
-                <span className="relative">Pricing Plans</span>{" "}
+                <span className="relative">business needs </span>{" "}
                 <TextUnderline />
               </span>{" "}
             </>
           }
         >
-          Enjoy lifetime access, community support, and no subscription fees.
+          Navigate through our detailed pricing breakdown to find the perfect
+          plan that aligns with your business objectives effortlessly.
         </PageIntro>
 
         <Pricing2 />

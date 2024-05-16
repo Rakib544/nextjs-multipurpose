@@ -16,10 +16,10 @@ export default function Faq2() {
           pageTitle={
             <>
               {" "}
-              Frequently Asked
-              <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+              Frequently asked
+              <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                 {" "}
-                <span className="relative">Questions</span> <TextUnderline />
+                <span className="relative">questions</span> <TextUnderline />
               </span>{" "}
             </>
           }

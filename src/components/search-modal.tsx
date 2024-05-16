@@ -77,7 +77,7 @@ export function SearchModal() {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <Button variant="ghost" size="icon">
-          <Search className="h-5 w-5 text-gray-700" />
+          <Search className="h-5 w-5 text-muted-foreground" />
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[525px]">
@@ -96,7 +96,7 @@ export function SearchModal() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="absolute h-5 w-5 text-gray-500 top-1/2 left-5 -translate-y-1/2"
+              className="absolute h-5 w-5 text-muted-foreground top-1/2 left-5 -translate-y-1/2"
             >
               <circle cx="11" cy="11" r="8" />
               <path d="m21 21-4.3-4.3" />
@@ -113,7 +113,7 @@ export function SearchModal() {
                   onClick={() => setIsOpen(false)}
                 >
                   <p className="text-base font-medium">{menu.label}</p>
-                  <p className="text-sm text-gray-600">{menu.href}</p>
+                  <p className="text-sm text-muted-foreground">{menu.href}</p>
                 </Link>
               </li>
             ))}

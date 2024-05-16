@@ -52,7 +52,7 @@ function Navigation() {
                 ></path>
               </svg>
             </Link>
-            <p className="text-gray-600 text-[17px] mt-6 leading-8 mb-6">
+            <p className="text-muted-foreground text-[17px] mt-6 leading-8 mb-6">
               We are developer studio working at the intersection of design and
               technology. It’s a really busy intersection though — a lot of our
               staff have been involved in hit and runs.
@@ -61,15 +61,15 @@ function Navigation() {
           </div>
         </li>
         <li className="col-span-6 sm:col-span-3">
-          <div className="font-display text-xl font-extrabold text-indigo-950">
+          <div className="font-display text-xl font-extrabold text-foreground">
             {company.title}
           </div>
-          <ul role="list" className="mt-6 text-gray-600">
+          <ul role="list" className="mt-6 text-muted-foreground">
             {company.links.map((link: any) => (
               <li key={link.title} className="mt-4 ">
                 <Link
                   href={link.href}
-                  className="transition hover:text-indigo-600 text-[17px]"
+                  className="transition hover:text-primary text-[17px]"
                 >
                   {link.title}
                 </Link>
@@ -78,15 +78,15 @@ function Navigation() {
           </ul>
         </li>
         <li className="col-span-6 sm:col-span-3">
-          <div className="font-display text-xl font-extrabold text-indigo-950">
+          <div className="font-display text-xl font-extrabold text-foreground">
             {work.title}
           </div>
-          <ul role="list" className="mt-6 text-gray-600">
+          <ul role="list" className="mt-6 text-muted-foreground">
             {work.links.map((link: any) => (
               <li key={link.title} className="mt-4">
                 <Link
                   href={link.href}
-                  className="transition hover:text-indigo-600 text-[17px]"
+                  className="transition hover:text-primary text-[17px]"
                 >
                   {link.title}
                 </Link>
@@ -123,7 +123,7 @@ export function Footer2() {
               <h4 className="max-w-sm text-2xl md:text-3xl/tight font-extrabold text-white">
                 Get a Free consultation to boost your business
               </h4>
-              <p className="lg:max-w-xl mx-auto text-gray-200 mt-3 leading-7">
+              <p className="lg:max-w-xl mx-auto text-primary-foreground mt-3 leading-7">
                 We&apos;ll focus on timezone problems
               </p>
               <List className="mt-4 border-indigo-400">
@@ -173,14 +173,14 @@ export function Footer2() {
               </div>
             </div>
             <div className="pb-10 mt-24 flex justify-between flex-col sm:flex-row gap-y-4 items-center border-t border-indigo-950/10 pt-12">
-              <p className="text-gray-600 text-base">
+              <p className="text-muted-foreground text-base">
                 © {new Date().getFullYear()}. All Right Reserved
               </p>
-              <div className="gap-x-4 text-gray-600 flex text-base">
-                <Link href="/privacy-policy" className="hover:text-indigo-600">
+              <div className="gap-x-4 text-muted-foreground flex text-base">
+                <Link href="/privacy-policy" className="hover:text-primary">
                   Privacy Policy
                 </Link>
-                <Link href="/terms-condition" className="hover:text-indigo-600">
+                <Link href="/terms-condition" className="hover:text-primary">
                   Terms of Condition
                 </Link>
               </div>

@@ -87,28 +87,28 @@ export default function ServiceDetails() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             <FadeIn className="p-4 md:p-8 bg-white shadow-xl shadow-gray-200 border-b-4 border-indigo-600">
-              <h3 className="text-xl text-indigo-950 font-extrabold">
+              <h3 className="text-xl text-foreground font-extrabold">
                 UI Design
               </h3>
-              <p className="text-base text-gray-600 leading-8 mt-4 ">
+              <p className="text-base text-muted-foreground leading-8 mt-4 ">
                 Craft visually appealing interfaces that enhance user engagement
                 and reflect your brand identity.
               </p>
             </FadeIn>
             <FadeIn className="p-4 md:p-8 bg-white shadow-xl shadow-gray-200 border-b-4 border-indigo-600">
-              <h3 className="text-xl text-indigo-950 font-extrabold">
+              <h3 className="text-xl text-foreground font-extrabold">
                 UX Research
               </h3>
-              <p className="text-base text-gray-600 leading-8 mt-4 ">
+              <p className="text-base text-muted-foreground leading-8 mt-4 ">
                 Dive deep into user behavior and preferences to uncover insights
                 that inform strategic design decisions.
               </p>
             </FadeIn>
             <FadeIn className="p-4 md:p-8 bg-white shadow-xl shadow-gray-200 border-b-4 border-indigo-600">
-              <h3 className="text-xl text-indigo-950 font-extrabold">
+              <h3 className="text-xl text-foreground font-extrabold">
                 Prototyping
               </h3>
-              <p className="text-base text-gray-600 leading-8 mt-4 ">
+              <p className="text-base text-muted-foreground leading-8 mt-4 ">
                 Bring concepts to life with interactive prototypes that validate
                 ideas and streamline development.
               </p>
@@ -138,7 +138,7 @@ export default function ServiceDetails() {
                   <h3 className="text-xl font-extrabold mb-2">
                     {process.title}
                   </h3>
-                  <p className="text-base leading-8 text-gray-600 pb-10">
+                  <p className="text-base leading-8 text-muted-foreground pb-10">
                     {process.description}
                   </p>
                 </div>

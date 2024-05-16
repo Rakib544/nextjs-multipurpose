@@ -76,7 +76,9 @@ export function SocialMediaProfiles({
             aria-label={socialMediaProfile.title}
             className={clsx(
               "transition h-11 w-11 bg-indigo-600 rounded-full flex justify-center items-center",
-              invert ? "hover:text-neutral-200 " : "hover:text-neutral-700"
+              invert
+                ? "hover:text-primary-foreground "
+                : "hover:text-primary-foreground"
             )}
           >
             <socialMediaProfile.icon className="h-5 w-5 fill-current" />

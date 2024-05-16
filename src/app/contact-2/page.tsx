@@ -16,7 +16,7 @@ export default function Contact2() {
             <PageIntro
               className="mt-20 mb-10"
               eyebrow="Contact Us"
-              pageTitle="Don’t hesitate to reach out"
+              pageTitle="Let's build an awesome project together for your business"
             >
               Feel free to reach out to us through your preferred method of
               contact. We are eager to connect with you and explore how our
@@ -28,10 +28,10 @@ export default function Contact2() {
                   href="mailto:md.rakib10122003@gmail.com"
                   className="col-span-12 md:col-span-6 p-4  rounded-xl bg-white border-[#ECE9FF] transition duration-300 hover:border-primary border"
                 >
-                  <p className="text-xs  tracking-wider font-bold text-indigo-600">
+                  <p className="text-xs  tracking-wider font-bold text-primary">
                     Email Address
                   </p>
-                  <p className="text-base font-medium text-indigo-950 mt-1">
+                  <p className="text-base font-medium text-foreground mt-1">
                     demo@gmail.com
                   </p>
                 </Link>
@@ -39,10 +39,10 @@ export default function Contact2() {
                   href="tel:+8801786542643"
                   className="col-span-12 md:col-span-6 p-4 rounded-xl bg-white border-[#ECE9FF] transition duration-300 hover:border-primary border"
                 >
-                  <p className="text-xs  tracking-wider font-bold text-indigo-600">
+                  <p className="text-xs  tracking-wider font-bold text-primary">
                     Phone Number
                   </p>
-                  <p className="text-base font-medium text-indigo-950 mt-1">
+                  <p className="text-base font-medium text-foreground mt-1">
                     +8801786542643
                   </p>
                 </Link>
@@ -51,10 +51,10 @@ export default function Contact2() {
                   target="_blank"
                   className="col-span-12 p-4 rounded-xl bg-white border-[#ECE9FF] transition duration-300 hover:border-primary border"
                 >
-                  <p className="text-xs  tracking-wider font-bold text-indigo-600">
+                  <p className="text-xs  tracking-wider font-bold text-primary">
                     Address
                   </p>
-                  <p className="text-base font-medium text-indigo-950 mt-1">
+                  <p className="text-base font-medium text-foreground mt-1">
                     Gazipur, Dhaka, Bangladesh
                   </p>
                 </Link>
@@ -87,10 +87,10 @@ export default function Contact2() {
                 <h4 className="text-white font-bold text-base md:text-lg ">
                   Copenhagen
                 </h4>
-                <p className="text-base mt-1 text-slate-200">
+                <p className="text-base mt-1 text-primary-foreground">
                   1 Carlsberg Gate
                 </p>
-                <p className="text-base text-slate-200">
+                <p className="text-base text-primary-foreground">
                   1260, København, Denmark
                 </p>
               </FadeIn>
@@ -98,10 +98,10 @@ export default function Contact2() {
                 <h4 className="text-white font-bold text-base md:text-lg ">
                   London
                 </h4>
-                <p className="text-base mt-1 text-slate-200">
+                <p className="text-base mt-1 text-primary-foreground">
                   1 Carlsberg Gate
                 </p>
-                <p className="text-base text-slate-200">
+                <p className="text-base text-primary-foreground">
                   1260, København, Denmark
                 </p>
               </FadeIn>
@@ -109,10 +109,10 @@ export default function Contact2() {
                 <h4 className="text-white font-bold text-base md:text-lg ">
                   Sydney
                 </h4>
-                <p className="text-base mt-1 text-slate-200">
+                <p className="text-base mt-1 text-primary-foreground">
                   1 Carlsberg Gate
                 </p>
-                <p className="text-base text-slate-200">
+                <p className="text-base text-primary-foreground">
                   1260, København, Denmark
                 </p>
               </FadeIn>
@@ -120,10 +120,10 @@ export default function Contact2() {
                 <h4 className="text-white font-bold text-base md:text-lg ">
                   New York
                 </h4>
-                <p className="text-base mt-1 text-slate-200">
+                <p className="text-base mt-1 text-primary-foreground">
                   1 Carlsberg Gate
                 </p>
-                <p className="text-base text-slate-200">
+                <p className="text-base text-primary-foreground">
                   1260, København, Denmark
                 </p>
               </FadeIn>

@@ -20,14 +20,14 @@ export default function TeamDetails() {
             />
             <div className="mb-4 text-center md:text-left w-full">
               <h1 className="text-xl sm:text-2xl font-extrabold">John Smith</h1>
-              <p className="text-base text-gray-600">
+              <p className="text-base text-muted-foreground">
                 Senior Software Engineer
               </p>
             </div>
           </div>
         </div>
         <div className="mt-36 lg:mt-32">
-          <p className="text-base leading-8 text-indigo-950">
+          <p className="text-base leading-8 text-foreground">
             John Smith is a seasoned software engineer with over 10 years of
             experience in developing innovative software solutions. He holds a
             Bachelor&apos;s degree in Computer Science from XYZ University and
@@ -39,7 +39,7 @@ export default function TeamDetails() {
         </div>
         <div className="mt-12">
           <h2 className="text-xl font-bold mb-4">Responsibilities:</h2>
-          <p className="text-base leading-8 text-indigo-950">
+          <p className="text-base leading-8 text-foreground">
             As a Senior Software Engineer, John is responsible for leading the
             development of key software projects, from initial concept to final
             implementation. He works closely with product managers and designers

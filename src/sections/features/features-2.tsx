@@ -25,12 +25,12 @@ export default function Features2() {
       >
         <FadeIn className="border rounded-2xl p-8">
           <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
-            <MegaphoneIcon className="fill-indigo-600 text-indigo-600  h-7 w-7" />
+            <MegaphoneIcon className="fill-indigo-600 text-primary  h-7 w-7" />
           </span>
-          <h3 className="text-xl font-bold mt-6 text-indigo-950">
+          <h3 className="text-xl font-bold mt-6 text-foreground">
             Better Audience
           </h3>
-          <p className="text-base leading-7 mt-3 text-gray-600 ">
+          <p className="text-base leading-7 mt-3 text-muted-foreground ">
             Our proprietary solution leverages an in-house database of 260M+
             customers and 2,000+ custom variables to build custom predictive
             models.
@@ -38,12 +38,12 @@ export default function Features2() {
         </FadeIn>
         <FadeIn className="border rounded-2xl p-8">
           <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
-            <AnalyticsIcon className="fill-indigo-600 text-indigo-600  h-7 w-7" />
+            <AnalyticsIcon className="fill-indigo-600 text-primary  h-7 w-7" />
           </span>
-          <h3 className="text-xl font-bold mt-6 text-indigo-950">
+          <h3 className="text-xl font-bold mt-6 text-foreground">
             Better Analytics
           </h3>
-          <p className="text-base leading-7 mt-3 text-gray-600 ">
+          <p className="text-base leading-7 mt-3 text-muted-foreground ">
             Our proprietary solution leverages an in-house database of 260M+
             customers and 2,000+ custom variables to build custom predictive
             models.
@@ -51,12 +51,12 @@ export default function Features2() {
         </FadeIn>
         <FadeIn className="border rounded-2xl p-8">
           <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
-            <DollarBagIcon className="fill-indigo-600 text-indigo-600  h-7 w-7" />
+            <DollarBagIcon className="fill-indigo-600 text-primary  h-7 w-7" />
           </span>
-          <h3 className="text-xl font-bold mt-6 text-indigo-950">
+          <h3 className="text-xl font-bold mt-6 text-foreground">
             Better Outcomes
           </h3>
-          <p className="text-base leading-7 mt-3 text-gray-600 ">
+          <p className="text-base leading-7 mt-3 text-muted-foreground ">
             Our proprietary solution leverages an in-house database of 260M+
             customers and 2,000+ custom variables to build custom predictive
             models.

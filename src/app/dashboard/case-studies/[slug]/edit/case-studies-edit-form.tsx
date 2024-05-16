@@ -199,7 +199,7 @@ export default function CaseStudiesEditForm() {
           <div className="grid grid-cols-12 gap-6 mt-12">
             <div className="col-span-12 md:col-span-4">
               <h3 className="text-lg font-bold">Details</h3>
-              <p className="text-base text-gray-600">
+              <p className="text-base text-muted-foreground">
                 Title, description, image....
               </p>
             </div>
@@ -257,7 +257,7 @@ export default function CaseStudiesEditForm() {
           <div className="grid grid-cols-12 gap-6 mt-12">
             <div className="col-span-12 md:col-span-4">
               <h3 className="text-lg font-bold">Client Information</h3>
-              <p className="text-base text-gray-600">
+              <p className="text-base text-muted-foreground">
                 Name, logo, services....
               </p>
             </div>
@@ -322,14 +322,12 @@ export default function CaseStudiesEditForm() {
                           className="block mx-auto"
                         />
 
-                        <p className="text-indigo-950 font-bold text-lg mt-5 text-center">
+                        <p className="text-foreground font-bold text-lg mt-5 text-center">
                           Drop or Select File
                         </p>
-                        <p className="text-center text-sm text-gray-600 mt-3 font-medium">
+                        <p className="text-center text-sm text-muted-foreground mt-3 font-medium">
                           Drop files here or click{" "}
-                          <span className="underline text-indigo-600">
-                            browse
-                          </span>{" "}
+                          <span className="underline text-primary">browse</span>{" "}
                           thorough your machine
                         </p>
                       </div>
@@ -365,7 +363,7 @@ export default function CaseStudiesEditForm() {
           <div className="grid grid-cols-12 gap-6 mt-12">
             <div className="col-span-12 md:col-span-4">
               <h3 className="text-lg font-bold">Properties</h3>
-              <p className="text-base text-gray-600">
+              <p className="text-base text-muted-foreground">
                 Additional functions and attributes...
               </p>
             </div>

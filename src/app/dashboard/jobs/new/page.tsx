@@ -12,18 +12,18 @@ import JobCreateForm from "./new-job-form";
 export default function CreateJob() {
   return (
     <div>
-      <h2 className="text-xl md:text-2xl font-bold text-indigo-950 mb-3">
+      <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">
         Create a new job
       </h2>
       <Breadcrumb>
         <BreadcrumbList>
-          <BreadcrumbItem className="text-sm text-gray-800 font-medium">
+          <BreadcrumbItem className="text-sm text-foreground font-medium">
             <BreadcrumbLink asChild>
               <Link href="/dashboard">Dashboard</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
-          <BreadcrumbItem className="text-sm text-gray-800 font-medium">
+          <BreadcrumbItem className="text-sm text-foreground font-medium">
             <BreadcrumbLink asChild>
               <Link href="/dashboard/jobs">Jobs</Link>
             </BreadcrumbLink>

@@ -35,7 +35,7 @@ export function SectionIntro({
             <span
               className={clsx(
                 "block font-display uppercase text-xs tracking-wider font-bold",
-                invert ? "text-white" : "text-indigo-600"
+                invert ? "text-white" : "text-primary"
               )}
             >
               {eyebrow}
@@ -49,7 +49,7 @@ export function SectionIntro({
             smaller
               ? "text-2xl font-extrabold"
               : "text-2xl lg:text-3xl font-extrabold",
-            invert ? "text-white" : "text-indigo-950"
+            invert ? "text-white" : "text-foreground"
           )}
         >
           {title}
@@ -59,7 +59,7 @@ export function SectionIntro({
         <div
           className={clsx(
             "text-[17px] leading-8",
-            invert ? "text-neutral-300" : "text-gray-800"
+            invert ? "text-primary-foreground" : "text-muted-foreground"
           )}
         >
           {children}

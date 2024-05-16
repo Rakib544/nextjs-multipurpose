@@ -25,7 +25,7 @@ export default function Career2() {
           pageTitle={
             <>
               Join our team of
-              <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+              <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                 {" "}
                 <span className="relative">revolutionaries</span>{" "}
                 <TextUnderline />

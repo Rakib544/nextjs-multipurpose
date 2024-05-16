@@ -26,7 +26,7 @@ export default async function CaseStudies() {
       <h2 className="text-xl md:text-2xl font-bold mb-2">Manage portfolios</h2>
       <Breadcrumb>
         <BreadcrumbList>
-          <BreadcrumbItem className="text-sm text-gray-800 font-medium">
+          <BreadcrumbItem className="text-sm text-foreground font-medium">
             <BreadcrumbLink asChild>
               <Link href="/dashboard">Dashboard</Link>
             </BreadcrumbLink>
@@ -63,15 +63,15 @@ export default async function CaseStudies() {
                 key={index}
               >
                 <div className="col-span-12 md:col-span-7 order-2 md:order-1 max-w-xl">
-                  <p className=" mt-4 mb-2 text-sm text-gray-600 font-medium">
+                  <p className=" mt-4 mb-2 text-sm text-muted-foreground font-medium">
                     {new Date(blog.createdAt).toDateString()}
                   </p>
                   <Link href="/dashboard/portfolios/1" className="">
-                    <h2 className="text-lg mt-4 font-extrabold tracking-tight transition duration-300 text-indigo-950 line-clamp-2 hover:text-indigo-600">
+                    <h2 className="text-lg mt-4 font-extrabold tracking-tight transition duration-300 text-foreground line-clamp-2 hover:text-primary">
                       {blog.title}
                     </h2>
                   </Link>
-                  <p className="mt-2 text-base text-gray-600 line-clamp-2 leading-7">
+                  <p className="mt-2 text-base text-muted-foreground line-clamp-2 leading-7">
                     {blog.subtitle}
                   </p>
                   <Link

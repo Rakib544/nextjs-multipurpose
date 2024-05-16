@@ -31,7 +31,7 @@ export default function Features1() {
               <h3 className="text-lg font-bold mt-8 group-focus:text-white group-hover:text-white transition duration-300">
                 {service.title}
               </h3>
-              <p className="text-base leading-7 group-focus:text-slate-200 mt-3 group-hover:text-slate-200 text-gray-600 transition-all duration-300">
+              <p className="text-base leading-7 group-focus:text-primary-foreground mt-3 group-hover:text-primary-foreground text-muted-foreground transition-all duration-300">
                 {service.description}
               </p>
             </Link>

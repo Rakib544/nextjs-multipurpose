@@ -39,7 +39,7 @@ export default function ApplicationDetails() {
               <tr>
                 <th
                   scope="col"
-                  className="px-3 py-3 text-base text-indigo-950 capitalize  font-semibold"
+                  className="px-3 py-3 text-base text-foreground capitalize  font-semibold"
                 >
                   Applicant Documents
                 </th>
@@ -95,7 +95,7 @@ function ApplicationInfoText({
 
 function SectionTitle({ title }: { title: string }) {
   return (
-    <h2 className="rounded bg-slate-50 px-4 py-3 font-semibold text-indigo-950">
+    <h2 className="rounded bg-slate-50 px-4 py-3 font-semibold text-foreground">
       {title}
     </h2>
   );

@@ -120,7 +120,7 @@ export function DataTable<TData, TValue>({
                 {headerGroup.headers.map((header) => {
                   return (
                     <TableHead
-                      className="h-16 px-4 text-left align-middle font-semibold text-indigo-950 [&:has([role=checkbox])]:pr-0"
+                      className="h-16 px-4 text-left align-middle font-semibold text-foreground [&:has([role=checkbox])]:pr-0"
                       key={header.id}
                     >
                       {header.isPlaceholder

@@ -59,7 +59,7 @@ export default function ProjectProgressChart() {
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
-        <h3 className="font-bold text-indigo-950">Projects Progress</h3>
+        <h3 className="font-bold text-foreground">Projects Progress</h3>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline">Filter</Button>

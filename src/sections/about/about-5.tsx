@@ -48,7 +48,7 @@ export default function About5() {
                 <CheckIcon className="h-7 w-7  text-white fill-white shrink-0" />{" "}
                 24/7 Community Support
               </span>
-              <span className="text-sm font-medium leading-7 text-slate-200">
+              <span className="text-sm font-medium leading-7 text-primary-foreground">
                 We’re servicing 24/7 support for all
               </span>
             </div>
@@ -62,7 +62,7 @@ export default function About5() {
               <span className="text-base font-semibold flex">
                 <CheckIcon className="h-7 w-7 fill-white shrink-0" /> Analytics
               </span>
-              <span className="text-sm font-medium leading-7 text-slate-200">
+              <span className="text-sm font-medium leading-7 text-primary-foreground">
                 Lorem ipsum dolor sit amet.
               </span>
             </div>
@@ -91,7 +91,7 @@ export default function About5() {
                   <AccordionTrigger className="font-semibold">
                     {data.id.toString().padStart(2, "0")}. {data.title}
                   </AccordionTrigger>
-                  <AccordionContent className="text-slate-200 leading-8 text-base">
+                  <AccordionContent className="text-primary-foreground leading-8 text-base">
                     {data.description}
                   </AccordionContent>
                 </AccordionItem>

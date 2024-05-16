@@ -12,21 +12,22 @@ export default function Component() {
       <div className="h-screen absolute top-0 left-0 bg-gradient-to-t from-violet-100 to-white w-full z-[-1]" />
       <Container>
         <PageIntro
-          className="max-w-3xl mx-auto"
-          centered
+          className="max-w-2xl mx-auto"
           eyebrow="Pricing Plan"
+          centered
           pageTitle={
             <>
-              Our plans scale with
-              <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+              Explore our pricing plans that fit your
+              <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                 {" "}
-                <span className="relative">your business</span>{" "}
+                <span className="relative">business needs </span>{" "}
                 <TextUnderline />
               </span>{" "}
             </>
           }
         >
-          Enjoy lifetime access, community support, and no subscription fees.
+          Navigate through our detailed pricing breakdown to find the perfect
+          plan that aligns with your business objectives effortlessly.
         </PageIntro>
 
         <FadeIn className="bg-white border rounded mt-12 md:mt-20">

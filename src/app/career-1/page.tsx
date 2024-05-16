@@ -19,7 +19,7 @@ export default function Career1() {
               pageTitle={
                 <>
                   Help us build technology for the next era of
-                  <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+                  <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                     {" "}
                     <span className="relative"> digital solution</span>{" "}
                     <TextUnderline />
@@ -47,8 +47,8 @@ export default function Career1() {
         <Border />
         <FadeInStagger faster className="grid grid-cols-12 py-10 gap-y-6">
           <FadeIn className="col-span-12 lg:col-span-5">
-            <h2 className="text-lg font-bold text-indigo-950 mb-2">Design</h2>
-            <p className="text-base text-gray-600">
+            <h2 className="text-lg font-bold text-foreground mb-2">Design</h2>
+            <p className="text-base text-muted-foreground">
               Open Positions for our design team
             </p>
           </FadeIn>
@@ -74,10 +74,10 @@ export default function Career1() {
         <Border />
         <FadeInStagger faster className="grid grid-cols-12 py-10 gap-y-6">
           <FadeIn className="col-span-12 lg:col-span-5">
-            <h2 className="text-lg font-bold text-indigo-950 mb-2">
+            <h2 className="text-lg font-bold text-foreground mb-2">
               Marketing
             </h2>
-            <p className="text-base text-gray-600">
+            <p className="text-base text-muted-foreground">
               Open Positions for our design team
             </p>
           </FadeIn>

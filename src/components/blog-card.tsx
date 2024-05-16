@@ -23,16 +23,16 @@ export default function BlogCard({
           className="object-cover rounded-xl motion-safe:group-hover:scale-105 transition duration-500"
         />
       </div>
-      <p className=" mt-4 mb-2 text-sm text-gray-600 font-medium">
+      <p className=" mt-4 mb-2 text-sm text-muted-foreground font-medium">
         {new Date(createdAt).toDateString()}
       </p>
 
       <Link href="/blog-details">
-        <h2 className="text-lg font-bold tracking-tight hover:text-indigo-600 text-indigo-950 line-clamp-2">
+        <h2 className="text-lg font-bold tracking-tight hover:text-primary text-foreground line-clamp-2">
           {title}
         </h2>
       </Link>
-      <p className="mt-2 text-base text-gray-600 line-clamp-2 leading-7 ">
+      <p className="mt-2 text-base text-muted-foreground line-clamp-2 leading-7 ">
         {subtitle}
       </p>
       <Link

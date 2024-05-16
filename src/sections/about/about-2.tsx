@@ -11,7 +11,7 @@ export default function About2() {
         title="Meet our passionate and innovative team of digital marketing experts"
         className="mb-12 !max-w-2xl lg:pr-12"
       >
-        <p className="text-gray-800 leading-7">
+        <p className="text-foreground leading-7">
           Numerique is a tech-enabled digital marketing solutions provider, and
           we create custom strategies for each of our clients based on their
           needs and goals.

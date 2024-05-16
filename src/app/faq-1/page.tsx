@@ -16,16 +16,16 @@ export default function Faq1() {
           eyebrow="Faq"
           pageTitle={
             <>
-              Frequently Asked
-              <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+              Frequently asked
+              <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                 {" "}
-                <span className="relative">Questions</span> <TextUnderline />
+                <span className="relative">questions</span> <TextUnderline />
               </span>{" "}
             </>
           }
         >
-          These are the most commonly asked questions about us and billing.
-          Can&apos;t find what you are looking for? Chat to our Support Team!
+          These are the most commonly asked questions about us. Can&apos;t find
+          what you are looking for? Chat to our Support Team!
         </PageIntro>
       </Container>
 

@@ -25,7 +25,7 @@ export default function About4() {
                 <CheckIcon className="h-5 w-5 fill-white" />
               </span>
               <p className="text-xl font-bold mt-3">Expert Team Member</p>
-              <p className="text-base text-gray-600 mt-2">
+              <p className="text-base text-muted-foreground mt-2">
                 An SEO Optimization agency is company that specializes
               </p>
             </div>
@@ -34,7 +34,7 @@ export default function About4() {
                 <CheckIcon className="h-5 w-5 fill-white" />
               </span>
               <p className="text-xl font-bold mt-3">Expert Team Member</p>
-              <p className="text-base text-gray-600 mt-2">
+              <p className="text-base text-muted-foreground mt-2">
                 An SEO Optimization agency is company that specializes
               </p>
             </div>

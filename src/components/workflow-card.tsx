@@ -39,7 +39,7 @@ export default function WorkFlowCard({
         <span
           className={cn(
             "border-subtle absolute top-[3px] z-10 grid h-6 w-6 -translate-x-3 scale-[var(--scale,1)] transition duration-500 place-items-center rounded-full border text-xs font-medium shadow-[0px_0px_0px_3px_#e0e7ff] md:left-1/2",
-            isView ? "bg-indigo-600 text-white" : "bg-white text-indigo-950"
+            isView ? "bg-indigo-600 text-white" : "bg-white text-foreground"
           )}
         >
           {id}

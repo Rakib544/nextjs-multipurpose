@@ -14,7 +14,7 @@ export default function Demo3() {
       <Hero3 />
       <section>
         <Container className="mt-20">
-          <p className="max-w-xs text-base font-medium text-gray-800 leading-7">
+          <p className="max-w-xs text-base font-medium text-foreground leading-7">
             Worked with 100+ clients around the world including:
           </p>
           <Clients />

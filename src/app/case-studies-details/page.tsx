@@ -19,7 +19,7 @@ export default function CaseStudiesDetails() {
           className="grid grid-cols-1 md:grid-cols-3 mt-12 gap-6"
         >
           <FadeIn>
-            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+            <span className="text-xs uppercase text-primary font-bold tracking-wider ">
               Client
             </span>
             <p className="text-base font-medium mt-1">
@@ -27,7 +27,7 @@ export default function CaseStudiesDetails() {
             </p>
           </FadeIn>
           <FadeIn>
-            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+            <span className="text-xs uppercase text-primary font-bold tracking-wider ">
               Date
             </span>
             <p className="text-base font-medium mt-1">
@@ -35,7 +35,7 @@ export default function CaseStudiesDetails() {
             </p>
           </FadeIn>
           <FadeIn>
-            <span className="text-xs uppercase text-indigo-600 font-bold tracking-wider ">
+            <span className="text-xs uppercase text-primary font-bold tracking-wider ">
               Services
             </span>
             <p className="text-base font-medium mt-1">
@@ -52,7 +52,7 @@ export default function CaseStudiesDetails() {
         </FadeIn>
         <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Background</h2>
-          <p className="text-base leading-8 font-medium text-gray-600">
+          <p className="text-base leading-8 font-medium text-muted-foreground">
             XYZ Corporation, a leading provider of innovative software
             solutions, approached our agency with the goal of revamping their
             outdated website. Their existing site lacked visual appeal,
@@ -140,7 +140,7 @@ export default function CaseStudiesDetails() {
         </div>
         <div className="mt-12 md:mt-20">
           <h2 className="text-xl font-extrabold mb-4">Conclusion</h2>
-          <p className="text-base leading-8 text-gray-600">
+          <p className="text-base leading-8 text-muted-foreground">
             By partnering with our agency to redesign and optimize their
             website, XYZ Corporation was able to overcome various challenges and
             enhance their online presence, attract more visitors, and generate
@@ -165,19 +165,19 @@ export default function CaseStudiesDetails() {
                       />
                     </Link>
                   </h3>
-                  <p className="mt-6 flex gap-x-2 text-sm text-indigo-950">
+                  <p className="mt-6 flex gap-x-2 text-sm text-foreground">
                     <time dateTime={caseStudy.year} className="font-semibold">
                       {caseStudy.date.split("-")[0]}
                     </time>
-                    <span className="text-neutral-300" aria-hidden="true">
+                    <span className="text-muted-foreground" aria-hidden="true">
                       /
                     </span>
                     <span className="font-medium">Case study</span>
                   </p>
-                  <p className="mt-6 font-display text-xl font-extrabold text-indigo-950">
+                  <p className="mt-6 font-display text-xl font-extrabold text-foreground">
                     {caseStudy.title}
                   </p>
-                  <p className="mt-4 text-base leading-7 text-gray-600">
+                  <p className="mt-4 text-base leading-7 text-muted-foreground">
                     {caseStudy.description}
                   </p>
                 </article>

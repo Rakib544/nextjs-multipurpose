@@ -140,13 +140,13 @@ export default function JobApplicationForm() {
                   >
                     <input {...getInputProps()} />
                     <span className="inline-block mx-auto">
-                      <CloudUploadIcon className="h-8 w-8 text-indigo-600" />
+                      <CloudUploadIcon className="h-8 w-8 text-primary" />
                     </span>
-                    <p className="text-indigo-950 font-semibold text-base text-center">
-                      <span className="text-indigo-600">Click to upload</span>{" "}
-                      or drag and drop
+                    <p className="text-foreground font-semibold text-base text-center">
+                      <span className="text-primary">Click to upload</span> or
+                      drag and drop
                     </p>
-                    <p className="text-center text-base text-gray-600 mt-3 font-medium">
+                    <p className="text-center text-base text-muted-foreground mt-3 font-medium">
                       Only .pdf file are allowed
                     </p>
                   </div>
@@ -160,10 +160,10 @@ export default function JobApplicationForm() {
             <div className="flex justify-between relative items-center px-1 py-3 md:p-4 shadow-sm border rounded-xl mt-5">
               <div className="flex gap-x-2 md:gap-x-3  items-center">
                 <span className="inline-flex justify-center items-center md:h-12 shrink-0 h-10 w-10 md:w-12 rounded-full bg-indigo-50 border">
-                  <FileTextIcon className="h-4 w-4 md:h-5 md:w-5 text-indigo-500" />
+                  <FileTextIcon className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                 </span>
                 <div>
-                  <p className="font-semibold text-indigo-950 text-sm text-wrap">
+                  <p className="font-semibold text-foreground text-sm text-wrap">
                     {form.getValues("cv")?.name}
                   </p>
                 </div>

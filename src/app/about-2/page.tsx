@@ -50,9 +50,9 @@ export default function About2() {
               eyebrow="About Us"
               pageTitle={
                 <>
-                  <h1 className="text-3xl font-extrabold md:text-4.5xl/tight text-indigo-950">
+                  <h1 className="text-3xl font-extrabold md:text-4.5xl/tight text-foreground">
                     Digital marketing solutions designed to{" "}
-                    <span className="text-indigo-600 relative z-10 whitespace-nowrap inline-block sm:inline">
+                    <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                       {" "}
                       <span className="relative">generate revenue</span>{" "}
                       <TextUnderline />
@@ -107,8 +107,8 @@ export default function About2() {
         <FadeInStagger className="grid grid-cols-1 lg:grid-cols-3 mt-12 gap-6">
           <FadeIn>
             <Border position="left" className="pl-8">
-              <p className="text-base leading-8 text-gray-600">
-                <span className="font-bold text-indigo-600">Integrity. </span>
+              <p className="text-base leading-8 text-muted-foreground">
+                <span className="font-bold text-primary">Integrity. </span>
                 We upholds the highest ethical standards in all our dealings and
                 embrace creativity and strive for improvement.
               </p>
@@ -116,10 +116,8 @@ export default function About2() {
           </FadeIn>
           <FadeIn>
             <Border position="left" className="pl-8">
-              <p className="text-base leading-8 text-gray-600">
-                <span className="font-bold text-indigo-600">
-                  Customer Focus.{" "}
-                </span>
+              <p className="text-base leading-8 text-muted-foreground">
+                <span className="font-bold text-primary">Customer Focus. </span>
                 We are dedicated to exceeding customer exceptions and delivering
                 value.
               </p>
@@ -127,8 +125,8 @@ export default function About2() {
           </FadeIn>
           <FadeIn>
             <Border position="left" className="pl-8">
-              <p className="text-base leading-8 text-gray-600">
-                <span className="font-bold text-indigo-600">Teamwork. </span>
+              <p className="text-base leading-8 text-muted-foreground">
+                <span className="font-bold text-primary">Teamwork. </span>
                 We collaborate openly, respect diversity, help each other and
                 support each others success.
               </p>
@@ -137,55 +135,54 @@ export default function About2() {
         </FadeInStagger>
       </Container>
       <Team />
-      <div className="py-20 my-32 bg-[#F1EEFF]">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-12 items-center">
-            <div>
-              <SectionIntro
-                eyebrow="Join our team"
-                title="Opportunity to be part of a dynamic team"
+
+      <Container className="my-20 md:my-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-12 items-center">
+          <div>
+            <SectionIntro
+              eyebrow="Join our team"
+              title="Opportunity to be part of a dynamic team"
+            >
+              <p>
+                Apply now and become part of our innovative team dedicated to
+                driving meaningful change. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Unde, rem!
+              </p>
+              <Link
+                href="/career-1"
+                className={buttonVariants({
+                  variant: "link",
+                  className: "!px-0 mt-4",
+                })}
               >
-                <p>
-                  Apply now and become part of our innovative team dedicated to
-                  driving meaningful change. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Unde, rem!
-                </p>
-                <Link
-                  href="/career-1"
-                  className={buttonVariants({
-                    variant: "link",
-                    className: "!px-0 mt-4",
-                  })}
-                >
-                  View open positions &rarr;
-                </Link>
-              </SectionIntro>
-            </div>
-            <FadeInStagger faster className="space-y-4">
-              {jobs.slice(0, 4).map((job) => (
-                <FadeIn key={job.slug}>
-                  <Link
-                    href="jobs/1"
-                    className="flex justify-between items-center p-6 bg-white rounded-xl hover:bg-slate-50"
-                  >
-                    <div>
-                      <h3 className="font-bold text-lg md:text-xl">
-                        Senior Software Engineer
-                      </h3>
-                      <p className="text-sm mt-1 text-gray-600">
-                        {job.address}
-                      </p>
-                    </div>
-                    <Button size="icon" variant="ghost">
-                      &rarr;
-                    </Button>
-                  </Link>
-                </FadeIn>
-              ))}
-            </FadeInStagger>
+                View open positions &rarr;
+              </Link>
+            </SectionIntro>
           </div>
-        </Container>
-      </div>
+          <FadeInStagger faster className="space-y-4">
+            {jobs.slice(0, 4).map((job) => (
+              <FadeIn key={job.slug}>
+                <Link
+                  href="jobs/1"
+                  className="flex justify-between items-center p-6 rounded-xl hover:bg-muted border border-border/50 bg-slate-50"
+                >
+                  <div>
+                    <h3 className="font-bold text-lg md:text-xl">
+                      Senior Software Engineer
+                    </h3>
+                    <p className="text-sm mt-1 text-muted-foreground">
+                      {job.address}
+                    </p>
+                  </div>
+                  <Button size="icon" variant="ghost">
+                    &rarr;
+                  </Button>
+                </Link>
+              </FadeIn>
+            ))}
+          </FadeInStagger>
+        </div>
+      </Container>
     </div>
   );
 }

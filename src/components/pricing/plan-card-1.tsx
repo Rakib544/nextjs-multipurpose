@@ -55,7 +55,7 @@ export function PlanCard1({
     >
       <h3
         className={`mt-5 font-display text-lg font-semibold ${
-          featured ? "text-white" : "text-neutral-700"
+          featured ? "text-white" : "text-muted-foreground"
         }`}
       >
         {name}
@@ -63,19 +63,19 @@ export function PlanCard1({
       <p
         className={clsx(
           "mt-2 text-base",
-          featured ? "text-white" : "text-neutral-700"
+          featured ? "text-white" : "text-muted-foreground"
         )}
       >
         {description}
       </p>
       <div
         className={`flex items-end gap-x-1 order-first ${
-          featured ? "text-white" : "text-indigo-950"
+          featured ? "text-white" : "text-foreground"
         }`}
       >
         <p
           className={`font-display text-5xl font-bold tracking-tight ${
-            featured ? "text-white" : "text-indigo-950"
+            featured ? "text-white" : "text-foreground"
           }`}
         >
           {price}
@@ -86,13 +86,13 @@ export function PlanCard1({
       <ul
         className={clsx(
           "order-last mt-10 flex flex-col gap-y-3 text-sm",
-          featured ? "text-white" : "text-neutral-700"
+          featured ? "text-white" : "text-muted-foreground"
         )}
       >
         {features.map((feature) => (
           <li key={feature} className="flex font-medium">
             <CheckIcon
-              className={featured ? "text-white" : "text-neutral-700"}
+              className={featured ? "text-white" : "text-muted-foreground"}
             />
             <span className="ml-4">{feature}</span>
           </li>

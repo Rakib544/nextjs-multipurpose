@@ -14,7 +14,7 @@ export const seoRevenueEarningProcess = [
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="h-6 w-6 text-indigo-600"
+        className="h-6 w-6 text-primary"
       >
         <path d="m3 17 2 2 4-4" />
         <path d="m3 7 2 2 4-4" />
@@ -62,6 +62,6 @@ export const seoRevenueEarningProcess = [
     title: "Performance Tracking & Reporting",
     description:
       "Transparency is key to our approach. We provide detailed monthly reports that outline our progress, key performance indicators, and ROI. This allows you to track your campaign's success and make data-driven decisions.",
-    icon: <AnalyticsIcon className="text-indigo-600" />,
+    icon: <AnalyticsIcon className="text-primary" />,
   },
 ];

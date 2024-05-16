@@ -7,7 +7,7 @@ export const dashboardMenus = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="mr-2 h-5 w-5 text-gray-700 group-data-[state=active]:text-white"
+        className="mr-2 h-5 w-5 group-hover:text-foreground text-muted-foreground group-data-[state=active]:text-white"
         fill="none"
       >
         <path
@@ -33,7 +33,7 @@ export const dashboardMenus = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="mr-2 h-5 w-5 text-gray-700 group-data-[state=active]:text-white"
+        className="mr-2 h-5 w-5 group-hover:text-foreground text-muted-foreground group-data-[state=active]:text-white"
         fill="none"
       >
         <path
@@ -71,7 +71,7 @@ export const dashboardMenus = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="mr-2 h-5 w-5 text-gray-700 group-data-[state=active]:text-white"
+        className="mr-2 h-5 w-5 group-hover:text-foreground text-muted-foreground group-data-[state=active]:text-white"
         fill="none"
       >
         <path
@@ -112,7 +112,7 @@ export const dashboardMenus = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="mr-2 h-5 w-5 text-gray-700 group-data-[state=active]:text-white"
+        className="mr-2 h-5 w-5 group-hover:text-foreground text-muted-foreground group-data-[state=active]:text-white"
         fill="none"
       >
         <path
@@ -147,7 +147,7 @@ export const dashboardMenus = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="mr-2 h-5 w-5 text-gray-700 group-data-[state=active]:text-white"
+        className="mr-2 h-5 w-5 group-hover:text-foreground text-muted-foreground group-data-[state=active]:text-white"
         fill="none"
       >
         <path
@@ -178,7 +178,7 @@ export const dashboardMenus = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="mr-2 h-5 w-5 text-gray-700 group-data-[state=active]:text-white"
+        className="mr-2 h-5 w-5 group-hover:text-foreground text-muted-foreground group-data-[state=active]:text-white"
         fill="none"
       >
         <path
@@ -217,7 +217,7 @@ export const dashboardMenus = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="mr-2 h-5 w-5 text-gray-700 group-data-[state=active]:text-white"
+        className="mr-2 h-5 w-5 group-hover:text-foreground text-muted-foreground group-data-[state=active]:text-white"
         fill="none"
       >
         <path
@@ -251,7 +251,7 @@ export const dashboardMenus = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="mr-2 h-5 w-5 text-gray-700 group-data-[state=active]:text-white"
+        className="mr-2 h-5 w-5 group-hover:text-foreground text-muted-foreground group-data-[state=active]:text-white"
         fill="none"
       >
         <path
@@ -285,7 +285,7 @@ export const dashboardMenus = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="mr-2 h-5 w-5 text-gray-700 group-data-[state=active]:text-white"
+        className="mr-2 h-5 w-5 group-hover:text-foreground text-muted-foreground group-data-[state=active]:text-white"
         fill="none"
       >
         <path

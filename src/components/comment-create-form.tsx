@@ -38,7 +38,7 @@ export default function CommentCreateForm() {
   return (
     <div className="text-left mt-16">
       <h3 className="text-2xl font-bold text-left">Add a comment</h3>
-      <p className="leading-7 text-base text-gray-600 mb-4">
+      <p className="leading-7 text-base text-muted-foreground mb-4">
         Your email address will not be published.
       </p>
       <Form {...form}>
