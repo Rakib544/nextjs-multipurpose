@@ -57,7 +57,7 @@ export default function ProjectProgressChart() {
     ],
   };
   return (
-    <div>
+    <div className="flex flex-col justify-between">
       <div className="flex justify-between items-center mb-6">
         <h3 className="font-bold text-foreground">Projects Progress</h3>
         <DropdownMenu>
@@ -73,7 +73,9 @@ export default function ProjectProgressChart() {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <Doughnut data={data} />;
+      <div className="h-72">
+        <Doughnut data={data} />
+      </div>
     </div>
   );
 }
