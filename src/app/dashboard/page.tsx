@@ -12,6 +12,12 @@ const ContinentVisitChart = dynamic(
     ssr: false,
   }
 );
+const ProjectStatChart = dynamic(
+  () => import("@/components/project-stat-chart"),
+  {
+    ssr: false,
+  }
+);
 
 export default function Dashboard() {
   return (
@@ -67,6 +73,9 @@ export default function Dashboard() {
           {/* <ProjectProgressChart /> */}
           <ContinentVisitChart />
         </div>
+      </div>
+      <div className="mt-6 lg:px-5 py-5 rounded-lg border border-border/50">
+        <ProjectStatChart />
       </div>
     </div>
   );
