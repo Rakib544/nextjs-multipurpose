@@ -34,7 +34,7 @@ export default function Services2() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {sassFeatures.map((service) => (
             <Link
-              href="/services/1"
+              href="/service-details"
               key={service.id}
               className="border focus:ring-0 focus:bg-primary focus:outline-none focus:border-primary group rounded-xl p-6 hover:border-primary hover:bg-primary transition duration-300"
             >

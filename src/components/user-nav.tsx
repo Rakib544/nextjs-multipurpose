@@ -1,5 +1,6 @@
 "use client";
 
+import { LogOut } from "lucide-react";
 import Link from "next/link";
 import { UsersIcon } from "./icons";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
@@ -53,7 +54,7 @@ export default function UserNav() {
         </DropdownMenuItem>
 
         <DropdownMenuItem className="cursor-pointer py-2 font-medium">
-          {/* <LogOut className="mr-2 h-4 w-4" /> */}
+          <LogOut className="mr-2 h-4 w-4" />
           <span>Log out</span>
         </DropdownMenuItem>
       </DropdownMenuContent>

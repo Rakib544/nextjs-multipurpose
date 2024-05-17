@@ -7,7 +7,7 @@ export const pricingData = [
     isFeatured: false,
     description:
       "Good for anyone who is self-employed and just getting started.",
-    href: "/register",
+    href: "/auth/signup",
     features: [
       "Send 25 quotes and invoices",
       "Connect up to 5 bank accounts",
@@ -26,7 +26,7 @@ export const pricingData = [
     yearlyPrice: "$130",
     description:
       "Good for anyone who is self-employed and just getting started.",
-    href: "/register",
+    href: "/auth/signup",
     features: [
       "Send 25 quotes and invoices",
       "Connect up to 5 bank accounts",
@@ -44,7 +44,7 @@ export const pricingData = [
     monthlyPrice: "$35",
     yearlyPrice: "$350",
     description: "For even the biggest enterprise companies.",
-    href: "/register",
+    href: "/auth/signup",
     features: [
       "Send unlimited quotes and invoices",
       "Connect up to 15 bank accounts",

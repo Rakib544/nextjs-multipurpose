@@ -56,7 +56,7 @@ export default function ServiceDetails() {
               UI ensures an intuitive and visually captivating interface.
             </PageIntro>
 
-            <Link href="/audit" className={buttonVariants({ size: "lg" })}>
+            <Link href="/contact-1" className={buttonVariants({ size: "lg" })}>
               Get A Free Audit <ArrowRight className="size-4 ml-1" />
             </Link>
           </div>

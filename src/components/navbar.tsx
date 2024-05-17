@@ -140,7 +140,7 @@ export default function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
       <Link
-        href="/contact"
+        href="/contact-1"
         className={buttonVariants({
           size: "lg",
           className: "hidden lg:inline-flex",

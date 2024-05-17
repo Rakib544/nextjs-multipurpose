@@ -46,7 +46,7 @@ export default function Features6() {
           {services.map((service, index) => (
             <FadeIn key={service.id}>
               <Link
-                href="/services/1"
+                href="/service-details"
                 className="block group border-t border-indigo-500"
               >
                 <div className="grid grid-cols-12 gap-6 items-end py-4">

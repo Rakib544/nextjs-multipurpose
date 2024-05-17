@@ -36,7 +36,7 @@ export default function Career1() {
             <Image
               height={450}
               width={450}
-              className="block ml-auto rounded-2xl"
+              className="block ml-auto rounded-2xl w-full"
               src="/about-intro-1.webp"
               alt=""
             />

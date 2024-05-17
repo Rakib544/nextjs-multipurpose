@@ -33,7 +33,7 @@ export default function Hero2() {
                 </p>
                 <div className="flex gap-4 mt-6">
                   <Link
-                    href="/about-us"
+                    href="/about-1"
                     className={buttonVariants({
                       size: "lg",
                       variant: "secondary",

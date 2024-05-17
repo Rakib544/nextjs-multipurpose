@@ -22,7 +22,7 @@ export default function Features1() {
         {sassFeatures.map((service) => (
           <FadeIn key={service.id}>
             <Link
-              href="/services/1"
+              href="/service-details"
               className="block border focus:ring-0 focus:bg-primary focus:outline-none focus:border-primary group rounded-xl p-6 hover:border-primary hover:bg-primary transition duration-300"
             >
               <span className="border inline-block px-5 py-1.5 group-hover:border-indigo-500 border-indigo-200 rounded-full transition-all duration-300 group-focus:border-indigo-500">

@@ -25,7 +25,7 @@ export default function Hero1() {
         </p>
         <div className="flex gap-4 justify-center flex-col sm:flex-row">
           <Link
-            href="/about-us"
+            href="/about-1"
             className={buttonVariants({
               size: "lg",
             })}
@@ -33,7 +33,7 @@ export default function Hero1() {
             Get Started
           </Link>
           <Link
-            href="/about-us"
+            href="/about-1"
             className={buttonVariants({
               variant: "outline",
 

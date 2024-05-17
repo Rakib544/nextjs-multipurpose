@@ -262,7 +262,7 @@ const MobileNavigation: React.FC<{ navLinks: MobileNavigationProps[] }> = ({
             ))}
             <li className="w-full">
               <Link
-                href="/contact"
+                href="/contact-1"
                 className={buttonVariants({ className: "mt-4 w-full" })}
               >
                 Contact

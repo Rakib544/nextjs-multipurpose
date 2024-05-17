@@ -24,10 +24,10 @@ export const footerNavigation = [
   {
     title: "Company",
     links: [
-      { title: "About", href: "/about" },
-      { title: "Process", href: "/process" },
-      { title: "Blog", href: "/blog" },
-      { title: "Contact us", href: "/contact" },
+      { title: "About", href: "/about-1" },
+      { title: "Services", href: "/services-1" },
+      { title: "Blog", href: "/blogs-1" },
+      { title: "Contact us", href: "/contact-1" },
     ],
   },
   {
