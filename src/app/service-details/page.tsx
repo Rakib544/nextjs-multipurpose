@@ -7,6 +7,7 @@ import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
 import WorkFlowCard from "@/components/workflow-card";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,6 +38,14 @@ const processSteps = [
       "Providing comprehensive support and maintenance to ensure continued excellence post-launch.",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Product design solution",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function ServiceDetails() {
   return (

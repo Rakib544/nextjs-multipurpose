@@ -5,6 +5,15 @@ import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { faqData } from "@/lib/data/faq-data";
 import { Testimonial1 } from "@/sections/testimonial";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Faq",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Faq2() {
   return (

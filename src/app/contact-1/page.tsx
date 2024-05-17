@@ -13,6 +13,7 @@ import { SectionIntro } from "@/components/section-intro";
 import { buttonVariants } from "@/components/ui/button";
 import { Faq1 } from "@/sections/faq";
 import { Testimonial1 } from "@/sections/testimonial";
+import { Metadata } from "next";
 import Link from "next/link";
 
 const contactData = [
@@ -49,6 +50,14 @@ const contactData = [
     btnText: "Call our team",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Contact",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Contact1() {
   return (

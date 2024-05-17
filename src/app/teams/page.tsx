@@ -8,6 +8,7 @@ import TeamCard1 from "@/components/team-card/team-card-1";
 import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
 import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
 import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
+import { Metadata } from "next";
 import Image from "next/image";
 
 const peoples = [
@@ -32,6 +33,14 @@ const peoples = [
     image: { src: imageMichaelFoster },
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Teams",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Teams() {
   return (

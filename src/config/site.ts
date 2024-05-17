@@ -1,26 +1,23 @@
-const siteURL = "https://e-book-template.vercel.app";
+const siteURL = "https://agency-multipurpose.vercel.app/";
 export const siteConfig = {
-  name: "Unlock Your Potential: A Guide to Personal Growth",
+  name: "Agenify - The Ultimate Multipurpose Agency Template",
   url: siteURL,
   ogImage: `${siteURL}/open-graph.png`,
   description:
-    "Unlock Your Potential is a comprehensive guide to personal growth, written by renowned life coach Emma Smith. Discover practical strategies, actionable advice, and inspiring insights to overcome obstacles, cultivate resilience, and achieve your goals. Start your journey of self-discovery today!",
+    "Agenify is a versatile and powerful multipurpose agency template designed to cater to all your business needs. Whether you run a creative agency, a corporate business, or a freelance portfolio, Agenify offers a sleek and modern design that can be easily customized to fit your brand. Packed with advanced features and a user-friendly interface, Agenify is the perfect solution for building a professional and dynamic online presence.",
   keywords: [
-    "personal growth",
-    "self-improvement",
-    "self-discovery",
-    "empowerment",
-    "goal setting",
-    "mindset",
-    "resilience",
-    "confidence building",
-    "positive thinking",
-    "life transformation",
-    "self-help",
-    "motivation",
-    "success strategies",
-    "self-awareness",
-    "overcoming obstacles",
+    "Multipurpose template",
+    "Agency template",
+    "Business template",
+    "Corporate website",
+    "Creative portfolio",
+    "Responsive design",
+    "HTML5 template",
+    "CSS3",
+    "Bootstrap",
+    "SEO optimized",
+    "Customizable",
+    "Professional template",
   ],
   authors: [
     {

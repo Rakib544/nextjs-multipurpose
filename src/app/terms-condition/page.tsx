@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { termsConditionData } from "@/lib/data/terms-condition-data";
+import { Metadata } from "next";
 import Link from "next/link";
 
 const sideMenus = [
@@ -38,6 +39,14 @@ const sideMenus = [
     href: "changes-to-terms",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Terms and condition",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function TermsAndCondition() {
   return (

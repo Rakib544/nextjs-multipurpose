@@ -7,37 +7,20 @@ import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { Button, buttonVariants } from "@/components/ui/button";
-import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
-import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
-import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
 import { jobs } from "@/lib/data/job-data";
 import { About5 } from "@/sections/about";
 import Team from "@/sections/team";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-const peoples = [
-  {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
-    image: { src: imageLeslieAlexander },
+export const metadata: Metadata = {
+  title: "About",
+  robots: {
+    index: true,
+    follow: true,
   },
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    image: { src: imageMichaelFoster },
-  },
-  {
-    name: "Dries Vincent",
-    role: "Partner & Business Relations",
-    image: { src: imageDriesVincent },
-  },
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    image: { src: imageMichaelFoster },
-  },
-];
+};
 
 export default function About2() {
   return (

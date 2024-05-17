@@ -1,6 +1,15 @@
 import LoginForm from "@/components/login-form";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Sing in and get started",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function SignIn() {
   return (

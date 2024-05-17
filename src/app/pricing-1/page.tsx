@@ -3,6 +3,15 @@ import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { Pricing2 } from "@/components/pricing/index";
 import { Faq1 } from "@/sections/faq";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pricing",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Pricing() {
   return (

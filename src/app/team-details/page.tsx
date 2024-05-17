@@ -2,7 +2,16 @@ import { Container } from "@/components/container";
 import { List, ListItem } from "@/components/list";
 import { SocialMediaProfiles } from "@/components/social-media-profiles";
 import userImage from "@/images/team/benjamin-russel.jpeg";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Team Details",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function TeamDetails() {
   return (

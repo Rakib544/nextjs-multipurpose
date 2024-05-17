@@ -5,8 +5,17 @@ import { PageIntro } from "@/components/page-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import coverImage from "@/images/hero.jpg";
 import { caseStudies } from "@/lib/data/case-studies";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Enhanced online presence for xyz corporation",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function CaseStudiesDetails() {
   return (

@@ -7,6 +7,15 @@ import {
   FileTextIcon,
 } from "@/components/icons";
 import JobApplicationForm from "@/components/job-application-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Apply",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function JobApply() {
   return (

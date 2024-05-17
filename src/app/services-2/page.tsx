@@ -5,7 +5,16 @@ import { sassFeatures } from "@/lib/data/sass-features";
 import { Faq1 } from "@/sections/faq";
 import { Process2 } from "@/sections/process";
 import { Testimonial1 } from "@/sections/testimonial";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Services",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Services2() {
   return (

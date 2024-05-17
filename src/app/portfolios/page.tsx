@@ -1,7 +1,16 @@
 import { Container } from "@/components/container";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
+import { Metadata } from "next";
 import Projects from "./projects";
+
+export const metadata: Metadata = {
+  title: "Portfolios",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Portfolios() {
   return (

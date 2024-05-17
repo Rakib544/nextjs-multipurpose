@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { privacyPolicyData } from "@/lib/data/privacy-policy-data";
+import { Metadata } from "next";
 import Link from "next/link";
 
 const sideMenus = [
@@ -30,6 +31,14 @@ const sideMenus = [
     href: "your-choices",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Privacy and policy",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function privacyAndPolicy() {
   return (

@@ -9,7 +9,16 @@ import { About4 } from "@/sections/about";
 import Team from "@/sections/team";
 
 import { Testimonial1 } from "@/sections/testimonial";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function About1() {
   return (

@@ -5,7 +5,16 @@ import { TextUnderline } from "@/components/icons";
 import { JobCard } from "@/components/job-card";
 import { PageIntro } from "@/components/page-intro";
 import { jobs } from "@/lib/data/job-data";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Career",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Career1() {
   return (

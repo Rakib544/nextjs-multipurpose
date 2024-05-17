@@ -8,6 +8,7 @@ import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
 import userImage from "@/images/testimonial_1.jpg";
 import { portfoliosData } from "@/lib/data/portfolio-data";
+import { Metadata } from "next";
 import Image from "next/image";
 
 const serviceProcess = [
@@ -36,6 +37,14 @@ const serviceProcess = [
       "Launched the redesigned website and monitored its performance post-launch to ensure seamless operation and functionality.",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "E-commerce website redesign for ABC clothing Co.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function PortfolioDetails() {
   return (

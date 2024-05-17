@@ -6,6 +6,7 @@ import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
 import { Faq2 } from "@/sections/faq";
 import { Features6 } from "@/sections/features";
+import { Metadata } from "next";
 import Image from "next/image";
 
 const services = [
@@ -31,6 +32,14 @@ const services = [
     image: "/app-development.webp",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Services",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Services1() {
   return (

@@ -4,8 +4,17 @@ import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import Pagination from "@/components/ui/pagination";
 import { caseStudies } from "@/lib/data/case-studies";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Case Studies",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function WorkStudies() {
   return (

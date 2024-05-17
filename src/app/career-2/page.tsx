@@ -8,7 +8,16 @@ import { PageIntro } from "@/components/page-intro";
 import SearchField from "@/components/search-field";
 import Pagination from "@/components/ui/pagination";
 import { jobs } from "@/lib/data/job-data";
+import { Metadata } from "next";
 import { Suspense } from "react";
+
+export const metadata: Metadata = {
+  title: "Careers",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Career2() {
   const jobType = jobs.map((job) => job.jobType);

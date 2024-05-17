@@ -5,8 +5,17 @@ import { ArrowRight } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import Pagination from "@/components/ui/pagination";
 import { blogsData } from "@/lib/data/blog-data";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Blogs",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Blogs2() {
   return (

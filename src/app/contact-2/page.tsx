@@ -4,7 +4,16 @@ import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { Faq1 } from "@/sections/faq";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Contact2() {
   return (

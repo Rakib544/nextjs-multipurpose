@@ -4,6 +4,15 @@ import NotificationDrawer from "@/components/notification-drawer";
 import { SearchModal } from "@/components/search-modal";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import UserNav from "@/components/user-nav";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dashboard",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function DashboardLayout({
   children,

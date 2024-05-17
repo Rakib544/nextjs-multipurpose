@@ -6,7 +6,16 @@ import Description from "@/components/description";
 import coverImage from "@/images/hero.jpg";
 
 import { blogComments, blogDetails } from "@/lib/data/blog-data";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "The future of web development: our prediction for 2023",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function BlogDetails1() {
   return (

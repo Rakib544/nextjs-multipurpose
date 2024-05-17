@@ -11,7 +11,16 @@ import {
 import { PageIntro } from "@/components/page-intro";
 import { buttonVariants } from "@/components/ui/button";
 import { jobDescription } from "@/lib/data/job-description";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Jobs",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function JobDetails() {
   return (

@@ -5,6 +5,15 @@ import { PageIntro } from "@/components/page-intro";
 import PriceComparisonTable from "@/components/pricing/price-comparison-table";
 import { Faq1 } from "@/sections/faq";
 import { Testimonial1 } from "@/sections/testimonial";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pricing",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Component() {
   return (

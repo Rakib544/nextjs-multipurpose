@@ -6,9 +6,18 @@ import SearchField from "@/components/search-field";
 import { buttonVariants } from "@/components/ui/button";
 import Pagination from "@/components/ui/pagination";
 import { blogsData, categories, tags } from "@/lib/data/blog-data";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
+
+export const metadata: Metadata = {
+  title: "Blogs",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function Blogs1() {
   return (

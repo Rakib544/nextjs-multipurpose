@@ -1,5 +1,14 @@
 import { Container } from "@/components/container";
 import ForgetPasswordForm from "@/components/forget-password-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Forget Password",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function ForgetPassword() {
   return (
