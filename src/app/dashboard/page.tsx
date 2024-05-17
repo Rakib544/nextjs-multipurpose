@@ -6,6 +6,13 @@ const ApexChart = dynamic(() => import("@/components/website-visitor-chart"), {
   ssr: false,
 });
 
+const ContinentVisitChart = dynamic(
+  () => import("@/components/continent-visit-charts"),
+  {
+    ssr: false,
+  }
+);
+
 export default function Dashboard() {
   return (
     <div>
@@ -56,8 +63,9 @@ export default function Dashboard() {
             <ApexChart />
           </Suspense>
         </div>
-        <div className="col-span-12 md:col-span-5 bg-white border border-border/50 p-5 rounded-lg">
+        <div className="col-span-12 md:col-span-5 bg-white border border-border/50 py-5 rounded-lg">
           {/* <ProjectProgressChart /> */}
+          <ContinentVisitChart />
         </div>
       </div>
     </div>

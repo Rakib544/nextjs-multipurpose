@@ -11,19 +11,19 @@ import {
 
 const series = [
   {
-    name: "TEAM A",
+    name: "Desktop",
     type: "column",
     color: "rgba(0, 167, 111, 1)",
     data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
   },
   {
-    name: "TEAM B",
+    name: "Mobile",
     type: "area",
     color: "rgba(79, 70, 229, 0.7)",
     data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
   },
   {
-    name: "TEAM C",
+    name: "Tablet",
     type: "line",
     color: "rgba(52, 152, 219, 1)",
     data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
@@ -124,7 +124,7 @@ const ApexChart = () => {
   return (
     <div>
       <div className="flex justify-between items-center mb-8 px-5">
-        <h3 className="font-bold text-foreground">Projects Analytics</h3>
+        <h3 className="font-bold text-foreground">Visitors Devices</h3>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline">Filter</Button>
