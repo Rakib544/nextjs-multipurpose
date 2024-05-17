@@ -56,9 +56,13 @@
   border-image: linear-gradient(to right, #4dc0b5, #3490dc);
 }
 
+.apexcharts-canvas {
+  font-family: "Inter";
+}
+
 .apexcharts-tooltip {
-  backdrop-filter: blur(6px) !important;
-  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) !important;
+  background-color: rgba(255, 255, 255, 0.9);
   color: rgb(33, 43, 54);
   box-shadow: rgba(145, 158, 171, 0.24) 0px 0px 2px 0px,
     rgba(145, 158, 171, 0.24) -20px 20px 40px -4px;

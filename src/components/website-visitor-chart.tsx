@@ -1,6 +1,14 @@
 "use client";
 import ReactApexChart from "react-apexcharts";
 
+import { Button } from "./ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+
 const series = [
   {
     name: "TEAM A",
@@ -56,7 +64,7 @@ const options = {
     bar: {
       borderRadius: 4,
       borderRadiusApplication: "end",
-      columnWidth: "20%",
+      columnWidth: "10px",
     },
   },
   fill: {
@@ -96,9 +104,6 @@ const options = {
     type: "datetime",
   },
   yaxis: {
-    title: {
-      text: "Points",
-    },
     min: 0,
   },
   tooltip: {
@@ -113,69 +118,32 @@ const options = {
       },
     },
   },
-  responsive: [
-    {
-      breakpoint: 1400, // Extra large devices
-      options: {
-        chart: {
-          width: "100%",
-        },
-      },
-    },
-    {
-      breakpoint: 1200, // Large devices
-      options: {
-        chart: {
-          width: "100%",
-        },
-      },
-    },
-    {
-      breakpoint: 992, // Medium devices
-      options: {
-        chart: {
-          width: "100%",
-        },
-      },
-    },
-    {
-      breakpoint: 768, // Small devices
-      options: {
-        chart: {
-          width: "100%",
-        },
-      },
-    },
-    {
-      breakpoint: 576, // Extra small devices
-      options: {
-        chart: {
-          width: "100%",
-          height: "auto",
-        },
-
-        yaxis: {
-          show: false, // Hide y-axis for very small screens
-        },
-        xaxis: {
-          labels: {
-            show: false, // Hide x-axis labels for very small screens
-          },
-        },
-      },
-    },
-  ],
 };
 
 const ApexChart = () => {
   return (
     <div>
+      <div className="flex justify-between items-center mb-8 px-5">
+        <h3 className="font-bold text-foreground">Projects Analytics</h3>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline">Filter</Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem>This Month</DropdownMenuItem>
+            <DropdownMenuItem>Last 3 Months</DropdownMenuItem>
+            <DropdownMenuItem>Last Year</DropdownMenuItem>
+            <DropdownMenuItem>Last 5 Year</DropdownMenuItem>
+            <DropdownMenuItem>All Times</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
       <div id="chart">
         <ReactApexChart
           options={options as any}
           series={series}
           type="line"
-          height={350}
+          // height={350}
         />
       </div>
     </div>

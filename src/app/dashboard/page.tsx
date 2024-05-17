@@ -51,7 +51,7 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="grid grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-7 bg-white border border-border/50 p-5 rounded-lg">
+        <div className="col-span-12 md:col-span-7 bg-white border border-border/50 py-5 rounded-lg">
           <Suspense fallback={<p></p>}>
             <ApexChart />
           </Suspense>

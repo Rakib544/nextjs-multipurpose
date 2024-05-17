@@ -1,11 +1,4 @@
 "use client";
-import { Button } from "./ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
 
 import { Line } from "react-chartjs-2";
 
@@ -99,21 +92,6 @@ export default function ProjectAnalyticsChart() {
 
   return (
     <div className="flex flex-col justify-between h-full">
-      <div className="flex justify-between items-center mb-8">
-        <h3 className="font-bold text-foreground">Projects Analytics</h3>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline">Filter</Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuItem>This Month</DropdownMenuItem>
-            <DropdownMenuItem>Last 3 Months</DropdownMenuItem>
-            <DropdownMenuItem>Last Year</DropdownMenuItem>
-            <DropdownMenuItem>Last 5 Year</DropdownMenuItem>
-            <DropdownMenuItem>All Times</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
       <div
         style={{
           cursor: "pointer",
