@@ -1,5 +1,6 @@
 import ProjectAnalyticsChart from "@/components/project-analytics-chart";
 import ProjectProgressChart from "@/components/projects-progress-chart";
+import ApexChart from "@/components/website-visitor-chart";
 
 export default function Dashboard() {
   return (
@@ -53,6 +54,7 @@ export default function Dashboard() {
           <ProjectProgressChart />
         </div>
       </div>
+      <ApexChart />
     </div>
   );
 }
