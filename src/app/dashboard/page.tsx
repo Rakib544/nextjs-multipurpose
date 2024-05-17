@@ -1,7 +1,10 @@
-import ProjectAnalyticsChart from "@/components/project-analytics-chart";
-import ProjectProgressChart from "@/components/projects-progress-chart";
-import ApexChart from "@/components/website-visitor-chart";
 import { Suspense } from "react";
+
+import dynamic from "next/dynamic";
+
+const ApexChart = dynamic(() => import("@/components/website-visitor-chart"), {
+  ssr: false,
+});
 
 export default function Dashboard() {
   return (
@@ -49,15 +52,14 @@ export default function Dashboard() {
       </div>
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-7 bg-white border border-border/50 p-5 rounded-lg">
-          <ProjectAnalyticsChart />
+          <Suspense fallback={<p></p>}>
+            <ApexChart />
+          </Suspense>
         </div>
         <div className="col-span-12 md:col-span-5 bg-white border border-border/50 p-5 rounded-lg">
-          <ProjectProgressChart />
+          {/* <ProjectProgressChart /> */}
         </div>
       </div>
-      <Suspense fallback={<p>Loading...</p>}>
-        <ApexChart />
-      </Suspense>
     </div>
   );
 }
