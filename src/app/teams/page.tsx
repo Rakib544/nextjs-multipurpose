@@ -47,7 +47,7 @@ export default function Teams() {
                   We bring a wealth of
                   <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                     {" "}
-                    <span className="relative">experience</span>{" "}
+                    <span className="relative"> experience</span>{" "}
                     <TextUnderline />
                   </span>{" "}
                   from the wide range of backgrounds
