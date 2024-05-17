@@ -1,6 +1,6 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
-import { MegaphoneIcon } from "@/components/icons";
+import { ArrowRight, MegaphoneIcon } from "@/components/icons";
 import { SectionIntro } from "@/components/section-intro";
 import { buttonVariants } from "@/components/ui/button";
 import { seoServices } from "@/lib/data/seo-services";
@@ -33,7 +33,7 @@ export default function Features3() {
                 className: "!px-0 mt-4",
               })}
             >
-              Learn More &rarr;
+              Learn More <ArrowRight className="size-4 ml-1" />
             </Link>
           </FadeIn>
         ))}

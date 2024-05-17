@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { ArrowRight } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,7 +52,10 @@ export default function Hero5() {
                   className: "mt-4 bg-indigo-600 text-white",
                 })}
               >
-                Explore our works <span className="ml-2">&rarr;</span>
+                Explore our works{" "}
+                <span className="ml-2">
+                  <ArrowRight className="size-4 ml-1" />
+                </span>
               </Link>
             </div>
           </FadeIn>

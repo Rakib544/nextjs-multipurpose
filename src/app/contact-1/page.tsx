@@ -1,6 +1,7 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import {
+  ArrowRight,
   ChatIcon,
   NotificationIcon,
   PhoneIcon,
@@ -96,7 +97,7 @@ export default function Contact1() {
                   className: "!px-0",
                 })}
               >
-                {contactInfo.btnText} <span className="ml-2">&rarr;</span>
+                {contactInfo.btnText} <ArrowRight className="size-4 ml-1" />
               </Link>
             </FadeIn>
           ))}

@@ -52,12 +52,12 @@ export const navLinks = [
         submenus: [
           {
             id: generateUniqueId(),
-            label: "about-1",
+            label: "About-1",
             href: "/about-1",
           },
           {
             id: generateUniqueId(),
-            label: "about-2",
+            label: "About-2",
             href: "/about-2",
           },
         ],
@@ -120,12 +120,12 @@ export const navLinks = [
         submenus: [
           {
             id: generateUniqueId(),
-            label: "faq-1",
+            label: "Faq-1",
             href: "/faq-1",
           },
           {
             id: generateUniqueId(),
-            label: "faq-2",
+            label: "Faq-2",
             href: "/faq-2",
           },
         ],
@@ -137,17 +137,17 @@ export const navLinks = [
         submenus: [
           {
             id: generateUniqueId(),
-            label: "services-1",
+            label: "Services-1",
             href: "/services-1",
           },
           {
             id: generateUniqueId(),
-            label: "services-2",
+            label: "Services-2",
             href: "/services-2",
           },
           {
             id: generateUniqueId(),
-            label: "service details",
+            label: "Service details",
             href: "/service-details",
           },
         ],

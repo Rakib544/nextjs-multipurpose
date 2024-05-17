@@ -2,7 +2,7 @@ import { Border } from "@/components/border";
 import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
-import { TextUnderline } from "@/components/icons";
+import { ArrowRight, TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
@@ -152,10 +152,10 @@ export default function About2() {
                 href="/career-1"
                 className={buttonVariants({
                   variant: "link",
-                  className: "!px-0 mt-4",
+                  className: "!px-0 mt-4 items-center",
                 })}
               >
-                View open positions &rarr;
+                View open positions <ArrowRight className="h-4 w-4 ml-1" />
               </Link>
             </SectionIntro>
           </div>
@@ -164,7 +164,7 @@ export default function About2() {
               <FadeIn key={job.slug}>
                 <Link
                   href="jobs/1"
-                  className="flex justify-between items-center p-6 rounded-xl hover:bg-muted border border-border/50 bg-slate-50"
+                  className="flex justify-between items-center p-6 rounded-xl hover:bg-muted border border-border/50 bg-slate-50 group"
                 >
                   <div>
                     <h3 className="font-bold text-lg md:text-xl">
@@ -175,7 +175,7 @@ export default function About2() {
                     </p>
                   </div>
                   <Button size="icon" variant="ghost">
-                    &rarr;
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-foreground" />
                   </Button>
                 </Link>
               </FadeIn>

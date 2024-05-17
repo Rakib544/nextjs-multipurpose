@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { ArrowRight } from "@/components/icons";
 import { List, ListItem } from "@/components/list";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
@@ -56,7 +57,7 @@ export default function ServiceDetails() {
             </PageIntro>
 
             <Link href="/audit" className={buttonVariants({ size: "lg" })}>
-              Get A Free Audit <span className="ml-2">&rarr;</span>
+              Get A Free Audit <ArrowRight className="size-4 ml-1" />
             </Link>
           </div>
           <FadeIn>

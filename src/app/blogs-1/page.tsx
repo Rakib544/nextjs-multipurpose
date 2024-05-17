@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { ArrowRight } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import SearchField from "@/components/search-field";
 import { buttonVariants } from "@/components/ui/button";
@@ -13,10 +14,14 @@ export default function Blogs1() {
   return (
     <div>
       <Container>
-        <PageIntro eyebrow="Blogs" pageTitle="Insights & Trends">
+        <PageIntro
+          className="max-w-xl"
+          eyebrow="Blogs"
+          pageTitle="Take a look at the latest news and articles"
+        >
           <p>
-            Explore Our Latest Articles on UI/UX Design, Digital Trends, and
-            Innovation
+            Explore our latest articles on UI/UX design, digital trends, and
+            innovation
           </p>
         </PageIntro>
       </Container>
@@ -121,7 +126,7 @@ export default function Blogs1() {
                         className: "!px-0 mt-4",
                       })}
                     >
-                      Read More &rarr;
+                      Read More <ArrowRight className="size-4 ml-1" />
                     </Link>
                   </div>
                   <div className="col-span-12 md:col-span-4 order-1 md:order-2">

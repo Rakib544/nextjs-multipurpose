@@ -1,19 +1,23 @@
+import { ArrowRight } from "@/components/icons";
 import { socialMediaProfiles } from "@/components/social-media-profiles";
 
 export const footerNavigation = [
   {
-    title: "Work",
+    title: "Solutions",
     links: [
-      { title: "FamilyFund", href: "/work/family-fund" },
-      { title: "Unseal", href: "/work/unseal" },
-      { title: "Phobia", href: "/work/phobia" },
+      { title: "Paid search marketing", href: "/service-details" },
+      { title: "Email marketing", href: "/service-details" },
+      { title: "Social media marketing", href: "/service-details" },
       {
         title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
+          <p className="flex items-center">
+            See all{" "}
+            <span aria-hidden="true">
+              <ArrowRight className="size-4 ml-1" />
+            </span>
+          </p>
         ),
-        href: "/work",
+        href: "/services-1",
       },
     ],
   },

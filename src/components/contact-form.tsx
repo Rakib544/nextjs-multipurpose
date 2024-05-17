@@ -2,6 +2,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { ArrowRight } from "./icons";
 import { Button } from "./ui/button";
 import {
   Form,
@@ -118,7 +119,7 @@ export default function ContactForm() {
             )}
           />
           <Button type="submit" size="lg">
-            Send Message &rarr;
+            Send Message <ArrowRight className="size-4 ml-1" />
           </Button>
         </form>
       </Form>

@@ -1,6 +1,7 @@
 import BlogCard from "@/components/blog-card";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { ArrowRight } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import Pagination from "@/components/ui/pagination";
 import { blogsData } from "@/lib/data/blog-data";
@@ -31,7 +32,7 @@ export default function Blogs2() {
                 className: "!px-0 mt-4",
               })}
             >
-              Read More &rarr;
+              Read More <ArrowRight className="size-4 ml-1" />
             </Link>
           </div>
           <div className="col-span-12 md:col-span-4 order-1 md:order-2">

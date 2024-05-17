@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "./icons";
 import { buttonVariants } from "./ui/button";
 
 export default function BlogCard({
@@ -39,7 +40,7 @@ export default function BlogCard({
         href="/blog-details"
         className={buttonVariants({ variant: "link", className: "!px-0" })}
       >
-        Read More &rarr;
+        Read More <ArrowRight className="size-4 ml-1" />
       </Link>
     </article>
   );

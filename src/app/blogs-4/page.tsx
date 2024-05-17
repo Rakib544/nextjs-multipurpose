@@ -14,10 +14,14 @@ export default function Blogs3() {
   return (
     <div>
       <Container>
-        <PageIntro eyebrow="Blogs" pageTitle="Insights & Trends">
+        <PageIntro
+          className="max-w-xl"
+          eyebrow="Blogs"
+          pageTitle="Take a look at the latest news and articles"
+        >
           <p>
-            Explore Our Latest Articles on UI/UX Design, Digital Trends, and
-            Innovation
+            Explore our latest articles on UI/UX design, digital trends, and
+            innovation
           </p>
         </PageIntro>
       </Container>

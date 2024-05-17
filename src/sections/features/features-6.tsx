@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { ArrowRight } from "@/components/icons";
 import { SectionIntro } from "@/components/section-intro";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -67,7 +68,7 @@ export default function Features6() {
                       size="icon"
                       className="border-[1.5px] group-hover:bg-white group-hover:text-primary"
                     >
-                      &rarr;
+                      <ArrowRight className="size-5 ml-1" />
                     </Button>
                   </div>
                 </div>

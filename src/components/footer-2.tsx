@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Container } from "./container";
 import { FadeIn, FadeInStagger } from "./fade-in";
+import { ArrowRight } from "./icons";
 import { List, ListItem } from "./list";
 import { NewsletterForm } from "./newsletter-form";
 import { SocialMediaProfiles } from "./social-media-profiles";
@@ -16,7 +17,7 @@ function Navigation() {
   const work = footerNavigation[0];
   return (
     <nav className="col-span-12 md:col-span-12 lg:col-span-8">
-      <ul className="grid grid-cols-12 md:gap-x-8 gap-y-12">
+      <ul className="grid grid-cols-12 md:gap-x-2 gap-y-12">
         <li className="col-span-12 sm:col-span-6">
           <div>
             <Link href="/" aria-label="Home">
@@ -52,7 +53,7 @@ function Navigation() {
                 ></path>
               </svg>
             </Link>
-            <p className="text-muted-foreground text-[17px] mt-6 leading-8 mb-6">
+            <p className="text-muted-foreground text-base mt-6 leading-8 mb-6">
               We are developer studio working at the intersection of design and
               technology. It’s a really busy intersection though — a lot of our
               staff have been involved in hit and runs.
@@ -69,7 +70,7 @@ function Navigation() {
               <li key={link.title} className="mt-4 ">
                 <Link
                   href={link.href}
-                  className="transition hover:text-primary text-[17px]"
+                  className="transition hover:text-primary text-base"
                 >
                   {link.title}
                 </Link>
@@ -86,7 +87,7 @@ function Navigation() {
               <li key={link.title} className="mt-4">
                 <Link
                   href={link.href}
-                  className="transition hover:text-primary text-[17px]"
+                  className="transition hover:text-primary text-base"
                 >
                   {link.title}
                 </Link>
@@ -155,7 +156,7 @@ export function Footer2() {
                     className="rounded-full pl-6"
                   />
                   <Button size="lg" className="w-full">
-                    Next &rarr;
+                    Next <ArrowRight className="size-4 ml-1" />
                   </Button>
                 </form>
               </div>

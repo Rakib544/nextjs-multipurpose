@@ -50,11 +50,6 @@ export default function Team() {
           </li>
         ))}
       </ul>
-      {/* <div className="flex justify-center mt-12">
-          <Link href="/teams" className={buttonVariants({ variant: "link" })}>
-            View All Team &rarr;
-          </Link>
-        </div> */}
     </Container>
   );
 }

@@ -1,3 +1,4 @@
+import { ArrowRight } from "@/components/icons";
 import SearchField from "@/components/search-field";
 import {
   Breadcrumb,
@@ -81,7 +82,7 @@ export default async function CaseStudies() {
                       className: "!px-0 mt-2",
                     })}
                   >
-                    Read More &rarr;
+                    Read More <ArrowRight className="size-4 ml-1" />
                   </Link>
                   <div className="absolute top-4 right-6 z-20">
                     <DropdownMenu>
