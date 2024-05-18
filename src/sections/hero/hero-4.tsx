@@ -2,10 +2,12 @@ import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { StarIcon, TextUnderline } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
-import userImage2 from "@/images/testimonial_2.jpg";
-import userImage1 from "@/images/testimonial_3.jpg";
+import userImage2 from "@/images/testimonials/testimonial_2.jpg";
+import userImage1 from "@/images/testimonials/testimonial_3.jpg";
 import Image from "next/image";
 import Link from "next/link";
+
+import heroMobileDesign from "@/images/demo-4/hero-app.png";
 
 export default function Hero4() {
   return (
@@ -79,7 +81,7 @@ export default function Hero4() {
             </div>
           </FadeIn>
           <FadeIn className="flex justify-center order-1 lg:order-2">
-            <Image src="/device.png" height={700} width={400} alt="" />
+            <Image src={heroMobileDesign} height={700} width={400} alt="" />
           </FadeIn>
         </FadeInStagger>
       </Container>

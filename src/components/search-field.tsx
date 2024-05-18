@@ -1,5 +1,4 @@
 "use client";
-
 import { cn } from "@/lib/utils";
 import { SearchIcon } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -49,7 +48,7 @@ function Search({ className, ...props }: SearchFieldProps) {
 
 export default function SearchField({ className, ...props }: SearchFieldProps) {
   return (
-    <Suspense>
+    <Suspense fallback={<p>Loading...</p>}>
       <Search className={className} {...props} />
     </Suspense>
   );

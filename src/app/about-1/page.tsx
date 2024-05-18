@@ -8,6 +8,7 @@ import { StatList, StatListItem } from "@/components/stat-list";
 import { About4 } from "@/sections/about";
 import Team from "@/sections/team";
 
+import aboutImage from "@/images/about/about-1.png";
 import { Testimonial1 } from "@/sections/testimonial";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -38,7 +39,7 @@ export default function About1() {
       <Container>
         <FadeIn className="">
           <Image
-            src="/test.png"
+            src={aboutImage}
             alt=""
             height={300}
             width={1200}

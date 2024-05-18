@@ -2,14 +2,16 @@ import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { ArrowRight } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
-import SearchField from "@/components/search-field";
 import { buttonVariants } from "@/components/ui/button";
 import Pagination from "@/components/ui/pagination";
 import { blogsData, categories, tags } from "@/lib/data/blog-data";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
+const SearchField = dynamic(() => import("@/components/search-field"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: "Blogs",
@@ -28,10 +30,8 @@ export default function Blogs1() {
           eyebrow="Blogs"
           pageTitle="Take a look at the latest news and articles"
         >
-          <p>
-            Explore our latest articles on UI/UX design, digital trends, and
-            innovation
-          </p>
+          Explore our latest articles on UI/UX design, digital trends, and
+          innovation
         </PageIntro>
       </Container>
       <Container className="my-20">
@@ -40,13 +40,11 @@ export default function Blogs1() {
             <div className="bg-white pr-5 rounded-lg">
               <h2 className="font-bold text-foreground mb-2">Search Here</h2>
 
-              <Suspense>
-                <SearchField
-                  className="rounded-full"
-                  type="search"
-                  placeholder="Search"
-                />
-              </Suspense>
+              <SearchField
+                className="rounded-full"
+                type="search"
+                placeholder="Search"
+              />
             </div>
 
             <div className="bg-white pr-5 rounded-lg hidden lg:block">
@@ -129,7 +127,7 @@ export default function Blogs1() {
                       {blog.subtitle}
                     </p>
                     <Link
-                      href=""
+                      href="/blog-details"
                       className={buttonVariants({
                         variant: "link",
                         className: "!px-0 mt-4",

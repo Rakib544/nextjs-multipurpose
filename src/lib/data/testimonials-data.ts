@@ -1,6 +1,7 @@
-import testimonialUser1 from "@/images/testimonial_1.jpg";
-import testimonialUser2 from "@/images/testimonial_2.jpg";
-import testimonialUser3 from "@/images/testimonial_3.jpg";
+import testimonialUser1 from "@/images/testimonials/testimonial_1.jpg";
+import testimonialUser2 from "@/images/testimonials/testimonial_2.jpg";
+import testimonialUser3 from "@/images/testimonials/testimonial_3.jpg";
+
 export const testimonials = [
   {
     id: 1,

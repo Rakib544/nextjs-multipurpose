@@ -4,34 +4,11 @@ import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
+import serviceHeroImage from "@/images/service/hero.webp";
 import { Faq2 } from "@/sections/faq";
 import { Features6 } from "@/sections/features";
 import { Metadata } from "next";
 import Image from "next/image";
-
-const services = [
-  {
-    id: 1,
-    title: "UI/UX Design",
-    description:
-      "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience",
-    image: "/ui-ux.webp",
-  },
-  {
-    id: 2,
-    title: "Web Development",
-    description:
-      "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience",
-    image: "/web-development.webp",
-  },
-  {
-    id: 4,
-    title: "App Development",
-    description:
-      "Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience",
-    image: "/app-development.webp",
-  },
-];
 
 export const metadata: Metadata = {
   title: "Services",
@@ -73,7 +50,7 @@ export default function Services1() {
               height={450}
               width={450}
               className="block w-full lg:w-auto lg:ml-auto rounded-2xl"
-              src="/about-intro-1.webp"
+              src={serviceHeroImage}
               alt=""
             />
           </FadeIn>

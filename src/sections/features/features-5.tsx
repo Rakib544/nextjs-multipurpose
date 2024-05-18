@@ -3,6 +3,11 @@ import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { SectionIntro } from "@/components/section-intro";
 import Image from "next/image";
 
+import featureImage1 from "@/images/demo-4/feature-1.webp";
+import featureImage2 from "@/images/demo-4/feature-2.webp";
+import featureImage3 from "@/images/demo-4/feature-3.webp";
+import featureImage4 from "@/images/demo-4/feature-4.webp";
+
 export default function Features5() {
   return (
     <div className="my-20 md:my-32">
@@ -16,7 +21,7 @@ export default function Features5() {
           <FadeIn className="col-span-12 md:col-span-8 p-10 bg-slate-100 rounded-[40px]">
             <div className="relative aspect-[16/7]">
               <Image
-                src="https://assets-global.website-files.com/6207f5adfd8e615d3d70498b/6476d6c96421f487199b8408_Blink%20Copilot%20launch%20image-p-1080.png"
+                src={featureImage1}
                 alt=""
                 fill
                 className="rounded-xl block object-cover"
@@ -33,7 +38,7 @@ export default function Features5() {
           <FadeIn className="col-span-12 md:col-span-4 p-10 bg-slate-100 rounded-[40px]">
             <div className="relative aspect-video">
               <Image
-                src="/header1.png"
+                src={featureImage2}
                 alt=""
                 fill
                 className="rounded-xl block object-cover"
@@ -50,7 +55,7 @@ export default function Features5() {
           <FadeIn className="col-span-12 md:col-span-4 p-10 bg-slate-100 rounded-[40px]">
             <div className="relative aspect-video">
               <Image
-                src="/header1.png"
+                src={featureImage3}
                 alt=""
                 fill
                 className="rounded-xl block object-cover"
@@ -67,7 +72,7 @@ export default function Features5() {
           <FadeIn className="col-span-12 md:col-span-8 p-10 bg-slate-100 rounded-[40px]">
             <div className="relative aspect-[16/7]">
               <Image
-                src="https://assets-global.website-files.com/6207f5adfd8e615d3d70498b/6476d6c96421f487199b8408_Blink%20Copilot%20launch%20image-p-1080.png"
+                src={featureImage4}
                 alt=""
                 fill
                 className="rounded-xl block object-cover"

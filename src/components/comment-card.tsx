@@ -1,4 +1,4 @@
-import userImage from "@/images/testimonial_2.jpg";
+import userImage from "@/images/testimonials/testimonial_2.jpg";
 import Image from "next/image";
 import { MessageCircle } from "./icons";
 import { Button } from "./ui/button";

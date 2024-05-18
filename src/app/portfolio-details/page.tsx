@@ -6,7 +6,8 @@ import PortfolioCard from "@/components/portfolio-card";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
-import userImage from "@/images/testimonial_1.jpg";
+import portfolioBanner from "@/images/portfolio/portfolio-1.avif";
+import userImage from "@/images/testimonials/testimonial_1.jpg";
 import { portfoliosData } from "@/lib/data/portfolio-data";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -85,7 +86,7 @@ export default function PortfolioDetails() {
           </FadeIn>
         </FadeInStagger>
         <Image
-          src="https://images.unsplash.com/photo-1588590560438-5e27fe3f6b71?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src={portfolioBanner}
           alt=""
           width={1200}
           height={400}

@@ -2,6 +2,7 @@ import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import { CheckIcon } from "@/components/icons";
 import { SectionIntro } from "@/components/section-intro";
+import aboutImage from "@/images/about/about-2.webp";
 import Image from "next/image";
 
 export default function About4() {
@@ -48,7 +49,7 @@ export default function About4() {
             </span>
           </div>
           <Image
-            src="/about-intro.webp"
+            src={aboutImage}
             alt=""
             height={300}
             width={400}

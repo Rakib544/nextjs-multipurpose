@@ -1,5 +1,4 @@
 import { Container } from "@/components/container";
-import { CheckIcon } from "@/components/icons";
 import { SectionIntro } from "@/components/section-intro";
 import {
   Accordion,
@@ -7,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import aboutImage from "@/images/about/about-4.webp";
 import Image from "next/image";
 
 const whyChooseData = [
@@ -34,53 +34,29 @@ export default function About5() {
   return (
     <section className="mt-20 md:mt-32">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
+          <div className="relative aspect-square">
             <Image
-              src="https://vue.hibotheme.com/prag/img/about-img.df163752.webp"
+              src={aboutImage}
               alt=""
-              height={500}
-              width={400}
-              className="block mx-auto rounded-xl"
+              fill
+              className="block mx-auto object-cover object-center rounded-xl w-full"
             />
-            <div className="absolute bottom-10 bg-indigo-600 text-white p-4 rounded-xl shadow-xl">
-              <span className="text-base font-semibold flex">
-                <CheckIcon className="h-7 w-7  text-white fill-white shrink-0" />{" "}
-                24/7 Community Support
-              </span>
-              <span className="text-sm font-medium leading-7 text-primary-foreground">
-                We’re servicing 24/7 support for all
-              </span>
-            </div>
-            <div className="absolute top-10 bg-indigo-600 text-white p-4 rounded-xl shadow-xl">
-              <span className="text-base font-semibold flex">
-                <CheckIcon className="h-7 w-7 fill-white shrink-0" />{" "}
-                Personalized Plan
-              </span>
-            </div>
-            <div className="absolute right-0 bottom-32 bg-indigo-600 text-white p-4 rounded-xl shadow-xl">
-              <span className="text-base font-semibold flex">
-                <CheckIcon className="h-7 w-7 fill-white shrink-0" /> Analytics
-              </span>
-              <span className="text-sm font-medium leading-7 text-primary-foreground">
-                Lorem ipsum dolor sit amet.
-              </span>
-            </div>
           </div>
           <div>
             <SectionIntro
               eyebrow="Why choose us"
-              title="Why FitLife Is THe Right Choice For You"
+              title="We bring solutions to make life easier for our customers."
             >
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
-                expedita, culpa enim praesentium amet necessitatibus.
+                We upholds the highest ethical standards in all our dealings and
+                embrace creativity and strive for improvement.
               </p>
             </SectionIntro>
             <Accordion
               type="single"
               defaultValue="item-1"
-              className="mt-12 space-y-3"
+              className="mt-8 space-y-3"
             >
               {whyChooseData.map((data) => (
                 <AccordionItem

@@ -7,6 +7,7 @@ import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { Button, buttonVariants } from "@/components/ui/button";
+import aboutImage from "@/images/about/about-3.webp";
 import { jobs } from "@/lib/data/job-data";
 import { About5 } from "@/sections/about";
 import Team from "@/sections/team";
@@ -56,7 +57,7 @@ export default function About2() {
               height={450}
               width={450}
               className="block w-full lg:w-auto lg:ml-auto rounded-2xl"
-              src="/about-intro-1.webp"
+              src={aboutImage}
               alt=""
             />
           </FadeIn>

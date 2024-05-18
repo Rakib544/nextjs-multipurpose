@@ -2,6 +2,8 @@ import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { ArrowRight } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
+import heroBackgroundImage from "@/images/demo-5/hero-background.png";
+import heroImage from "@/images/demo-5/hero.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,8 +13,7 @@ export default function Hero5() {
       <div
         className="absolute min-h-screen w-full top-0 z-[-2] bg-cover"
         style={{
-          backgroundImage:
-            "url(https://tailwindui.com/img/beams-basic-transparent.png)",
+          backgroundImage: `url(${heroBackgroundImage})`,
         }}
       ></div>
       <span className="absolute h-80 w-80 top-40 bg-gradient-to-r from-indigo-50 to-white  z-[-1] rotate-45 -left-52"></span>
@@ -61,7 +62,7 @@ export default function Hero5() {
           </FadeIn>
           <FadeIn className="col-span-12 lg:col-span-6 order-1 lg:order-2 relative z-[-1] ">
             <div className="h-10 w-full bg-gradient-to-t from-white to-transparent absolute bottom-0"></div>
-            <Image src="/design-studio.png" alt="" height={577} width={517} />
+            <Image src={heroImage} alt="" height={577} width={517} />
             <div className="absolute right-0 bg-white shadow-xl p-5 rounded-xl bottom-20">
               <p className="font-bold">5000+</p>
               <p className="text-sm text-muted-foreground font-medium">

@@ -6,6 +6,7 @@ import { Clients } from "@/components/clients";
 import { FadeIn } from "@/components/fade-in";
 import { Pricing2 } from "@/components/pricing";
 import { SectionIntro } from "@/components/section-intro";
+import { buttonVariants } from "@/components/ui/button";
 import {
   InfiniteMoving,
   InfiniteMovingItem,
@@ -15,6 +16,10 @@ import { Features5 } from "@/sections/features";
 import { Hero4 } from "@/sections/hero";
 import { Process1 } from "@/sections/process";
 import { Testimonial4 } from "@/sections/testimonial";
+
+import uiImage1 from "@/images/demo-4/ui-1.png";
+import uiImage2 from "@/images/demo-4/ui-2.png";
+import uiImage3 from "@/images/demo-4/ui-3.png";
 
 export default function AppLanding() {
   return (
@@ -48,12 +53,7 @@ export default function AppLanding() {
           powerful features.
         </SectionIntro>
         <InfiniteMoving>
-          {[
-            "/cool-amazing-3.png",
-            "/cool-amazing-4.png",
-            "/cool-amazing-5.png",
-            "/cool-amazing-3.png",
-          ].map((image, index) => (
+          {[uiImage1, uiImage2, uiImage3].map((image, index) => (
             <InfiniteMovingItem key={index} className="md:w-[200px]">
               <Image
                 src={image}
@@ -77,21 +77,14 @@ export default function AppLanding() {
             Start your free trial now and see how easy it is to track, manage,
             and optimize your time.
             <FadeIn className="flex gap-x-4 items-center justify-center mt-6">
-              <Link href="">
-                <Image
-                  src="https://assets-global.website-files.com/643e8219320d012584af3b6d/643e8219320d013be4af3ba9_App%20Store%20badge.svg"
-                  alt=""
-                  height={80}
-                  width={200}
-                />
+              <Link href="" className={buttonVariants({ size: "lg" })}>
+                Download IOS
               </Link>
-              <Link href="">
-                <Image
-                  src="https://assets-global.website-files.com/643e8219320d012584af3b6d/643e8219320d011c39af3baa_Mobile%20App%20Store%20Badge.svg"
-                  alt=""
-                  height={80}
-                  width={200}
-                />
+              <Link
+                href=""
+                className={buttonVariants({ size: "lg", variant: "outline" })}
+              >
+                Download Android
               </Link>
             </FadeIn>
           </SectionIntro>

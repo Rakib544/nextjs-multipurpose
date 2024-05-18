@@ -1,7 +1,7 @@
 import { Container } from "@/components/container";
 import { List, ListItem } from "@/components/list";
 import { SocialMediaProfiles } from "@/components/social-media-profiles";
-import userImage from "@/images/team/benjamin-russel.jpeg";
+import userImage from "@/images/team/team-2.jpeg";
 import { Metadata } from "next";
 import Image from "next/image";
 

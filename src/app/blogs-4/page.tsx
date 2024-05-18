@@ -2,11 +2,15 @@ import BlogCard from "@/components/blog-card";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { PageIntro } from "@/components/page-intro";
-import SearchField from "@/components/search-field";
+const SearchField = dynamic(() => import("@/components/search-field"), {
+  ssr: false,
+});
+
 import { buttonVariants } from "@/components/ui/button";
 import Pagination from "@/components/ui/pagination";
 import { blogsData, categories, tags } from "@/lib/data/blog-data";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";

@@ -3,7 +3,7 @@ import { CommentCard } from "@/components/comment-card";
 import CommentCreateForm from "@/components/comment-create-form";
 import { Container } from "@/components/container";
 import Description from "@/components/description";
-import coverImage from "@/images/hero.jpg";
+import coverImage from "@/images/blogs/blog-1.avif";
 
 import { blogComments, blogDetails } from "@/lib/data/blog-data";
 import { Metadata } from "next";

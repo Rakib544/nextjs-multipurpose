@@ -7,6 +7,7 @@ import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
 import WorkFlowCard from "@/components/workflow-card";
+import serviceDetailsHeroImage from "@/images/service/service-details-hero.webp";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -71,7 +72,7 @@ export default function ServiceDetails() {
           </div>
           <FadeIn>
             <Image
-              src="https://images.unsplash.com/photo-1568584263125-bf8f0a77d51c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={serviceDetailsHeroImage}
               alt=""
               height={700}
               width={450}

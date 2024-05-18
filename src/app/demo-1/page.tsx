@@ -4,6 +4,7 @@ import { FadeIn } from "@/components/fade-in";
 import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
 import UseCases from "@/components/use-case";
+import dashboardBannerImage from "@/images/demo-1/banner.webp";
 import { sassWorkflows } from "@/lib/data/sass-features";
 import { Features1 } from "@/sections/features";
 import { Hero1 } from "@/sections/hero";
@@ -16,13 +17,13 @@ export default function Home() {
     <div>
       <Hero1 />
       <div className="relative">
-        <Container>
+        <Container className="!max-w-5xl">
           <Image
-            src="/sass-landing-banner.webp"
+            src={dashboardBannerImage}
             alt=""
             height={1015}
             width={1205}
-            className="block mx-auto mt-12 relative"
+            className="block object-cover object-center mx-auto mt-12 relative border rounded-lg border-border/50"
           />
         </Container>
         <div className="bg-gradient-to-t from-[#FAD0F9]/50 h-full to-transparent absolute inset-0"></div>

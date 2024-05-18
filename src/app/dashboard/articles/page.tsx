@@ -1,5 +1,8 @@
 import { ArrowRight } from "@/components/icons";
-import SearchField from "@/components/search-field";
+const SearchField = dynamic(() => import("@/components/search-field"), {
+  ssr: false,
+});
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -18,6 +21,7 @@ import {
 import Pagination from "@/components/ui/pagination";
 import { blogsData } from "@/lib/data/blog-data";
 import { Ellipsis, PlusCircle } from "lucide-react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 

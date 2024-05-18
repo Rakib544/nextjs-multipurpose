@@ -5,11 +5,14 @@ import { JobCard } from "@/components/job-card";
 import JobFilter from "@/components/job-filter";
 import MobileFilterDrawer from "@/components/mobile-filter-drawer";
 import { PageIntro } from "@/components/page-intro";
-import SearchField from "@/components/search-field";
+const SearchField = dynamic(() => import("@/components/search-field"), {
+  ssr: false,
+});
+
 import Pagination from "@/components/ui/pagination";
 import { jobs } from "@/lib/data/job-data";
 import { Metadata } from "next";
-import { Suspense } from "react";
+import dynamic from "next/dynamic";
 
 export const metadata: Metadata = {
   title: "Careers",
@@ -50,13 +53,11 @@ export default function Career2() {
       <Container className="mb-20 mt-12">
         <FadeInStagger faster className="grid grid-cols-12 gap-6">
           <FadeIn className="col-span-12 md:col-span-8 space-y-4">
-            <Suspense>
-              <SearchField
-                placeholder="Search by title"
-                type="Search"
-                className="rounded-full pl-10"
-              />
-            </Suspense>
+            <SearchField
+              placeholder="Search by title"
+              type="Search"
+              className="rounded-full pl-10"
+            />
             <FadeIn className="flex justify-end md:hidden">
               <MobileFilterDrawer />
             </FadeIn>

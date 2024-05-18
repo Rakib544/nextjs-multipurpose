@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "./icons";
 import { buttonVariants } from "./ui/button";
@@ -12,7 +12,7 @@ export default function BlogCard({
   title: string;
   subtitle: string;
   createdAt: string;
-  thumbnail: string;
+  thumbnail: string | StaticImageData;
 }) {
   return (
     <article className="group ">

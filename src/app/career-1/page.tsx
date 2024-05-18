@@ -4,6 +4,7 @@ import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { JobCard } from "@/components/job-card";
 import { PageIntro } from "@/components/page-intro";
+import careerHeroImage from "@/images/career/hero.webp";
 import { jobs } from "@/lib/data/job-data";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -46,7 +47,7 @@ export default function Career1() {
               height={450}
               width={450}
               className="block ml-auto rounded-2xl w-full"
-              src="/about-intro-1.webp"
+              src={careerHeroImage}
               alt=""
             />
           </FadeIn>

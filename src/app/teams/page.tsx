@@ -4,35 +4,9 @@ import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import TeamCard1 from "@/components/team-card/team-card-1";
-
-import imageDriesVincent from "@/images/team/dries-vincent.jpeg";
-import imageLeslieAlexander from "@/images/team/leslie-alexander.jpeg";
-import imageMichaelFoster from "@/images/team/michael-foster.jpeg";
+import { peoples } from "@/lib/data/team-data";
 import { Metadata } from "next";
 import Image from "next/image";
-
-const peoples = [
-  {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
-    image: { src: imageLeslieAlexander },
-  },
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    image: { src: imageMichaelFoster },
-  },
-  {
-    name: "Dries Vincent",
-    role: "Partner & Business Relations",
-    image: { src: imageDriesVincent },
-  },
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    image: { src: imageMichaelFoster },
-  },
-];
 
 export const metadata: Metadata = {
   title: "Teams",
@@ -85,10 +59,10 @@ export default function Teams() {
             title="Leadership Team"
             className="mb-12"
           >
-            Meet the Visionaries Behind [Your Company Name]
+            Meet the Visionaries Behind Agenify
           </SectionIntro>
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
-            {peoples.map((person) => (
+            {peoples.slice(0, 4).map((person) => (
               <li key={person.name}>
                 <TeamCard1
                   image={person.image.src}
@@ -105,10 +79,10 @@ export default function Teams() {
             title="Our Team"
             className="mb-12 mt-20 md:mt-32"
           >
-            Meet the Talented Individuals Driving [Your Company Name] Forward
+            Meet the Talented Individuals Driving Agenify Forward
           </SectionIntro>
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
-            {peoples.map((person) => (
+            {peoples.slice(5).map((person) => (
               <li key={person.name}>
                 <TeamCard1
                   image={person.image.src}
