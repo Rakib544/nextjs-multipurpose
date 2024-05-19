@@ -60,7 +60,7 @@ export default function AppLanding() {
                 alt=""
                 width={200}
                 height={200}
-                className="w-full h-auto object-cover rounded-xl border"
+                className="w-full h-auto sm:h-auto object-cover rounded-xl border"
               />
             </InfiniteMovingItem>
           ))}
@@ -76,13 +76,23 @@ export default function AppLanding() {
           >
             Start your free trial now and see how easy it is to track, manage,
             and optimize your time.
-            <FadeIn className="flex gap-x-4 items-center justify-center mt-6">
-              <Link href="" className={buttonVariants({ size: "lg" })}>
+            <FadeIn className="flex flex-col sm:flex-row gap-4 items-center justify-start sm:justify-center mt-6">
+              <Link
+                href=""
+                className={buttonVariants({
+                  size: "lg",
+                  className: "w-full sm:w-auto",
+                })}
+              >
                 Download IOS
               </Link>
               <Link
                 href=""
-                className={buttonVariants({ size: "lg", variant: "outline" })}
+                className={buttonVariants({
+                  size: "lg",
+                  variant: "outline",
+                  className: "w-full sm:w-auto",
+                })}
               >
                 Download Android
               </Link>

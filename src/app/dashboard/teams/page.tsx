@@ -5,17 +5,18 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import teamImage1 from "@/images/team/team-1.jpeg";
+import teamImage2 from "@/images/team/team-2.jpeg";
 import Link from "next/link";
-import { Payment, columns } from "./columns";
+import { Team, columns } from "./columns";
 import { DataTable } from "./data-table";
 
-const users: Payment[] = [
+const users: Team[] = [
   {
     id: "1",
     user: {
       name: "John Doe",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D",
+      image: teamImage1,
     },
     phone: "+1234567890",
     status: "active",
@@ -26,8 +27,7 @@ const users: Payment[] = [
     id: "2",
     user: {
       name: "Alice Smith",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D",
+      image: teamImage2,
     },
     phone: "+9876543210",
     status: "suspended",

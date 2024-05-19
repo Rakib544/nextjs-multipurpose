@@ -11,14 +11,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { type ColumnDef } from "@tanstack/react-table";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-export type Payment = {
+export type Team = {
   id: string;
   user: {
     name: string;
-    image: string;
+    image: string | StaticImageData;
   };
   phone: string;
   status: "active" | "suspended";
@@ -26,7 +26,7 @@ export type Payment = {
   country: string;
 };
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Team>[] = [
   {
     id: "select",
     header: ({ table }) => (

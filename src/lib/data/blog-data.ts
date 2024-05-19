@@ -5,6 +5,13 @@ import blogImage4 from "@/images/blogs/blog-4.avif";
 import blogImage5 from "@/images/blogs/blog-5.avif";
 import blogImage6 from "@/images/blogs/blog-6.avif";
 import blogImage7 from "@/images/blogs/blog-7.avif";
+
+import userImage1 from "@/images/team/team-1.jpeg";
+import userImage2 from "@/images/team/team-2.jpeg";
+import userImage3 from "@/images/team/team-3.jpeg";
+import userImage4 from "@/images/team/team-4.jpeg";
+import userImage5 from "@/images/team/team-5.jpeg";
+
 export const blogsData = [
   {
     title: "Unlocking the Potential of UX Design in Today’s Digital Landscape",
@@ -94,7 +101,7 @@ export const blogComments = [
     createdAt: "2024-04-14T12:00:00Z",
     author: {
       name: "John Doe",
-      image: "https://example.com/johndoe.jpg",
+      image: userImage1,
     },
     replies: [],
   },
@@ -104,7 +111,7 @@ export const blogComments = [
     createdAt: "2024-04-14T13:00:00Z",
     author: {
       name: "Emily Brown",
-      image: "https://example.com/emilybrown.jpg",
+      image: userImage2,
     },
     replies: [
       {
@@ -113,7 +120,7 @@ export const blogComments = [
         createdAt: "2024-04-14T13:10:00Z",
         author: {
           name: "Bob Johnson",
-          image: "https://example.com/bobjohnson.jpg",
+          image: userImage3,
         },
       },
     ],
@@ -124,7 +131,7 @@ export const blogComments = [
     createdAt: "2024-04-14T14:00:00Z",
     author: {
       name: "Alice Smith",
-      image: "https://example.com/alicesmith.jpg",
+      image: userImage5,
     },
     replies: [
       {
@@ -133,7 +140,7 @@ export const blogComments = [
         createdAt: "2024-04-14T14:05:00Z",
         author: {
           name: "John Doe",
-          image: "https://example.com/johndoe.jpg",
+          image: userImage4,
         },
       },
     ],

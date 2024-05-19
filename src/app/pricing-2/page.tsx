@@ -1,6 +1,7 @@
 import { Container } from "@/components/container";
 import { PageIntro } from "@/components/page-intro";
 import { Pricing1 } from "@/components/pricing/index";
+import heroBackgroundImage from "@/images/demo-5/hero-background.png";
 import { Faq1 } from "@/sections/faq";
 import { Testimonial1 } from "@/sections/testimonial";
 import { Metadata } from "next";
@@ -19,8 +20,7 @@ export default function Pricing() {
       <div
         className="absolute min-h-screen w-full top-0 z-[-2] bg-cover"
         style={{
-          backgroundImage:
-            "url(https://tailwindui.com/img/beams-basic-transparent.png)",
+          backgroundImage: `url(${heroBackgroundImage})`,
         }}
       ></div>
       <Container className="z-10">

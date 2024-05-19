@@ -1,35 +1,9 @@
+import { awards } from "@/lib/data/award-data";
 import Image from "next/image";
 import { Container } from "../components/container";
 import { FadeIn } from "../components/fade-in";
 import { SectionIntro } from "../components/section-intro";
 import WorkFlowCard from "../components/workflow-card";
-
-const awards = [
-  {
-    id: 1,
-    icon: "https://fxotary.netlify.app/images/achivement_icon_1.png",
-    title: "Awwwards Interior excellence.",
-    winningYear: 2024,
-  },
-  {
-    id: 2,
-    icon: "https://fxotary.netlify.app/images/achivement_icon_2.png",
-    title: "Best Site of the Year Awards.",
-    winningYear: 2023,
-  },
-  {
-    id: 3,
-    icon: "https://fxotary.netlify.app/images/achivement_icon_3.png",
-    title: "Template of the seasons in this month.",
-    winningYear: 2022,
-  },
-  {
-    id: 4,
-    icon: "https://fxotary.netlify.app/images/achivement_icon_4.png",
-    title: "Best Selling of this week & month.",
-    winningYear: 2021,
-  },
-];
 
 export default function OurAwards() {
   return (

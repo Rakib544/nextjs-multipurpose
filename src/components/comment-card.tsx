@@ -1,5 +1,4 @@
-import userImage from "@/images/testimonials/testimonial_2.jpg";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { MessageCircle } from "./icons";
 import { Button } from "./ui/button";
 
@@ -11,11 +10,11 @@ export function CommentCard({
 }: {
   createdAt: string;
   comment: string;
-  author: { name: string; image: string };
+  author: { name: string; image: string | StaticImageData };
   replies: Array<{
     createdAt: string;
     comment: string;
-    author: { name: string; image: string };
+    author: { name: string; image: string | StaticImageData };
   }>;
 }) {
   return (
@@ -23,7 +22,7 @@ export function CommentCard({
       <div className="flex justify-between items-center">
         <div className="flex gap-x-4 items-center">
           <Image
-            src={userImage}
+            src={author.image}
             className="h-14 w-14 rounded-full object-cover shrink-0"
             alt={author.name}
           />
@@ -51,7 +50,7 @@ export function CommentReplyCard({
   replies: Array<{
     createdAt: string;
     comment: string;
-    author: { name: string; image: string };
+    author: { name: string; image: string | StaticImageData };
   }>;
 }) {
   return (
@@ -65,7 +64,7 @@ export function CommentReplyCard({
             <div className="flex justify-between items-center">
               <div className="flex gap-x-3 items-center">
                 <Image
-                  src={userImage}
+                  src={reply.author.image}
                   className="h-10 w-10 rounded-full object-cover shrink-0"
                   alt=""
                 />
