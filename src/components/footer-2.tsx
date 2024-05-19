@@ -105,8 +105,10 @@ export function Footer2() {
   const isAuthRoute = pathname.startsWith("/auth/");
   const isDashboardRoute = pathname.startsWith("/dashboard");
   const isDocsRoute = pathname.startsWith("/docs");
+  const isPreviewPage = pathname === "/";
 
-  const isFooterHidden = isAuthRoute || isDashboardRoute || isDocsRoute;
+  const isFooterHidden =
+    isAuthRoute || isDashboardRoute || isDocsRoute || isPreviewPage;
   return (
     <footer
       className={cn(
