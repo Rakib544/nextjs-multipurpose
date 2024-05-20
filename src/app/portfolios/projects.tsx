@@ -4,6 +4,7 @@ import { FadeIn } from "@/components/fade-in";
 import PortfolioCard from "@/components/portfolio-card";
 import { Button } from "@/components/ui/button";
 import { portfoliosData } from "@/lib/data/portfolio-data";
+import { PlusCircle } from "lucide-react";
 import { useState } from "react";
 
 export default function Projects() {
@@ -26,7 +27,9 @@ export default function Projects() {
           className="mt-20 flex justify-center"
           onClick={() => setCurrentIndex((prev) => prev + 1)}
         >
-          <Button size="lg">Load More</Button>
+          <Button size="lg">
+            <PlusCircle className="size-4 mr-1" /> Load More
+          </Button>
         </div>
       )}
     </FadeIn>

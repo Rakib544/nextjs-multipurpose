@@ -21,7 +21,7 @@ export default function Career1() {
   return (
     <div>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-0 gap-y-6 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-12 gap-y-6 items-center mt-4">
           <div>
             <PageIntro
               className="mt-20 mb-10"

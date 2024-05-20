@@ -4,6 +4,7 @@ import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import TeamCard1 from "@/components/team-card/team-card-1";
+import aboutImage from "@/images/about/about-3.webp";
 import { peoples } from "@/lib/data/team-data";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -20,7 +21,7 @@ export default function Teams() {
   return (
     <div>
       <Container>
-        <div className=" grid grid-cols-1 lg:grid-cols-2 lg:gap-x-0 gap-y-6 items-center">
+        <div className=" grid grid-cols-1 lg:grid-cols-2 lg:gap-x-0 gap-y-6 items-center mt-4">
           <div>
             <PageIntro
               className="mt-20 mb-10"
@@ -46,7 +47,7 @@ export default function Teams() {
               height={450}
               width={450}
               className="block w-full lg:w-auto lg:ml-auto rounded-2xl"
-              src="/about-intro-1.webp"
+              src={aboutImage}
               alt=""
             />
           </FadeIn>

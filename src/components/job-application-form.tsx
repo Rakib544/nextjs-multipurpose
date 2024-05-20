@@ -11,10 +11,11 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Image from "next/image";
 import { useDropzone } from "react-dropzone";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { CloudUploadIcon, FileTextIcon, TrashIcon } from "./icons";
+import { FileTextIcon, TrashIcon } from "./icons";
 import { Textarea } from "./ui/textarea";
 
 const FormSchema = z.object({
@@ -131,23 +132,30 @@ export default function JobApplicationForm() {
             name="cv"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Upload your CV</FormLabel>
+                <FormLabel>Upload CV :</FormLabel>
                 <FormControl>
                   <div
                     {...field}
                     {...getRootProps()}
-                    className="py-16 bg-indigo-50 px-6 rounded-xl text-center"
+                    className="py-14 bg-[#F9F9FA] px-6 rounded-xl text-center border border-dashed"
                   >
                     <input {...getInputProps()} />
-                    <span className="inline-block mx-auto">
-                      <CloudUploadIcon className="h-8 w-8 text-primary" />
-                    </span>
-                    <p className="text-foreground font-semibold text-base text-center">
-                      <span className="text-primary">Click to upload</span> or
-                      drag and drop
+
+                    <Image
+                      src="/file-upload.svg"
+                      alt=""
+                      height={100}
+                      width={200}
+                      className="block mx-auto"
+                    />
+
+                    <p className="text-foreground font-bold text-lg mt-5 text-center">
+                      Drop or Select File
                     </p>
-                    <p className="text-center text-base text-muted-foreground mt-3 font-medium">
-                      Only .pdf file are allowed
+                    <p className="text-center text-sm text-muted-foreground mt-3 font-medium">
+                      Drop files here or click{" "}
+                      <span className="underline text-primary">browse</span>{" "}
+                      thorough your machine
                     </p>
                   </div>
                 </FormControl>

@@ -5,7 +5,6 @@ import {
   ChatIcon,
   NotificationIcon,
   PhoneIcon,
-  PinIcon,
   TextUnderline,
 } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
@@ -13,6 +12,7 @@ import { SectionIntro } from "@/components/section-intro";
 import { buttonVariants } from "@/components/ui/button";
 import { Faq1 } from "@/sections/faq";
 import { Testimonial1 } from "@/sections/testimonial";
+import { MapPin } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -38,7 +38,7 @@ const contactData = [
     title: "Visit us",
     subtitle: "Visit our office HQ",
     link: "",
-    icon: <PinIcon className="h-5 w-5 fill-[#6666FF] text-[#6666FF]" />,
+    icon: <MapPin className="h-5 w-5 fill-white text-[#6666FF]" />,
     btnText: "Get Direction",
   },
   {

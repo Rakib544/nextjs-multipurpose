@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import aboutImage from "@/images/about/about-4.webp";
+import aboutImage from "@/images/about/about-4.jpg";
 import Image from "next/image";
 
 const whyChooseData = [

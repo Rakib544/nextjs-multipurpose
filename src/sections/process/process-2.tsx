@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { SectionIntro } from "@/components/section-intro";
 
 const processSteps = [
@@ -35,9 +36,12 @@ export default function Process2() {
         Streamline your business workflow with our smart and effective process
         for optimal results
       </SectionIntro>
-      <div className="grid grid-cols-1 md:grid-cold-2 lg:grid-cols-4">
+      <FadeInStagger
+        faster
+        className="grid grid-cols-1 md:grid-cold-2 lg:grid-cols-4"
+      >
         {processSteps.map((p, index) => (
-          <div key={index}>
+          <FadeIn key={index}>
             <span className="inline-flex size-12 justify-center items-center font-bold rounded-xl bg-indigo-600 text-white">
               {index + 1}
             </span>
@@ -45,9 +49,9 @@ export default function Process2() {
             <p className="text-base leading-7 text-muted-foreground">
               {p.description}
             </p>
-          </div>
+          </FadeIn>
         ))}
-      </div>
+      </FadeInStagger>
     </Container>
   );
 }

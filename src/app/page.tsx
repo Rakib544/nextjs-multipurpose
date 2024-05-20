@@ -7,11 +7,7 @@ import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
-import previewImage1 from "@/images/preview/preview-1.jpg";
-import previewImage2 from "@/images/preview/preview-2.jpg";
-import previewImage3 from "@/images/preview/preview-3.jpg";
-import previewImage4 from "@/images/preview/preview-4.jpg";
-import previewImageTest from "@/images/preview/preview-test.png";
+import { previewData } from "@/lib/data/previw-data";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -55,19 +51,17 @@ export default function Home() {
         </FadeIn>
       </Container>
       <InfiniteMoving>
-        {[previewImage1, previewImage2, previewImage3, previewImage4].map(
-          (item, index) => (
-            <InfiniteMovingItem key={index} className="md:w-[400px] relative">
-              <Image
-                src={item}
-                alt=""
-                height={500}
-                width={400}
-                className="border object-cover object-center rounded-lg border-border/50"
-              />
-            </InfiniteMovingItem>
-          )
-        )}
+        {previewData.homepage.map((item, index) => (
+          <InfiniteMovingItem key={index} className="md:w-[350px] relative">
+            <Image
+              src={item.image}
+              alt=""
+              height={500}
+              width={400}
+              className="border object-cover object-center rounded-lg border-border/50 "
+            />
+          </InfiniteMovingItem>
+        ))}
       </InfiniteMoving>
       <Container className="mt-20 md:mt-32">
         <SectionIntro
@@ -79,30 +73,18 @@ export default function Home() {
           Discover a Range of Ready-Made Pages to Suit Every Need
         </SectionIntro>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="p-5 bg-slate-100 rounded-[30px]">
-            <Image
-              src={previewImageTest}
-              alt=""
-              height={500}
-              width={400}
-              className="rounded-lg"
-            />
-            <h3 className="text-xl font-extrabold text-foreground mt-3 text-center">
-              Demo - 1
-            </h3>
-          </div>
-          <div className="border border-border rounded-lg">
-            <Image
-              src={previewImageTest}
-              alt=""
-              height={500}
-              width={400}
-              className="rounded-lg"
-            />
-          </div>
-          <div>
-            <Image src={previewImage1} alt="" height={500} width={400} />
-          </div>
+          {previewData.homepage.map((item, index) => (
+            <div className="" key={index}>
+              <Image
+                src={item.image}
+                alt={item.title}
+                height={550}
+                width={400}
+                className="border border-border rounded-lg"
+              />
+              <h3 className="mt-3 font-bold text-center">{item.title}</h3>
+            </div>
+          ))}
         </div>
       </Container>
       <Container className="mt-20 md:mt-32">hwllo</Container>

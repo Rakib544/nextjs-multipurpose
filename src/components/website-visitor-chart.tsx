@@ -20,7 +20,7 @@ const series = [
     name: "Mobile",
     type: "area",
     color: "rgba(79, 70, 229, 0.7)",
-    data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
+    data: [44, 55, 41, 50, 30, 43, 21, 41, 56, 27, 43],
   },
   {
     name: "Tablet",

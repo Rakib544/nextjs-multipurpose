@@ -102,7 +102,7 @@ export const jobDescription = [
     id: "lwmhc",
     children: [
       {
-        text: "\r[Insert Company Name] is a leading [Insert Industry] company dedicated to [Insert Mission]. We pride ourselves on innovation, creativity, and a commitment to excellence. As we continue to expand our team, we are seeking a talented Software Engineer to join us in developing cutting-edge solutions that drive our business forward.",
+        text: "\rAgenify is a leading Agency company dedicated to Software Product Development. We pride ourselves on innovation, creativity, and a commitment to excellence. As we continue to expand our team, we are seeking a talented Software Engineer to join us in developing cutting-edge solutions that drive our business forward.",
       },
     ],
     lineHeight: 2,
@@ -117,7 +117,7 @@ export const jobDescription = [
     id: "vwcbq",
     children: [
       {
-        text: "\rAs a Software Engineer at [Insert Company Name], you will be responsible for designing, developing, and maintaining software applications that meet the needs of our customers and contribute to the overall success of our business. You will work closely with cross-functional teams to understand requirements, implement solutions, and ensure the reliability and scalability of our software products.",
+        text: "\rAs a Software Engineer at Agenify, you will be responsible for designing, developing, and maintaining software applications that meet the needs of our customers and contribute to the overall success of our business. You will work closely with cross-functional teams to understand requirements, implement solutions, and ensure the reliability and scalability of our software products.",
       },
     ],
     lineHeight: 2,

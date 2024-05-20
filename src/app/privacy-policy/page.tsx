@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/breadcrumb";
 import { privacyPolicyData } from "@/lib/data/privacy-policy-data";
 import { Metadata } from "next";
-import Link from "next/link";
 
 const sideMenus = [
   {
@@ -57,25 +56,8 @@ export default function privacyAndPolicy() {
         </Breadcrumb>
       </PageIntro>
       <Container className="my-20 ">
-        <div className="grid grid-cols-12 gap-x-6">
-          <div className="col-span-12 md:col-span-3 sticky top-0 h-screen hidden md:block">
-            <h2 className="font-bold text-xl mb-4">Table Of Contents</h2>
-            <ul className="space-y-3 text-foreground">
-              {sideMenus.map((menu) => (
-                <li key={menu.href} className="">
-                  <Link
-                    href={`#${menu.href}`}
-                    className="hover:text-primary font-medium text-muted-foreground"
-                  >
-                    {menu.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="col-span-12 md:col-span-9">
-            <Description description={privacyPolicyData} />
-          </div>
+        <div className="max-w-3xl mx-auto">
+          <Description description={privacyPolicyData} />
         </div>
       </Container>
     </div>

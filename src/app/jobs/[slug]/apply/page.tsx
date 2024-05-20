@@ -22,7 +22,7 @@ export default function JobApply() {
     <div>
       <Container className="my-20">
         <div>
-          <span className="inline-block text-sm font-medium px-10 py-3 bg-indigo-600 text-white rounded-lg mb-4">
+          <span className="block text-sm font-bold  text-primary uppercase  mb-4">
             You are applying for:
           </span>
         </div>

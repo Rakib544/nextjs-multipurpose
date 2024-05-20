@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import Description from "@/components/description";
 import { FadeIn } from "@/components/fade-in";
 import {
   BriefcaseIcon,
@@ -10,7 +11,7 @@ import {
 } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { buttonVariants } from "@/components/ui/button";
-import { jobDescription } from "@/lib/data/job-description";
+import { jobDescription } from "@/lib/data/job-data";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -37,15 +38,12 @@ export default function JobDetails() {
       <Container className="mt-12 mb-32">
         <FadeIn className="grid grid-cols-12 gap-6">
           <div className="col-span-12 lg:col-span-8">
-            <div
-              className="prose prose-slate prose-base prose-h3:font-bold prose-h3:text-lg"
-              dangerouslySetInnerHTML={{ __html: jobDescription }}
-            />
+            <Description description={jobDescription} />
           </div>
           <div className="col-span-12 lg:col-span-4">
             <div className="border border-indigo-950/5 bg-white rounded-xl p-6">
               <div className="flex gap-x-2 text-base text-foreground font-semibold">
-                <PinIcon className="h-5 w-5" /> Dhaka, Bangladesh
+                <PinIcon className="h-5 w-5 fill-primary" /> Dhaka, Bangladesh
               </div>
               <p className="text-base text-muted-foreground leading-6 mt-2">
                 Please send us your details CV to apply for this post.

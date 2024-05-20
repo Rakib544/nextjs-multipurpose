@@ -63,11 +63,9 @@ export default function Hero5() {
           <FadeIn className="col-span-12 lg:col-span-6 order-1 lg:order-2 relative z-[-1] ">
             <div className="h-10 w-full bg-gradient-to-t from-white to-transparent absolute bottom-0"></div>
             <Image src={heroImage} alt="" height={577} width={517} />
-            <div className="absolute right-0 bg-white shadow-xl p-5 rounded-xl bottom-20">
+            <div className="absolute right-0 bg-primary text-white shadow-xl p-5 rounded-xl bottom-20">
               <p className="font-bold">5000+</p>
-              <p className="text-sm text-muted-foreground font-medium">
-                Satisfied Clients
-              </p>
+              <p className="text-sm font-medium">Satisfied Clients</p>
             </div>
           </FadeIn>
         </FadeInStagger>
