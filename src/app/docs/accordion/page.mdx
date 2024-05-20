@@ -9,33 +9,35 @@ import {
 
 ## Accordion with single open at a time
 
-<Accordion type="single" className="not-prose">
-  <AccordionItem
-    className="border-none data-[state=open]:bg-indigo-600 px-5 data-[state=open]:py-4 rounded-xl data-[state=open]:text-primary-foreground  text-muted-foreground"
-    value={`item-1`}
-  >
-    <AccordionTrigger className="font-semibold text-base data-[state=open]:text-white text-foreground text-start">
-      <div>How do i get started your agency?</div>
-    </AccordionTrigger>
-    <AccordionContent className="text-base leading-7">
-      Getting started is easy! Simply reach out to us via our contact page or
-      email, and one of our representatives will get in touch with you to
-      discuss your project needs.
-    </AccordionContent>
-  </AccordionItem>
-  <AccordionItem
-    className="border-none data-[state=open]:bg-indigo-600 px-5 data-[state=open]:py-4  rounded-xl data-[state=open]:text-primary-foreground  text-muted-foreground"
-    value={`item-2`}
-  >
-    <AccordionTrigger className="font-semibold text-base data-[state=open]:text-white text-foreground text-start">
-      <div>What services do your agency serves?</div>
-    </AccordionTrigger>
-    <AccordionContent className="text-base leading-7">
-      Our agency specializes in a wide range of services including web design,
-      digital marketing, branding, and content creation.
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>
+<div className="not-prose">
+  <Accordion type="single">
+    <AccordionItem
+      className="border-none data-[state=open]:bg-indigo-600 px-5 data-[state=open]:py-4 rounded-xl data-[state=open]:text-primary-foreground  text-muted-foreground"
+      value={`item-1`}
+    >
+      <AccordionTrigger className="font-semibold text-base data-[state=open]:text-white text-foreground text-start">
+        <div>How do i get started your agency?</div>
+      </AccordionTrigger>
+      <AccordionContent className="text-base leading-7">
+        Getting started is easy! Simply reach out to us via our contact page or
+        email, and one of our representatives will get in touch with you to
+        discuss your project needs.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem
+      className="border-none data-[state=open]:bg-indigo-600 px-5 data-[state=open]:py-4  rounded-xl data-[state=open]:text-primary-foreground  text-muted-foreground"
+      value={`item-2`}
+    >
+      <AccordionTrigger className="font-semibold text-base data-[state=open]:text-white text-foreground text-start">
+        <div>What services do your agency serves?</div>
+      </AccordionTrigger>
+      <AccordionContent className="text-base leading-7">
+        Our agency specializes in a wide range of services including web design,
+        digital marketing, branding, and content creation.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</div>
 
 #### View examples code
 

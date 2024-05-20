@@ -28,7 +28,7 @@ export default function Career1() {
               eyebrow="Careers"
               pageTitle={
                 <>
-                  Help us build technology for the next era of
+                  Help us building technology for the next era of
                   <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                     {" "}
                     <span className="relative"> digital solution</span>{" "}

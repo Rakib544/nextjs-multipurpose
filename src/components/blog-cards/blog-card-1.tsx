@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "./icons";
-import { buttonVariants } from "./ui/button";
+import { ArrowRight } from "../icons";
+import { buttonVariants } from "../ui/button";
 
-export default function BlogCard({
+export default function BlogCard1({
   title,
   subtitle,
   createdAt,

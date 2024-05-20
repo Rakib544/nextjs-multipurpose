@@ -26,7 +26,7 @@ export default function About1() {
     <div>
       <Container>
         <PageIntro
-          className="max-w-5xl mx-auto z-10 mt-12 mb-0 md:mt-20"
+          className="max-w-4xl mx-auto z-10 mt-12 mb-0 md:mt-20"
           eyebrow="About us"
           pageTitle="Discover the story behind our agency that’s dedicated to bring your
             creative vision to life"

@@ -25,7 +25,7 @@ export function PageIntro({
           <span className="sr-only"> - </span>
           <span
             className={clsx(
-              "text-3xl font-extrabold block md:text-4.5xl/tight text-foreground",
+              "text-3xl font-extrabold block md:text-4xl/tight text-foreground",
               centered && "mx-auto"
             )}
           >

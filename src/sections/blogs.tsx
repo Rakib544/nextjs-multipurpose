@@ -1,4 +1,4 @@
-import BlogCard from "@/components/blog-card";
+import { BlogCard1 } from "@/components/blog-cards";
 import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import { SectionIntro } from "@/components/section-intro";
@@ -18,7 +18,7 @@ export default function Blogs() {
       </SectionIntro>
       <FadeIn className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
         {blogsData.slice(0, 3).map((blog, index) => (
-          <BlogCard
+          <BlogCard1
             createdAt={blog.createdAt}
             subtitle={blog.subtitle}
             title={blog.title}

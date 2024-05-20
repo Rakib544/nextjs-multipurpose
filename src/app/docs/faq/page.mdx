@@ -20,46 +20,40 @@ If you don't see an answer to your question here, please feel free to contact us
   <Button size='lg'>Contact Support</Button>
 </Link>
 
-<Accordion type="multiple">
+<Accordion type="multiple" className="not-prose space-y-4 mt-12">
   <AccordionItem
     value="item-1"
     className="border-none bg-slate-100 px-3 md:px-4 rounded-xl  text-foreground [&>h3]:text-red-500"
   >
-    <AccordionTrigger className="text-base font-semibold py-0">
+    <AccordionTrigger className="text-base font-semibold">
       How can i remove unwanted package or library?
     </AccordionTrigger>
-    <AccordionContent className="py-0">
-      <p className="text-base -mt-4">
-        All third-party plugin JS files are located in `npm uninstall
-        package-name`
-      </p>
+    <AccordionContent>
+      All third-party plugin JS files are located in `npm uninstall
+      package-name`
     </AccordionContent>
   </AccordionItem>
   <AccordionItem
     value="item-2"
     className="border-none bg-slate-100 px-3 md:px-4 rounded-xl  text-foreground"
   >
-    <AccordionTrigger className="text-base font-semibold py-0">
+    <AccordionTrigger className="text-base font-semibold">
       Why am i getting error while installing to wordpress?
     </AccordionTrigger>
-    <AccordionContent className="py-0">
-      <p className="text-base -mt-4">
-        Sandbox is an nextjs template, not a Wordpress theme. So it cannot be
-        installed in Wordpress
-      </p>
+    <AccordionContent>
+      Sandbox is an nextjs template, not a Wordpress theme. So it cannot be
+      installed in Wordpress
     </AccordionContent>
   </AccordionItem>
   <AccordionItem
     value="item-3"
     className="border-none bg-slate-100 px-3 md:px-4 rounded-xl  text-foreground"
   >
-    <AccordionTrigger className="text-base font-semibold py-0">
+    <AccordionTrigger className="text-base font-semibold">
       What font is used on this template?
     </AccordionTrigger>
-    <AccordionContent className="py-0">
-      <p className="text-base -mt-4">
-        The font used in the Sandbox logo is Inter google font
-      </p>
+    <AccordionContent>
+      The font used in the Sandbox logo is Inter google font
     </AccordionContent>
   </AccordionItem>
 </Accordion>

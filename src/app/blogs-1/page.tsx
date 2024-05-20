@@ -1,13 +1,12 @@
+import { BlogCard2, BlogCard3 } from "@/components/blog-cards";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
-import { ArrowRight } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { buttonVariants } from "@/components/ui/button";
 import Pagination from "@/components/ui/pagination";
 import { blogsData, categories, tags } from "@/lib/data/blog-data";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
 const SearchField = dynamic(() => import("@/components/search-field"), {
   ssr: false,
@@ -51,28 +50,13 @@ export default function Blogs1() {
               <h2 className="font-bold text-foreground mb-2">Popular Posts</h2>
               <div className="space-y-3">
                 {blogsData.slice(0, 3).map((blog, index) => (
-                  <Link
-                    href="/blog-details"
-                    className="grid grid-cols-12 gap-x-2 group"
+                  <BlogCard2
                     key={index}
-                  >
-                    <div className="col-span-4 aspect-video relative overflow-hidden rounded">
-                      <Image
-                        src={blog.thumbnail}
-                        alt={blog.title}
-                        className="object-cover transition duration-500 motion-safe:group-hover:scale-105"
-                        fill
-                      />
-                    </div>
-                    <div className="col-span-8">
-                      <time className="text-xs font-medium text-muted-foreground">
-                        {new Date(blog.createdAt).toDateString()}
-                      </time>
-                      <h3 className="font-bold hover:text-primary text-sm text-foreground line-clamp-2">
-                        {blog.title}
-                      </h3>
-                    </div>
-                  </Link>
+                    title={blog.title}
+                    subtitle={blog.subtitle}
+                    thumbnail={blog.thumbnail}
+                    createdAt={blog.createdAt}
+                  />
                 ))}
               </div>
             </div>
@@ -110,43 +94,13 @@ export default function Blogs1() {
           <FadeIn className="col-span-12 lg:col-span-8">
             <div className="space-y-8">
               {blogsData.map((blog, index) => (
-                <div
-                  className="grid grid-cols-12 gap-y-4 md:gap-x-12 p-4 lg:p-10 bg-slate-50 rounded-xl hover:bg-slate-100"
+                <BlogCard3
                   key={index}
-                >
-                  <div className="col-span-12 md:col-span-8 order-2 md:order-1 max-w-xl">
-                    <p className=" mt-4 mb-2 text-sm text-muted-foreground font-medium">
-                      {new Date(blog.createdAt).toDateString()}
-                    </p>
-                    <Link href="/blog-details" className="">
-                      <h2 className="text-2xl mt-6 font-extrabold tracking-tight transition duration-300 text-foreground line-clamp-2 hover:text-primary">
-                        {blog.title}
-                      </h2>
-                    </Link>
-                    <p className="mt-3 text-base text-muted-foreground line-clamp-2 leading-7 ">
-                      {blog.subtitle}
-                    </p>
-                    <Link
-                      href="/blog-details"
-                      className={buttonVariants({
-                        variant: "link",
-                        className: "!px-0 mt-4",
-                      })}
-                    >
-                      Read More <ArrowRight className="size-4 ml-1" />
-                    </Link>
-                  </div>
-                  <div className="col-span-12 md:col-span-4 order-1 md:order-2">
-                    <div className="aspect-square relative rounded-2xl overflow-hidden">
-                      <Image
-                        src={blog.thumbnail}
-                        alt={blog.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
+                  title={blog.title}
+                  thumbnail={blog.thumbnail}
+                  subtitle={blog.subtitle}
+                  createdAt={blog.createdAt}
+                />
               ))}
             </div>
             <div className="flex justify-center mt-20">
