@@ -11,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 import { type ColumnDef } from "@tanstack/react-table";
 import Link from "next/link";
 
@@ -21,10 +22,23 @@ export type Application = {
   jobTitle: string;
   appliedDate: string;
   position: string;
-  status: string;
+  status: "under review" | "shortlisted" | "rejected";
   phone: string;
   bio: string;
 };
+
+function statusBadge(status: Application["status"]) {
+  if (status === "rejected") {
+    return "bg-red-400/10 text-red-500 hover:bg-red-400/20";
+  }
+
+  if (status === "shortlisted") {
+    return "bg-green-400/10 text-green-500 hover:bg-green-400/20";
+  }
+  if (status === "under review") {
+    return "bg-yellow-400/10 text-yellow-500 hover:bg-yellow-400/20";
+  }
+}
 
 export const columns: ColumnDef<Application>[] = [
   {
@@ -81,6 +95,19 @@ export const columns: ColumnDef<Application>[] = [
   {
     accessorKey: "status",
     header: "Status",
+    cell: ({ row }) => {
+      const { status } = row.original;
+      return (
+        <span
+          className={cn(
+            "capitalize inline-block rounded-full  px-3 py-1 text-center text-xs font-semibold leading-5",
+            statusBadge(status)
+          )}
+        >
+          {status}
+        </span>
+      );
+    },
   },
   {
     id: "actions",

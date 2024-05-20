@@ -13,7 +13,7 @@ export default function ArticleEditPage() {
   return (
     <div>
       <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">
-        Edit Article
+        Edit Case Studies
       </h2>
       <Breadcrumb>
         <BreadcrumbList>

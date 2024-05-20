@@ -11,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 import { type ColumnDef } from "@tanstack/react-table";
 import Link from "next/link";
 
@@ -21,8 +22,21 @@ export type Job = {
   createdAt: string;
   jobType: string;
   role: string;
-  status: string;
+  status: "active" | "expired" | "draft";
 };
+
+function statusBadge(status: Job["status"]) {
+  if (status === "expired") {
+    return "bg-red-400/10 text-red-500 hover:bg-red-400/20";
+  }
+
+  if (status === "active") {
+    return "bg-green-400/10 text-green-500 hover:bg-green-400/20";
+  }
+  if (status === "draft") {
+    return "bg-gray-200 text-muted-foreground";
+  }
+}
 
 export const columns: ColumnDef<Job>[] = [
   {
@@ -74,6 +88,19 @@ export const columns: ColumnDef<Job>[] = [
   {
     accessorKey: "status",
     header: "Status",
+    cell: ({ row }) => {
+      const { status } = row.original;
+      return (
+        <span
+          className={cn(
+            "capitalize inline-block rounded-full  px-3 py-1 text-center text-xs font-semibold leading-5",
+            statusBadge(status)
+          )}
+        >
+          {status}
+        </span>
+      );
+    },
   },
   {
     id: "actions",

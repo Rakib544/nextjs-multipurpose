@@ -74,9 +74,14 @@ export function DataTable<TData, TValue>({
       <div className="flex gap-y-4 flex-col sm:flex-row items-end sm:items-center justify-between py-4">
         <Input
           placeholder="Filter applications by email..."
-          value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+          value={
+            (table.getColumn("applicantEmail")?.getFilterValue() as string) ??
+            ""
+          }
           onChange={(event) =>
-            table.getColumn("email")?.setFilterValue(event.target.value)
+            table
+              .getColumn("applicantEmail")
+              ?.setFilterValue(event.target.value)
           }
           className="max-w-md pl-6 !rounded-full order-2 sm:order-1"
         />

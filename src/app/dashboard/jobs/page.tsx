@@ -18,7 +18,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-01",
     jobType: "Full-time",
     role: "Frontend Engineer",
-    status: "Active",
+    status: "active",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-02",
     jobType: "Full-time",
     role: "Backend Engineer",
-    status: "Active",
+    status: "active",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-03",
     jobType: "Contract",
     role: "UI/UX Designer",
-    status: "Active",
+    status: "draft",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-04",
     jobType: "Full-time",
     role: "Data Scientist",
-    status: "Active",
+    status: "expired",
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-05",
     jobType: "Full-time",
     role: "Marketing Manager",
-    status: "Active",
+    status: "active",
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-06",
     jobType: "Full-time",
     role: "Product Manager",
-    status: "Active",
+    status: "active",
   },
   {
     id: 7,
@@ -72,7 +72,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-07",
     jobType: "Full-time",
     role: "Software Engineer",
-    status: "Active",
+    status: "active",
   },
   {
     id: 8,
@@ -81,7 +81,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-08",
     jobType: "Contract",
     role: "DevOps Engineer",
-    status: "Active",
+    status: "active",
   },
   {
     id: 9,
@@ -90,7 +90,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-09",
     jobType: "Full-time",
     role: "Sales Representative",
-    status: "Active",
+    status: "active",
   },
   {
     id: 10,
@@ -99,7 +99,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-10",
     jobType: "Contract",
     role: "Customer Support Specialist",
-    status: "Active",
+    status: "active",
   },
   {
     id: 11,
@@ -108,7 +108,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-11",
     jobType: "Full-time",
     role: "Graphic Designer",
-    status: "Active",
+    status: "active",
   },
   {
     id: 12,
@@ -117,7 +117,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-12",
     jobType: "Full-time",
     role: "HR Manager",
-    status: "Active",
+    status: "active",
   },
   {
     id: 13,
@@ -126,7 +126,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-13",
     jobType: "Contract",
     role: "Content Writer",
-    status: "Active",
+    status: "expired",
   },
   {
     id: 14,
@@ -135,7 +135,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-14",
     jobType: "Full-time",
     role: "Network Administrator",
-    status: "Active",
+    status: "active",
   },
   {
     id: 15,
@@ -144,7 +144,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-15",
     jobType: "Full-time",
     role: "Accountant",
-    status: "Active",
+    status: "draft",
   },
   {
     id: 16,
@@ -153,7 +153,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-16",
     jobType: "Full-time",
     role: "Business Analyst",
-    status: "Active",
+    status: "active",
   },
   {
     id: 17,
@@ -162,7 +162,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-17",
     jobType: "Full-time",
     role: "Quality Assurance Engineer",
-    status: "Active",
+    status: "active",
   },
   {
     id: 18,
@@ -171,7 +171,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-18",
     jobType: "Full-time",
     role: "Project Manager",
-    status: "Active",
+    status: "active",
   },
   {
     id: 19,
@@ -180,7 +180,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-19",
     jobType: "Contract",
     role: "IT Support Specialist",
-    status: "Active",
+    status: "active",
   },
   {
     id: 20,
@@ -189,7 +189,7 @@ const jobs: Job[] = [
     createdAt: "2024-04-20",
     jobType: "Full-time",
     role: "Research Analyst",
-    status: "Active",
+    status: "active",
   },
 ];
 

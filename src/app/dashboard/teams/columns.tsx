@@ -10,6 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 import { type ColumnDef } from "@tanstack/react-table";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -86,10 +87,10 @@ export const columns: ColumnDef<Team>[] = [
       );
     },
   },
-  {
-    accessorKey: "phone",
-    header: "Phone",
-  },
+  // {
+  //   accessorKey: "phone",
+  //   header: "Phone",
+  // },
   {
     accessorKey: "country",
     header: "Country",
@@ -97,6 +98,21 @@ export const columns: ColumnDef<Team>[] = [
   {
     accessorKey: "status",
     header: "Status",
+    cell: ({ row }) => {
+      const { status } = row.original;
+      return (
+        <span
+          className={cn(
+            "capitalize rounded-full  px-3 py-1 text-center text-xs font-semibold leading-5",
+            status === "active"
+              ? " bg-red-400/10  text-red-500 hover:bg-red-400/20"
+              : "bg-green-400/20 text-green-500 hover:bg-green-400/30"
+          )}
+        >
+          {status}
+        </span>
+      );
+    },
   },
   {
     id: "actions",

@@ -25,11 +25,11 @@ export default function DashboardSidebar({
   return (
     <div className={cn("pb-12", className)}>
       <div className=" py-4">
-        <div className="px-1 py-2 space-y-8">
+        <div className="px-1 py-2 space-y-4">
           <Link
             aria-label="Home"
             href="/"
-            className="text-2xl font-extrabold text-primary relative inline-block ml-1"
+            className="text-2xl font-extrabold text-primary relative inline-block ml-4"
           >
             Agenify
             <TextUnderline />
