@@ -2,7 +2,7 @@ import { Border } from "@/components/border";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
-import { JobCard } from "@/components/job-card";
+import { JobCard1 } from "@/components/job-cards";
 import { PageIntro } from "@/components/page-intro";
 import careerHeroImage from "@/images/career/hero.webp";
 import { jobs } from "@/lib/data/job-data";
@@ -66,7 +66,7 @@ export default function Career1() {
             {jobs
               .filter((item) => item.category.toLowerCase() === "design")
               .map((job, index) => (
-                <JobCard
+                <JobCard1
                   key={index}
                   address={job.address}
                   category={job.category}
@@ -95,7 +95,7 @@ export default function Career1() {
             {jobs
               .filter((item) => item.category.toLowerCase() === "marketing")
               .map((job, index) => (
-                <JobCard
+                <JobCard1
                   key={index}
                   address={job.address}
                   category={job.category}

@@ -1,0 +1,46 @@
+## Team cards
+
+import { TeamCard1, TeamCard2 } from "@/components/team-card";
+import teamImage from "@/images/team/team-2.jpeg";
+
+### Team card 1
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6">
+  <TeamCard1
+    image={teamImage}
+    name="Leslie Alexander"
+    role="Co-Founder / CEO"
+  />
+  <TeamCard1
+    image={teamImage}
+    name="Leslie Alexander"
+    role="Co-Founder / CEO"
+  />
+</div>
+
+```js
+import { TeamCard1 } from "@/components/team-card";
+import teamImage from "@/images/team/team-2.jpeg";
+<TeamCard1 image={teamImage} name="Leslie Alexander" role="Co-Founder / CEO" />;
+```
+
+### Team card 2
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6">
+  <TeamCard2
+    image={teamImage}
+    name="Leslie Alexander"
+    role="Co-Founder / CEO"
+  />
+  <TeamCard2
+    image={teamImage}
+    name="Leslie Alexander"
+    role="Co-Founder / CEO"
+  />
+</div>
+
+```js
+import { TeamCard2 } from "@/components/team-card";
+import teamImage from "@/images/team/team-2.jpeg";
+<TeamCard2 image={teamImage} name="Leslie Alexander" role="Co-Founder / CEO" />;
+```

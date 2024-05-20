@@ -3,7 +3,7 @@ import { FadeIn } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
-import TeamCard1 from "@/components/team-card/team-card-1";
+import { TeamCard1 } from "@/components/team-card";
 import aboutImage from "@/images/about/about-3.webp";
 import { peoples } from "@/lib/data/team-data";
 import { Metadata } from "next";

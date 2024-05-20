@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { ClockIcon, DollarCircleIcon, PinIcon } from "./icons";
+import { ClockIcon, DollarCircleIcon, PinIcon } from "../../components/icons";
 
 interface JobCardProps extends React.HTMLAttributes<HTMLAnchorElement> {
   title: string;
@@ -12,7 +12,7 @@ interface JobCardProps extends React.HTMLAttributes<HTMLAnchorElement> {
   slug: string;
 }
 
-const JobCard = React.forwardRef<HTMLAnchorElement, JobCardProps>(
+const JobCard1 = React.forwardRef<HTMLAnchorElement, JobCardProps>(
   ({ title, category, address, subtitle, jobType, salary, slug }, ref) => {
     return (
       <Link
@@ -46,6 +46,6 @@ const JobCard = React.forwardRef<HTMLAnchorElement, JobCardProps>(
   }
 );
 
-JobCard.displayName = "JobCard";
+JobCard1.displayName = "JobCard1";
 
-export { JobCard };
+export { JobCard1 };

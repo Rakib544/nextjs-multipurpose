@@ -1,6 +1,6 @@
 import { Container } from "@/components/container";
 import { SectionIntro } from "@/components/section-intro";
-import TeamCard1 from "@/components/team-card/team-card-1";
+import { TeamCard1 } from "@/components/team-card";
 import { peoples } from "@/lib/data/team-data";
 
 export default function Team() {

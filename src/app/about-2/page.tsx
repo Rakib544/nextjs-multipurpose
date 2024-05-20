@@ -3,10 +3,11 @@ import { Clients } from "@/components/clients";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { ArrowRight, TextUnderline } from "@/components/icons";
+import { JobCard2 } from "@/components/job-cards";
 import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import aboutImage from "@/images/about/about-3.webp";
 import { jobs } from "@/lib/data/job-data";
 import { About5 } from "@/sections/about";
@@ -146,22 +147,11 @@ export default function About2() {
           <FadeInStagger faster className="space-y-4">
             {jobs.slice(0, 4).map((job) => (
               <FadeIn key={job.slug}>
-                <Link
-                  href="jobs/1"
-                  className="flex justify-between items-center p-6 rounded-xl hover:bg-muted border border-border/50 bg-slate-50 group"
-                >
-                  <div>
-                    <h3 className="font-bold text-lg md:text-xl">
-                      Senior Software Engineer
-                    </h3>
-                    <p className="text-sm mt-1 text-muted-foreground">
-                      {job.address}
-                    </p>
-                  </div>
-                  <Button size="icon" variant="ghost">
-                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-foreground" />
-                  </Button>
-                </Link>
+                <JobCard2
+                  address={job.address}
+                  slug={job.slug}
+                  title={job.title}
+                />
               </FadeIn>
             ))}
           </FadeInStagger>

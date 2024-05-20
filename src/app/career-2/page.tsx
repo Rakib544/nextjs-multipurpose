@@ -1,7 +1,7 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
-import { JobCard } from "@/components/job-card";
+import { JobCard1 } from "@/components/job-cards";
 import JobFilter from "@/components/job-filter";
 import MobileFilterDrawer from "@/components/mobile-filter-drawer";
 import { PageIntro } from "@/components/page-intro";
@@ -64,7 +64,7 @@ export default function Career2() {
             <FadeInStagger faster className="space-y-4">
               {jobs.map((job, index) => (
                 <FadeIn key={index}>
-                  <JobCard
+                  <JobCard1
                     address={job.address}
                     category={job.category}
                     salary={job.category}

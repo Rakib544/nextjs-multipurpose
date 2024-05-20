@@ -1,0 +1,49 @@
+## Job cards
+
+import { JobCard1, JobCard2 } from "@/components/job-cards";
+
+### Job card 1
+
+<div className="not-prose">
+  <JobCard1
+    title="Software Engineer"
+    category="Information Technology"
+    address="123 Main St, Anytown, USA"
+    subtitle="Join our team to develop cutting-edge software solutions."
+    jobType="Full-time"
+    salary="$80,000 - $100,000 per year"
+    slug="/software-engineer"
+  />
+</div>
+
+```js
+import { JobCard1 } from "@/components/job-cards";
+<JobCard1
+  title="Software Engineer"
+  category="Information Technology"
+  address="123 Main St, Anytown, USA"
+  subtitle="Join our team to develop cutting-edge software solutions."
+  jobType="Full-time"
+  salary="$80,000 - $100,000 per year"
+  slug="/software-engineer"
+/>;
+```
+
+### Job card 2
+
+<div className="not-prose">
+  <JobCard2
+    title="Software Engineer"
+    address="123 Main St, Anytown, USA"
+    slug="/software-engineer"
+  />
+</div>
+
+```js
+import { JobCard2 } from "@/components/job-cards";
+<JobCard2
+  title="Software Engineer"
+  address="123 Main St, Anytown, USA"
+  slug="/software-engineer"
+/>;
+```

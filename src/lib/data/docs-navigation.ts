@@ -119,7 +119,7 @@ export const docsNavigation = [
       {
         id: 55,
         label: "Testimonials",
-        href: "/docs/testimonials",
+        href: "/docs/testimonial-cards",
       },
     ],
   },
