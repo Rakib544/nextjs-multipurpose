@@ -98,11 +98,9 @@ export const columns: ColumnDef<Application>[] = [
 
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link href="/dashboard/jobs/1">View</Link>
+              <Link href="/dashboard/job-applications/1">View</Link>
             </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="/dashboard/jobs/1/edit">Edit</Link>
-            </DropdownMenuItem>
+            <DropdownMenuItem>Approve</DropdownMenuItem>
             <DropdownMenuItem>Delete</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

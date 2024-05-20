@@ -13,12 +13,12 @@ const series = [
   {
     name: "Completed",
     data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
-    color: "rgba(0, 167, 111, 1)",
+    color: "rgba(79, 70, 229,1)",
   },
   {
     name: "Pending",
     data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
-    color: "rgba(0, 167, 111, 0.6)",
+    color: "rgba(79, 70, 229,0.5)",
   },
 ];
 
@@ -37,6 +37,8 @@ const options = {
   },
   plotOptions: {
     bar: {
+      borderRadiusApplication: "end",
+      borderRadius: 10,
       horizontal: false,
       columnWidth: "55%",
       endingShape: "rounded",

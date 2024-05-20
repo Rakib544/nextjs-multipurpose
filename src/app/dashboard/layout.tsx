@@ -21,7 +21,7 @@ export default function DashboardLayout({
 }) {
   return (
     <div>
-      <header className="fixed w-full lg:w-[calc(100%-281px)] ml-auto top-0 right-0 left-auto z-30 mb-6 flex items-center justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 h-20">
+      <header className="fixed w-full lg:w-[calc(100%-281px)] ml-auto top-0 right-0 left-auto z-30 mb-6 flex items-center justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 lg:px-9 h-20">
         <div className="flex items-center gap-x-4 mt-2 relative">
           <div className="block lg:hidden">
             <DashboardMobileNavigation />

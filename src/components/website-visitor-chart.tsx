@@ -120,7 +120,7 @@ const options = {
   },
 };
 
-const ApexChart = () => {
+const WebsiteVisitorChart = () => {
   return (
     <div>
       <div className="flex justify-between items-center mb-8 px-5">
@@ -150,4 +150,4 @@ const ApexChart = () => {
   );
 };
 
-export default ApexChart;
+export default WebsiteVisitorChart;

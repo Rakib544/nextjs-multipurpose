@@ -1,8 +1,11 @@
 import dynamic from "next/dynamic";
 
-const ApexChart = dynamic(() => import("@/components/website-visitor-chart"), {
-  ssr: false,
-});
+const WebsiteVisitorChart = dynamic(
+  () => import("@/components/website-visitor-chart"),
+  {
+    ssr: false,
+  }
+);
 
 const ContinentVisitChart = dynamic(
   () => import("@/components/continent-visit-charts"),
@@ -75,7 +78,7 @@ export default function Dashboard() {
       </div>
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-7 bg-white border border-border/50 py-5 rounded-lg min-h-40">
-          <ApexChart />
+          <WebsiteVisitorChart />
         </div>
         <div className="col-span-12 md:col-span-5 bg-white border border-border/50 py-5 rounded-lg min-h-40">
           <ContinentVisitChart />

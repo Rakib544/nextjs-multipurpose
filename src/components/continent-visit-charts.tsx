@@ -17,6 +17,7 @@ const options = {
   legend: {
     position: "top",
   },
+  colors: ["#00A76F", "#FFAB00", "#00B8D9", "#FF5630"],
   labels: ["Asia", "America", "Europe", "Africa"],
 };
 
