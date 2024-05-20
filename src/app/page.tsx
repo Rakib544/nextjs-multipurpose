@@ -7,7 +7,7 @@ import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
-import { previewData } from "@/lib/data/previw-data";
+import { previewData } from "@/lib/data/preview-data";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -74,6 +74,30 @@ export default function Home() {
         </SectionIntro>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {previewData.homepage.map((item, index) => (
+            <div className="" key={index}>
+              <Image
+                src={item.image}
+                alt={item.title}
+                height={550}
+                width={400}
+                className="border border-border rounded-lg"
+              />
+              <h3 className="mt-3 font-bold text-center">{item.title}</h3>
+            </div>
+          ))}
+        </div>
+      </Container>
+      <Container className="mt-20 md:mt-32">
+        <SectionIntro
+          eyebrow="5 Pre-Built Demos"
+          title="We carefully crafted all demos for your business needs"
+          centered
+          className="mb-12"
+        >
+          Discover a Range of Ready-Made Pages to Suit Every Need
+        </SectionIntro>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {previewData.innerPages.map((item, index) => (
             <div className="" key={index}>
               <Image
                 src={item.image}
