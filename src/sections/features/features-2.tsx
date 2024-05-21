@@ -1,11 +1,33 @@
 import { Container } from "@/components/container";
-import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { FadeInStagger } from "@/components/fade-in";
 import {
   AnalyticsIcon,
   DollarBagIcon,
   MegaphoneIcon,
 } from "@/components/icons";
 import { SectionIntro } from "@/components/section-intro";
+import { ServiceCard2 } from "@/components/service-cards";
+
+const services = [
+  {
+    icon: <MegaphoneIcon className="fill-indigo-600 text-primary  h-7 w-7" />,
+    title: "Better Audience",
+    description:
+      "Our proprietary solution leverages an in-house database of 260M+ customers and 2,000+ custom variables to build custom predictive models.",
+  },
+  {
+    icon: <AnalyticsIcon className="fill-indigo-600 text-primary  h-7 w-7" />,
+    title: "Better Analytics",
+    description:
+      "Our proprietary solution leverages an in-house database of 260M+ customers and 2,000+ custom variables to build custom predictive models.",
+  },
+  {
+    icon: <DollarBagIcon className="fill-indigo-600 text-primary  h-7 w-7" />,
+    title: "Better Outcomes",
+    description:
+      "Our proprietary solution leverages an in-house database of 260M+ customers and 2,000+ custom variables to build custom predictive models.",
+  },
+];
 
 export default function Features2() {
   return (
@@ -23,45 +45,14 @@ export default function Features2() {
         faster
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
       >
-        <FadeIn className="border rounded-2xl p-8">
-          <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
-            <MegaphoneIcon className="fill-indigo-600 text-primary  h-7 w-7" />
-          </span>
-          <h3 className="text-xl font-bold mt-6 text-foreground">
-            Better Audience
-          </h3>
-          <p className="text-base leading-7 mt-3 text-muted-foreground ">
-            Our proprietary solution leverages an in-house database of 260M+
-            customers and 2,000+ custom variables to build custom predictive
-            models.
-          </p>
-        </FadeIn>
-        <FadeIn className="border rounded-2xl p-8">
-          <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
-            <AnalyticsIcon className="fill-indigo-600 text-primary  h-7 w-7" />
-          </span>
-          <h3 className="text-xl font-bold mt-6 text-foreground">
-            Better Analytics
-          </h3>
-          <p className="text-base leading-7 mt-3 text-muted-foreground ">
-            Our proprietary solution leverages an in-house database of 260M+
-            customers and 2,000+ custom variables to build custom predictive
-            models.
-          </p>
-        </FadeIn>
-        <FadeIn className="border rounded-2xl p-8">
-          <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
-            <DollarBagIcon className="fill-indigo-600 text-primary  h-7 w-7" />
-          </span>
-          <h3 className="text-xl font-bold mt-6 text-foreground">
-            Better Outcomes
-          </h3>
-          <p className="text-base leading-7 mt-3 text-muted-foreground ">
-            Our proprietary solution leverages an in-house database of 260M+
-            customers and 2,000+ custom variables to build custom predictive
-            models.
-          </p>
-        </FadeIn>
+        {services.map((service, index) => (
+          <ServiceCard2
+            icon={service.icon}
+            title={service.title}
+            description={service.description}
+            key={index}
+          />
+        ))}
       </FadeInStagger>
     </Container>
   );

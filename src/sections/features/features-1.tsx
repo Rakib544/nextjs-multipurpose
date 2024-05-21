@@ -1,8 +1,8 @@
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { SectionIntro } from "@/components/section-intro";
+import { ServiceCard1 } from "@/components/service-cards";
 import { sassFeatures } from "@/lib/data/sass-features";
-import Link from "next/link";
 
 export default function Features1() {
   return (
@@ -12,8 +12,8 @@ export default function Features1() {
         eyebrow="Features"
         className="mb-12"
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem est
-        deleniti, molestias maxime laudantium eos?
+        The existing website had an outdated design and lacked mobile
+        responsiveness, resulting in poor user experience.
       </SectionIntro>
       <FadeInStagger
         faster
@@ -21,20 +21,11 @@ export default function Features1() {
       >
         {sassFeatures.map((service) => (
           <FadeIn key={service.id}>
-            <Link
-              href="/service-details"
-              className="block border focus:ring-0 focus:bg-primary focus:outline-none focus:border-primary group rounded-xl p-6 hover:border-primary hover:bg-primary transition duration-300"
-            >
-              <span className="border inline-block px-5 py-1.5 group-hover:border-indigo-500 border-indigo-200 rounded-full transition-all duration-300 group-focus:border-indigo-500">
-                {service.icon}
-              </span>
-              <h3 className="text-lg font-bold mt-8 group-focus:text-white group-hover:text-white transition duration-300">
-                {service.title}
-              </h3>
-              <p className="text-base leading-7 group-focus:text-primary-foreground mt-3 group-hover:text-primary-foreground text-muted-foreground transition-all duration-300">
-                {service.description}
-              </p>
-            </Link>
+            <ServiceCard1
+              description={service.description}
+              icon={service.icon}
+              title={service.title}
+            />
           </FadeIn>
         ))}
       </FadeInStagger>

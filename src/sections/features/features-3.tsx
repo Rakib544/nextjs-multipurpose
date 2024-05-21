@@ -1,10 +1,8 @@
 import { Container } from "@/components/container";
-import { FadeIn, FadeInStagger } from "@/components/fade-in";
-import { ArrowRight, MegaphoneIcon } from "@/components/icons";
+import { FadeInStagger } from "@/components/fade-in";
 import { SectionIntro } from "@/components/section-intro";
-import { buttonVariants } from "@/components/ui/button";
+import { ServiceCard2 } from "@/components/service-cards";
 import { seoServices } from "@/lib/data/seo-services";
-import Link from "next/link";
 
 export default function Features3() {
   return (
@@ -15,27 +13,14 @@ export default function Features3() {
         title="Optimized to the unique needs of each business we work with"
       />
       <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {seoServices.map((service) => (
-          <FadeIn className="border rounded-2xl p-6" key={service.id}>
-            <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
-              <MegaphoneIcon className="fill-indigo-600 text-primary  h-7 w-7" />
-            </span>
-            <h3 className="text-lg font-bold mt-6 text-foreground">
-              {service.title}
-            </h3>
-            <p className="text-base leading-7 mt-3 text-muted-foreground">
-              {service.description}
-            </p>
-            <Link
-              href="/service-details"
-              className={buttonVariants({
-                variant: "link",
-                className: "!px-0 mt-4",
-              })}
-            >
-              Learn More <ArrowRight className="size-4 ml-1" />
-            </Link>
-          </FadeIn>
+        {seoServices.map((service, index) => (
+          <ServiceCard2
+            key={index}
+            title={service.title}
+            description={service.description}
+            href="/service-details"
+            icon={service.icon}
+          />
         ))}
       </FadeInStagger>
     </Container>
