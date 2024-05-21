@@ -109,7 +109,7 @@ export const docsNavigation = [
       {
         id: 53,
         label: "Service Cards",
-        href: "/docs/service-card",
+        href: "/docs/service-cards",
       },
       {
         id: 54,

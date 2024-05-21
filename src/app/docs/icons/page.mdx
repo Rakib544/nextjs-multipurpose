@@ -1,0 +1,23 @@
+## Icons
+
+We use `Lucide React` on our project.
+
+### How to use
+
+Lucide is built with ES Modules, so it's completely tree-shakable.
+
+Each icon can be imported as a React component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+
+### Example
+
+Additional props can be passed to adjust the icon:
+
+```
+import { Camera } from 'lucide-react';
+
+const App = () => {
+  return <Camera color="red" size={48} />;
+};
+
+export default App;
+```

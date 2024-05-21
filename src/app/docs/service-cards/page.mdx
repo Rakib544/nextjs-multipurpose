@@ -1,0 +1,100 @@
+## Service Cards
+
+import { ServiceCard1, ServiceCard2 } from "@/components/service-cards";
+import { FastIcon } from "@/components/icons";
+
+## Service card 1
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6">
+  <ServiceCard1
+    icon={
+      <FastIcon className="h-5 w-5 group-hover:fill-white group-focus:fill-white  transition-all duration-300" />
+    }
+    title="Streamlined Workflow"
+    description="Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience."
+  />
+  <ServiceCard1
+    icon={
+      <FastIcon className="h-5 w-5 group-hover:fill-white group-focus:fill-white  transition-all duration-300" />
+    }
+    title="Streamlined Workflow"
+    description="Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience."
+  />
+</div>
+
+```js
+import { ServiceCard1 } from "@/components/service-cards";
+import { FastIcon } from "@/components/icons";
+<ServiceCard1
+  icon={
+    <FastIcon className="h-5 w-5 group-hover:fill-white group-focus:fill-white  transition-all duration-300" />
+  }
+  title="Streamlined Workflow"
+  description="Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience."
+/>;
+```
+
+### service card 2
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6">
+  <ServiceCard2
+    icon={
+      <FastIcon className="size-7 group-hover:fill-white group-focus:fill-white  transition-all duration-300" />
+    }
+    title="Streamlined Workflow"
+    description="Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience."
+  />
+  <ServiceCard2
+    icon={
+      <FastIcon className="size-7 group-hover:fill-white group-focus:fill-white  transition-all duration-300" />
+    }
+    title="Streamlined Workflow"
+    description="Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience."
+  />
+</div>
+
+```js
+import { ServiceCard2 } from "@/components/service-cards";
+import { FastIcon } from "@/components/icons";
+<ServiceCard2
+  icon={
+    <FastIcon className="size-7 group-hover:fill-white group-focus:fill-white  transition-all duration-300" />
+  }
+  title="Streamlined Workflow"
+  description="Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience."
+/>;
+```
+
+### service card 2 (with link)
+
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6">
+  <ServiceCard2
+    icon={
+      <FastIcon className="size-7 group-hover:fill-white group-focus:fill-white  transition-all duration-300" />
+    }
+    title="Streamlined Workflow"
+    description="Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience."
+    href="/service-details"
+  />
+  <ServiceCard2
+    icon={
+      <FastIcon className="size-7 group-hover:fill-white group-focus:fill-white  transition-all duration-300" />
+    }
+    title="Streamlined Workflow"
+    description="Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience."
+    href="/service-details"
+  />
+</div>
+
+```js
+import { ServiceCard2 } from "@/components/service-cards";
+import { FastIcon } from "@/components/icons";
+<ServiceCard2
+  icon={
+    <FastIcon className="size-7 group-hover:fill-white group-focus:fill-white  transition-all duration-300" />
+  }
+  title="Streamlined Workflow"
+  description="Expand functionality effortlessly with versatile plugins and extensions tailored to enhance your analytics experience."
+  href="/service-details"
+/>;
+```
