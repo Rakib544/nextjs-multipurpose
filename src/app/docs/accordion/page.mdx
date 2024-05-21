@@ -5,11 +5,17 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-# Accordion
+## Accordion
 
-## Accordion with single open at a time
+A vertically stacked set of interactive headings that each reveal a section of content.
 
-<div className="not-prose">
+<div className="mt-20"></div>
+
+### Accordion with single open at a time
+
+---
+
+<div className="not-prose -mt-10">
   <Accordion type="single">
     <AccordionItem
       className="border-none data-[state=open]:bg-indigo-600 px-5 data-[state=open]:py-4 rounded-xl data-[state=open]:text-primary-foreground  text-muted-foreground"
@@ -39,7 +45,7 @@ import {
   </Accordion>
 </div>
 
-#### View examples code
+###### View examples code
 
 ```js
 import {
@@ -78,9 +84,12 @@ import {
 </Accordion>;
 ```
 
-## Accordion with multiple open
+<div className="mt-20"></div>
+### Accordion with multiple open
 
-<Accordion type="multiple" className="not-prose space-y-4">
+---
+
+<Accordion type="multiple" className="not-prose space-y-4 -mt-10">
   <AccordionItem
     className="border-none data-[state=open]:bg-indigo-600 px-5 data-[state=open]:py-4 rounded-xl data-[state=open]:text-primary-foreground  text-muted-foreground"
     value={`item-1`}
@@ -108,7 +117,7 @@ import {
   </AccordionItem>
 </Accordion>
 
-#### View examples code
+###### View examples code
 
 ```js
 import {
@@ -147,11 +156,14 @@ import {
 </Accordion>;
 ```
 
-## Accordion with default open
+<div className="mt-20"></div>
+### Accordion with default open
+
+---
 
 <Accordion
   type="multiple"
-  className="not-prose space-y-4"
+  className="not-prose space-y-4 -mt-10"
   defaultValue="item-1"
 >
   <AccordionItem

@@ -1,7 +1,15 @@
 ## Blog cards
 
+Use our custom blog card components to build any custom blog section or blocks
+
 import { BlogCard1, BlogCard2, BlogCard3 } from "@/components/blog-cards";
 import blogImage from "@/images/blogs/blog-1.avif";
+
+### Examples
+
+---
+
+<div className="-mt-8"></div>
 
 ### Blog card 1
 
@@ -20,6 +28,8 @@ import blogImage from "@/images/blogs/blog-1.avif";
   />
 </div>
 
+#### View examples code
+
 ```js
 import { BlogCard1 } from "@/components/blog-cards";
 import blogImage from "@/images/blogs/blog-1.avif";
@@ -31,9 +41,10 @@ import blogImage from "@/images/blogs/blog-1.avif";
 />;
 ```
 
+<div className="mt-20"></div>
 ### Blog card 2
 
-<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6">
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
   <BlogCard2
     title="Unlocking the Potential of UX Design in Today’s Digital Landscape"
     subtitle="Discover the key principles and practices that drive successful user experiences in today's"
@@ -47,6 +58,8 @@ import blogImage from "@/images/blogs/blog-1.avif";
     thumbnail={blogImage}
   />
 </div>
+
+#### View examples code
 
 ```js
 import { BlogCard2 } from "@/components/blog-cards";
@@ -59,9 +72,9 @@ import blogImage from "@/images/blogs/blog-1.avif";
 />;
 ```
 
-### Blog card 3
+<div className="mt-20"></div>
 
-{" "}
+### Blog card 3
 
 <div className="not-prose">
   <BlogCard3
@@ -71,6 +84,8 @@ import blogImage from "@/images/blogs/blog-1.avif";
     thumbnail={blogImage}
   />
 </div>
+
+#### View examples code
 
 ```js
 import { BlogCard3 } from "@/components/blog-cards";

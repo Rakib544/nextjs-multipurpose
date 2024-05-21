@@ -1,7 +1,13 @@
 ## Team cards
 
+Use our custom team card components to build any custom blog section or blocks
+
 import { TeamCard1, TeamCard2 } from "@/components/team-card";
 import teamImage from "@/images/team/team-2.jpeg";
+
+### Examples
+
+---
 
 ### Team card 1
 
@@ -18,12 +24,15 @@ import teamImage from "@/images/team/team-2.jpeg";
   />
 </div>
 
+#### View examples code
+
 ```js
 import { TeamCard1 } from "@/components/team-card";
 import teamImage from "@/images/team/team-2.jpeg";
 <TeamCard1 image={teamImage} name="Leslie Alexander" role="Co-Founder / CEO" />;
 ```
 
+<div className="mt-20"></div>
 ### Team card 2
 
 <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -38,6 +47,8 @@ import teamImage from "@/images/team/team-2.jpeg";
     role="Co-Founder / CEO"
   />
 </div>
+
+#### View examples code
 
 ```js
 import { TeamCard2 } from "@/components/team-card";
