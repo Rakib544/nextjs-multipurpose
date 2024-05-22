@@ -12,6 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -250,6 +251,8 @@ export default function TeamMemberAddForm() {
                           height={100}
                           width={200}
                           className="block mx-auto"
+                          placeholder="blur"
+                          blurDataURL={generateBlurImageURL()}
                         />
 
                         <p className="text-foreground font-bold text-lg mt-5 text-center">
@@ -275,6 +278,8 @@ export default function TeamMemberAddForm() {
                     className="object-cover object-center h-20 w-20 rounded-full border"
                     width={80}
                     height={80}
+                    placeholder="blur"
+                    blurDataURL={generateBlurImageURL()}
                   />
 
                   <Button

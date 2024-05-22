@@ -5,6 +5,7 @@ import { TextUnderline } from "@/components/icons";
 import { JobCard1 } from "@/components/job-cards";
 import { PageIntro } from "@/components/page-intro";
 import careerHeroImage from "@/images/career/hero.webp";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { jobs } from "@/lib/data/job-data";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -44,6 +45,8 @@ export default function Career1() {
           </div>
           <FadeIn>
             <Image
+              placeholder="blur"
+              blurDataURL={generateBlurImageURL()}
               height={450}
               width={450}
               className="block ml-auto rounded-2xl w-full"

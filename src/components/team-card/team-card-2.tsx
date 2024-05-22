@@ -1,3 +1,4 @@
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import clsx from "clsx";
 import Image, { StaticImageData } from "next/image";
 import { FadeIn } from "../fade-in";
@@ -21,6 +22,8 @@ export default function TeamCard2({
         <Image
           alt=""
           src={image}
+          placeholder="blur"
+          blurDataURL={generateBlurImageURL()}
           className="h-72 rounded-2xl  w-full object-cover"
         />
         <div className="flex flex-col mt-3">

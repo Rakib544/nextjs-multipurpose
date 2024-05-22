@@ -3,6 +3,7 @@ import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import Pagination from "@/components/ui/pagination";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { caseStudies } from "@/lib/data/case-studies";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -49,6 +50,8 @@ export default function WorkStudies() {
                       src={caseStudy.logo}
                       alt={caseStudy.client}
                       unoptimized
+                      placeholder="blur"
+                      blurDataURL={generateBlurImageURL()}
                     />
                   </Link>
                 </h3>

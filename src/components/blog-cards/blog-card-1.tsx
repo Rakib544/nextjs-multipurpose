@@ -1,3 +1,4 @@
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "../icons";
@@ -21,6 +22,8 @@ export default function BlogCard1({
           src={thumbnail}
           alt={title}
           fill
+          placeholder="blur"
+          blurDataURL={generateBlurImageURL()}
           className="object-cover rounded-xl motion-safe:group-hover:scale-105 transition duration-500"
         />
       </div>

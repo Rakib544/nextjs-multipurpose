@@ -6,6 +6,7 @@ import CommentCreateForm from "@/components/comment-create-form";
 import Description from "@/components/description";
 import { buttonVariants } from "@/components/ui/button";
 import { blogComments, blogDetails } from "@/lib/data/blog-data";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,6 +34,8 @@ export default function JobDetails() {
           src={coverImage}
           alt=""
           className="aspect-[16/9] block rounded-xl mt-8 mb-12"
+          placeholder="blur"
+          blurDataURL={generateBlurImageURL()}
         />
         <div className="text-left">
           <Description description={blogDetails} />

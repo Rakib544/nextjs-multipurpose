@@ -5,6 +5,7 @@ import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
 import UseCases from "@/components/use-case";
 import dashboardBannerImage from "@/images/demo-1/banner.webp";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { sassWorkflows } from "@/lib/data/sass-features";
 import { Features1 } from "@/sections/features";
 import { Hero1 } from "@/sections/hero";
@@ -23,6 +24,8 @@ export default function Home() {
             alt=""
             height={1015}
             width={1205}
+            placeholder="blur"
+            blurDataURL={generateBlurImageURL()}
             className="block object-cover object-center mx-auto mt-12 relative border rounded-lg border-border/50"
           />
         </Container>

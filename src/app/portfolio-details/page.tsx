@@ -8,6 +8,7 @@ import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
 import portfolioBanner from "@/images/portfolio/portfolio-1.avif";
 import userImage from "@/images/testimonials/testimonial_1.jpg";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { portfoliosData } from "@/lib/data/portfolio-data";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -90,6 +91,8 @@ export default function PortfolioDetails() {
           alt=""
           width={1200}
           height={400}
+          placeholder="blur"
+          blurDataURL={generateBlurImageURL()}
           className="aspect-[16/9] block rounded-xl mt-12 object-cover"
         />
         <div className="mt-12 md:mt-20">

@@ -9,6 +9,7 @@ import { About4 } from "@/sections/about";
 import Team from "@/sections/team";
 
 import aboutImage from "@/images/about/about-1.png";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Testimonial1 } from "@/sections/testimonial";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -39,6 +40,8 @@ export default function About1() {
       <Container>
         <FadeIn className="">
           <Image
+            placeholder="blur"
+            blurDataURL={generateBlurImageURL()}
             src={aboutImage}
             alt=""
             height={300}

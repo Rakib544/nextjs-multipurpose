@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import aboutImage from "@/images/about/about-4.jpg";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import Image from "next/image";
 
 const whyChooseData = [
@@ -40,6 +41,8 @@ export default function About5() {
               src={aboutImage}
               alt=""
               fill
+              placeholder="blur"
+              blurDataURL={generateBlurImageURL()}
               className="block mx-auto object-cover object-center rounded-xl w-full"
             />
           </div>

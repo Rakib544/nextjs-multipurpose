@@ -13,6 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { TrashIcon } from "lucide-react";
 import Image from "next/image";
@@ -159,6 +160,8 @@ export default function ArticleCreateForm() {
                           alt=""
                           height={100}
                           width={200}
+                          placeholder="blur"
+                          blurDataURL={generateBlurImageURL()}
                           className="block mx-auto"
                         />
 
@@ -183,6 +186,8 @@ export default function ArticleCreateForm() {
                     src={URL.createObjectURL(form.getValues("cover") as Blob)}
                     alt="demo"
                     fill
+                    placeholder="blur"
+                    blurDataURL={generateBlurImageURL()}
                     className="object-cover object-center border"
                   />
 

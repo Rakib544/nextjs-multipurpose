@@ -1,6 +1,7 @@
 import { TextUnderline } from "@/components/icons";
 import SignUpForm from "@/components/signup-form";
 import dashboardBannerImage from "@/images/demo-1/banner.webp";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -46,6 +47,8 @@ export default function SignUp() {
               consectetur adipisicing elit. Neque, necessitatibus!
             </p>
             <Image
+              placeholder="blur"
+              blurDataURL={generateBlurImageURL()}
               src={dashboardBannerImage}
               alt=""
               height={800}

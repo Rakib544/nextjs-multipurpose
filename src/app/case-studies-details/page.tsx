@@ -4,6 +4,7 @@ import { List, ListItem } from "@/components/list";
 import { PageIntro } from "@/components/page-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import coverImage from "@/images/hero.jpg";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { caseStudies } from "@/lib/data/case-studies";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -57,6 +58,8 @@ export default function CaseStudiesDetails() {
             src={coverImage}
             alt=""
             className="aspect-[16/9] block rounded-xl mt-12 object-cover"
+            placeholder="blur"
+            blurDataURL={generateBlurImageURL()}
           />
         </FadeIn>
         <div className="mt-12 md:mt-20">
@@ -171,6 +174,8 @@ export default function CaseStudiesDetails() {
                         src={caseStudy.logo}
                         alt={caseStudy.client}
                         unoptimized
+                        placeholder="blur"
+                        blurDataURL={generateBlurImageURL()}
                       />
                     </Link>
                   </h3>

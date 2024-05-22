@@ -1,3 +1,4 @@
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import Image, { StaticImageData } from "next/image";
 import { MessageCircle } from "./icons";
 import { Button } from "./ui/button";
@@ -25,6 +26,8 @@ export function CommentCard({
             src={author.image}
             className="h-14 w-14 rounded-full object-cover shrink-0"
             alt={author.name}
+            placeholder="blur"
+            blurDataURL={generateBlurImageURL()}
           />
           <div>
             <h4 className="font-bold text-foreground">{author.name}</h4>
@@ -64,6 +67,8 @@ export function CommentReplyCard({
             <div className="flex justify-between items-center">
               <div className="flex gap-x-3 items-center">
                 <Image
+                  placeholder="blur"
+                  blurDataURL={generateBlurImageURL()}
                   src={reply.author.image}
                   className="h-10 w-10 rounded-full object-cover shrink-0"
                   alt=""

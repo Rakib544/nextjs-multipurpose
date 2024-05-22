@@ -1,3 +1,4 @@
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "../icons";
@@ -40,7 +41,14 @@ export default function BlogCard3({
       </div>
       <div className="col-span-12 md:col-span-4 order-1 md:order-2">
         <div className="aspect-square relative rounded-2xl overflow-hidden">
-          <Image src={thumbnail} alt={title} fill className="object-cover" />
+          <Image
+            src={thumbnail}
+            alt={title}
+            fill
+            className="object-cover"
+            placeholder="blur"
+            blurDataURL={generateBlurImageURL()}
+          />
         </div>
       </div>
     </div>

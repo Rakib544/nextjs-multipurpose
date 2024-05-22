@@ -1,3 +1,4 @@
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import clsx from "clsx";
 import Image from "next/image";
 import { Border } from "./border";
@@ -27,6 +28,8 @@ function BlockquoteWithImage({
         <Image
           alt=""
           {...image}
+          placeholder="blur"
+          blurDataURL={generateBlurImageURL()}
           sizes="(min-width: 1024px) 17.625rem, (min-width: 768px) 16rem, (min-width: 640px) 40vw, 3rem"
           className="h-12 w-12 object-cover grayscale sm:aspect-[7/9] sm:h-auto sm:w-full"
         />

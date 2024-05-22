@@ -4,6 +4,7 @@ import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { List, ListItem } from "@/components/list";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -55,6 +56,8 @@ export default function JobDetails() {
             src={coverImage}
             alt=""
             className="aspect-[16/9] block rounded-xl mt-12 object-cover"
+            placeholder="blur"
+            blurDataURL={generateBlurImageURL()}
           />
         </FadeIn>
         <div className="mt-12 md:mt-20">

@@ -5,6 +5,7 @@ import { PageIntro } from "@/components/page-intro";
 import { SectionIntro } from "@/components/section-intro";
 import { TeamCard1 } from "@/components/team-card";
 import aboutImage from "@/images/about/about-3.webp";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { peoples } from "@/lib/data/team-data";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -49,6 +50,8 @@ export default function Teams() {
               className="block w-full lg:w-auto lg:ml-auto rounded-2xl"
               src={aboutImage}
               alt=""
+              placeholder="blur"
+              blurDataURL={generateBlurImageURL()}
             />
           </FadeIn>
         </div>

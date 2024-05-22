@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Pagination from "@/components/ui/pagination";
 import { blogsData } from "@/lib/data/blog-data";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Ellipsis, PlusCircle } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -115,6 +116,8 @@ export default async function CaseStudies() {
                       src={blog.thumbnail}
                       alt={blog.title}
                       fill
+                      placeholder="blur"
+                      blurDataURL={generateBlurImageURL()}
                       className="object-cover h-full"
                     />
                   </div>

@@ -1,4 +1,5 @@
 import { awards } from "@/lib/data/award-data";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import Image from "next/image";
 import { Container } from "../components/container";
 import { FadeIn } from "../components/fade-in";
@@ -33,6 +34,8 @@ export default function OurAwards() {
                       width={50}
                       alt={award.title}
                       className="size-14 shrink-0"
+                      placeholder="blur"
+                      blurDataURL={generateBlurImageURL()}
                     />
                   </div>
                   <div>

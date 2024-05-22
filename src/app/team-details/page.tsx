@@ -2,6 +2,7 @@ import { Container } from "@/components/container";
 import { List, ListItem } from "@/components/list";
 import { SocialMediaProfiles } from "@/components/social-media-profiles";
 import userImage from "@/images/team/team-2.jpeg";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -30,6 +31,8 @@ export default function TeamDetails() {
               alt=""
               height={150}
               width={150}
+              placeholder="blur"
+              blurDataURL={generateBlurImageURL()}
               className="rounded-full shrink-0 border-4 border-white"
             />
             <div className="mb-4 text-center md:text-left w-full">

@@ -10,6 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { cn } from "@/lib/utils";
 import { type ColumnDef } from "@tanstack/react-table";
 import Image, { StaticImageData } from "next/image";
@@ -61,8 +62,8 @@ export const columns: ColumnDef<Team>[] = [
               alt={user.name}
               height={30}
               width={30}
-              // placeholder="blur"
-              // blurDataURL={generateBlurImageURL()}
+              placeholder="blur"
+              blurDataURL={generateBlurImageURL()}
               className="h-full w-full object-cover object-center rounded-full"
             />
           </div>

@@ -20,6 +20,7 @@ import { Testimonial4 } from "@/sections/testimonial";
 import uiImage1 from "@/images/demo-4/ui-1.png";
 import uiImage2 from "@/images/demo-4/ui-2.png";
 import uiImage3 from "@/images/demo-4/ui-3.png";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 
 export default function AppLanding() {
   return (
@@ -60,6 +61,8 @@ export default function AppLanding() {
                 alt=""
                 width={200}
                 height={200}
+                placeholder="blur"
+                blurDataURL={generateBlurImageURL()}
                 className="w-full h-auto sm:h-auto object-cover rounded-xl border"
               />
             </InfiniteMovingItem>

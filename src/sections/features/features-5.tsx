@@ -7,6 +7,7 @@ import featureImage1 from "@/images/demo-4/feature-1.webp";
 import featureImage2 from "@/images/demo-4/feature-2.webp";
 import featureImage3 from "@/images/demo-4/feature-3.webp";
 import featureImage4 from "@/images/demo-4/feature-4.webp";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 
 export default function Features5() {
   return (
@@ -24,6 +25,8 @@ export default function Features5() {
                 src={featureImage1}
                 alt=""
                 fill
+                placeholder="blur"
+                blurDataURL={generateBlurImageURL()}
                 className="rounded-xl block object-cover"
               />
             </div>
@@ -41,6 +44,8 @@ export default function Features5() {
                 src={featureImage2}
                 alt=""
                 fill
+                placeholder="blur"
+                blurDataURL={generateBlurImageURL()}
                 className="rounded-xl block object-cover"
               />
             </div>
@@ -58,6 +63,8 @@ export default function Features5() {
                 src={featureImage3}
                 alt=""
                 fill
+                placeholder="blur"
+                blurDataURL={generateBlurImageURL()}
                 className="rounded-xl block object-cover"
               />
             </div>
@@ -75,6 +82,8 @@ export default function Features5() {
                 src={featureImage4}
                 alt=""
                 fill
+                placeholder="blur"
+                blurDataURL={generateBlurImageURL()}
                 className="rounded-xl block object-cover"
               />
             </div>

@@ -6,6 +6,7 @@ import Description from "@/components/description";
 import coverImage from "@/images/blogs/blog-1.avif";
 
 import { blogComments, blogDetails } from "@/lib/data/blog-data";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -34,6 +35,8 @@ export default function BlogDetails1() {
           <Image
             src={coverImage}
             alt=""
+            placeholder="blur"
+            blurDataURL={generateBlurImageURL()}
             className="aspect-[16/9] block rounded-xl mt-8 mb-12"
           />
           <div className="text-left">

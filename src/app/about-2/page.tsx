@@ -9,6 +9,7 @@ import { SectionIntro } from "@/components/section-intro";
 import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
 import aboutImage from "@/images/about/about-3.webp";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { jobs } from "@/lib/data/job-data";
 import { About5 } from "@/sections/about";
 import Team from "@/sections/team";
@@ -55,6 +56,8 @@ export default function About2() {
           </div>
           <FadeIn>
             <Image
+              placeholder="blur"
+              blurDataURL={generateBlurImageURL()}
               height={450}
               width={450}
               className="block w-full lg:w-auto lg:ml-auto rounded-2xl"

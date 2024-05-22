@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PlusCircle, Trash, TrashIcon } from "lucide-react";
@@ -312,6 +313,8 @@ export default function PortfolioCreateForm() {
                           height={100}
                           width={200}
                           className="block mx-auto"
+                          placeholder="blur"
+                          blurDataURL={generateBlurImageURL()}
                         />
 
                         <p className="text-foreground font-bold text-lg mt-5 text-center">
@@ -338,6 +341,8 @@ export default function PortfolioCreateForm() {
                     alt="demo"
                     fill
                     className="object-cover object-center border"
+                    placeholder="blur"
+                    blurDataURL={generateBlurImageURL()}
                   />
 
                   <Button

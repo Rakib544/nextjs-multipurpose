@@ -10,6 +10,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import { useDropzone } from "react-dropzone";
@@ -147,6 +148,8 @@ export default function JobApplicationForm() {
                       height={100}
                       width={200}
                       className="block mx-auto"
+                      placeholder="blur"
+                      blurDataURL={generateBlurImageURL()}
                     />
 
                     <p className="text-foreground font-bold text-lg mt-5 text-center">

@@ -1,3 +1,4 @@
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
@@ -28,6 +29,8 @@ const TestimonialCard = React.forwardRef<HTMLDivElement, TestimonialCardProps>(
             <Image
               src={image}
               alt=""
+              placeholder="blur"
+              blurDataURL={generateBlurImageURL()}
               className="h-12 w-12 rounded-full object-center object-cover"
             />
             <div>

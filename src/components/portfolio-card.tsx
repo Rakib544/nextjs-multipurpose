@@ -1,3 +1,4 @@
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -23,6 +24,8 @@ export default function PortfolioCard({
         src={image}
         fill
         alt=""
+        placeholder="blur"
+        blurDataURL={generateBlurImageURL()}
         className="object-cover object-center transition duration-500 motion-safe:group-hover:scale-105"
       />
       <div className="absolute inset-0 flex items-end p-4 md:p-8 bg-gradient-to-t from-black/70 from-5%">
