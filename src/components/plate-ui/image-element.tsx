@@ -3,7 +3,6 @@ import { PlateElement, withHOC } from "@udecode/plate-common";
 import { ELEMENT_IMAGE, Image, useMediaState } from "@udecode/plate-media";
 import { ResizableProvider, useResizableStore } from "@udecode/plate-resizable";
 
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Caption, CaptionTextarea } from "./caption";
 import { MediaPopover } from "./media-popover";
 import {
@@ -45,8 +44,6 @@ export const ImageElement = withHOC(
                     focused && selected && "ring-2 ring-ring ring-offset-2"
                   )}
                   alt=""
-                  placeholder="blur"
-                  blurDataURL={generateBlurImageURL()}
                   {...nodeProps}
                 />
                 <ResizeHandle
