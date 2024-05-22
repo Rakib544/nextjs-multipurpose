@@ -38,10 +38,8 @@ const options = {
   plotOptions: {
     bar: {
       borderRadiusApplication: "end",
-      borderRadius: 10,
-      horizontal: false,
-      columnWidth: "55%",
-      endingShape: "rounded",
+      borderRadius: 4,
+      columnWidth: "15px",
     },
   },
   dataLabels: {

@@ -222,13 +222,15 @@ export default function Home() {
             centered
           >
             One-time­ payment­ &­ get­ free­ life­ time­ license­ and­update
+          </SectionIntro>
+          <div className="flex justify-center">
             <Link
               href="mailto:md.rakib10122003@gmail.com"
               className={buttonVariants({ size: "lg", className: "mt-4" })}
             >
               Contact Now
             </Link>
-          </SectionIntro>
+          </div>
         </Container>
       </div>
     </main>
