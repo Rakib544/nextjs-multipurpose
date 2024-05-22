@@ -2,6 +2,7 @@ import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import { ArrowRight, TextUnderline } from "@/components/icons";
 import { SectionIntro } from "@/components/section-intro";
+import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
 import {
   InfiniteMoving,
@@ -18,11 +19,12 @@ export default function Home() {
     <main>
       <Container>
         <FadeIn className="max-w-3xl mx-auto text-center z-10 mt-20 mb-12">
-          <h1 className="text-3xl font-black md:text-4.5xl/tight text-foreground">
-            A Next-Generation Multipurpose Template Built with
+          <h1 className="text-3xl font-black md:text-4xl/tight text-foreground">
+            A Next-Generation Multipurpose Template with Stunning Dashboards,
+            Built with
             <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
               {" "}
-              <span className="relative">React & Next.js</span>{" "}
+              <span className="relative">Next.js & Tailwind</span>{" "}
               <TextUnderline />
             </span>{" "}
           </h1>
@@ -32,7 +34,7 @@ export default function Home() {
           </p>
           <div className="flex gap-4 justify-center flex-col sm:flex-row">
             <Link
-              href=""
+              href="#demos"
               className={buttonVariants({
                 size: "lg",
               })}
@@ -69,17 +71,41 @@ export default function Home() {
       </InfiniteMoving>
       <Container className="mt-20 md:mt-32">
         <SectionIntro
+          eyebrow="Features"
+          centered
+          title="Optimize Your Development with Agenify"
+          className="mb-12"
+        >
+          Discover the extensive selection of home pages, inner pages, dashboard
+          layouts, and customizable blocks we offer to streamline your website
+          development.
+        </SectionIntro>
+        <div className="max-w-4xl mx-auto">
+          <StatList>
+            <StatListItem label="Neatly coded pages" value="65+" />
+            <StatListItem label="Pre-made blocks" value="28+" />
+            <StatListItem label="Components" value="160+" />
+            <StatListItem label="Dashboard pages" value="22+" />
+          </StatList>
+        </div>
+      </Container>
+      <Container id="demos" className="mt-20 md:mt-32">
+        <SectionIntro
           eyebrow="5 Pre-Built Demos"
           title="We carefully crafted all demos for your business needs"
           centered
           className="mb-12"
         >
-          Discover a Range of Ready-Made Pages to Suit Every Need
+          Discover a range of ready-made pages to suit every need
         </SectionIntro>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {previewData.homepage.map((item, index) => (
-            <Link href={item.href} className=" group" key={index}>
-              <div className="relative rounded-lg overflow-hidden border border-border ">
+            <Link
+              href={item.href}
+              className=" group bg-slate-100 p-6 rounded-[30px] flex flex-col justify-between"
+              key={index}
+            >
+              <div className="relative rounded-lg overflow-hidden">
                 <Image
                   placeholder="blur"
                   blurDataURL={generateBlurImageURL()}
@@ -87,11 +113,10 @@ export default function Home() {
                   alt={item.title}
                   height={425}
                   width={324}
-                  className="object-cover object-center w-full"
+                  className="object-cover object-center w-full transition duration-500 motion-safe:group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-primary/5 transition duration-300 opacity-0 group-hover:opacity-100"></div>
               </div>
-              <h3 className="mt-3 text-sm font-bold text-center group-hover:text-primary">
+              <h3 className="text-sm mt-2 font-bold text-center group-hover:text-primary">
                 {item.title}
               </h3>
             </Link>
@@ -101,16 +126,20 @@ export default function Home() {
       <Container className="mt-20 md:mt-32">
         <SectionIntro
           eyebrow={`${previewData.innerPages.length} Inner Pages`}
-          title="We carefully crafted all demos for your business needs"
+          title="Different layout inner pages"
           centered
           className="mb-12"
         >
-          Discover a Range of Ready-Made Pages to Suit Every Need
+          Offer a wide range of services to help businesses establish.
         </SectionIntro>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {previewData.innerPages.map((item, index) => (
-            <Link href={item.href} className=" group" key={index}>
-              <div className="relative rounded-lg overflow-hidden border border-border ">
+            <Link
+              href={item.href}
+              className=" group bg-slate-100 p-6 rounded-[30px] flex flex-col justify-between"
+              key={index}
+            >
+              <div className="relative rounded-lg overflow-hidden">
                 <Image
                   placeholder="blur"
                   blurDataURL={generateBlurImageURL()}
@@ -118,11 +147,10 @@ export default function Home() {
                   alt={item.title}
                   height={425}
                   width={324}
-                  className="object-cover object-center w-full"
+                  className="object-cover object-center w-full transition duration-500 motion-safe:group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-primary/5 transition duration-300 opacity-0 group-hover:opacity-100"></div>
               </div>
-              <h3 className="mt-3 text-sm font-bold text-center group-hover:text-primary">
+              <h3 className="text-sm mt-2 font-bold text-center group-hover:text-primary">
                 {item.title}
               </h3>
             </Link>
@@ -132,16 +160,21 @@ export default function Home() {
       <Container className="mt-20 md:mt-32">
         <SectionIntro
           eyebrow={`${previewData.dashboard.length} Dashboard Pages`}
-          title="We carefully crafted all demos for your business needs"
+          title="We also provided beautiful, modern and clean dashboard"
           centered
           className="mb-12"
         >
-          Discover a Range of Ready-Made Pages to Suit Every Need
+          See the versatile and user-friendly dashboard in action, designed to
+          cater to your business needs.
         </SectionIntro>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {previewData.dashboard.map((item, index) => (
-            <Link href={item.href} className=" group" key={index}>
-              <div className="relative rounded-lg overflow-hidden border border-border">
+            <Link
+              href={item.href}
+              className=" group bg-slate-100 p-6 rounded-[30px] flex flex-col justify-between"
+              key={index}
+            >
+              <div className="relative rounded-lg overflow-hidden">
                 <Image
                   placeholder="blur"
                   blurDataURL={generateBlurImageURL()}
@@ -149,11 +182,10 @@ export default function Home() {
                   alt={item.title}
                   height={425}
                   width={324}
-                  className="object-cover object-center w-full"
+                  className="object-cover object-center w-full transition duration-500 motion-safe:group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-primary/5 transition duration-300 opacity-0 group-hover:opacity-100"></div>
               </div>
-              <h3 className="mt-3 text-sm font-bold text-center group-hover:text-primary">
+              <h3 className="text-sm mt-2 font-bold text-center group-hover:text-primary">
                 {item.title}
               </h3>
             </Link>
