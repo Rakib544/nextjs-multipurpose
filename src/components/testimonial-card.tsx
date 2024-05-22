@@ -46,7 +46,7 @@ const TestimonialCard = React.forwardRef<HTMLDivElement, TestimonialCardProps>(
             {rating} <StarIcon className="h-4 w-4 fill-yellow-500" />
           </span>
         </figcaption>
-        <blockquote className=" relative z-20 text-[15px] font-medium leading-7 text-muted-foreground block mt-6">
+        <blockquote className=" relative z-20 text-[15px] font-medium leading-7 text-foreground block mt-6">
           &quot;{quote}&quot;
         </blockquote>
       </figure>

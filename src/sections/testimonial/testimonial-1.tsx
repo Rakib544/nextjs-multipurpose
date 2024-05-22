@@ -24,7 +24,7 @@ export default function Testimonials1({
         {testimonials.map((testimonial) => (
           <InfiniteMovingItem
             key={testimonial.id}
-            className="md:w-[400px] bg-gradient-to-br from-indigo-50 to-white"
+            className="md:w-[400px] bg-gray-100"
           >
             <TestimonialCard
               image={testimonial.image}

@@ -35,7 +35,7 @@ export default function Testimonial2({
           <CarouselContent className="mb-6">
             {testimonials.map((testimonial, index) => (
               <CarouselItem
-                className="basis-full md:basis-[50%] bg-gradient-to-br from-indigo-50 to-white mx-2 py-2 md:py-10 rounded-xl border px-6 md:px-10"
+                className="basis-full md:basis-[50%] bg-gray-100 mx-2 py-2 md:py-10 rounded-[40px] px-6 md:px-10"
                 key={index}
               >
                 <TestimonialCard
