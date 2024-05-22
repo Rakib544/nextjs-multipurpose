@@ -11,7 +11,7 @@ export default function OurAwards() {
     <Container className="mt-20 md:mt-32">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
         <div>
-          <div className="sticky top-6">
+          <div className="sticky top-24">
             <SectionIntro
               title="Recognizing excellence our award winning work"
               eyebrow="Our Awards"

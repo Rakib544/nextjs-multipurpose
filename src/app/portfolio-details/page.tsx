@@ -52,7 +52,10 @@ export default function PortfolioDetails() {
   return (
     <div>
       <Container className="my-20 !max-w-5xl">
-        <PageIntro pageTitle="E-commerce website redesign for ABC Clothing Co.">
+        <PageIntro
+          className="max-w-3xl"
+          pageTitle="E-commerce website redesign for ABC Clothing Co."
+        >
           Redesigned the existing e-commerce website for ABC Clothing Co. to
           enhance user experience, improve conversion rates, and align with
           modern design trends.

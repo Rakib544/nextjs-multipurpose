@@ -27,7 +27,7 @@ export default function JobDetails() {
   return (
     <div>
       <Container>
-        <PageIntro pageTitle="Senior WordPress Plugin Developer">
+        <PageIntro pageTitle="Senior wordpress plugin developer">
           <p>
             We are looking for Senior WordPress Plugin Developers with 5+ years
             of experience. You must have excellent capabilities and experience

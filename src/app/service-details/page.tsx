@@ -133,7 +133,7 @@ export default function ServiceDetails() {
       <Container className="mt-20 md:mt-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
           <div>
-            <div className="sticky top-6">
+            <div className="sticky top-24">
               <SectionIntro
                 title="Our design process"
                 className="mb-12"

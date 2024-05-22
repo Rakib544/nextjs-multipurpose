@@ -64,12 +64,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={workSans.className}>
-        <div className=" fixed top-0 w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className=" sticky top-0 w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <Container>
             <Navbar />
           </Container>
         </div>
-        {children}
+        <main>{children}</main>
         <Footer2 />
       </body>
     </html>
