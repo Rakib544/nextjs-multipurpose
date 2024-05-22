@@ -7,7 +7,7 @@ import { StatList, StatListItem } from "@/components/stat-list";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
 import portfolioBanner from "@/images/portfolio/portfolio-1.avif";
-import userImage from "@/images/testimonials/testimonial_1.jpg";
+import userImage from "@/images/testimonials/testimonial_1.jpeg";
 import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { portfoliosData } from "@/lib/data/portfolio-data";
 import { Metadata } from "next";

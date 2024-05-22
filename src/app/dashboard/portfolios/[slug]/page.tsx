@@ -5,7 +5,7 @@ import { StatList, StatListItem } from "@/components/stat-list";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { buttonVariants } from "@/components/ui/button";
 import portfolioBanner from "@/images/portfolio/portfolio-1.avif";
-import userImage from "@/images/testimonials/testimonial_1.jpg";
+import userImage from "@/images/testimonials/testimonial_1.jpeg";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

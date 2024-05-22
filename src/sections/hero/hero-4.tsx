@@ -2,8 +2,8 @@ import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { StarIcon, TextUnderline } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
-import userImage2 from "@/images/testimonials/testimonial_2.jpg";
-import userImage1 from "@/images/testimonials/testimonial_3.jpg";
+import userImage2 from "@/images/testimonials/testimonial_2.jpeg";
+import userImage1 from "@/images/testimonials/testimonial_3.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 
