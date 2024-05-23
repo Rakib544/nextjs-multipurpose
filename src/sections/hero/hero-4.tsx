@@ -26,9 +26,9 @@ export default function Hero4() {
               </span>{" "}
             </h1>
             <p className="text-lg leading-8 text-muted-foreground mt-3">
-              Take control of your health and reach your goals faster. Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              omnis.
+              Effortlessly manage and streamline your payments anytime you want
+              with Financial.io, providing you with the fastest, most convenient
+              payment solutions available.
             </p>
             <div className="flex flex-col sm:flex-row gap-y-3 gap-x-3 mt-4">
               <Link href="" className={buttonVariants({ size: "lg" })}>
@@ -81,7 +81,13 @@ export default function Hero4() {
             </div>
           </FadeIn>
           <FadeIn className="flex justify-center order-1 lg:order-2">
-            <Image src={heroMobileDesign} height={700} width={400} alt="" />
+            <Image
+              src={heroMobileDesign}
+              height={400}
+              width={270}
+              className="w-[150px] md:w-[250px]"
+              alt=""
+            />
           </FadeIn>
         </FadeInStagger>
       </Container>

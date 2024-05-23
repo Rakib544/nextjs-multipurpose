@@ -17,10 +17,11 @@ import { Hero4 } from "@/sections/hero";
 import { Process1 } from "@/sections/process";
 import { Testimonial4 } from "@/sections/testimonial";
 
+import uiImage5 from "@/images/demo-4/hero-app.png";
 import uiImage1 from "@/images/demo-4/ui-1.png";
 import uiImage2 from "@/images/demo-4/ui-2.png";
 import uiImage3 from "@/images/demo-4/ui-3.png";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
+import uiImage4 from "@/images/demo-4/ui-4.png";
 
 export default function AppLanding() {
   return (
@@ -54,19 +55,24 @@ export default function AppLanding() {
           powerful features.
         </SectionIntro>
         <InfiniteMoving>
-          {[uiImage1, uiImage2, uiImage3].map((image, index) => (
-            <InfiniteMovingItem key={index} className="md:w-[200px]">
-              <Image
-                src={image}
-                alt=""
-                width={200}
-                height={200}
-                placeholder="blur"
-                blurDataURL={generateBlurImageURL()}
-                className="w-full h-auto sm:h-auto object-cover rounded-xl border"
-              />
-            </InfiniteMovingItem>
-          ))}
+          {[uiImage1, uiImage2, uiImage3, uiImage5, uiImage4].map(
+            (image, index) => (
+              <InfiniteMovingItem
+                key={index}
+                className="w-[150px] md:w-[200px]"
+              >
+                <Image
+                  src={image}
+                  alt=""
+                  width={200}
+                  height={200}
+                  // placeholder="blur"
+                  // blurDataURL={generateBlurImageURL()}
+                  className="w-full h-auto sm:h-auto object-cover rounded-xl"
+                />
+              </InfiniteMovingItem>
+            )
+          )}
         </InfiniteMoving>
       </Container>
       <Testimonial4 />
