@@ -3,10 +3,10 @@ import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { SectionIntro } from "@/components/section-intro";
 import Image from "next/image";
 
-import featureImage1 from "@/images/demo-4/feature-1.webp";
-import featureImage2 from "@/images/demo-4/feature-2.webp";
-import featureImage3 from "@/images/demo-4/feature-3.webp";
-import featureImage4 from "@/images/demo-4/feature-4.webp";
+import featureImage1 from "@/images/demo-4/feature-1.png";
+import featureImage2 from "@/images/demo-4/feature-2.png";
+import featureImage3 from "@/images/demo-4/feature-3.png";
+import featureImage4 from "@/images/demo-4/feature-4.png";
 import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 
 export default function Features5() {
@@ -20,6 +20,13 @@ export default function Features5() {
         ></SectionIntro>
         <FadeInStagger faster className="grid grid-cols-12 gap-6">
           <FadeIn className="col-span-12 md:col-span-8 p-10 bg-slate-100 rounded-[40px]">
+            <h3 className="text-xl md:text-2xl font-extrabold text-foreground">
+              Secure & Convenient
+            </h3>
+            <p className="text-base leading-8 text-muted-foreground mb-8">
+              Enjoy peace of mind with advanced security features and
+              easy-to-use interface.
+            </p>
             <div className="relative aspect-[16/7]">
               <Image
                 src={featureImage1}
@@ -30,16 +37,9 @@ export default function Features5() {
                 className="rounded-xl block object-cover"
               />
             </div>
-            <h3 className="text-xl md:text-2xl font-extrabold text-foreground mt-8">
-              Secure & Convenient
-            </h3>
-            <p className="text-base leading-8 text-muted-foreground">
-              Enjoy peace of mind with advanced security features and
-              easy-to-use interface.
-            </p>
           </FadeIn>
           <FadeIn className="col-span-12 md:col-span-4 p-10 bg-slate-100 rounded-[40px]">
-            <div className="relative aspect-video">
+            <div className="relative aspect-square">
               <Image
                 src={featureImage2}
                 alt=""
@@ -58,7 +58,7 @@ export default function Features5() {
             </p>
           </FadeIn>
           <FadeIn className="col-span-12 md:col-span-4 p-10 bg-slate-100 rounded-[40px]">
-            <div className="relative aspect-video">
+            <div className="relative aspect-square">
               <Image
                 src={featureImage3}
                 alt=""
@@ -69,7 +69,7 @@ export default function Features5() {
               />
             </div>
             <h3 className="text-xl md:text-2xl font-extrabold text-foreground mt-8">
-              Real-Time Transactions
+              Tracking
             </h3>
             <p className="text-base leading-8 text-muted-foreground">
               Stay updated with real-time transaction alerts and balance
@@ -77,7 +77,14 @@ export default function Features5() {
             </p>
           </FadeIn>
           <FadeIn className="col-span-12 md:col-span-8 p-10 bg-slate-100 rounded-[40px]">
-            <div className="relative aspect-[16/7]">
+            <h3 className="text-xl md:text-2xl font-extrabold text-foreground">
+              Secure & Convenient
+            </h3>
+            <p className="text-base leading-8 text-muted-foreground mb-8">
+              Enjoy peace of mind with advanced security features and
+              easy-to-use interface.
+            </p>
+            <div className="relative aspect-[16/8]">
               <Image
                 src={featureImage4}
                 alt=""
@@ -87,13 +94,6 @@ export default function Features5() {
                 className="rounded-xl block object-cover"
               />
             </div>
-            <h3 className="text-xl md:text-2xl font-extrabold text-foreground mt-8">
-              Secure & Convenient
-            </h3>
-            <p className="text-base leading-8 text-muted-foreground">
-              Enjoy peace of mind with advanced security features and
-              easy-to-use interface.
-            </p>
           </FadeIn>
         </FadeInStagger>
       </Container>
