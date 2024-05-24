@@ -1,0 +1,30 @@
+import { FadeIn } from "@/components/fade-in";
+import {
+  InfiniteMoving,
+  InfiniteMovingItem,
+} from "@/components/ui/infinite-moving";
+import { generateBlurImageURL } from "@/lib/data/blur-image-data";
+import { previewData } from "@/lib/data/preview-data";
+import Image from "next/image";
+
+export default function DemoSlider1() {
+  return (
+    <FadeIn>
+      <InfiniteMoving>
+        {previewData.homepage.map((item, index) => (
+          <InfiniteMovingItem key={index} className="md:w-[324px] relative">
+            <Image
+              placeholder="blur"
+              blurDataURL={generateBlurImageURL()}
+              src={item.image}
+              alt=""
+              height={425}
+              width={324}
+              className="border object-cover object-center rounded-lg border-border/50 "
+            />
+          </InfiniteMovingItem>
+        ))}
+      </InfiniteMoving>
+    </FadeIn>
+  );
+}

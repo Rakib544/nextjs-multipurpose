@@ -1,8 +1,7 @@
-import { Clients } from "@/components/clients";
-import { Container } from "@/components/container";
 import { seoRevenueEarningProcess } from "@/lib/data/seo-agency";
 import { About2 } from "@/sections/about";
 import Blogs from "@/sections/blogs";
+import { Clients2 } from "@/sections/clients";
 import { Features4 } from "@/sections/features";
 import { Hero3 } from "@/sections/hero";
 import { Process1 } from "@/sections/process";
@@ -12,14 +11,7 @@ export default function Demo3() {
   return (
     <div>
       <Hero3 />
-      <section>
-        <Container className="mt-20">
-          <p className="max-w-xs text-base font-medium text-foreground leading-7">
-            Worked with 100+ clients around the world including:
-          </p>
-          <Clients />
-        </Container>
-      </section>
+      <Clients2 />
       <About2 />
       <Features4 />
       <Process1

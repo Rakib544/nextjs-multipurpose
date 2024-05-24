@@ -13,16 +13,64 @@ import {
 
 const services = [
   {
-    name: "Engineering Team",
+    title: "Engineering Team",
+    description: {
+      title:
+        "Our Engineering Team excels in developing robust, scalable, and innovative solutions to meet your technical needs, ensuring high performance and reliability for your projects.",
+      features: [
+        "Custom software development",
+        "System architecture design",
+        "Code review and quality assurance",
+        "Integration with third-party services",
+        "Continuous deployment and monitoring",
+        "Technical support and maintenance",
+      ],
+    },
   },
   {
-    name: "Digital Marketing Team",
+    title: "Digital Marketing Team",
+    description: {
+      title:
+        "Harness the power of online marketing with our Digital Marketing Team. We specialize in strategies that boost your brand's visibility and drive targeted traffic to your site.",
+      features: [
+        "Search engine optimization (SEO)",
+        "Pay-per-click advertising (PPC)",
+        "Content marketing",
+        "Email marketing campaigns",
+        "Social media management",
+        "Performance analytics and reporting",
+      ],
+    },
   },
   {
-    name: "UI/UX Design Team",
+    title: "UI/UX Design Team",
+    description: {
+      title:
+        "Create user-centric designs that offer seamless experiences with our UI/UX Design Team. We focus on usability and aesthetics to enhance user satisfaction and engagement.",
+      features: [
+        "User research and personas",
+        "Wireframing and prototyping",
+        "Visual design",
+        "Interaction design",
+        "Usability testing",
+        "Design system creation",
+      ],
+    },
   },
   {
-    name: "Project Management Team",
+    title: "Project Management Team",
+    description: {
+      title:
+        "Ensure your projects are delivered on time and within budget with our Project Management Team. We bring expertise in planning, executing, and closing projects effectively.",
+      features: [
+        "Project planning and scheduling",
+        "Resource allocation",
+        "Risk management",
+        "Stakeholder communication",
+        "Progress tracking and reporting",
+        "Post-project evaluation",
+      ],
+    },
   },
 ];
 
@@ -49,65 +97,29 @@ export default function Features4() {
                 value={`tab-${i + 1}`}
                 className="border-none data-[state=active]:bg-primary w-full text-lg pl-10 pr-3 py-4 rounded-full !text-white font-bold flex justify-between group"
               >
-                <p className="text-wrap text-left">{service.name}</p>
+                <p className="text-wrap text-left">{service.title}</p>
                 <span className="inline-flex opacity-0 group-data-[state=active]:opacity-100  justify-center items-center size-14 rounded-full shrink-0 bg-black">
                   <ArrowRight className="h-5 w-5" />
                 </span>
               </TabsTrigger>
             ))}
           </TabsList>
-          <TabsContent value="tab-1" className="col-span-8 p-10">
-            <h3 className="text-xl mb-4 font-bold leading-8">
-              Increase your organic traffic by ranking high on search engines
-              and AI discovery tools like ChatGPT
-            </h3>
-            <List>
-              <ListItem>Keyword and competitor research</ListItem>
-              <ListItem>SKAGS (single keyword ad groups)</ListItem>
-              <ListItem>Negative keyword pruning</ListItem>
-              <ListItem>Ad copy optimization</ListItem>
-              <ListItem>Backlink Generation</ListItem>
-            </List>
-          </TabsContent>
-          <TabsContent value="tab-2" className="col-span-8 p-10">
-            <h3 className="text-xl mb-4 font-bold leading-8">
-              Increase your organic traffic by ranking high on search engines
-              and AI discovery tools like ChatGPT
-            </h3>
-            <List>
-              <ListItem>Keyword and competitor research</ListItem>
-              <ListItem>SKAGS (single keyword ad groups)</ListItem>
-              <ListItem>Negative keyword pruning</ListItem>
-              <ListItem>Ad copy optimization</ListItem>
-              <ListItem>Backlink Generation</ListItem>
-            </List>
-          </TabsContent>
-          <TabsContent value="tab-3" className="col-span-8 p-10">
-            <h3 className="text-xl mb-4 font-bold leading-8">
-              Increase your organic traffic by ranking high on search engines
-              and AI discovery tools like ChatGPT
-            </h3>
-            <List>
-              <ListItem>Keyword and competitor research</ListItem>
-              <ListItem>SKAGS (single keyword ad groups)</ListItem>
-              <ListItem>Negative keyword pruning</ListItem>
-              <ListItem>Ad copy optimization</ListItem>
-              <ListItem>Backlink Generation</ListItem>
-            </List>
-          </TabsContent>
-          <TabsContent value="tab-4" className="col-span-8 p-10">
-            <h3 className="text-xl mb-4 font-bold leading-8">
-              Increase your organic traffic by ranking high on search engines
-              and AI discovery tools like ChatGPT
-            </h3>
-            <List>
-              <ListItem>Keyword and competitor research</ListItem>
-              <ListItem>SKAGS (single keyword ad groups)</ListItem>
-              <ListItem>Negative keyword pruning</ListItem>
-              <ListItem>Ad copy optimization</ListItem>
-              <ListItem>Backlink Generation</ListItem>
-            </List>
-          </TabsContent>
+          {services.map((service, index) => (
+            <TabsContent
+              value={`tab-${index + 1}`}
+              className="col-span-8 p-10"
+              key={index}
+            >
+              <h3 className="text-xl mb-4 font-bold leading-8">
+                {service.description.title}
+              </h3>
+              <List>
+                {service.description.features.map((feature, index) => (
+                  <ListItem key={index + 10}>{feature}</ListItem>
+                ))}
+              </List>
+            </TabsContent>
+          ))}
         </Tabs>
         <Accordion
           type="single"
@@ -121,19 +133,16 @@ export default function Features4() {
               className="border-none"
             >
               <AccordionTrigger className="bg-black text-white data-[state=open]:bg-primary px-4 rounded-full text-[17px] font-semibold text-left">
-                {service.name}
+                {service.title}
               </AccordionTrigger>
               <AccordionContent className="bg-white p-4 rounded-[30px] mt-2">
                 <h3 className="text-lg mb-4 font-bold">
-                  Increase your organic traffic by ranking high on search
-                  engines and AI discovery tools like ChatGPT
+                  {service.description.title}
                 </h3>
                 <List className="space-y-1">
-                  <ListItem>Keyword and competitor research</ListItem>
-                  <ListItem>SKAGS (single keyword ad groups)</ListItem>
-                  <ListItem>Negative keyword pruning</ListItem>
-                  <ListItem>Ad copy optimization</ListItem>
-                  <ListItem>Backlink Generation</ListItem>
+                  {service.description.features.map((feature, index) => (
+                    <ListItem key={index + 10}>{feature}</ListItem>
+                  ))}
                 </List>
               </AccordionContent>
             </AccordionItem>

@@ -1,9 +1,9 @@
 import ContactForm from "@/components/contact-form";
 import { Container } from "@/components/container";
-import { FadeIn, FadeInStagger } from "@/components/fade-in";
+import { FadeIn } from "@/components/fade-in";
 import { PageIntro } from "@/components/page-intro";
-import { SectionIntro } from "@/components/section-intro";
 import { Faq1 } from "@/sections/faq";
+import Offices from "@/sections/offices";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -76,70 +76,7 @@ export default function Contact2() {
           </FadeIn>
         </div>
       </Container>
-      <div className="bg-indigo-600 py-20 md:py-32 mt-20 md:mt-32">
-        <Container>
-          <div className="grid grid-cols-12 gap-6">
-            <div className="col-span-12 md:col-span-5">
-              <SectionIntro
-                eyebrow="Our Locations"
-                title="Visit our offices"
-                invert
-              >
-                <p>Find us on these locations</p>
-              </SectionIntro>
-            </div>
-            <FadeInStagger
-              faster
-              className="col-span-12 md:col-span-7 grid grid-cols-1  sm:grid-cols-2 gap-6"
-            >
-              <FadeIn>
-                <h4 className="text-white font-bold text-base md:text-lg ">
-                  Copenhagen
-                </h4>
-                <p className="text-base mt-1 text-primary-foreground">
-                  1 Carlsberg Gate
-                </p>
-                <p className="text-base text-primary-foreground">
-                  1260, København, Denmark
-                </p>
-              </FadeIn>
-              <FadeIn>
-                <h4 className="text-white font-bold text-base md:text-lg ">
-                  London
-                </h4>
-                <p className="text-base mt-1 text-primary-foreground">
-                  1 Carlsberg Gate
-                </p>
-                <p className="text-base text-primary-foreground">
-                  1260, København, Denmark
-                </p>
-              </FadeIn>
-              <FadeIn>
-                <h4 className="text-white font-bold text-base md:text-lg ">
-                  Sydney
-                </h4>
-                <p className="text-base mt-1 text-primary-foreground">
-                  1 Carlsberg Gate
-                </p>
-                <p className="text-base text-primary-foreground">
-                  1260, København, Denmark
-                </p>
-              </FadeIn>
-              <FadeIn>
-                <h4 className="text-white font-bold text-base md:text-lg ">
-                  New York
-                </h4>
-                <p className="text-base mt-1 text-primary-foreground">
-                  1 Carlsberg Gate
-                </p>
-                <p className="text-base text-primary-foreground">
-                  1260, København, Denmark
-                </p>
-              </FadeIn>
-            </FadeInStagger>
-          </div>
-        </Container>
-      </div>
+      <Offices />
       <Faq1 />
     </div>
   );

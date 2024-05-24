@@ -13,16 +13,64 @@ import {
 
 const services = [
   {
-    name: "Search engine optimization",
+    title: "Search engine optimization",
+    description: {
+      title:
+        "Boost your website's visibility and ranking on search engines with our comprehensive SEO strategies, ensuring you reach your target audience effectively and efficiently.",
+      features: [
+        "Keyword research and analysis",
+        "On-page optimization",
+        "Technical SEO audits",
+        "Backlink building strategies",
+        "Content optimization",
+        "Performance tracking and reporting",
+      ],
+    },
   },
   {
-    name: "Paid search marketing",
+    title: "Paid search marketing",
+    description: {
+      title:
+        "Leverage paid search marketing to reach potential customers instantly. Our expert management ensures you get the best return on investment for your advertising spend.",
+      features: [
+        "Google Ads campaign setup",
+        "Bing Ads management",
+        "Keyword bid optimization",
+        "Ad copy creation",
+        "Performance analysis and reporting",
+        "Remarketing strategies",
+      ],
+    },
   },
   {
-    name: "Conversion rate optimization",
+    title: "Conversion rate optimization",
+    description: {
+      title:
+        "Enhance your website's ability to convert visitors into customers through our data-driven conversion rate optimization techniques, ensuring higher revenue and business growth.",
+      features: [
+        "A/B testing",
+        "Landing page optimization",
+        "User behavior analysis",
+        "Funnel optimization",
+        "Heatmap and click tracking",
+        "Conversion tracking and analysis",
+      ],
+    },
   },
   {
-    name: "Social media marketing",
+    title: "Social media marketing",
+    description: {
+      title:
+        "Expand your brand's presence and engage with your audience on social media platforms using our tailored social media marketing strategies and expert content creation services.",
+      features: [
+        "Social media strategy development",
+        "Content creation and curation",
+        "Community management",
+        "Paid social media campaigns",
+        "Influencer partnerships",
+        "Performance tracking and analytics",
+      ],
+    },
   },
 ];
 
@@ -49,65 +97,29 @@ export default function Features4() {
                 value={`tab-${i + 1}`}
                 className="border-none data-[state=active]:bg-primary w-full text-lg pl-10 pr-3 py-4 rounded-full !text-white font-bold flex justify-between group"
               >
-                <p className="text-wrap text-left">{service.name}</p>
+                <p className="text-wrap text-left">{service.title}</p>
                 <span className="inline-flex opacity-0 group-data-[state=active]:opacity-100  justify-center items-center size-14 rounded-full shrink-0 bg-black">
                   <ArrowRight className="h-5 w-5" />
                 </span>
               </TabsTrigger>
             ))}
           </TabsList>
-          <TabsContent value="tab-1" className="col-span-8 p-10">
-            <h3 className="text-xl mb-4 font-bold leading-8">
-              Increase your organic traffic by ranking high on search engines
-              and AI discovery tools like ChatGPT
-            </h3>
-            <List>
-              <ListItem>Keyword and competitor research</ListItem>
-              <ListItem>SKAGS (single keyword ad groups)</ListItem>
-              <ListItem>Negative keyword pruning</ListItem>
-              <ListItem>Ad copy optimization</ListItem>
-              <ListItem>Backlink Generation</ListItem>
-            </List>
-          </TabsContent>
-          <TabsContent value="tab-2" className="col-span-8 p-10">
-            <h3 className="text-xl mb-4 font-bold leading-8">
-              Increase your organic traffic by ranking high on search engines
-              and AI discovery tools like ChatGPT
-            </h3>
-            <List>
-              <ListItem>Keyword and competitor research</ListItem>
-              <ListItem>SKAGS (single keyword ad groups)</ListItem>
-              <ListItem>Negative keyword pruning</ListItem>
-              <ListItem>Ad copy optimization</ListItem>
-              <ListItem>Backlink Generation</ListItem>
-            </List>
-          </TabsContent>
-          <TabsContent value="tab-3" className="col-span-8 p-10">
-            <h3 className="text-xl mb-4 font-bold leading-8">
-              Increase your organic traffic by ranking high on search engines
-              and AI discovery tools like ChatGPT
-            </h3>
-            <List>
-              <ListItem>Keyword and competitor research</ListItem>
-              <ListItem>SKAGS (single keyword ad groups)</ListItem>
-              <ListItem>Negative keyword pruning</ListItem>
-              <ListItem>Ad copy optimization</ListItem>
-              <ListItem>Backlink Generation</ListItem>
-            </List>
-          </TabsContent>
-          <TabsContent value="tab-4" className="col-span-8 p-10">
-            <h3 className="text-xl mb-4 font-bold leading-8">
-              Increase your organic traffic by ranking high on search engines
-              and AI discovery tools like ChatGPT
-            </h3>
-            <List>
-              <ListItem>Keyword and competitor research</ListItem>
-              <ListItem>SKAGS (single keyword ad groups)</ListItem>
-              <ListItem>Negative keyword pruning</ListItem>
-              <ListItem>Ad copy optimization</ListItem>
-              <ListItem>Backlink Generation</ListItem>
-            </List>
-          </TabsContent>
+          {services.map((service, index) => (
+            <TabsContent
+              value={`tab-${index + 1}`}
+              className="col-span-8 p-10"
+              key={index}
+            >
+              <h3 className="text-xl mb-4 font-bold leading-8">
+                {service.description.title}
+              </h3>
+              <List>
+                {service.description.features.map((feature, index) => (
+                  <ListItem key={index + 10}>{feature}</ListItem>
+                ))}
+              </List>
+            </TabsContent>
+          ))}
         </Tabs>
         <Accordion
           type="single"
@@ -121,19 +133,16 @@ export default function Features4() {
               className="border-none"
             >
               <AccordionTrigger className="bg-black text-white data-[state=open]:bg-primary px-4 rounded-full text-[17px] font-semibold text-left">
-                {service.name}
+                {service.title}
               </AccordionTrigger>
               <AccordionContent className="bg-white p-4 rounded-[30px] mt-2">
                 <h3 className="text-lg mb-4 font-bold">
-                  Increase your organic traffic by ranking high on search
-                  engines and AI discovery tools like ChatGPT
+                  {service.description.title}
                 </h3>
                 <List className="space-y-1">
-                  <ListItem>Keyword and competitor research</ListItem>
-                  <ListItem>SKAGS (single keyword ad groups)</ListItem>
-                  <ListItem>Negative keyword pruning</ListItem>
-                  <ListItem>Ad copy optimization</ListItem>
-                  <ListItem>Backlink Generation</ListItem>
+                  {service.description.features.map((feature, index) => (
+                    <ListItem key={index + 10}>{feature}</ListItem>
+                  ))}
                 </List>
               </AccordionContent>
             </AccordionItem>

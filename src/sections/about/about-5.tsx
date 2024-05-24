@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { SectionIntro } from "@/components/section-intro";
 import {
   Accordion,
@@ -35,8 +36,11 @@ export default function About5() {
   return (
     <section className="mt-20 md:mt-32">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
-          <div className="relative aspect-square">
+        <FadeInStagger
+          faster
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16"
+        >
+          <FadeIn className="relative aspect-square">
             <Image
               src={aboutImage}
               alt=""
@@ -45,8 +49,8 @@ export default function About5() {
               blurDataURL={generateBlurImageURL()}
               className="block mx-auto object-cover object-center rounded-xl w-full"
             />
-          </div>
-          <div>
+          </FadeIn>
+          <FadeIn>
             <SectionIntro
               eyebrow="Why choose us"
               title="We bring solutions to make life easier for our customers."
@@ -76,8 +80,8 @@ export default function About5() {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-        </div>
+          </FadeIn>
+        </FadeInStagger>
       </Container>
     </section>
   );

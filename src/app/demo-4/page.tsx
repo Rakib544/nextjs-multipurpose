@@ -1,40 +1,22 @@
 import { Container } from "@/components/container";
-import Image from "next/image";
-import Link from "next/link";
 
-import { Clients } from "@/components/clients";
-import { FadeIn } from "@/components/fade-in";
 import { Pricing2 } from "@/components/pricing";
 import { SectionIntro } from "@/components/section-intro";
-import { buttonVariants } from "@/components/ui/button";
-import {
-  InfiniteMoving,
-  InfiniteMovingItem,
-} from "@/components/ui/infinite-moving";
 import { workingSteps } from "@/lib/data/app-data";
 import { Features5 } from "@/sections/features";
 import { Hero4 } from "@/sections/hero";
 import { Process1 } from "@/sections/process";
 import { Testimonial4 } from "@/sections/testimonial";
 
-import uiImage5 from "@/images/demo-4/hero-app.png";
-import uiImage1 from "@/images/demo-4/ui-1.png";
-import uiImage2 from "@/images/demo-4/ui-2.png";
-import uiImage3 from "@/images/demo-4/ui-3.png";
-import uiImage4 from "@/images/demo-4/ui-4.png";
+import { CallToAction2 } from "@/sections/call-to-action";
+import { Clients1 } from "@/sections/clients";
+import { DemoSlider2 } from "@/sections/demo-slider";
 
 export default function AppLanding() {
   return (
     <div>
       <Hero4 />
-      <Container className="mt-20">
-        <FadeIn>
-          <p className="text-base font-medium text-center">
-            Trusted by top companies
-          </p>
-          <Clients />
-        </FadeIn>
-      </Container>
+      <Clients1 />
       <Features5 />
       <Process1
         eyebrow="Working Steps"
@@ -45,70 +27,9 @@ export default function AppLanding() {
                 finances effortlessly."
         processes={workingSteps}
       />
-      <Container className="mt-20 md:mt-32">
-        <SectionIntro
-          eyebrow="COOL & AMAZING DESIGN"
-          className="mb-8"
-          title="Experience Financial.io"
-        >
-          Take a closer look at our app&apos;s user-friendly interface and
-          powerful features.
-        </SectionIntro>
-        <InfiniteMoving>
-          {[uiImage1, uiImage2, uiImage3, uiImage5, uiImage4].map(
-            (image, index) => (
-              <InfiniteMovingItem
-                key={index}
-                className="w-[150px] md:w-[200px]"
-              >
-                <Image
-                  src={image}
-                  alt=""
-                  width={200}
-                  height={200}
-                  // placeholder="blur"
-                  // blurDataURL={generateBlurImageURL()}
-                  className="w-full h-auto sm:h-auto object-cover rounded-xl"
-                />
-              </InfiniteMovingItem>
-            )
-          )}
-        </InfiniteMoving>
-      </Container>
+      <DemoSlider2 />
       <Testimonial4 />
-      <Container className="mt-20 md:mt-32">
-        <div className="bg-slate-100 rounded-[40px] py-20 md:py-32 px-4">
-          <SectionIntro
-            eyebrow="Download now"
-            title="Start using Financial.io now"
-            className="sm:mx-auto sm:text-center"
-          >
-            Start your free trial now and see how easy it is to track, manage,
-            and optimize your time.
-            <FadeIn className="flex flex-col sm:flex-row gap-4 items-center justify-start sm:justify-center mt-6">
-              <Link
-                href=""
-                className={buttonVariants({
-                  size: "lg",
-                  className: "w-full sm:w-auto",
-                })}
-              >
-                Download IOS
-              </Link>
-              <Link
-                href=""
-                className={buttonVariants({
-                  size: "lg",
-                  variant: "outline",
-                  className: "w-full sm:w-auto",
-                })}
-              >
-                Download Android
-              </Link>
-            </FadeIn>
-          </SectionIntro>
-        </div>
-      </Container>
+      <CallToAction2 />
       <Container className="mt-20 md:mt-32">
         <div className="flex">
           <SectionIntro

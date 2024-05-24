@@ -11,8 +11,8 @@ export default function Team() {
         className="mb-12"
         eyebrow="Team Member"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quis ea
-        natus repellendus error ipsam.
+        We upholds the highest ethical standards in all our dealings and embrace
+        creativity and strive for improvement.
       </SectionIntro>
       <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
         {peoples.slice(0, 8).map((person) => (
