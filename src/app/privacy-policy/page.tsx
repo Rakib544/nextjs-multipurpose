@@ -12,25 +12,6 @@ import {
 import { privacyPolicyData } from "@/lib/data/privacy-policy-data";
 import { Metadata } from "next";
 
-const sideMenus = [
-  {
-    label: "Information We Collect",
-    href: "information-we-collect",
-  },
-  {
-    label: "How We Use Your Information",
-    href: "how-we-use-your-information",
-  },
-  {
-    label: "Information Sharing",
-    href: "information-sharing",
-  },
-  {
-    label: "Your Choices",
-    href: "your-choices",
-  },
-];
-
 export const metadata: Metadata = {
   title: "Privacy and policy",
   robots: {
