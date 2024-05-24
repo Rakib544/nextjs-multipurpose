@@ -37,7 +37,7 @@ export default function JoinOurTeam() {
             <FadeIn key={job.slug}>
               <JobCard2
                 address={job.address}
-                slug={job.slug}
+                slug={`/jobs/${job.slug}`}
                 title={job.title}
               />
             </FadeIn>
