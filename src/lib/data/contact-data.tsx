@@ -1,4 +1,5 @@
 import { ChatIcon, NotificationIcon, PhoneIcon } from "@/components/icons";
+import { MapPin } from "lucide-react";
 
 export const contactData = [
   {
