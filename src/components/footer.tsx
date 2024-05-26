@@ -13,7 +13,7 @@ function Navigation() {
             <div className="font-display text-lg font-bold text-foreground">
               {section.title}
             </div>
-            <ul role="list" className="mt-4 text-muted-foreground">
+            <ul className="mt-4 text-muted-foreground">
               {section.links.map((link: any) => (
                 <li key={link.title} className="mt-4">
                   <Link

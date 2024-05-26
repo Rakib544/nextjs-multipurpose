@@ -62,7 +62,6 @@ export function SocialMediaProfiles({
 }) {
   return (
     <ul
-      role="list"
       className={clsx(
         "flex gap-x-4 mt-3",
         invert ? "text-white" : "text-white",

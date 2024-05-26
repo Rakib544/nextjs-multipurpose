@@ -19,12 +19,14 @@ export default function Home() {
         pages={previewData.homepage}
       />
       <PreviewDemos
+        id="inner-pages-demos"
         eyebrow={`${previewData.innerPages.length} Inner Pages`}
         title="Different layout inner pages"
         description=" Offer a wide range of inner pages to help businesses establish."
         pages={previewData.innerPages}
       />
       <PreviewDemos
+        id="dashboard-pages-demos"
         eyebrow={`${previewData.dashboard.length} Dashboard Pages`}
         title="We also provided beautiful, modern and clean dashboard"
         description=" See the versatile and user-friendly dashboard in action, designed to

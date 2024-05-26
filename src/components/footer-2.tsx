@@ -41,7 +41,7 @@ function Navigation() {
           <div className="font-display text-xl font-extrabold text-foreground">
             {company.title}
           </div>
-          <ul role="list" className="mt-6 text-muted-foreground">
+          <ul className="mt-6 text-muted-foreground">
             {company.links.map((link: any) => (
               <li key={link.title} className="mt-4 ">
                 <Link
@@ -58,7 +58,7 @@ function Navigation() {
           <div className="font-display text-xl font-extrabold text-foreground">
             {work.title}
           </div>
-          <ul role="list" className="mt-6 text-muted-foreground">
+          <ul className="mt-6 text-muted-foreground">
             {work.links.map((link: any) => (
               <li key={link.title} className="mt-4">
                 <Link
