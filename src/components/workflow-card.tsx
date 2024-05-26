@@ -27,6 +27,8 @@ export default function WorkFlowCard({
     return () => scrollYProgress.clearListeners();
   }, [scrollYProgress]);
 
+  const randomId = new Date().getTime().toString();
+
   return (
     <div
       className={cn(
@@ -59,19 +61,19 @@ export default function WorkFlowCard({
               fill="none"
             >
               <path
-                fill="url(#a)"
+                fill={`url(#${randomId})`}
                 d="M.5 169a.5.5 0 0 0 1 0h-1ZM.5 0v169h1V0h-1Z"
               ></path>
               <defs>
                 <linearGradient
-                  id="a"
+                  id={randomId}
                   x1="1.5"
                   x2="1.5"
                   y1="0"
                   y2="169"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#4f46e5"></stop>
+                  <stop offset="0" stopColor="#4f46e5"></stop>
                   <stop offset="1" stopColor="#4f46e5" stopOpacity="0"></stop>
                 </linearGradient>
               </defs>

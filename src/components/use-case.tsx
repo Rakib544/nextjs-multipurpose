@@ -97,7 +97,7 @@ export default function Features4() {
                 value={`tab-${i + 1}`}
                 className="border-none data-[state=active]:bg-primary w-full text-lg pl-10 pr-3 py-4 rounded-full !text-white font-bold flex justify-between group"
               >
-                <p className="text-wrap text-left">{service.title}</p>
+                <span className="text-wrap text-left">{service.title}</span>
                 <span className="inline-flex opacity-0 group-data-[state=active]:opacity-100  justify-center items-center size-14 rounded-full shrink-0 bg-black">
                   <ArrowRight className="h-5 w-5" />
                 </span>
