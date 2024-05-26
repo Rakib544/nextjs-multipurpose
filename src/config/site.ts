@@ -1,4 +1,4 @@
-const siteURL = "https://agency-multipurpose.vercel.app/";
+const siteURL = "https://agency-multipurpose.vercel.app";
 export const siteConfig = {
   name: "Agenify - The Ultimate Multipurpose Agency Template",
   url: siteURL,
