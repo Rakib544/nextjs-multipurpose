@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ForgetPassword() {
   return (
-    <main className="min-h-screen flex justify-center items-center">
+    <div className="min-h-screen flex justify-center items-center">
       <Container>
         <div className="w-full max-w-lg">
           <Link
@@ -35,6 +35,6 @@ export default function ForgetPassword() {
           <ForgetPasswordForm />
         </div>
       </Container>
-    </main>
+    </div>
   );
 }

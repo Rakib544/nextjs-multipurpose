@@ -175,14 +175,9 @@ const NavLink: React.FC<NavLinkProps> = ({
   };
 
   return (
-    <Link
-      href={href}
-      onClick={handleClick}
-      legacyBehavior
-      passHref
-      className="w-full"
-    >
+    <Link href={href} legacyBehavior passHref className="w-full">
       <NavigationMenuLink
+        onClick={handleClick}
         className={navigationMenuTriggerStyle({
           className: `!w-full !flex-start !p-4 text-base !justify-start ${className}`,
         })}

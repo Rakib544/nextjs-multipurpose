@@ -12,15 +12,15 @@ import Link from "next/link";
 export default function JobDetails() {
   return (
     <div>
-      <Link
-        href="/dashboard/case-studies"
-        className={buttonVariants({ variant: "ghost" })}
-      >
-        <ArrowLeft className="h-4 w-4 mr-1.5" /> Back
-      </Link>
-      <div className="max-w-3xl mx-auto text-left mt-12">
-        <h1 className="text-3xl max-w-full font-extrabold tracking-tight lg:text-4.5xl/tight text-foreground">
-          The Future of Web Development: Our Predictions for 2023
+      <div className="max-w-3xl mx-auto text-left">
+        <Link
+          href="/dashboard/case-studies"
+          className={buttonVariants({ variant: "secondary" })}
+        >
+          <ArrowLeft className="h-4 w-4 mr-1.5" /> Back
+        </Link>
+        <h1 className="text-3xl mt-12 max-w-full font-extrabold tracking-tight lg:text-4.5xl/tight text-foreground">
+          The future of web development: our predictions for 2023
         </h1>
         <FadeInStagger
           faster

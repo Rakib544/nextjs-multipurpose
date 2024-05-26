@@ -276,7 +276,7 @@ export const previewData = {
     {
       title: "View articles",
       image: viewArticleImage,
-      href: "/dashboard/articles/1/edit",
+      href: "/dashboard/articles/1",
     },
     {
       title: "Edit articles",
@@ -327,7 +327,7 @@ export const previewData = {
     {
       title: "Add team member",
       image: addTeamMemberImage,
-      href: "/dashboard/teams/mew",
+      href: "/dashboard/teams/new",
     },
     {
       title: "Edit team member",

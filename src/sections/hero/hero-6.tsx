@@ -8,7 +8,7 @@ export default function Hero6() {
   return (
     <Container>
       <FadeIn className="max-w-3xl mx-auto text-center z-10 mt-20 mb-12">
-        <h1 className="text-3xl font-black md:text-4xl/tight text-foreground">
+        <h1 className="text-[29px] leading-10 font-black md:text-4xl/tight text-foreground">
           A Next-Generation Multipurpose Template with Stunning Dashboards,
           Built with
           <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">

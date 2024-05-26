@@ -40,14 +40,19 @@ const serviceProcess = [
 export default function PortfolioDetails() {
   return (
     <div>
-      <Link
-        href="/dashboard/portfolios"
-        className={buttonVariants({ variant: "ghost" })}
-      >
-        <ArrowLeft className="h-4 w-4 mr-1.5" /> Back
-      </Link>
-      <div className="max-w-3xl mx-auto text-left mt-12">
-        <PageIntro pageTitle="E-commerce website redesign for ABC Clothing Co.">
+      <div className="max-w-3xl mx-auto text-left">
+        <Link
+          href="/dashboard/portfolios"
+          className={buttonVariants({
+            variant: "secondary",
+          })}
+        >
+          <ArrowLeft className="h-4 w-4 mr-1.5" /> Back
+        </Link>
+        <PageIntro
+          className="mt-12"
+          pageTitle="E-commerce website redesign for ABC Clothing Co."
+        >
           Redesigned the existing e-commerce website for ABC Clothing Co. to
           enhance user experience, improve conversion rates, and align with
           modern design trends.

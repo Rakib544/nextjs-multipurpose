@@ -7,7 +7,7 @@ import PreviewDemos from "@/sections/preview-demos";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <Hero6 />
       <DemoSlider1 />
       <Features7 />
@@ -33,6 +33,6 @@ export default function Home() {
       />
       <Features8 />
       <CallToAction1 />
-    </main>
+    </div>
   );
 }

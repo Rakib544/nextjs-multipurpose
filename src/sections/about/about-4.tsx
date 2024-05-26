@@ -2,7 +2,7 @@ import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import { CheckIcon } from "@/components/icons";
 import { SectionIntro } from "@/components/section-intro";
-import aboutImage from "@/images/about/about-2.webp";
+import aboutImage from "@/images/about/about-2.jpg";
 import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import Image from "next/image";
 
@@ -54,7 +54,7 @@ export default function About4() {
             alt=""
             height={300}
             width={400}
-            className="block ml-auto w-full lg:w-[400px]"
+            className="block ml-auto w-full lg:w-[400px] rounded-xl"
             placeholder="blur"
             blurDataURL={generateBlurImageURL()}
           />

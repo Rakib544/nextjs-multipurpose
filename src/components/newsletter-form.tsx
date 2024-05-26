@@ -16,7 +16,7 @@ export function NewsletterForm() {
           placeholder="Email address"
           autoComplete="email"
           aria-label="Email address"
-          className="block w-full rounded-full border border-indigo-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-white ring-4 ring-transparent transition placeholder:text-foreground focus:border-indigo-600 focus:outline-none focus:ring-neutral-950/5"
+          className="block w-full border text-foreground text-sm placeholder:text-muted-foreground px-4 rounded-full py-4 pl-6 pr-20  ring-4 ring-transparent transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
           <Button type="submit" size="lg" className="h-full">

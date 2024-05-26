@@ -7,7 +7,7 @@ import { Testimonial2 } from "@/sections/testimonial";
 
 export default function Demo2() {
   return (
-    <main>
+    <div>
       <Hero2 />
       <Features2 />
       <Features3 />
@@ -15,6 +15,6 @@ export default function Demo2() {
       <Fact1 />
       <Testimonial2 />
       <Blogs />
-    </main>
+    </div>
   );
 }
