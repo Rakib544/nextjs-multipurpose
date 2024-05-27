@@ -27,7 +27,7 @@ export default function WorkFlowCard({
     return () => scrollYProgress.clearListeners();
   }, [scrollYProgress]);
 
-  const randomId = new Date().getTime().toString();
+  const randomId = `workflow-${id}-demo`;
 
   return (
     <div
