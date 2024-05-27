@@ -37,26 +37,22 @@ export function Pricing2() {
           Yearly
         </span>
       </div>
-      <section>
-        <div className="-mx-4 mt-8 grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-8 md:gap-x-8 sm:mx-auto lg:-mx-8 lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
-          {pricingData.map((price) => (
-            <PlanCard1
-              pricingType={pricingType}
-              key={price.id}
-              name={price.name}
-              price={
-                pricingType === "monthly"
-                  ? price.monthlyPrice
-                  : price.yearlyPrice
-              }
-              description={price.description}
-              href={price.href}
-              features={price.features}
-              featured={price.isFeatured}
-            />
-          ))}
-        </div>
-      </section>
+      <div className="-mx-4 mt-8 grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-8 md:gap-x-8 sm:mx-auto lg:-mx-8 lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
+        {pricingData.map((price) => (
+          <PlanCard1
+            pricingType={pricingType}
+            key={price.id}
+            name={price.name}
+            price={
+              pricingType === "monthly" ? price.monthlyPrice : price.yearlyPrice
+            }
+            description={price.description}
+            href={price.href}
+            features={price.features}
+            featured={price.isFeatured}
+          />
+        ))}
+      </div>
     </FadeIn>
   );
 }
