@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import { ClockIcon, DollarCircleIcon, PinIcon } from "../../components/icons";
@@ -13,11 +14,17 @@ interface JobCardProps extends React.HTMLAttributes<HTMLAnchorElement> {
 }
 
 const JobCard1 = React.forwardRef<HTMLAnchorElement, JobCardProps>(
-  ({ title, category, address, subtitle, jobType, salary, slug }, ref) => {
+  (
+    { title, category, address, subtitle, jobType, salary, slug, className },
+    ref
+  ) => {
     return (
       <Link
         href={`/jobs/${slug}`}
-        className="border border-indigo-950/5 relative p-4 rounded-xl group block hover:bg-slate-50"
+        className={cn(
+          "border border-indigo-950/5 relative p-4 rounded-xl group block hover:bg-slate-50",
+          className
+        )}
       >
         <div className="flex justify-between items-center mb-3">
           <span className="hidden sm:inline-block px-4 py-1 group-hover:transparent border bg-slate-100 text-foreground text-xs font-semibold rounded-full">

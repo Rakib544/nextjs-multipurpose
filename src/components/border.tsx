@@ -1,4 +1,11 @@
 import clsx from "clsx";
+import React from "react";
+
+interface BorderProps extends React.HTMLAttributes<HTMLBaseElement> {
+  position?: string;
+  invert?: boolean;
+  as?: any;
+}
 
 export function Border({
   className,
@@ -7,14 +14,7 @@ export function Border({
   as: Component = "div",
   children,
   ...props
-}: {
-  className?: string;
-  position?: string;
-  invert?: boolean;
-  as?: any;
-  children?: any;
-  props?: any;
-}) {
+}: BorderProps) {
   return (
     <Component
       className={clsx(

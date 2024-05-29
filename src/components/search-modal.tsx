@@ -106,7 +106,7 @@ export function SearchModal() {
         <ScrollArea className="h-[350px]">
           <ul className="space-y-2">
             {search.map((menu, i) => (
-              <li key={i} className="py-2 px-4 hover:bg-gray-100 rounded-xl ">
+              <li key={i} className="py-2 px-4 hover:bg-slate-100 rounded-xl ">
                 <Link
                   href={menu.href}
                   className="w-full "

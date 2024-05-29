@@ -10,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { FadeIn } from "./fade-in";
 
 const services = [
   {
@@ -85,7 +86,7 @@ export default function Features4() {
         Well everything you need if you aren’t that picky about minor details
         like tax compliance.
       </SectionIntro>
-      <div>
+      <FadeIn>
         <Tabs
           defaultValue="tab-1"
           className="hidden lg:grid grid-cols-12 bg-[#F7F7FA] rounded-[40px]"
@@ -148,7 +149,7 @@ export default function Features4() {
             </AccordionItem>
           ))}
         </Accordion>
-      </div>
+      </FadeIn>
     </Container>
   );
 }

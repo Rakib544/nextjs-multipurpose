@@ -1,22 +1,26 @@
 import { generateBlurImageURL } from "@/lib/data/blur-image-data";
+import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "../icons";
 import { buttonVariants } from "../ui/button";
+
+interface BlogCardProps extends React.HTMLAttributes<HTMLDivElement> {
+  title: string;
+  subtitle: string;
+  createdAt: string;
+  thumbnail: string | StaticImageData;
+}
 
 export default function BlogCard1({
   title,
   subtitle,
   createdAt,
   thumbnail,
-}: {
-  title: string;
-  subtitle: string;
-  createdAt: string;
-  thumbnail: string | StaticImageData;
-}) {
+  className,
+}: BlogCardProps) {
   return (
-    <article className="group ">
+    <article className={cn("group", className)}>
       <div className="aspect-video relative overflow-hidden rounded-xl">
         <Image
           src={thumbnail}

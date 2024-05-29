@@ -1,20 +1,26 @@
 import { generateBlurImageURL } from "@/lib/data/blur-image-data";
+import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-export default function BlogCard2({
-  title,
-  subtitle,
-  createdAt,
-  thumbnail,
-}: {
+interface BlogCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   subtitle: string;
   createdAt: string;
   thumbnail: string | StaticImageData;
-}) {
+}
+
+export default function BlogCard2({
+  title,
+  createdAt,
+  thumbnail,
+  className,
+}: BlogCardProps) {
   return (
-    <Link href="/blog-details" className="grid grid-cols-12 gap-x-2 group">
+    <Link
+      href="/blog-details"
+      className={cn("grid grid-cols-12 gap-x-2 group", className)}
+    >
       <div className="col-span-4 aspect-video relative overflow-hidden rounded">
         <Image
           src={thumbnail}

@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { FadeIn } from "../fade-in";
 import {
   AccordionContent,
@@ -15,12 +16,16 @@ export default function FaqCard1({
   id,
   question,
   answer,
+  className,
   ...props
 }: FaqCardProps) {
   return (
     <FadeIn {...(props as any)}>
       <AccordionItem
-        className="border-none data-[state=open]:bg-indigo-600 px-3 md:px-4 rounded-xl data-[state=open]:text-primary-foreground  text-muted-foreground"
+        className={cn(
+          "border-none data-[state=open]:bg-indigo-600 px-3 md:px-4 rounded-xl data-[state=open]:text-primary-foreground text-muted-foreground",
+          className
+        )}
         value={`item-${id}`}
       >
         <AccordionTrigger className="font-semibold text-base data-[state=open]:text-white text-foreground text-start">

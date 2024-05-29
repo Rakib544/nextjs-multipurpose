@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import Description from "@/components/description";
+import { FadeIn } from "@/components/fade-in";
 import { PageIntro } from "@/components/page-intro";
 import {
   Breadcrumb,
@@ -37,9 +38,9 @@ export default function TermsAndCondition() {
         </Breadcrumb>
       </PageIntro>
       <Container className="my-20 ">
-        <div className="max-w-3xl mx-auto">
+        <FadeIn className="max-w-3xl mx-auto">
           <Description description={termsConditionData} />
-        </div>
+        </FadeIn>
       </Container>
     </div>
   );

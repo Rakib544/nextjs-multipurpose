@@ -98,7 +98,7 @@ export default function Blogs3() {
             </div>
           </FadeIn>
           <FadeIn className="col-span-12 lg:col-span-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-5 gap-y-8">
               {blogsData.slice(0, 6).map((blog, index) => (
                 <BlogCard1
                   key={index}

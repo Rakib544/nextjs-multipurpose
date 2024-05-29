@@ -14,11 +14,11 @@ export default function Testimonials2() {
   return (
     <FadeIn>
       <Carousel>
-        <CarouselContent className="gap-x-4">
+        <CarouselContent className="gap-x-5">
           {testimonials.map((testimonial) => (
             <CarouselItem
               key={testimonial.id}
-              className="bg-gray-100 md:basis-1/2 lg:basis-1/3 rounded-2xl"
+              className="bg-slate-100 md:basis-1/2 lg:basis-1/3 rounded-2xl"
             >
               <TestimonialCard
                 quote={testimonial.quote}

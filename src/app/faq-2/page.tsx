@@ -40,14 +40,13 @@ export default function Faq2() {
       <Container className="">
         <div>
           <FadeInStagger faster>
-            <div className="mt-6 grid grid-cols-12 gap-6">
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-8">
               {faqData.map((faq) => (
                 <FaqCard2
                   key={faq.id}
                   id={faq.id.toString()}
                   answer={faq.answer}
                   question={faq.question}
-                  className="col-span-12 lg:col-span-6"
                 />
               ))}
             </div>

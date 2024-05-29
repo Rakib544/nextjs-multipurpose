@@ -1,13 +1,11 @@
+import CaseStudiesCard from "@/components/case-studies-card";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import Pagination from "@/components/ui/pagination";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { caseStudies } from "@/lib/data/case-studies";
 import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Case Studies",
@@ -39,38 +37,18 @@ export default function WorkStudies() {
           best value to our clients.
         </PageIntro>
 
-        <FadeInStagger className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-20">
+        <FadeInStagger className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-20">
           {caseStudies.map((caseStudy: any) => (
             <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-indigo-950/5 transition hover:bg-slate-50 hover:ring-indigo-950/10 sm:p-8">
-                <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      unoptimized
-                      placeholder="blur"
-                      blurDataURL={generateBlurImageURL()}
-                    />
-                  </Link>
-                </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-foreground">
-                  <time dateTime={caseStudy.year} className="font-semibold">
-                    {caseStudy.date.split("-")[0]}
-                  </time>
-                  <span className="text-muted-foreground" aria-hidden="true">
-                    /
-                  </span>
-                  <span className="font-medium">Case study</span>
-                </p>
-                <p className="mt-6 font-display text-xl font-extrabold text-foreground">
-                  {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base leading-7 text-muted-foreground">
-                  {caseStudy.description}
-                </p>
-              </article>
+              <CaseStudiesCard
+                client={caseStudy.client}
+                date={caseStudy.date}
+                description={caseStudy.description}
+                href={caseStudy.href}
+                logo={caseStudy.logo}
+                title={caseStudy.title}
+                year={caseStudy.year}
+              />
             </FadeIn>
           ))}
         </FadeInStagger>

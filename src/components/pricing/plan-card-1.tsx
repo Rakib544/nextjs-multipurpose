@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import clsx from "clsx";
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";
@@ -27,6 +28,17 @@ function CheckIcon({ className }: { className: string }) {
     </svg>
   );
 }
+
+interface PlanCardProps extends React.HTMLAttributes<HTMLDivElement> {
+  name: string;
+  price: string;
+  description: string;
+  href: string;
+  pricingType: "monthly" | "yearly";
+  features: string[];
+  featured?: boolean;
+}
+
 export function PlanCard1({
   name,
   price,
@@ -35,20 +47,14 @@ export function PlanCard1({
   pricingType = "monthly",
   features,
   featured = false,
-}: {
-  name: string;
-  price: string;
-  description: string;
-  href: string;
-  pricingType: "monthly" | "yearly";
-  features: string[];
-  featured?: boolean;
-}) {
+  className,
+}: PlanCardProps) {
   return (
     <section
-      className={clsx(
+      className={cn(
         "flex flex-col rounded-3xl px-6 sm:px-8 py-8",
-        featured ? "order-first bg-indigo-600 lg:order-none" : "bg-gray-100"
+        featured ? "order-first bg-indigo-600 lg:order-none" : "bg-slate-100",
+        className
       )}
     >
       <h3

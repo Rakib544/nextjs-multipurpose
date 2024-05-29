@@ -46,9 +46,7 @@ export default function Navbar() {
               <NavigationMenuItem key={link.id} className="relative">
                 {link?.submenus.length > 0 ? (
                   <>
-                    <NavigationMenuTrigger aria-controls={link.label}>
-                      {link.label}
-                    </NavigationMenuTrigger>
+                    <NavigationMenuTrigger>{link.label}</NavigationMenuTrigger>
                     <NavigationMenuContent
                       id={link.label}
                       className="bg-white border shadow-xl rounded p-2"

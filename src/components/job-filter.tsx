@@ -14,12 +14,12 @@ export default function JobFilter({
 }) {
   return (
     <div className="space-y-8">
-      <div className="border shadow-sm bg-white p-5 rounded-xl">
+      <div className="border border-border bg-white p-5 rounded-xl">
         <h2 className="text-sm font-bold mb-3">Category</h2>
         <Border position="top" className="pb-4" />
         <JobCategoryFilter categories={categories} />
       </div>
-      <div className="border shadow-sm bg-white p-5 rounded-xl">
+      <div className="border border-border bg-white p-5 rounded-xl">
         <h2 className="text-sm font-bold mb-3">Job Type</h2>
         <Border position="top" className="pb-4" />
         <JobTypeFilter jobTypes={jobTypes} />

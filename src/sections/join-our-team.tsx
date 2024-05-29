@@ -24,8 +24,8 @@ export default function JoinOurTeam() {
             <Link
               href="/career-1"
               className={buttonVariants({
-                variant: "link",
-                className: "!px-0 mt-4 items-center",
+                className: "mt-4 items-center",
+                size: "lg",
               })}
             >
               View open positions <ArrowRight className="h-4 w-4 ml-1" />

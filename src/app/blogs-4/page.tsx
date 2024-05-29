@@ -40,7 +40,7 @@ export default function Blogs3() {
       <Container className="my-20 md:mt-20 md:mb-32">
         <FadeInStagger faster className="grid grid-cols-12 gap-y-8 lg:gap-x-12">
           <FadeIn className="col-span-12 lg:col-span-8 order-2 lg:order-1">
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-5 gap-y-8">
               {blogsData.slice(0, 6).map((blog, index) => (
                 <BlogCard1
                   key={index}

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CallToAction1() {
   return (
-    <div className="bg-gray-100 mt-20 md:mt-32 rounded-tr-[40px] rounded-tl-[40px]">
+    <div className="bg-slate-100 mt-20 md:mt-32 rounded-tr-[40px] rounded-tl-[40px]">
       <Container className="py-20 py:my-32">
         <SectionIntro
           eyebrow="Let's hurry up now and"

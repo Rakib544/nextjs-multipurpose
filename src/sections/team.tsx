@@ -14,7 +14,7 @@ export default function Team() {
         We upholds the highest ethical standards in all our dealings and embrace
         creativity and strive for improvement.
       </SectionIntro>
-      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
+      <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {peoples.slice(0, 8).map((person) => (
           <li key={person.name}>
             <TeamCard1

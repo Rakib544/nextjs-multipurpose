@@ -9,14 +9,14 @@ export default function About1() {
     <Container className="mt-20 md:mt-32">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full relative">
         <div>
-          <div className="sticky top-24">
+          <section className="sticky top-24">
             <SectionIntro eyebrow="Why choose us" title="How we drive revenue">
               We start by conducting in-depth SEO audits to identify
               opportunities and areas for improvement. Our team analyzes your
               website&apos;s current performance, content, and technical setup
               to create a tailored strategy.
             </SectionIntro>
-          </div>
+          </section>
         </div>
         <FadeIn>
           {seoRevenueEarningProcess.map((process, index) => (

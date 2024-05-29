@@ -37,7 +37,7 @@ export function Pricing1() {
         </span>
       </div>
       <section>
-        <div className="-mx-4 mt-8 grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-8 md:gap-x-8 sm:mx-auto lg:-mx-8 lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
+        <div className="-mx-4 mt-8 grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-8 md:gap-x-5 sm:mx-auto lg:-mx-8 lg:grid-cols-3 xl:mx-0">
           {pricingData.map((price) => (
             <PlanCard2
               pricingType={pricingType}

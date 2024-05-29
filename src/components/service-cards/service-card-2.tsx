@@ -1,21 +1,27 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { FadeIn } from "../fade-in";
 import { ArrowRight } from "../icons";
 import { buttonVariants } from "../ui/button";
+
+interface ServiceCardProps extends React.HTMLAttributes<HTMLAnchorElement> {
+  icon: any;
+  title: string;
+  description: string;
+  href?: string;
+}
 
 export default function ServiceCard2({
   icon,
   title,
   description,
   href = "",
-}: {
-  icon: any;
-  title: string;
-  description: string;
-  href?: string;
-}) {
+  className,
+}: ServiceCardProps) {
   return (
-    <FadeIn className="border rounded-2xl p-8">
+    <FadeIn
+      className={cn("border border-border/50 rounded-2xl p-8", className)}
+    >
       <span className="flex justify-center items-center size-16 bg-indigo-50 rounded-full border border-indigo-50">
         {icon}
       </span>

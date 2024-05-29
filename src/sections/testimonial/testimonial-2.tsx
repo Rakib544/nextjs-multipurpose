@@ -32,10 +32,10 @@ export default function Testimonial2({
             loop: true,
           }}
         >
-          <CarouselContent className="mb-6">
+          <CarouselContent className="mb-6 gap-1">
             {testimonials.map((testimonial, index) => (
               <CarouselItem
-                className="basis-full md:basis-[50%] bg-gray-100 mx-2 py-2 md:py-10 rounded-[40px] px-6 md:px-10"
+                className="basis-full md:basis-[50%] bg-slate-100 mx-2 py-2 md:py-10 rounded-[30px] px-6 md:px-10"
                 key={index}
               >
                 <TestimonialCard

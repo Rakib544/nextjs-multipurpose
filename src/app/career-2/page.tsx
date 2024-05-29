@@ -61,7 +61,7 @@ export default function Career2() {
             <FadeIn className="flex justify-end md:hidden">
               <MobileFilterDrawer />
             </FadeIn>
-            <FadeInStagger faster className="space-y-4">
+            <FadeInStagger faster className="space-y-5">
               {jobs.map((job, index) => (
                 <FadeIn key={index}>
                   <JobCard1

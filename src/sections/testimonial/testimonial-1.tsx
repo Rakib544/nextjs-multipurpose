@@ -1,4 +1,5 @@
 import { Container } from "@/components/container";
+import { FadeIn } from "@/components/fade-in";
 import { SectionIntro } from "@/components/section-intro";
 import { TestimonialCard } from "@/components/testimonial-card";
 import {
@@ -20,22 +21,24 @@ export default function Testimonials1({
         title="Here’s what our amazing clients are saying"
         className="mb-12"
       ></SectionIntro>
-      <InfiniteMoving>
-        {testimonials.map((testimonial) => (
-          <InfiniteMovingItem
-            key={testimonial.id}
-            className="md:w-[400px] bg-gray-100"
-          >
-            <TestimonialCard
-              image={testimonial.image}
-              name={testimonial.name}
-              quote={testimonial.quote}
-              rating={testimonial.rating}
-              role={testimonial.role}
-            />
-          </InfiniteMovingItem>
-        ))}
-      </InfiniteMoving>
+      <FadeIn>
+        <InfiniteMoving>
+          {testimonials.map((testimonial) => (
+            <InfiniteMovingItem
+              key={testimonial.id}
+              className="md:w-[400px] bg-slate-100"
+            >
+              <TestimonialCard
+                image={testimonial.image}
+                name={testimonial.name}
+                quote={testimonial.quote}
+                rating={testimonial.rating}
+                role={testimonial.role}
+              />
+            </InfiniteMovingItem>
+          ))}
+        </InfiniteMoving>
+      </FadeIn>
     </Container>
   );
 }

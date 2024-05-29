@@ -19,7 +19,7 @@ export default function Features7() {
         <StatList>
           <StatListItem label="Neatly coded pages" value="65+" />
           <StatListItem label="Pre-made blocks" value="45+" />
-          <StatListItem label="Components" value="161+" />
+          <StatListItem label="Components" value="162+" />
           <StatListItem label="Dashboard pages" value="22+" />
         </StatList>
       </div>

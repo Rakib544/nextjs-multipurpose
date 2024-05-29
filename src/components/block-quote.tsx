@@ -3,17 +3,17 @@ import clsx from "clsx";
 import Image from "next/image";
 import { Border } from "./border";
 
+interface BlockquoteProps extends React.HTMLAttributes<HTMLDivElement> {
+  author: any;
+  image: any;
+}
+
 function BlockquoteWithImage({
   author,
   image,
   children,
   className,
-}: {
-  author: any;
-  image: any;
-  className: string;
-  children: any;
-}) {
+}: BlockquoteProps) {
   return (
     <figure
       className={clsx(

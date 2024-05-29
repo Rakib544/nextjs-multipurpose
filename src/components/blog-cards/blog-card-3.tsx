@@ -1,22 +1,31 @@
 import { generateBlurImageURL } from "@/lib/data/blur-image-data";
+import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "../icons";
 import { buttonVariants } from "../ui/button";
+
+interface BlogCardProps extends React.HTMLAttributes<HTMLDivElement> {
+  title: string;
+  subtitle: string;
+  createdAt: string;
+  thumbnail: string | StaticImageData;
+}
 
 export default function BlogCard3({
   title,
   subtitle,
   createdAt,
   thumbnail,
-}: {
-  title: string;
-  subtitle: string;
-  createdAt: string;
-  thumbnail: string | StaticImageData;
-}) {
+  className,
+}: BlogCardProps) {
   return (
-    <div className="grid grid-cols-12 gap-y-4 md:gap-x-12 p-4 lg:p-10 bg-slate-50 rounded-xl hover:bg-slate-100">
+    <div
+      className={cn(
+        "grid grid-cols-12 gap-y-4 md:gap-x-12 p-4 lg:p-10 bg-slate-50 rounded-xl hover:bg-slate-100",
+        className
+      )}
+    >
       <div className="col-span-12 md:col-span-8 order-2 md:order-1 max-w-xl">
         <p className=" mt-4 mb-2 text-sm text-muted-foreground font-medium">
           {new Date(createdAt).toDateString()}

@@ -65,7 +65,7 @@ export default function Teams() {
           >
             Meet the Visionaries Behind Agenify
           </SectionIntro>
-          <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
+          <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {peoples.slice(0, 4).map((person) => (
               <li key={person.name}>
                 <TeamCard1
@@ -85,7 +85,7 @@ export default function Teams() {
           >
             Meet the Talented Individuals Driving Agenify Forward
           </SectionIntro>
-          <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
+          <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {peoples.slice(5).map((person) => (
               <li key={person.name}>
                 <TeamCard1

@@ -16,7 +16,7 @@ export function PageIntro({
   className,
 }: PageIntroProps) {
   return (
-    <div className={cn("mt-24", centered && "text-center", className)}>
+    <section className={cn("mt-24", centered && "text-center", className)}>
       <FadeIn>
         <h1>
           <span className="uppercase block text-xs tracking-wider font-bold text-primary mb-3">
@@ -42,6 +42,6 @@ export function PageIntro({
           {children}
         </div>
       </FadeIn>
-    </div>
+    </section>
   );
 }

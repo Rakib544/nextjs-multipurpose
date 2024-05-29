@@ -12,7 +12,7 @@ export default function Features3() {
         className="mb-12"
         title="Optimized to the unique needs of each business we work with"
       />
-      <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {seoServices.map((service, index) => (
           <ServiceCard2
             key={index}

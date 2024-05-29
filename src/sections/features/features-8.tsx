@@ -19,7 +19,7 @@ export default function Features8() {
         {usedTechnology.map((technology, index) => (
           <FadeIn
             key={index}
-            className="bg-gray-100 rounded-xl p-4 text-center h-full flex items-center justify-center group"
+            className="bg-slate-100 rounded-xl p-4 text-center h-full flex items-center justify-center group"
           >
             <Link href={technology.href} target="_blank">
               <span className="flex justify-center">{technology.icon}</span>

@@ -1,14 +1,10 @@
 import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import Image, { StaticImageData } from "next/image";
+import React from "react";
 import { MessageCircle } from "./icons";
 import { Button } from "./ui/button";
 
-export function CommentCard({
-  comment,
-  author,
-  createdAt,
-  replies,
-}: {
+interface CommentCardProps extends React.HTMLAttributes<HTMLDivElement> {
   createdAt: string;
   comment: string;
   author: { name: string; image: string | StaticImageData };
@@ -17,9 +13,17 @@ export function CommentCard({
     comment: string;
     author: { name: string; image: string | StaticImageData };
   }>;
-}) {
+}
+
+export function CommentCard({
+  comment,
+  author,
+  createdAt,
+  replies,
+  className,
+}: CommentCardProps) {
   return (
-    <div>
+    <div className={className}>
       <div className="flex justify-between items-center">
         <div className="flex gap-x-4 items-center">
           <Image

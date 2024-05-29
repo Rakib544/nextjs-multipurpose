@@ -27,7 +27,7 @@ export default function Blogs2() {
         </FadeIn>
         <FadeInStagger
           faster
-          className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-6 gap-y-8 mt-20"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-x-5 gap-y-8 mt-20"
         >
           {blogsData.slice(1).map((blog, index) => (
             <FadeIn key={index}>
