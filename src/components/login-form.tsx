@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormMessage,
@@ -85,6 +86,9 @@ export default function LoginForm() {
                     className="rounded-full pl-6"
                   />
                 </FormControl>
+                <FormDescription className="sr-only">
+                  Please enter your email address
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -102,6 +106,9 @@ export default function LoginForm() {
                     className="rounded-full pl-6"
                   />
                 </FormControl>
+                <FormDescription className="sr-only">
+                  Please enter your password
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}

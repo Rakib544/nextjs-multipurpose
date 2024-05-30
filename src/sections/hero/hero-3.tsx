@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero3() {
   return (
-    <section
+    <div
       className="w-full py-20 md:py-32 rounded-bl-[40px] rounded-br-[40px]"
       style={{
         backgroundImage: `linear-gradient(180deg,#6754E9 0%,#4534B8 100%)`,
@@ -20,13 +20,13 @@ export default function Hero3() {
         </p>
         <div className="mt-6">
           <Link
-            className={buttonVariants({ variant: "secondary", size: "lg" })}
+            className={buttonVariants({ variant: "outline", size: "lg" })}
             href="#"
           >
             Free consultation
           </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -4,6 +4,7 @@ import { List, ListItem } from "@/components/list";
 import { SectionIntro } from "@/components/section-intro";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import { FadeIn } from "@/components/fade-in";
 import {
   Accordion,
   AccordionContent,
@@ -85,7 +86,7 @@ export default function Features4() {
         We deliver business impact through PR & marketing with a combination of
         intellectual curiosity, industry experience, urgency, and precision.
       </SectionIntro>
-      <div>
+      <FadeIn>
         <Tabs
           defaultValue="tab-1"
           className="hidden lg:grid grid-cols-12 bg-[#F7F7FA] rounded-[40px]"
@@ -97,7 +98,7 @@ export default function Features4() {
                 value={`tab-${i + 1}`}
                 className="border-none data-[state=active]:bg-primary w-full text-lg pl-10 pr-3 py-4 rounded-full !text-white font-bold flex justify-between group"
               >
-                <p className="text-wrap text-left">{service.title}</p>
+                <span className="text-wrap text-left">{service.title}</span>
                 <span className="inline-flex opacity-0 group-data-[state=active]:opacity-100  justify-center items-center size-14 rounded-full shrink-0 bg-black">
                   <ArrowRight className="h-5 w-5" />
                 </span>
@@ -148,7 +149,7 @@ export default function Features4() {
             </AccordionItem>
           ))}
         </Accordion>
-      </div>
+      </FadeIn>
     </Container>
   );
 }

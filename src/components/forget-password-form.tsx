@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -41,6 +43,7 @@ export default function ForgetPasswordForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
+                <FormLabel className="sr-only">Email</FormLabel>
                 <FormControl>
                   <Input
                     type="email"
@@ -49,6 +52,10 @@ export default function ForgetPasswordForm() {
                     className="rounded-full pl-6"
                   />
                 </FormControl>
+                <FormDescription className="sr-only">
+                  Please enter your email address which you use while creating
+                  this account
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}

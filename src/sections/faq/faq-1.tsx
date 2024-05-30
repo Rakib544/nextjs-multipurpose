@@ -12,11 +12,9 @@ export default function Faq1() {
         eyebrow="Our FAQ"
         className="max-w-2xl mx-auto text-center"
       >
-        <p>
-          In order to make sure your website is user friendly and optimized for
-          Google’s algorithm, our on-site optimization experts clean up the code
-          and copy.
-        </p>
+        In order to make sure your website is user friendly and optimized for
+        Google’s algorithm, our on-site optimization experts clean up the code
+        and copy.
       </SectionIntro>
       <div className="max-w-2xl mx-auto mt-16">
         <FadeInStagger faster>

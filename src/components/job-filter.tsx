@@ -56,11 +56,11 @@ function JobCategoryFilter({ categories }: { categories: string[] }) {
     >
       {categories.map((category) => (
         <div className="flex items-center space-x-2" key={category}>
+          <RadioGroupItem value={category} id={category.split(" ").join("")} />
           <Label
-            htmlFor={category}
+            htmlFor={category.split(" ").join("")}
             className="flex font-medium cursor-pointer items-center gap-x-2  py-1 capitalize"
           >
-            <RadioGroupItem value={category} id={category} />
             {category}
           </Label>
         </div>
@@ -97,11 +97,11 @@ function JobTypeFilter({ jobTypes }: { jobTypes: string[] }) {
     >
       {jobTypes.map((jobType) => (
         <div className="flex items-center space-x-2" key={jobType}>
+          <RadioGroupItem value={jobType} id={jobType.split(" ").join("")} />
           <Label
-            htmlFor={jobType}
+            htmlFor={jobType.split(" ").join("")}
             className="flex font-medium cursor-pointer items-center gap-x-2 py-1 capitalize"
           >
-            <RadioGroupItem value={jobType} id={jobType} />
             {jobType}
           </Label>
         </div>

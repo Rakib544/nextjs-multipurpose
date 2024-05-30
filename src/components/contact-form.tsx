@@ -7,6 +7,7 @@ import { Button } from "./ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -50,6 +51,9 @@ export default function ContactForm() {
                   <FormControl>
                     <Input placeholder="John Doe" {...field} />
                   </FormControl>
+                  <FormDescription className="sr-only">
+                    Please enter your full name
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -67,6 +71,10 @@ export default function ContactForm() {
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription className="sr-only">
+                    Please enter your email address. We&apos;ll never share your
+                    email with anyone else.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -82,6 +90,9 @@ export default function ContactForm() {
                   <FormControl>
                     <Input placeholder="Design and Graphics" {...field} />
                   </FormControl>
+                  <FormDescription className="sr-only">
+                    Please enter your full name
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -95,6 +106,9 @@ export default function ContactForm() {
                   <FormControl>
                     <Input placeholder="$500-$1000" {...field} />
                   </FormControl>
+                  <FormDescription className="sr-only">
+                    Please enter your project budget
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -114,6 +128,9 @@ export default function ContactForm() {
                     {...field}
                   />
                 </FormControl>
+                <FormDescription className="sr-only">
+                  Please enter your message.
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}

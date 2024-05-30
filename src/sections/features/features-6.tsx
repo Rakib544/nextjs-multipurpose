@@ -2,7 +2,7 @@ import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { ArrowRight } from "@/components/icons";
 import { SectionIntro } from "@/components/section-intro";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 
 const services = [
@@ -64,12 +64,22 @@ export default function Features6() {
                     </p>
                   </div>
                   <div className="col-span-12 md:col-span-4 flex justify-end md:justify-center">
-                    <Button
+                    <span
+                      className={buttonVariants({
+                        size: "icon",
+                        className:
+                          "border-[1.5px] group-hover:bg-white group-hover:text-primary",
+                      })}
+                    >
+                      {" "}
+                      <ArrowRight className="size-5" />
+                    </span>
+                    {/* <Button
                       size="icon"
                       className="border-[1.5px] group-hover:bg-white group-hover:text-primary"
                     >
                       <ArrowRight className="size-5 ml-1" />
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </Link>

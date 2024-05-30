@@ -41,11 +41,11 @@ export default function DashboardLayout({
             </ScrollArea>
           </div>
         </aside>
-        <main className="flex-grow min-h-full flex flex-col w-full lg:width-[calc(100%-280px)] py-24 px-4">
+        <div className="flex-grow min-h-full flex flex-col w-full lg:width-[calc(100%-280px)] py-24 px-4">
           <div className="w-full max-w-[1536px] block mr-auto ml-auto lg:px-6">
             {children}
           </div>
-        </main>
+        </div>
       </div>
     </div>
   );

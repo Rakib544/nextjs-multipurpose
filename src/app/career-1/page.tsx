@@ -1,14 +1,16 @@
 import { Border } from "@/components/border";
 import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
-import { TextUnderline } from "@/components/icons";
+import { ArrowRight, TextUnderline } from "@/components/icons";
 import { JobCard1 } from "@/components/job-cards";
 import { PageIntro } from "@/components/page-intro";
+import { buttonVariants } from "@/components/ui/button";
 import careerHeroImage from "@/images/career/hero.webp";
 import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { jobs } from "@/lib/data/job-data";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Career",
@@ -41,6 +43,14 @@ export default function Career1() {
               Join us and become the trusted expert relied upon by the world’s
               biggest brands, venues, and entertainers to solve their most
               complex challenges.
+              <div>
+                <Link
+                  href="/about-1"
+                  className={buttonVariants({ className: "mt-4", size: "lg" })}
+                >
+                  Learn More <ArrowRight className="ml-1 size-5" />
+                </Link>
+              </div>
             </PageIntro>
           </div>
           <FadeIn>

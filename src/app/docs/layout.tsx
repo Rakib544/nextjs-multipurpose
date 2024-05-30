@@ -41,11 +41,11 @@ export default function DashboardLayout({
           </div>
         </aside>
 
-        <main className="flex-grow min-h-full flex flex-col w-full lg:width-[calc(100%-280px)] pb-12 px-4">
+        <div className="flex-grow min-h-full flex flex-col w-full lg:width-[calc(100%-280px)] pb-12 px-4">
           <div className="w-full prose-base max-w-3xl block lg:px-6 prose prose-gray prose-headings:mt-8 prose-headings:font-bold">
             {children}
           </div>
-        </main>
+        </div>
       </div>
     </div>
   );

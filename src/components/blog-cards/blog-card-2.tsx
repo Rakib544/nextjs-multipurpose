@@ -32,9 +32,9 @@ export default function BlogCard2({
         />
       </div>
       <div className="col-span-8">
-        <time className="text-xs font-medium text-muted-foreground">
+        <p className="text-xs font-medium text-muted-foreground">
           {new Date(createdAt).toDateString()}
-        </time>
+        </p>
         <h3 className="font-bold hover:text-primary text-sm text-foreground line-clamp-2">
           {title}
         </h3>

@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowRight } from "../icons";
-import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 interface JobCardProps extends React.HTMLAttributes<HTMLAnchorElement> {
   title: string;
   address: string;
@@ -26,9 +26,9 @@ export default function JobCard2({
         <h3 className="font-bold text-lg md:text-xl">{title}</h3>
         <p className="text-sm mt-1 text-muted-foreground">{address}</p>
       </div>
-      <Button size="icon" variant="ghost">
+      <span className={buttonVariants({ size: "icon", variant: "ghost" })}>
         <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-foreground" />
-      </Button>
+      </span>
     </Link>
   );
 }

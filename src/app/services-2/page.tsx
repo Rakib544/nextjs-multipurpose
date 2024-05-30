@@ -1,5 +1,5 @@
 import { Container } from "@/components/container";
-import { FadeInStagger } from "@/components/fade-in";
+import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import { ServiceCard1 } from "@/components/service-cards";
@@ -46,12 +46,13 @@ export default function Services2() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {sassFeatures.map((service) => (
-            <ServiceCard1
-              key={service.id}
-              description={service.description}
-              icon={service.icon}
-              title={service.title}
-            />
+            <FadeIn key={service.id}>
+              <ServiceCard1
+                description={service.description}
+                icon={service.icon}
+                title={service.title}
+              />
+            </FadeIn>
           ))}
         </FadeInStagger>
       </Container>

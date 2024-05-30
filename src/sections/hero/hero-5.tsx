@@ -2,20 +2,13 @@ import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { ArrowRight } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
-import heroBackgroundImage from "@/images/demo-5/hero-background.png";
 import heroImage from "@/images/demo-5/hero.png";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero5() {
   return (
-    <>
-      <div
-        className="absolute min-h-screen w-full top-0 z-[-2] bg-cover"
-        style={{
-          backgroundImage: `url(${heroBackgroundImage})`,
-        }}
-      ></div>
+    <div>
       <span className="absolute h-80 w-80 top-40 bg-gradient-to-r from-indigo-50 to-white  z-[-1] rotate-45 -left-52"></span>
       <Container className="relative overflow-x-hidden overflow-y-hidden pt-6 md:pt-16">
         <FadeIn
@@ -70,6 +63,6 @@ export default function Hero5() {
           </FadeIn>
         </FadeInStagger>
       </Container>
-    </>
+    </div>
   );
 }

@@ -28,15 +28,16 @@ export default function FaqCard1({
         )}
         value={`item-${id}`}
       >
-        <AccordionTrigger className="font-semibold text-base data-[state=open]:text-white text-foreground text-start">
-          <div>
+        <AccordionTrigger className="font-semibold text-base data-[state=open]:text-white text-foreground !text-left">
+          <span>
+            {" "}
             <span className="hidden h-10 w-10 border-[1.5px] rounded-lg md:inline-flex items-center justify-center mr-3">
               {id.padStart(2, "0")}
             </span>
             {question}
-          </div>
+          </span>
         </AccordionTrigger>
-        <AccordionContent className="text-base leading-7   ml-0 md:ml-12">
+        <AccordionContent className="text-base leading-7 text-left ml-0 md:ml-12">
           {answer}
         </AccordionContent>
       </AccordionItem>

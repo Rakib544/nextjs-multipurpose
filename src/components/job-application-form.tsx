@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -76,6 +77,9 @@ export default function JobApplicationForm() {
                 <FormControl>
                   <Input {...field} placeholder="Name" />
                 </FormControl>
+                <FormDescription className="sr-only">
+                  Please enter you name{" "}
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -93,6 +97,9 @@ export default function JobApplicationForm() {
                     {...field}
                   />
                 </FormControl>
+                <FormDescription className="sr-only">
+                  Please enter you email{" "}
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -106,6 +113,9 @@ export default function JobApplicationForm() {
                 <FormControl>
                   <Input placeholder="+8801786542743" {...field} />
                 </FormControl>
+                <FormDescription className="sr-only">
+                  Please enter you phone number{" "}
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -123,6 +133,9 @@ export default function JobApplicationForm() {
                     {...field}
                   />
                 </FormControl>
+                <FormDescription className="sr-only">
+                  Please enter about yourself{" "}
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -133,14 +146,14 @@ export default function JobApplicationForm() {
             name="cv"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Upload CV :</FormLabel>
+                <FormLabel htmlFor="CV">Upload CV :</FormLabel>
                 <FormControl>
                   <div
-                    {...field}
                     {...getRootProps()}
                     className="py-14 bg-[#F9F9FA] px-6 rounded-xl text-center border border-dashed"
                   >
-                    <input {...getInputProps()} />
+                    <input id="CV" {...getInputProps()} />
+                    <Input {...field} className="hidden" />
 
                     <Image
                       src="/file-upload.svg"
@@ -162,6 +175,9 @@ export default function JobApplicationForm() {
                     </p>
                   </div>
                 </FormControl>
+                <FormDescription className="sr-only">
+                  Please enter your cv{" "}
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}

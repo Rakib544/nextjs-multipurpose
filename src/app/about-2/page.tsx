@@ -32,7 +32,7 @@ export default function About2() {
               eyebrow="About Us"
               pageTitle={
                 <>
-                  <h1 className="text-3xl font-extrabold md:text-4.5xl/tight text-foreground">
+                  <span className="text-3xl font-extrabold md:text-4.5xl/tight text-foreground">
                     Digital marketing solutions designed to{" "}
                     <span className="text-primary relative z-10 whitespace-nowrap inline-block sm:inline">
                       {" "}
@@ -40,7 +40,7 @@ export default function About2() {
                       <TextUnderline />
                     </span>{" "}
                     for your business
-                  </h1>
+                  </span>
                 </>
               }
             >

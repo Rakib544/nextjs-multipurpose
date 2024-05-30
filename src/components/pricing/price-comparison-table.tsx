@@ -32,7 +32,7 @@ export default function PriceComparisonTable() {
           <TableHead>
             <div className="flex items-end h-full">
               <div className="w-full pb-8 min-w-[230px]">
-                <h2 className="font-semibold mb-3">Pick Your Plan</h2>
+                <p className="font-semibold mb-3">Pick Your Plan</p>
                 <div className="border shadow-sm rounded-xl p-4">
                   <RadioGroup
                     defaultValue="monthly"
@@ -40,15 +40,19 @@ export default function PriceComparisonTable() {
                       setPricingType(value as "monthly" | "yearly")
                     }
                   >
-                    <Label className="flex items-center gap-x-2 text-foreground">
-                      <RadioGroupItem value="monthly" />
-                      Monthly Billing
-                    </Label>
+                    <div className="flex items-center gap-x-2">
+                      <RadioGroupItem id="monthly" value="monthly" />
+                      <Label htmlFor="monthly" className="text-foreground">
+                        Monthly Billing
+                      </Label>
+                    </div>
 
-                    <Label className="flex items-center gap-x-2 text-foreground">
-                      <RadioGroupItem value="yearly" />
-                      Yearly Billing
-                    </Label>
+                    <div className="flex items-center gap-x-2 ">
+                      <RadioGroupItem id="yearly" value="yearly" />
+                      <Label htmlFor="yearly" className="text-foreground">
+                        Yearly Billing
+                      </Label>
+                    </div>
                   </RadioGroup>
                 </div>
               </div>
