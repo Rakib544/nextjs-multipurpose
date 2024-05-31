@@ -3,7 +3,6 @@ import {
   InfiniteMoving,
   InfiniteMovingItem,
 } from "@/components/ui/infinite-moving";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { previewData } from "@/lib/data/preview-data";
 import Image from "next/image";
 
@@ -14,8 +13,7 @@ export default function DemoSlider1() {
         {previewData.homepage.map((item, index) => (
           <InfiniteMovingItem key={index} className="md:w-[324px] relative">
             <Image
-              placeholder="blur"
-              blurDataURL={generateBlurImageURL()}
+              priority
               src={item.image}
               alt=""
               height={425}

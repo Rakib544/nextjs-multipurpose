@@ -5,7 +5,6 @@ import { PageIntro } from "@/components/page-intro";
 import { Pricing2 } from "@/components/pricing/index";
 import { SectionIntro } from "@/components/section-intro";
 import serviceHeroImage from "@/images/service/hero.webp";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Faq2 } from "@/sections/faq";
 import { Features6 } from "@/sections/features";
 import { Metadata } from "next";
@@ -53,8 +52,7 @@ export default function Services1() {
               className="block w-full lg:w-auto lg:ml-auto rounded-2xl"
               src={serviceHeroImage}
               alt=""
-              placeholder="blur"
-              blurDataURL={generateBlurImageURL()}
+              priority
             />
           </FadeIn>
         </div>

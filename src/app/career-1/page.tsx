@@ -6,7 +6,6 @@ import { JobCard1 } from "@/components/job-cards";
 import { PageIntro } from "@/components/page-intro";
 import { buttonVariants } from "@/components/ui/button";
 import careerHeroImage from "@/images/career/hero.webp";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { jobs } from "@/lib/data/job-data";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -46,6 +45,7 @@ export default function Career1() {
               <div>
                 <Link
                   href="/about-1"
+                  aria-label="Click here to learn more about us"
                   className={buttonVariants({ className: "mt-4", size: "lg" })}
                 >
                   Learn More <ArrowRight className="ml-1 size-5" />
@@ -55,8 +55,7 @@ export default function Career1() {
           </div>
           <FadeIn>
             <Image
-              placeholder="blur"
-              blurDataURL={generateBlurImageURL()}
+              priority
               height={450}
               width={450}
               className="block ml-auto rounded-2xl w-full"

@@ -1,4 +1,5 @@
 import createMDX from "@next/mdx";
+import pwa from "next-pwa";
 import remarkGfm from "remark-gfm";
 
 /** @type {import('next').NextConfig} */
@@ -16,5 +17,9 @@ const withMDX = createMDX({
   },
 });
 
+const withPWA = pwa({
+  dest: "public",
+});
+
 // Merge MDX config with Next.js config
-export default withMDX(nextConfig);
+export default withPWA(withMDX(nextConfig));

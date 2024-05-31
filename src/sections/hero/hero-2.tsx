@@ -54,6 +54,7 @@ export default function Hero2() {
                   alt=""
                   height={300}
                   width={300}
+                  priority
                   className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl"
                 />
               </FadeIn>
@@ -64,6 +65,7 @@ export default function Hero2() {
                   alt=""
                   height={200}
                   width={300}
+                  priority
                   className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl mt-4 lg:ml-4"
                 />
               </FadeIn>

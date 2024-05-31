@@ -48,16 +48,19 @@ export default function Hero4() {
                     src={userImage1}
                     alt=""
                     className="h-14 w-14 border-4 border-white shadow-xl rounded-full object-cover object-center"
+                    priority
                   />
                   <Image
                     src={userImage2}
                     alt=""
                     className="h-14 w-14 border-4 border-white shadow-xl rounded-full object-cover object-center -ml-4"
+                    priority
                   />
                   <Image
                     src={userImage1}
                     alt=""
                     className="h-14 w-14 border-4 border-white shadow-xl rounded-full object-cover object-center -ml-4"
+                    priority
                   />
                 </div>
                 <div>
@@ -87,6 +90,7 @@ export default function Hero4() {
               width={270}
               className="w-[150px] md:w-[250px]"
               alt=""
+              priority
             />
           </FadeIn>
         </FadeInStagger>

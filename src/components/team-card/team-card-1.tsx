@@ -1,6 +1,7 @@
 import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import clsx from "clsx";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { FadeIn } from "../fade-in";
 
 interface TeamCardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -18,9 +19,10 @@ export default function TeamCard1({
 }: TeamCardProps) {
   return (
     <FadeIn>
-      <div
+      <Link
+        href="/team-details"
         className={clsx(
-          "group relative overflow-hidden rounded-3xl bg-neutral-100",
+          "group relative block overflow-hidden rounded-3xl bg-neutral-100",
           className
         )}
       >
@@ -38,7 +40,7 @@ export default function TeamCard1({
           <p className="mt-2 text-sm text-white">{role}</p>
         </div>
         {children}
-      </div>
+      </Link>
     </FadeIn>
   );
 }

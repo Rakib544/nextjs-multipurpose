@@ -2,7 +2,6 @@ import { Container } from "@/components/container";
 import { FadeIn } from "@/components/fade-in";
 import { PageIntro } from "@/components/page-intro";
 import aboutImage from "@/images/about/about-1.png";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { About4 } from "@/sections/about";
 import { Clients3 } from "@/sections/clients";
 import CoreValues from "@/sections/core-values";
@@ -38,12 +37,11 @@ export default function About1() {
       <Container>
         <FadeIn className="">
           <Image
-            placeholder="blur"
-            blurDataURL={generateBlurImageURL()}
             src={aboutImage}
             alt=""
             height={300}
             width={1200}
+            priority
             className="object-cover"
           />
         </FadeIn>

@@ -4,7 +4,6 @@ import { FadeIn } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import aboutImage from "@/images/about/about-3.webp";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { About5 } from "@/sections/about";
 import CoreValues from "@/sections/core-values";
 import { Fact3 } from "@/sections/facts";
@@ -52,10 +51,9 @@ export default function About2() {
           </div>
           <FadeIn>
             <Image
-              placeholder="blur"
-              blurDataURL={generateBlurImageURL()}
               height={450}
               width={450}
+              priority
               className="block w-full lg:w-auto lg:ml-auto rounded-2xl"
               src={aboutImage}
               alt=""

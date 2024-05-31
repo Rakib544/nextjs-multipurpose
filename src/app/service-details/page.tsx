@@ -8,7 +8,6 @@ import { StatList, StatListItem } from "@/components/stat-list";
 import { buttonVariants } from "@/components/ui/button";
 import WorkFlowCard from "@/components/workflow-card";
 import serviceDetailsHeroImage from "@/images/service/service-details-hero.webp";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -77,8 +76,7 @@ export default function ServiceDetails() {
               alt=""
               height={700}
               width={450}
-              placeholder="blur"
-              blurDataURL={generateBlurImageURL()}
+              priority
               className="aspect-square block rounded-xl mt-8 object-cover w-full lg:w-auto lg:ml-auto"
             />
           </FadeIn>

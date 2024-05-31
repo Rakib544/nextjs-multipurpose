@@ -1,7 +1,7 @@
+import { FadeIn } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import LoginForm from "@/components/login-form";
 import dashboardBannerImage from "@/images/demo-1/banner.webp";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function SignIn() {
   return (
-    <div className="min-h-screen h-full">
+    <FadeIn className="min-h-screen h-full">
       <div className="grid grid-cols-12 gap-6 items-center min-h-screen">
         <div className="col-span-12 lg:col-span-6 mt-20 lg:mt-0 h-full flex items-center ">
           <div className="max-w-lg w-full mx-auto px-6">
@@ -48,17 +48,16 @@ export default function SignIn() {
               consectetur adipisicing elit. Neque, necessitatibus!
             </p>
             <Image
-              placeholder="blur"
-              blurDataURL={generateBlurImageURL()}
               src={dashboardBannerImage}
               alt=""
               height={800}
               width={500}
+              priority
               className="my-8 w-full rounded-lg h-[300px] object-cover object-center"
             />
           </div>
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 }

@@ -58,6 +58,7 @@ export default function Pagination({
             className="h-10 w-10 rounded-full p-0 text-muted-foreground"
             variant="outline"
             onClick={prevPage}
+            name="Previous page"
             disabled={currentPage === 1}
           >
             <ChevronLeft className="h-4 w-4" />
@@ -77,7 +78,11 @@ export default function Pagination({
             2
           </Button>
           {totalPage > 3 && currentPage > 3 && (
-            <Button className="h-10 w-10 rounded-full p-0" variant="ghost">
+            <Button
+              name="middle pages"
+              className="h-10 w-10 rounded-full p-0"
+              variant="ghost"
+            >
               <Ellips className="h-4 w-4" />
             </Button>
           )}
@@ -111,6 +116,7 @@ export default function Pagination({
             variant="outline"
             onClick={nextPage}
             disabled={currentPage === totalPage}
+            name="Next page"
           >
             <ChevronRight className="h-4 w-4" />
           </Button>

@@ -35,7 +35,7 @@ export default function BlogCard1({
         {new Date(createdAt).toDateString()}
       </p>
 
-      <Link href="/blog-details">
+      <Link href="/blog-details" aria-label="Click here to learn more">
         <h2 className="text-lg font-bold tracking-tight hover:text-primary text-foreground line-clamp-2">
           {title}
         </h2>
@@ -45,6 +45,7 @@ export default function BlogCard1({
       </p>
       <Link
         href="/blog-details"
+        aria-label="Click here to learn more"
         className={buttonVariants({ variant: "link", className: "!px-0" })}
       >
         Read More <ArrowRight className="size-4 ml-1" />

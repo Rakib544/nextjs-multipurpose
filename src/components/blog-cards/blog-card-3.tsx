@@ -30,7 +30,7 @@ export default function BlogCard3({
         <p className=" mt-4 mb-2 text-sm text-muted-foreground font-medium">
           {new Date(createdAt).toDateString()}
         </p>
-        <Link href="/blog-details" className="">
+        <Link href="/blog-details" aria-label="Click here to learn more">
           <h2 className="text-2xl mt-6 font-extrabold tracking-tight transition duration-300 text-foreground line-clamp-2 hover:text-primary">
             {title}
           </h2>
@@ -40,6 +40,7 @@ export default function BlogCard3({
         </p>
         <Link
           href="/blog-details"
+          aria-label="Click here to learn more"
           className={buttonVariants({
             variant: "link",
             className: "!px-0 mt-4",

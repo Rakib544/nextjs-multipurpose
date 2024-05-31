@@ -87,7 +87,7 @@ export default function CommentCreateForm() {
             )}
           />
           <div className="items-center flex space-x-2 !mb-2">
-            <Checkbox id="terms1" />
+            <Checkbox id="terms1" aria-label="Save my name and email" />
             <label
               htmlFor="terms1"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"

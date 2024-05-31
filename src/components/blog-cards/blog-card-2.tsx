@@ -19,6 +19,7 @@ export default function BlogCard2({
   return (
     <Link
       href="/blog-details"
+      aria-label="Click here to learn more"
       className={cn("grid grid-cols-12 gap-x-2 group", className)}
     >
       <div className="col-span-4 aspect-video relative overflow-hidden rounded">

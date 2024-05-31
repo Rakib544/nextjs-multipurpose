@@ -1,8 +1,8 @@
 import { Container } from "@/components/container";
+import { FadeIn } from "@/components/fade-in";
 import { List, ListItem } from "@/components/list";
 import { SocialMediaProfiles } from "@/components/social-media-profiles";
 import userImage from "@/images/team/team-2.jpeg";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -18,7 +18,7 @@ export default function TeamDetails() {
   return (
     <div>
       <Container className="mb-20 !max-w-5xl">
-        <div className="relative">
+        <FadeIn className="relative">
           <div
             style={{
               backgroundImage: `linear-gradient(180deg,#6754E9 0%,#4534B8 100%)`,
@@ -31,8 +31,7 @@ export default function TeamDetails() {
               alt=""
               height={150}
               width={150}
-              placeholder="blur"
-              blurDataURL={generateBlurImageURL()}
+              priority
               className="rounded-full shrink-0 border-4 border-white"
             />
             <div className="mb-4 text-center md:text-left w-full">
@@ -42,8 +41,8 @@ export default function TeamDetails() {
               </p>
             </div>
           </div>
-        </div>
-        <div className="mt-36 lg:mt-32">
+        </FadeIn>
+        <FadeIn className="mt-36 lg:mt-32">
           <p className="text-base leading-8 text-foreground">
             John Smith is a seasoned software engineer with over 10 years of
             experience in developing innovative software solutions. He holds a
@@ -53,8 +52,8 @@ export default function TeamDetails() {
             technology to solve complex problems and enjoys collaborating with
             cross-functional teams to bring ideas to life.
           </p>
-        </div>
-        <div className="mt-12">
+        </FadeIn>
+        <FadeIn className="mt-12">
           <h2 className="text-xl font-bold mb-4">Responsibilities:</h2>
           <p className="text-base leading-8 text-foreground">
             As a Senior Software Engineer, John is responsible for leading the
@@ -65,8 +64,8 @@ export default function TeamDetails() {
             of projects. John also mentors junior team members, providing
             guidance and support to help them grow their skills and expertise.
           </p>
-        </div>
-        <div className="mt-12">
+        </FadeIn>
+        <FadeIn className="mt-12">
           <h2 className="text-xl font-bold mb-4">
             Expertise and Specializations:
           </h2>
@@ -78,8 +77,8 @@ export default function TeamDetails() {
             <ListItem>Database management (MySQL, MongoDB)</ListItem>
             <ListItem>Agile development methodologies</ListItem>
           </List>
-        </div>
-        <div className="mt-12">
+        </FadeIn>
+        <FadeIn className="mt-12">
           <h2 className="text-xl font-bold mb-4">Career Highlights:</h2>
           <List>
             <ListItem>
@@ -91,11 +90,11 @@ export default function TeamDetails() {
               development and software engineering best practices.
             </ListItem>
           </List>
-        </div>
-        <div className="mt-12">
+        </FadeIn>
+        <FadeIn className="mt-12">
           <h2 className="text-xl font-bold mb-4">Social Links:</h2>
           <SocialMediaProfiles />
-        </div>
+        </FadeIn>
       </Container>
     </div>
   );

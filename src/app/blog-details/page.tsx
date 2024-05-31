@@ -3,10 +3,10 @@ import { CommentCard } from "@/components/comment-card";
 import CommentCreateForm from "@/components/comment-create-form";
 import { Container } from "@/components/container";
 import Description from "@/components/description";
+import { FadeIn } from "@/components/fade-in";
 import coverImage from "@/images/blogs/blog-1.avif";
 
 import { blogComments, blogDetails } from "@/lib/data/blog-data";
-import { generateBlurImageURL } from "@/lib/data/blur-image-data";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -22,7 +22,7 @@ export default function BlogDetails1() {
   return (
     <div>
       <Container className="mt-20">
-        <div className="max-w-3xl mx-auto text-center">
+        <FadeIn className="max-w-3xl mx-auto text-center">
           <p className="text-sm text-muted-foreground font-medium mb-4">
             19 October, 2023
           </p>
@@ -35,8 +35,7 @@ export default function BlogDetails1() {
           <Image
             src={coverImage}
             alt=""
-            placeholder="blur"
-            blurDataURL={generateBlurImageURL()}
+            priority
             className="aspect-[16/9] block rounded-xl mt-8 mb-12"
           />
           <div className="text-left">
@@ -60,7 +59,7 @@ export default function BlogDetails1() {
           </div>
 
           <CommentCreateForm />
-        </div>
+        </FadeIn>
       </Container>
     </div>
   );
