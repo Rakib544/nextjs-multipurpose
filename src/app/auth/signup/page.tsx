@@ -1,4 +1,3 @@
-import { FadeIn } from "@/components/fade-in";
 import { TextUnderline } from "@/components/icons";
 import SignUpForm from "@/components/signup-form";
 import dashboardBannerImage from "@/images/demo-1/banner.webp";
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function SignUp() {
   return (
-    <FadeIn className="min-h-screen h-full">
+    <div className="min-h-screen h-full">
       <div className="grid grid-cols-12 gap-6 items-center min-h-screen">
         <div className="col-span-12 lg:col-span-6 mt-20 lg:mt-0 h-full flex items-center ">
           <div className="max-w-lg w-full mx-auto px-6">
@@ -57,6 +56,6 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-    </FadeIn>
+    </div>
   );
 }
