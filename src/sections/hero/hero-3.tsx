@@ -1,3 +1,4 @@
+import { FadeIn } from "@/components/fade-in";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -9,7 +10,7 @@ export default function Hero3() {
         backgroundImage: `linear-gradient(180deg,#6754E9 0%,#4534B8 100%)`,
       }}
     >
-      <div className="container px-4 md:px-6 lg:px-8 text-center">
+      <FadeIn className="container px-4 md:px-6 lg:px-8 text-center">
         <h1 className="text-3xl md:text-5xl/tight font-extrabold text-white leading-tight max-w-3xl mx-auto">
           Elevate Your Digital Presence with Our Expertise
         </h1>
@@ -26,7 +27,7 @@ export default function Hero3() {
             Free consultation
           </Link>
         </div>
-      </div>
+      </FadeIn>
     </div>
   );
 }
