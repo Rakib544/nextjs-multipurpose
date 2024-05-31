@@ -3,6 +3,8 @@ import { Container } from "@/components/container";
 import { FadeIn, FadeInStagger } from "@/components/fade-in";
 import { HomeIcon } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
+import header1Image from "@/images/demo-2/header1.png";
+import header2Image from "@/images/demo-2/header2.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -50,9 +52,9 @@ export default function Hero2() {
             >
               <FadeIn>
                 <Image
-                  src="/header1.png"
+                  src={header1Image}
                   alt=""
-                  height={300}
+                  height={254}
                   width={300}
                   priority
                   className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl"
@@ -61,9 +63,9 @@ export default function Hero2() {
 
               <FadeIn>
                 <Image
-                  src="/header2.png"
+                  src={header2Image}
                   alt=""
-                  height={200}
+                  height={107}
                   width={300}
                   priority
                   className="object-cover object-center bg-white shadow-xl block mx-auto rounded-xl mt-4 lg:ml-4"
