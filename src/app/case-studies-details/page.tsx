@@ -56,7 +56,7 @@ export default function CaseStudiesDetails() {
           <Image
             src={coverImage}
             alt=""
-            className="aspect-[16/9] block rounded-xl mt-12 object-cover"
+            className="aspect-[16/9] block rounded-xl mt-12 object-cover w-full"
             priority
           />
         </FadeIn>
