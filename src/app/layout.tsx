@@ -64,11 +64,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning={true}>
       <body className={workSans.className} suppressHydrationWarning={true}>
-        <div className=" sticky top-0 w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header className=" sticky top-0 w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <Container>
             <Navbar />
           </Container>
-        </div>
+        </header>
         <main>{children}</main>
         <Footer2 />
       </body>
